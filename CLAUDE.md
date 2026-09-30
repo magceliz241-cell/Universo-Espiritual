@@ -11,8 +11,9 @@ Leia antes de qualquer mudança:
 
 Regras inegociáveis:
 - O software calcula (astronomia, numerologia, fases, sorteios); a IA só interpreta.
-- Motor astronômico: XALEN via `vendor/xalen-wasm` (commit fixado, `--no-default-features`).
-  Só `src/lib/astro/xalen-engine.ts` e `xalen-loader.ts` conhecem o XALEN.
+- Motor astronômico: XALEN via wrapper próprio `engine/` (crate `su-ephem`, XALEN fixado por commit,
+  `default-features = false`), artefato em `vendor/su-ephem`. Só `src/lib/astro/xalen-engine.ts` e
+  `ephem-loader.ts` conhecem o motor.
 - Swiss Ephemeris: nunca no código, dependências, build ou runtime.
 - IA: Groq, modelo `openai/gpt-oss-120b`, chamadas centralizadas em `src/lib/ai/`.
 - Segredos só no servidor. RLS em todas as tabelas.

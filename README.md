@@ -16,7 +16,7 @@ npm run typecheck
 npm run lint
 ```
 
-O motor astronômico é o [XALEN Ephemeris](https://github.com/vedika-io/xalen-ephemeris) (Apache-2.0), compilado
-para WebAssembly e versionado em `vendor/xalen-wasm/`. Para reproduzir o artefato:
+O motor astronômico é o [XALEN Ephemeris](https://github.com/vedika-io/xalen-ephemeris) (Apache-2.0), usado por um
+wrapper Rust próprio (`engine/`), compilado para WebAssembly e versionado em `vendor/su-ephem/`. Para reproduzir o artefato:
 `npm run build:xalen` (requer Rust e `wasm-bindgen-cli 0.2.129`).
-Construído com XALEN Ephemeris; ver `vendor/xalen-wasm/LICENSE` e `NOTICE`.
+Construído com XALEN Ephemeris; ver `vendor/su-ephem/XALEN-LICENSE` e `XALEN-NOTICE`.

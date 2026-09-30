@@ -1,17 +1,20 @@
-import { getXalen, XalenWasm } from "@/lib/astro/xalen-loader";
-import buildInfo from "../../../../../vendor/xalen-wasm/BUILD_INFO.json";
+import { getEphem } from "@/lib/astro/ephem-loader";
+import { XalenEphemerisEngine } from "@/lib/astro/xalen-engine";
 
-/** Smoke test do motor: calcula o Sol em J2000 e informa a versão fixada. */
+/** Smoke test do motor: Sol em J2000 + versão fixada. Não expõe dados de usuário. */
 export async function GET() {
-  const { xalen, initMs } = getXalen();
-  const jd = XalenWasm.julianDay(2000, 1, 1, 12);
+  const { initMs } = getEphem();
   const t0 = performance.now();
-  const sun = xalen.tropicalLongitude(jd, 0);
+  const chart = new XalenEphemerisEngine().calculateChartSync(
+    { date: "2000-01-01", time: "12:00", timezone: "UTC", latitude: 0, longitude: 0 },
+    { houseSystem: "placidus" },
+  );
+  const sun = chart.planets.sun.longitude;
   return Response.json({
     ok: Math.abs(sun - 280.3689) < 5 / 3600,
-    engine: { name: "xalen", commit: buildInfo.commit, method: "analytical" },
+    engine: chart.engine,
     sun_j2000: sun,
     init_ms: Math.round(initMs * 100) / 100,
-    calc_ms: Math.round((performance.now() - t0) * 1000) / 1000,
+    chart_ms: Math.round((performance.now() - t0) * 100) / 100,
   });
 }

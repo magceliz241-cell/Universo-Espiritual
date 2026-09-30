@@ -1,0 +1,10 @@
+{
+  "name": "su-ephem",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Wrapper WASM do Seu Universo sobre o XALEN Ephemeris (commit cc6edbec1f748ebdc4950ae6198f575c5ada73fa). Gerado por scripts/build-xalen.sh.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "su_ephem.js",
+  "types": "su_ephem.d.ts"
+}

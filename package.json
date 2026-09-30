@@ -16,7 +16,7 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "server-only": "^0.0.1",
-    "xalen-wasm": "file:vendor/xalen-wasm",
+    "su-ephem": "file:vendor/su-ephem",
     "zod": "^4.6.5"
   },
   "devDependencies": {
