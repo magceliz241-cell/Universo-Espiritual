@@ -113,10 +113,13 @@ export function retrieveTarot(spread: SpreadId, cardIds: string[]): RetrievedCon
 
 /** Numerologia: documentos dos números obtidos e dos cálculos. */
 export function retrieveNumerology(
-  values: { metric: "life-path" | "expression" | "soul-urge" | "personality" | "personal-year"; value: number }[],
+  values: { metric: "life-path" | "expression" | "soul-urge" | "personality" | "personal-year" | "birthday"; value: number }[],
 ): RetrievedContext {
   const ids: string[] = [];
-  for (const v of values) ids.push(kb.numerologyCalc(v.metric), kb.number(v.value));
+  for (const v of values) {
+    if (v.metric !== "birthday") ids.push(kb.numerologyCalc(v.metric));
+    ids.push(kb.number(v.value));
+  }
   ids.push(kb.numerologyMethod);
   return assemble("numerology", ids);
 }

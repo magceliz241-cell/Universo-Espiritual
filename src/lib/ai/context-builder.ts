@@ -20,7 +20,7 @@ import type { AiTask } from "./prompts";
  * Monta o contexto de cada tarefa: SÓ dados calculados relevantes + KB da tarefa.
  * Nunca envia nome, e-mail, coordenadas, cidade ou data de nascimento completa.
  */
-export type NumerologyMetric = "life-path" | "expression" | "soul-urge" | "personality" | "personal-year";
+export type NumerologyMetric = "life-path" | "expression" | "soul-urge" | "personality" | "personal-year" | "birthday";
 
 export type AiInput =
   | { task: "natal_summary"; chart: BirthChart }

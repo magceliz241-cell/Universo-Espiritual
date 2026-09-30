@@ -26,7 +26,7 @@ import { houseOf, SIGNS, toZodiac } from "./zodiac";
 export { houseOf };
 
 /** Formato do JSON devolvido por su-ephem (engine/src/lib.rs). */
-interface RawBody {
+export interface RawBody {
   longitude: number;
   latitude: number;
   distance: number;
@@ -169,6 +169,12 @@ export class XalenEphemerisEngine implements EphemerisEngine {
       moon_sign_range,
       input_hash: chartInputHash(birth, system, raw.engine.xalen_commit, raw.engine.wrapper),
     };
+  }
+
+  /** Posições aparentes de corpos num instante (JD UT). Usado pela Lua e por trânsitos. */
+  bodyPositionsSync(jdUt: number, bodies: readonly (PlanetId | PointId)[]): Record<string, RawBody> {
+    const { ephem } = getEphem();
+    return Object.fromEntries(bodies.map((b) => [b, JSON.parse(ephem.bodyJson(jdUt, b)) as RawBody]));
   }
 
   /** Signos que a Lua ocupa ao longo das 24 h em torno do meio-dia local. */
