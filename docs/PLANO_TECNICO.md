@@ -1,7 +1,7 @@
 # Seu Universo — Fase 0: Auditoria e Plano Técnico
 
 > Data: 2026-09-30 · Status: **aguardando autorização para a Fase 1**
-> Fonte: `SEU_UNIVERSO_CLAUDE_CODE_CONTEXT_v2.zip` (master prompt + Knowledge Base v2.0)
+> Fontes: `SEU_UNIVERSO_CLAUDE_CODE_CONTEXT_v2.zip` (master prompt + Knowledge Base v2.0) e `docs/DESIGN_SYSTEM.md`
 
 ---
 
@@ -46,7 +46,7 @@ Observações sobre a KB:
 
 O repositório `Universo-Espiritual` está **vazio**: só tem `README.md` e um commit inicial.
 Não existe Next.js, Supabase, `package.json` nem código. O master prompt diz que a stack é
-"já existente/preferencial", mas ela não está neste repositório (ver pergunta Q1).
+"já existente/preferencial", mas ela não está neste repositório. Decisão: começar do zero (§9).
 
 Ambiente verificado: Node 22.22, cargo/rustc 1.97 e alvo `wasm32-unknown-unknown` instalável.
 
@@ -219,8 +219,8 @@ Sem Luxon/date-fns-tz a princípio (`Intl` resolve). Só adicionamos se os teste
 | R4 | Obliquidade média nas casas | medir no benchmark e documentar a tolerância |
 | R5 | Cold start do WASM na Vercel | medir na Fase 1, instância única por processo |
 | R6 | Fuso/DST históricos errados geram mapa errado | testes de borda Brasil (DST pré-2019), gaps/overlaps explícitos |
-| R7 | **Geocodificação** (cidade → lat/lon/tz) não definida | ver Q3 |
-| R8 | Benchmark sem oracle independente: Swiss não pode ser runtime, e JPL Horizons exige rede | fixtures geradas via JPL Horizons (offline, salvas em JSON), com Swiss apenas como oracle de dev se autorizado (Q5) |
+| R7 | Geocodificação (cidade → lat/lon/tz) | base própria GeoNames (§10) |
+| R8 | JPL não fornece casas/ASC/MC | referência independente das fórmulas + tempo sideral do Horizons, com Swiss só como comparação externa manual (§11) |
 | R9 | KB incompleta (manifestação/jornadas) e Menores genéricos | trilha editorial paralela |
 | R10 | IA gerar linguagem causal/promessas | system prompt com regras editoriais + checagem pós-geração de termos proibidos |
 | R11 | Marca XALEN | não usar o nome em produto/pacote, apenas "construído com XALEN Ephemeris" |
@@ -241,7 +241,7 @@ Cada fase termina com testes + build + registro de decisões/riscos em `docs/DEC
 | **5 — Knowledge** | KB em `knowledge/`, índice gerado, retrieval por tarefa (`natal_summary`, `love_profile`, `synastry`, `tarot_reading`, `numerology`, `moon_today`, `dream_analysis`) | snapshot tests do contexto montado por tarefa (nunca a KB inteira) |
 | **6 — IA** | `src/lib/ai/*` com Groq `openai/gpt-oss-120b`, prompts versionados, cache separado, `usage` + `ai_generations` | chamada real com logs de tokens/latência; secrets fora do bundle do cliente |
 | **7 — Features** | numerologia (pitagórico versionado), Tarot (RNG cripto, 78 cartas, 3 tiragens), Lua (fase/iluminação/instantes), sonhos, mapa (roda SVG), amor/sinastria, dashboard | testes unitários de cada cálculo; fluxos ponta a ponta |
-| **8 — Benchmark** | 50+ fixtures (DST, altas latitudes, cúspides de signo, 00:00/23:59, bissextos, polares, inválidos) vs referências JPL Horizons | tolerâncias registradas: planetas ≤ 5″, Lua ≤ 15″, ASC/MC ≤ 0,01°, cúspides Placidus ≤ 0,02° (\|lat\| ≤ 66°) — valores a confirmar com você |
+| **8 — Benchmark** | 50+ fixtures (DST, altas latitudes, cúspides de signo, 00:00/23:59, bissextos, polares, inválidos) vs JPL Horizons/DE440 | tolerâncias aprovadas (ver §11), com máx/média/RMS/p95/p99 por grandeza |
 | **9 — Polimento** | UX, performance, segurança (headers, rate-limit da IA), deploy Vercel, `THIRD_PARTY_NOTICES.md` | checklist da "Definição de pronto" do master prompt |
 
 Trilhas paralelas (não bloqueiam as fases): conteúdo de manifestação/gratidão/jornadas, revisão dos
@@ -264,15 +264,86 @@ Menores, arte própria do Tarot e identidade visual.
 
 ---
 
-## 9. Perguntas em aberto (precisam de resposta antes/durante a Fase 1)
+## 9. Decisões registradas (respostas de 2026-09-30)
 
-- **Q1.** O prompt diz que Next.js/Supabase/Vercel já existem. Existe outro repositório ou projeto Supabase
-  com código? Ou começamos do zero aqui?
-- **Q2.** Acesso/pagamento: a área de membros usa checkout externo (ex.: webhook de plataforma de vendas
-  liberando acesso) ou só login? Existem níveis/planos (free vs premium)?
-- **Q3.** Geocodificação do local de nascimento: base estática própria (ex.: cidades GeoNames, CC-BY 4.0,
-  com tz embutido) ou API externa? A lista embutida do XALEN tem só ~100 cidades, o que não basta.
-- **Q4.** Confirmar **Placidus** como padrão e oferecer Whole Sign/Equal como opção do usuário?
-- **Q5.** Posso usar pyswisseph/swetest **só como oracle de teste em dev** (nunca no runtime), ou as
-  fixtures devem vir exclusivamente do JPL Horizons?
-- **Q6.** As tolerâncias do benchmark propostas na Fase 8 estão ok?
+| # | Pergunta | Decisão |
+|---|---|---|
+| Q1 | Código/Supabase existentes? | **Nada criado.** Começamos do zero neste repositório, com projeto Supabase novo. |
+| Q2 | Acesso/pagamento | **Plano único** na landing + **order bump** que libera as **áreas de relacionamento**. Checkout Cakto (produto ainda não criado). Login e liberação seguem o modelo da skill *área de membros Cakto*: Supabase Auth com **confirmação de e-mail obrigatória**, webhook Cakto → `memberships`, vínculo da compra só após o e-mail ser confirmado. |
+| Q3 | Geocodificação | **Base própria de cidades** (ver §10). |
+| Q4 | Sistema de casas | **Placidus** pré-selecionado; **Whole Sign** e **Equal** como opções avançadas discretas (DESIGN_SYSTEM §14). |
+| Q5 | Swiss Ephemeris | Só como **comparação secundária externa** durante o desenvolvimento (ver §11). |
+| Q6 | Tolerâncias | Aprovadas com ajustes (ver §11). |
+
+Design: `docs/DESIGN_SYSTEM.md` é a especificação visual obrigatória (paleta, tipografia, componentes,
+motion, acessibilidade). Nenhuma tela é criada sem segui-lo.
+
+### 9.1 Impacto de Q2 no desenho de acesso
+- Níveis: `base` (plano principal) e `love` (bump de relacionamento: perfil amoroso, sinastria, Tarot do amor).
+  Os níveis são liberados por **ID de produto/oferta Cakto**, nunca por valor.
+- O servidor decide o acesso (middleware + headers internos, como na skill). Páginas de amor sem o bump
+  mostram a oferta, e o conteúdo exclusivo nunca vai para o bundle do cliente.
+- Reembolso/chargeback de cada pedido é tratado separadamente (reembolso só do bump remove só `love`).
+- Pendente (perguntar na Fase 4): duração do acesso do plano principal (tempo limitado ou vitalício?), e se
+  existe upgrade dentro do app para quem comprou sem o bump.
+
+## 10. Base própria de cidades (proposta)
+
+- Fonte: **GeoNames** (`cities1000` + todos os lugares povoados do Brasil), licença **CC-BY 4.0**
+  (exige atribuição em `THIRD_PARTY_NOTICES.md` e na tela "sobre"). Já traz lat/lon e **timezone IANA** por cidade.
+  A licença e o formato serão reconfirmados no momento da importação.
+- Armazenamento: tabela `cities` no Supabase (nome, nome sem acento, estado/região, país, lat, lon, timezone,
+  população) com busca por prefixo/trigram (`pg_trgm`). Leitura pública, escrita só via script de importação.
+- Script de importação versionado (`scripts/import-cities.ts`), com a data do dump registrada.
+- O fuso sempre vem da cidade escolhida (e não do navegador), e o usuário vê "Horário local de <cidade>".
+
+## 11. Política de validação astronômica (aprovada)
+
+```
+XALEN                → produção (único motor no runtime)
+JPL Horizons/DE440   → oracle astronômico principal
+Swiss Ephemeris      → comparação secundária externa, só durante o desenvolvimento
+```
+
+**Regras da Swiss Ephemeris:**
+- Nada de código, pacote, binário, arquivo de dados ou saída bruta dela no repositório, nas dependências,
+  no build, no runtime ou na distribuição. Isso vale inclusive para dependências de dev.
+- Uso permitido: consulta **externa e manual** de casos pontuais (ex.: quando XALEN e JPL divergem, ou para
+  casas, que o JPL não fornece). O benchmark registra a fonte de cada valor.
+- **Instalar `pyswisseph`/`swetest` localmente, mesmo fora do repositório, fica suspenso**: rodar o software
+  pode configurar uso sob a licença dele (AGPL/profissional). Se isso for necessário, paro e te consulto antes.
+  Consultas automatizadas em massa a serviços web de terceiros também exigem checar os termos antes.
+
+**Regras do JPL Horizons:** cada fixture registra os parâmetros da consulta, e só comparamos valores com
+parâmetros equivalentes:
+- corpo alvo e **observador geocêntrico** (`500@399`);
+- escala de tempo de entrada (**UT**), com o ΔT aplicado pelo próprio Horizons e registrado;
+- grandeza: **longitude/latitude eclíptica aparente do observador** (quantidade 31), referida ao equinócio e
+  eclíptica **de data**, que é o mesmo referencial da longitude tropical do XALEN. A definição exata de cada
+  quantidade será conferida na documentação do Horizons antes de gerar as fixtures;
+- efemérides usadas (DE440/DE441, conforme o Horizons informar) e data da consulta.
+
+As respostas do Horizons ficam salvas em `tests/fixtures/jpl/*.json` com os parâmetros, e os testes rodam offline.
+
+**Casas/ASC/MC:** o JPL não calcula casas. A referência principal passa a ser uma **implementação independente
+das fórmulas padrão** (ASC/MC a partir do tempo sideral aparente local e da obliquidade verdadeira, e Placidus
+por iteração), escrita só para os testes e alimentada com o tempo sideral do Horizons (quantidade 7).
+A Swiss Ephemeris entra apenas como conferência secundária manual, se houver divergência.
+
+**Tolerâncias de aceitação** (limites do nosso benchmark, não uma afirmação de precisão absoluta do XALEN):
+
+| Grandeza | Modo | Limite |
+|---|---|---|
+| Sol, Mercúrio–Netuno | analítico | ≤ 5″ |
+| Plutão | analítico | registrar (sem limite de 5″); **≤ 5″ só com DE440** |
+| Lua | analítico | ≤ 15″ |
+| Lua | DE440 | teste separado, com limite mais apertado a definir após a primeira medição |
+| Ascendente | — | ≤ 0,01° |
+| MC | — | ≤ 0,01° |
+| Cúspides | — | ≤ 0,02° |
+
+- Relatório com **erro máximo, média, RMS, p95 e p99** por grandeza, e não só PASS/FAIL.
+- Casas/ASC/MC medidos **separadamente** em latitudes normais (|lat| ≤ 60°) e altas (60°–66°), com as
+  condições polares (> 66,5°) validando o fallback documentado.
+- **Nunca aumentar uma tolerância para um teste passar.** Divergência é investigada primeiro e a causa fica registrada.
+- O DE440 entra só no benchmark (kernel baixado uma vez no ambiente de dev e fora do repositório), e nunca no runtime da Vercel.
