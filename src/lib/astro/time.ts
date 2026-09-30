@@ -9,8 +9,15 @@ import { ChartInputError } from "./types";
  * resolvidos em silêncio: geram ChartInputError, e o segundo caso aceita `fold`.
  */
 
-export const MIN_YEAR = 1800;
-export const MAX_YEAR = 2100;
+/**
+ * Janela suportada = cobertura do motor no modo analítico. O Plutão do XALEN (teoria de
+ * Meeus) cobre JD 2409542,03–2488069,50 (TT), isto é, 01/01/1885 ~12h até 30/12/2099 ~24h.
+ * Com margem para fusos de −12 h a +14 h, aceitamos datas locais de 02/01/1885 a 30/12/2099.
+ */
+export const MIN_DATE = "1885-01-02";
+export const MAX_DATE = "2099-12-30";
+export const MIN_YEAR = 1885;
+export const MAX_YEAR = 2099;
 
 const DATE_RE = /^(\d{4})-(\d{2})-(\d{2})$/;
 const TIME_RE = /^(\d{2}):(\d{2})(?::(\d{2}))?$/;
@@ -32,8 +39,8 @@ export function parseDate(date: string): Pick<LocalDateTime, "year" | "month" | 
   if (probe.getUTCFullYear() !== year || probe.getUTCMonth() !== month - 1 || probe.getUTCDate() !== day) {
     throw new ChartInputError("invalid_date", `Data inexistente: ${date}`);
   }
-  if (year < MIN_YEAR || year > MAX_YEAR) {
-    throw new ChartInputError("date_out_of_range", `Ano fora do intervalo suportado (${MIN_YEAR}–${MAX_YEAR}).`);
+  if (date < MIN_DATE || date > MAX_DATE) {
+    throw new ChartInputError("date_out_of_range", "Data fora do intervalo suportado (02/01/1885 a 30/12/2099).");
   }
   return { year, month, day };
 }

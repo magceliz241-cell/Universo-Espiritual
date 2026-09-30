@@ -171,6 +171,12 @@ export class XalenEphemerisEngine implements EphemerisEngine {
     };
   }
 
+  /** Casas e ângulos num instante (JD UT), em graus. Usado pelo benchmark. */
+  housesAtSync(jdUt: number, latitude: number, longitude: number, system: HouseSystem) {
+    const raw = JSON.parse(getEphem().ephem.chartJson(jdUt, latitude, longitude, system, true)) as RawChart;
+    return { ...raw.houses!, ramc: raw.ramc_deg!, bodies: Object.fromEntries(raw.bodies) as Record<string, RawBody> };
+  }
+
   /** Posições aparentes de corpos num instante (JD UT). Usado pela Lua e por trânsitos. */
   bodyPositionsSync(jdUt: number, bodies: readonly (PlanetId | PointId)[]): Record<string, RawBody> {
     const { ephem } = getEphem();

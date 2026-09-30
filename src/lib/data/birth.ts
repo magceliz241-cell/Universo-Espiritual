@@ -57,7 +57,7 @@ export async function saveBirthProfile(db: Db, userId: string, form: BirthForm):
       if (e.code === "nonexistent_local_time") {
         return { ok: false, field: "time", message: "Esse horário não existiu nesse local (o relógio adiantou uma hora para o horário de verão). Confira o horário." };
       }
-      if (e.code === "date_out_of_range") return { ok: false, field: "date", message: "Aceitamos datas entre 1800 e 2100." };
+      if (e.code === "date_out_of_range") return { ok: false, field: "date", message: "Aceitamos datas de 02/01/1885 a 30/12/2099 (limite do cálculo de Plutão)." };
       return { ok: false, field: "date", message: "Não conseguimos calcular com esses dados. Confira a data e o horário." };
     }
     throw e;

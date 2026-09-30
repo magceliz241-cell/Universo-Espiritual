@@ -66,6 +66,7 @@ describe("validação de data/hora/fuso", () => {
     expect(code(() => parseDate("2023-02-29"))).toBe("invalid_date");
     expect(code(() => parseDate("2024-02-29"))).toBe("no-error");
     expect(code(() => parseDate("1900-02-29"))).toBe("invalid_date");
+    expect(code(() => parseDate("1904-02-29"))).toBe("no-error");
     expect(code(() => parseDate("2000-02-29"))).toBe("no-error");
     expect(code(() => parseDate("2020-13-01"))).toBe("invalid_date");
     expect(code(() => parseDate("20-01-01"))).toBe("invalid_date");
@@ -73,7 +74,10 @@ describe("validação de data/hora/fuso", () => {
 
   it("rejeita anos fora do intervalo suportado", () => {
     expect(code(() => parseDate("1799-12-31"))).toBe("date_out_of_range");
-    expect(code(() => parseDate("2101-01-01"))).toBe("date_out_of_range");
+    expect(code(() => parseDate("1885-01-01"))).toBe("date_out_of_range");
+    expect(code(() => parseDate("1885-01-02"))).toBe("no-error");
+    expect(code(() => parseDate("2099-12-30"))).toBe("no-error");
+    expect(code(() => parseDate("2099-12-31"))).toBe("date_out_of_range");
   });
 
   it("rejeita horários inválidos", () => {

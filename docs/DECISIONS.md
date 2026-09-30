@@ -210,3 +210,25 @@ lateral → reembolso bloqueia. Zero erros de JavaScript no navegador.
 
 Achados corrigidos pelo e2e: arquivo `"use server"` exportando constante (quebrava `/sonhos`), grade sem colunas
 definidas estourando a largura no celular (Sinastria/Aspectos).
+
+## Fase 8 — Benchmark de precisão (2026-09-30)
+
+Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo principal · Swiss Ephemeris → comparação externa
+(não usada)**. Relatório completo em `docs/BENCHMARK.md` (máx, média, RMS, p95, p99 e a fonte de cada número).
+
+- **Casas/ASC/MC:** oráculo independente de fórmulas (`tests/benchmark/oracle/houses.ts`: GMST IAU 1982, nutação de
+  Meeus cap. 22, obliquidade verdadeira, ASC/MC analíticos, Placidus por semiarcos), sem nada do XALEN. 60 casos fixos
+  + 6 mil mapas aleatórios (1900–2099), latitudes normais e altas separadas, mais as polares:
+  ASC máx 0,00022° (|lat| ≤ 60°) e 0,00108° (60°–66°); cúspides máx 0,00108°. Tolerância: 0,01°/0,02°. ✅
+  Confirma a correção de referencial feita no wrapper na Fase 2 (antes: até 0,135°).
+- **Planetas:** o script `scripts/fetch-jpl-fixtures.ts` já está pronto (quantidade 31 geocêntrica aparente de data; LAST
+  = quantidade 7; parâmetros gravados nas fixtures), mas **não pôde rodar**, porque a rede daqui bloqueia
+  `ssd.jpl.nasa.gov`. Enquanto isso, o relatório usa os valores JPL citados pelo XALEN (2 épocas, segunda mão), todos
+  dentro dos limites (máx 1,07″ em Netuno). O benchmark oficial de planetas **continua pendente**.
+- **Achado — cobertura do motor:** o Plutão analítico do XALEN (Meeus) só cobre 01/01/1885 a 30/12/2099. Fora disso, o
+  mapa inteiro falhava. As datas aceitas foram restritas a **02/01/1885–30/12/2099** (validação no servidor, no
+  formulário e na mensagem de erro), sem contornar a limitação em silêncio.
+- Caso de horário ambíguo no benchmark (Londres, fim do BST) é resolvido explicitamente com `fold`.
+- `npm run benchmark` (pesado: fora do `npm test`), `npm run benchmark:fetch-jpl` (requer rede).
+- Pendências: fixtures do JPL; modo DE440 no benchmark (Plutão ≤ 5″ e teste apertado da Lua), que exige expor o
+  provedor DE440 no wrapper e baixar o kernel só no ambiente de benchmark.

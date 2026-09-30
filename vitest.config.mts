@@ -11,5 +11,7 @@ export default defineConfig({
   test: {
     environment: "node",
     include: ["tests/**/*.test.ts"],
+    // O benchmark é pesado (6 mil mapas): roda com `npm run benchmark`.
+    exclude: process.env.BENCHMARK ? ["**/node_modules/**"] : ["**/node_modules/**", "tests/benchmark/**"],
   },
 });

@@ -49,7 +49,7 @@ export function BirthForm({
 
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label="Data de nascimento" id="date" error={err?.field === "date" ? err.message : null}>
-          <Input id="date" name="date" type="date" required min="1800-01-01" max="2100-12-31" defaultValue={defaults.date} />
+          <Input id="date" name="date" type="date" required min="1885-01-02" max="2099-12-30" defaultValue={defaults.date} />
         </Field>
         <Field label="Horário de nascimento" id="time" hint="Quanto mais exato, melhor para Ascendente e casas." error={err?.field === "time" ? err.message : null}>
           <Input id="time" name="time" type="time" disabled={unknownTime} defaultValue={defaults.time ?? undefined} />

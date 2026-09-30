@@ -12,7 +12,9 @@
     "build:xalen": "bash scripts/build-xalen.sh",
     "test:db": "bash tests/db/run-migrations.sh && TEST_DATABASE_URL=\"postgres://postgres@localhost/su_test?host=/tmp&port=55432\" vitest run tests/db",
     "build:knowledge": "node scripts/build-knowledge.ts",
-    "test:e2e": "node tests/e2e/flow.mjs"
+    "test:e2e": "node tests/e2e/flow.mjs",
+    "benchmark": "BENCHMARK=1 BENCHMARK_REPORT=1 vitest run tests/benchmark && node scripts/benchmark-report.ts",
+    "benchmark:fetch-jpl": "node scripts/fetch-jpl-fixtures.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
