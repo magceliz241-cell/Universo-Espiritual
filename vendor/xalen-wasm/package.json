@@ -1,0 +1,10 @@
+{
+  "name": "xalen-wasm",
+  "version": "0.6.0-cc6edbe",
+  "private": true,
+  "description": "Build local, não publicado, do crate xalen-wasm (commit cc6edbec1f748ebdc4950ae6198f575c5ada73fa, --no-default-features)",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "xalen_wasm.js",
+  "types": "xalen_wasm.d.ts"
+}

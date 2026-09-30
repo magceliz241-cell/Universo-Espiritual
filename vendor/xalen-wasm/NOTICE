@@ -1,0 +1,87 @@
+XALEN Ephemeris
+Copyright 2024-2026 XALEN Technology Pvt Ltd
+
+This product includes software developed at
+XALEN Technology Pvt Ltd (https://vedika.io).
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+---
+
+Third-Party Acknowledgments:
+
+- VSOP87 planetary theory: P. Bretagnon, G. Francou (1987), Bureau des Longitudes
+- ELP2000-82 lunar theory: M. Chapront-Touze, J. Chapront (1982), Bureau des Longitudes
+- Pluto analytical theory: J. Meeus, based on Goffin/Steyaert fit to JPL DE200
+- DE440 ephemeris data: NASA/JPL (Jet Propulsion Laboratory)
+- IAU 2006 precession: N. Capitaine, P.T. Wallace, J. Chapront (2003)
+- IAU 2000B nutation: D.D. McCarthy, G. Petit (IERS TN 32)
+- Delta-T model: F.R. Stephenson, L.V. Morrison, C.Y. Hohenkerk (2016)
+- Fixed-star catalog: The Hipparcos and Tycho Catalogues, (C) ESA 1997
+  (ESA SP-1200), distributed by CDS Strasbourg as catalogue I/239. The
+  expanded fixed-star catalog (Vmag <= 6.5) is generated directly from
+  I/239 hip_main.dat (positions, magnitudes, proper motions).
+- Fixed-star traditional names: IAU Catalog of Star Names (IAU-CSN),
+  IAU Division C Working Group on Star Names (WGSN), used under
+  Creative Commons Attribution; names carried onto HIP identifiers.
+- Star identities additionally cross-checked against the CDS/SIMBAD
+  Astronomical Database, Strasbourg.
+- I-Ching (Yi King) text: James Legge, Sacred Books of the East Vol. XVI (1882), public domain.
+
+NOTE ON COMMERCIAL SCOPE: A 'comprehensive' COMMERCIAL claim over the
+Hipparcos-derived catalog still requires CDS/ESA license clearance for
+redistribution. This release ships under the attribution above; the
+clearance gate is tracked in docs and is NOT yet resolved.
+
+---
+
+ERFA (Essential Routines for Fundamental Astronomy) — BSD 3-Clause
+
+The precession and frame-bias matrix numerics in crates/xalen-coords
+(precession.rs: pfw06, fw2m, bi00, bp00, pmat06) are an independent Rust
+port of the corresponding ERFA routines and are therefore additionally
+distributed under the BSD 3-Clause License below.
+
+  Copyright (C) 2013-2023, NumFOCUS Foundation.
+  All rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the Standards Of Fundamental Astronomy Board, the
+     International Astronomical Union nor the names of its contributors may be
+     used to endorse or promote products derived from this software without
+     specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  POSSIBILITY OF SUCH DAMAGE.
+
+  ERFA upstream: https://github.com/liberfa/erfa
+
+---
+
+Commercial licensing available at https://vedika.io/ephemeris
