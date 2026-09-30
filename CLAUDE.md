@@ -20,4 +20,6 @@ Regras inegociáveis:
 - Responder ao usuário em português do Brasil.
 
 Comandos: `npm test`, `npm run typecheck`, `npm run lint`, `npx next build`,
-`npm run build:xalen` (reproduz o artefato do XALEN; requer Rust + wasm-bindgen-cli 0.2.129).
+`npm run build:xalen` (reproduz o artefato do motor; requer Rust + wasm-bindgen-cli 0.2.129),
+`npm run build:knowledge` (regenera `src/lib/knowledge/generated.ts` depois de editar `knowledge/`),
+`npm run test:db` (testes de banco; requer Postgres local na porta 55432).

@@ -135,3 +135,22 @@ responde 500 sem segredo configurado.
 
 **Pendências:** e2e do fluxo de login com Auth real/simulado (Playwright), a planejar no polimento; e importar as
 cidades de verdade (a rede daqui bloqueia `download.geonames.org`). O guia completo está em `docs/SETUP.md`.
+
+## Fase 5 — Knowledge Base e recuperação por tarefa (2026-09-30)
+
+- KB copiada para `knowledge/` (fonte editorial versionada no git).
+- `scripts/build-knowledge.ts` gera `src/lib/knowledge/generated.ts` (181 documentos, ~160 KB) com o conteúdo embutido
+  no código, o que dispensa leitura de arquivos em runtime na Vercel. As seções e linhas de fonte ("## Fonte…",
+  "Referência…:") saem do texto enviado à IA e ficam em `sources`. `XALEN_INTEGRATION.md`, `SOURCES.md` e o README
+  raiz não vão para a IA.
+- `KNOWLEDGE_VERSION` = versão do `INDEX.json` + sha256 do conteúdo (ex.: `2.0+5486ad3b182f`). Qualquer edição na KB
+  muda a versão e invalida o cache de IA. Um teste falha se `generated.ts` estiver fora de sincronia.
+- `src/lib/knowledge/retrieve.ts`: recuperação **determinística** por tarefa (`natal_summary`, `love_profile`,
+  `synastry`, `tarot_reading`, `numerology`, `moon_today`, `dream_analysis`), com orçamento de 14 000 caracteres e
+  ordem de prioridade. Trabalha com ids de documento, e nunca envia a KB inteira. Sem pgvector: a KB é pequena e
+  estruturada.
+- `src/lib/tarot/deck.ts`: 78 cartas RWS (nomes PT-BR/EN, id da KB). `src/lib/dreams/`: 20 símbolos da KB com termos
+  em português e extração por dicionário (limites de palavra: "mar" ≠ "marido", "casa" ≠ "casamento").
+- Regras editoriais (`AI_CONTEXT_RULES` + `LEGAL_AND_EDITORIAL_NOTES`) expostas para o system prompt da Fase 6.
+- Testes: 16 (sincronia, ausência de URLs no conteúdo, todos os mapeamentos resolvem, baralho completo, contexto
+  por tarefa, orçamento, extração de símbolos).
