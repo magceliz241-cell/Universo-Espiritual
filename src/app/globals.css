@@ -34,6 +34,7 @@
   /* Tipografia: serif = astrologia; sans = interface */
   --font-display: var(--font-instrument-serif), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-glyph: var(--font-glyphs), "Noto Sans Symbols", "Segoe UI Symbol", serif;
 
   /* Raios */
   --radius-sm: 8px;
@@ -98,6 +99,12 @@ body::before {
     letter-spacing: -0.01em;
     line-height: 1.1;
   }
+  .glyph {
+    font-family: var(--font-glyph);
+    font-weight: 300;
+    font-variant-emoji: text;
+    line-height: 1;
+  }
   .eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.16em;
@@ -114,5 +121,16 @@ body::before {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }

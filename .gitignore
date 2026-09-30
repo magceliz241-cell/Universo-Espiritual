@@ -43,3 +43,9 @@ next-env.d.ts
 
 # rust
 /engine/target/
+
+# e2e harness (gerados)
+/tests/e2e/harness/.env.e2e
+/tests/e2e/harness/*.log
+/tests/e2e/harness/*.pid
+/tests/e2e/harness/pgrst.conf

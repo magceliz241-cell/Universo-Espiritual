@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter } from "next/font/google";
+import { Instrument_Serif, Inter, Noto_Sans_Symbols } from "next/font/google";
 import "./globals.css";
 
 const serif = Instrument_Serif({
@@ -12,6 +12,13 @@ const serif = Instrument_Serif({
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+});
+
+/** Glifos astrológicos em traço (evita a versão emoji de ☉ ☽ ♈ nos celulares). */
+const glyphs = Noto_Sans_Symbols({
+  variable: "--font-glyphs",
+  subsets: ["symbols"],
+  weight: ["300", "400"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +34,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={`${serif.variable} ${inter.variable} h-full`}>
+    <html lang="pt-BR" className={`${serif.variable} ${inter.variable} ${glyphs.variable} h-full`}>
       <body className="relative min-h-full">
         <div className="relative z-10 flex min-h-full flex-col">{children}</div>
       </body>

@@ -174,3 +174,39 @@ cidades de verdade (a rede daqui bloqueia `download.geonames.org`). O guia compl
   `usage_events` com cache hit/miss. Nenhum segredo é registrado.
 - Testes: 19 com Groq simulada (a rede daqui bloqueia `api.groq.com`), cobrindo formato da requisição, novas
   tentativas, ausência de PII no payload, cache, limite, correção editorial e erro registrado.
+
+## Fase 7 — Funcionalidades e telas (2026-09-30)
+
+**Cálculos (determinísticos, testados)**
+- Numerologia pitagórica `numerology-pyth-1.0.0`: tabela explícita, acentos removidos de forma uniforme, Y como
+  consoante, Caminho de Vida em 3 ciclos com mestres 11/22/33, Aniversário com 11/22, Ano Pessoal sem mestres
+  (ciclo 1–9). O nome **não** é enviado à IA.
+- Tarot `tarot-1.0.0`: Fisher–Yates com `node:crypto.randomInt`, orientação 50/50, sorteio no servidor e gravado em
+  `tarot_readings` antes de qualquer IA. Tarot do amor exige o bump.
+- Lua `moon-1.0.0`: fase pela elongação Sol–Lua (setores de 45°), iluminação por `(1 − cos β·cos Δλ)/2`, instantes das
+  próximas fases por iteração sobre as posições XALEN. Validado contra o USNO (jan/2024, < 3 min).
+
+**Telas** (design system aplicado: fundo escuro, serif para astrologia, sans para interface, dourado como acento,
+violeta para interação, ícones de linha, glifos em Noto Sans Symbols com `U+FE0E` para não virarem emoji):
+Início (observatório pessoal), Mapa (roda SVG gerada no servidor, seletor discreto Placidus/Whole Sign/Equal,
+posições, aspectos, casas), Amor (planetas do encontro, perfil amoroso), Mapa do casal (outras pessoas, conexões
+sem score), Tarot (cartas tipográficas próprias, animação de virar, `prefers-reduced-motion`), Numerologia (número
+principal dominante, palavras-chave da KB), Lua (lua desenhada pela iluminação real e pelo hemisfério, intenção e
+diário), Sonhos (relato, emoções, símbolos da KB, histórico), Seu Guia (consulta, não chat genérico), Perfil
+(nascimento, pessoas, acesso, créditos XALEN/GeoNames e avisos). Oferta do bump dentro do app com checkout e
+`?email=` preenchido. Estados vazios, de carregamento e de erro com a voz do produto.
+
+**Segurança:** toda ação de servidor chama `requireMember()`; as de amor conferem `tier === "love"`. As
+interpretações recalculam/releem os dados no servidor (o navegador só informa *qual* leitura). Os dados vêm do banco
+com RLS.
+
+**Ambiente de ponta a ponta** (`tests/e2e/harness/`): Postgres + PostgREST 12.2.3 + gateway que imita a API de Auth
+do Supabase (cadastro, login, confirmação por `token_hash`, recuperação, caixa de saída de e-mails) + Groq simulada.
+`tests/e2e/flow.mjs` (Playwright, Chromium): **65/65 verificações**, cobrindo cadastro → confirmação → sem
+compra `/acesso` → webhook libera → nascimento com busca de cidade → mapa → Guia → Whole Sign → oferta do bump →
+bump libera sem sair → Tarot → Numerologia → Lua (persistência) → Sonhos (símbolos + leitura salva) → Guia →
+Sinastria com pessoa sem horário → Perfil → 13 páginas × 390/1280 px sem erro, sem `undefined/NaN` e sem rolagem
+lateral → reembolso bloqueia. Zero erros de JavaScript no navegador.
+
+Achados corrigidos pelo e2e: arquivo `"use server"` exportando constante (quebrava `/sonhos`), grade sem colunas
+definidas estourando a largura no celular (Sinastria/Aspectos).

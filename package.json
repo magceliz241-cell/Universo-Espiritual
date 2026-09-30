@@ -11,7 +11,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "build:xalen": "bash scripts/build-xalen.sh",
     "test:db": "bash tests/db/run-migrations.sh && TEST_DATABASE_URL=\"postgres://postgres@localhost/su_test?host=/tmp&port=55432\" vitest run tests/db",
-    "build:knowledge": "node scripts/build-knowledge.ts"
+    "build:knowledge": "node scripts/build-knowledge.ts",
+    "test:e2e": "node tests/e2e/flow.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
@@ -33,6 +34,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "pg": "^8.23.1",
+    "playwright": "^1.56.1",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.3"
