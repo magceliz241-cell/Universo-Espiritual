@@ -131,6 +131,11 @@ export function retrieveDream(symbolSlugs: string[]): RetrievedContext {
   return assemble("dream_analysis", [kb.dreamMethod, ...symbolSlugs.map(kb.dreamSymbol)]);
 }
 
+/** Conversa sem mapa: só a metodologia geral. */
+export function retrieveGeneral(): RetrievedContext {
+  return assemble("natal_summary", [kb.astrologyMethod]);
+}
+
 /** Regras editoriais fixas para o system prompt (não são "recuperadas" por tarefa). */
 export function editorialRules(): string {
   return [DOCS.AI_CONTEXT_RULES?.content, DOCS.LEGAL_AND_EDITORIAL_NOTES?.content].filter(Boolean).join("\n\n");

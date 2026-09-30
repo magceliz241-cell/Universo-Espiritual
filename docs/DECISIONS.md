@@ -154,3 +154,23 @@ cidades de verdade (a rede daqui bloqueia `download.geonames.org`). O guia compl
 - Regras editoriais (`AI_CONTEXT_RULES` + `LEGAL_AND_EDITORIAL_NOTES`) expostas para o system prompt da Fase 6.
 - Testes: 16 (sincronia, ausência de URLs no conteúdo, todos os mapeamentos resolvem, baralho completo, contexto
   por tarefa, orçamento, extração de símbolos).
+
+## Fase 6 — Camada de IA (2026-09-30)
+
+- Provedor único **Groq**, modelo `openai/gpt-oss-120b` (`GROQ_MODEL`), chamado via `fetch` na API compatível com
+  OpenAI (`/chat/completions`), com `response_format: json_object` e `max_completion_tokens`. **Sem SDK**: uma
+  requisição simples não justifica uma dependência nova. Nenhum parâmetro não confirmado (ex.: reasoning) é enviado.
+- `src/lib/ai/`: `groq.ts` (timeout de 45 s e uma nova tentativa em 429/5xx), `prompts.ts` (system prompt com as regras
+  inegociáveis + notas editoriais da KB, instruções e **versão por tarefa**), `context-builder.ts` (só dados
+  calculados relevantes: **sem nome, e-mail, coordenadas, fuso, cidade ou data de nascimento**; na sinastria, "você"
+  e "a outra pessoa"), `response-parser.ts` (JSON validado com zod + checagem editorial), `cache.ts`, `usage.ts`,
+  `generate.ts` (orquestrador) e `server.ts` (sessão do usuário).
+- Cache da IA **separado** do astronômico: chave = sha256(tarefa, hash do payload, versão do prompt, versão da KB,
+  modelo). Tarot, sonhos e conversa não usam cache.
+- Checagem editorial pós-geração (garantias, diagnósticos, previsões de morte/doença/dinheiro, porcentagem de
+  compatibilidade): uma correção automática. Se falhar de novo, erro amigável e registro com `error`.
+- Limite diário por pessoa (`AI_DAILY_LIMIT`, padrão 40 gerações reais em 24 h) para controle de custo.
+- Observabilidade: `ai_generations` (tarefa, modelo, versões de prompt/KB, tokens, latência, erro) +
+  `usage_events` com cache hit/miss. Nenhum segredo é registrado.
+- Testes: 19 com Groq simulada (a rede daqui bloqueia `api.groq.com`), cobrindo formato da requisição, novas
+  tentativas, ausência de PII no payload, cache, limite, correção editorial e erro registrado.
