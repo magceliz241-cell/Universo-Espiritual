@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { houseOf } from "@/lib/astro/xalen-engine";
-import { formatDms, normalize, separation, toZodiac } from "@/lib/astro/zodiac";
+import { formatDms, houseOf, normalize, separation, toZodiac } from "@/lib/astro/zodiac";
 
 describe("zodíaco", () => {
   it("0° = Áries 0°00′00″ e 360° volta para Áries", () => {

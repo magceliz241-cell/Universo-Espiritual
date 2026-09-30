@@ -1,4 +1,5 @@
 import "server-only";
+import { ASPECTS_VERSION, chartBodies, natalAspects } from "./aspects";
 import { CHART_METHODOLOGY_VERSION, UNKNOWN_TIME_NOON } from "./config";
 import type { EphemerisEngine } from "./engine";
 import { getEphem } from "./ephem-loader";
@@ -20,7 +21,9 @@ import {
   type SignId,
   type ZodiacPosition,
 } from "./types";
-import { normalize, SIGNS, toZodiac } from "./zodiac";
+import { houseOf, SIGNS, toZodiac } from "./zodiac";
+
+export { houseOf };
 
 /** Formato do JSON devolvido por su-ephem (engine/src/lib.rs). */
 interface RawBody {
@@ -56,18 +59,6 @@ const POINTS: readonly PointId[] = ["mean_node", "true_node", "chiron", "mean_li
 export function engineVersion(): { commit: string; wrapper: string } {
   const info = JSON.parse(getEphem().ephem.engineInfoJson()) as RawChart["engine"];
   return { commit: info.xalen_commit, wrapper: info.wrapper };
-}
-
-/** Casa (1..12) que contém a longitude, dadas as 12 cúspides. */
-export function houseOf(longitude: number, cusps: number[]): number {
-  const lon = normalize(longitude);
-  for (let i = 0; i < 12; i++) {
-    const start = cusps[i];
-    const end = cusps[(i + 1) % 12];
-    const span = normalize(end - start);
-    if (normalize(lon - start) < span) return i + 1;
-  }
-  return 1; // inalcançável com cúspides válidas
 }
 
 export function normalizeBirth(input: BirthData): { birth: NormalizedBirth; utcMs: number } {
@@ -174,7 +165,7 @@ export class XalenEphemerisEngine implements EphemerisEngine {
       points,
       angles,
       houses,
-      aspects: [],
+      aspects: natalAspects(chartBodies({ planets, points, angles })),
       moon_sign_range,
       input_hash: chartInputHash(birth, system, raw.engine.xalen_commit, raw.engine.wrapper),
     };
@@ -215,5 +206,6 @@ export function chartInputHash(
     wrapper,
     "analytical",
     CHART_METHODOLOGY_VERSION,
+    ASPECTS_VERSION,
   ]);
 }

@@ -75,3 +75,20 @@ Placidus/Equal/Whole Sign, 65° N sem fallback, 78° N com fallback, determinism
 
 **Riscos:** ΔT do modelo SMH2016 embutido no XALEN; UT1 aproximado por UTC (< 0,9 s, desprezível). Benchmark
 contra JPL (Fase 8) ainda depende de liberar `ssd.jpl.nasa.gov` na rede do ambiente.
+
+## Fase 3 — Aspectos e sinastria (2026-09-30)
+
+- `src/lib/astro/aspects.ts` (`aspects-1.0.0`): 5 aspectos maiores. Orbes só em configuração:
+  natal conj/opos 8°, trígono/quadratura 7°, sextil 5°, +2° com Sol/Lua, teto 3° para pontos (nó verdadeiro,
+  Quíron, Lilith) e 5° para ASC/MC. Sinastria: 6/6/5/5/4, +1° luminares, tetos 2° e 4°.
+- Corpos: 10 planetas + nó verdadeiro, Quíron, Lilith média + ASC/MC (se houver horário). O nó médio fica fora para
+  não duplicar o verdadeiro. Não há aspectos ângulo×ângulo nem ponto×ponto.
+- Aplicativo/separativo pela velocidade do XALEN (orbe em +1 h); `null` quando há ângulo envolvido.
+  Na sinastria é sempre `null` (não se aplica entre mapas fixos).
+- Ordem determinística: orbe crescente e, no empate, pelo par.
+- `src/lib/astro/synastry.ts`: aspectos cruzados A→B, sobreposição de casas nos dois sentidos (null se o mapa de
+  destino não tem horário) e marcação `key_contact` pelos contatos de `knowledge/astrology/synastry.md`.
+  **Sem score de compatibilidade.**
+- `ASPECTS_VERSION` entra no `input_hash` do mapa.
+- Testes: 53 no total (12 novos), incluindo fronteira de orbe, cruzamento de 0°, aplicativo/separativo, exclusões e
+  sinastria com horário desconhecido.

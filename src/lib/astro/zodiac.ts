@@ -56,3 +56,15 @@ export function toZodiac(longitude: number): ZodiacPosition {
 export function formatDms(p: Pick<ZodiacPosition, "degree" | "minute" | "second">): string {
   return `${p.degree}°${String(p.minute).padStart(2, "0")}′${String(p.second).padStart(2, "0")}″`;
 }
+
+/** Casa (1..12) que contém a longitude, dadas as 12 cúspides. */
+export function houseOf(longitude: number, cusps: number[]): number {
+  const lon = normalize(longitude);
+  for (let i = 0; i < 12; i++) {
+    const start = cusps[i];
+    const end = cusps[(i + 1) % 12];
+    const span = normalize(end - start);
+    if (normalize(lon - start) < span) return i + 1;
+  }
+  return 1; // inalcançável com cúspides válidas
+}
