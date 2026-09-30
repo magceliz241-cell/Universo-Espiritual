@@ -1,0 +1,4 @@
+BR.27	São Paulo	Sao Paulo	3448433
+BR.30	Pernambuco	Pernambuco	3392268
+BR.28	Sergipe	Sergipe	3447799
+GB.ENG	England	England	6269131

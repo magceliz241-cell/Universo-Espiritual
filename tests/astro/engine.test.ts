@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { XalenEphemerisEngine } from "@/lib/astro/xalen-engine";
+import { chartInputHash, engineVersion, normalizeBirth, XalenEphemerisEngine } from "@/lib/astro/xalen-engine";
 import { type BirthData, ChartInputError } from "@/lib/astro/types";
 import { separation } from "@/lib/astro/zodiac";
 
@@ -112,5 +112,11 @@ describe("XalenEphemerisEngine", () => {
     for (const p of Object.values(c.planets)) expect(p.retrograde).toBe(p.speed < 0);
     expect(c.planets.sun.retrograde).toBe(false);
     expect(c.planets.moon.retrograde).toBe(false);
+  });
+
+  it("hash de cache calculado antes do mapa é igual ao input_hash do mapa", () => {
+    const c = engine.calculateChartSync(SP, { houseSystem: "equal" });
+    const v = engineVersion();
+    expect(chartInputHash(normalizeBirth(SP).birth, "equal", v.commit, v.wrapper)).toBe(c.input_hash);
   });
 });

@@ -92,3 +92,46 @@ contra JPL (Fase 8) ainda depende de liberar `ssd.jpl.nasa.gov` na rede do ambie
 - `ASPECTS_VERSION` entra no `input_hash` do mapa.
 - Testes: 53 no total (12 novos), incluindo fronteira de orbe, cruzamento de 0°, aplicativo/separativo, exclusões e
   sinastria com horário desconhecido.
+
+## Fase 4 — Supabase, acesso e cidades (2026-09-30)
+
+**Modelo de acesso (decisão do produto):** plano único **vitalício** + order bump de relacionamento **vitalício**,
+também vendido dentro do app. Login por Supabase Auth com **confirmação de e-mail obrigatória** (modelo da skill
+área de membros Cakto).
+
+**Migrations** (`supabase/migrations/`, idempotentes):
+1. `…0100_core.sql`: `profiles` (criado por trigger), `birth_profiles` (1 `self` por pessoa + parceiros),
+   `birth_charts` (input normalizado, engine/commit/wrapper/método/zodíaco/casas/versão, JSON completo,
+   `unique(user_id, input_hash)`, FK composta impedindo apontar para perfil de outra pessoa), `numerology_profiles`,
+   `ai_generations` (tarefa, modelo, versões de prompt/KB, cache_key, tokens, latência, cache hit, erro),
+   `tarot_readings`, `moon_journeys`, `dream_entries`, `usage_events`. RLS em todas, e `anon` sem acesso.
+2. `…0200_memberships.sql`: `memberships` (`base`, `love`, pedidos, `revoked_order_ids`), `cakto_webhook_events`
+   (sem segredo), funções `cakto_apply_purchase` / `cakto_apply_revocation` (só service_role), `my_access()`
+   (só a própria pessoa), trigger que liga a compra à conta **só quando o e-mail é confirmado**.
+   Regras: bump antes do principal não libera nada; reembolso do principal remove tudo; reembolso do bump remove
+   só `love`; pedido revogado não reativa; reembolso antes da compra bloqueia aquele pedido.
+3. `…0300_cities.sql`: `cities` (GeoNames) com `pg_trgm`, `search_cities()` (prefixo por população e depois similaridade),
+   leitura pública.
+
+**App**
+- `src/proxy.ts` (o antigo middleware, renomeado no Next 16) → `lib/supabase/proxy.ts`: renova a sessão, valida o JWT
+  (`getClaims`), consulta `my_access()` e define os cabeçalhos internos `x-su-access/x-su-tier/x-su-user` (os que vêm do
+  navegador são apagados). Sem login → `/auth/login?next=`; sem compra → `/acesso`; sem Supabase configurado →
+  bloqueia (falha fechada). `SU_DEV_FAKE_ACCESS` só vale em `next dev`.
+- Auth: `/auth/sign-up`, `/auth/login` (com "reenviar confirmação"), `/auth/forgot-password`,
+  `/auth/update-password`, `/auth/confirm` (`verifyOtp` com `token_hash`), `/auth/callback`, `/auth/logout`,
+  `/auth/error`, `/acesso`. `safeNext` bloqueia redirecionamento externo.
+- Webhook Cakto `/api/webhooks/cakto`: segredo no corpo ou header, comparação em tempo constante, classificação **por
+  ID** (`CAKTO_MAIN_IDS` / `CAKTO_LOVE_IDS`), plano + bump no mesmo evento ou separados, idempotente por `event_key`,
+  500 em erro de banco (a Cakto tenta de novo). `GET` mostra só true/false.
+- `lib/charts/service.ts`: `getOrCreateChart` procura pelo `input_hash` antes de calcular.
+- Cidades: `/api/cities?q=`, `scripts/import-cities.ts` (CSV ou upsert via REST) com fixture de teste.
+- Design tokens do `DESIGN_SYSTEM.md` em `globals.css` (Tailwind 4 `@theme`), Instrument Serif + Inter, componentes
+  base (`Button`, `Card`, `Field`, `Notice`, `Wordmark`, `OrbitalDecoration`).
+
+**Testes:** 18 de banco (Postgres 16 local + stub do Supabase) e 22 novos unitários (webhook, rotas, cidades).
+Smoke no `next start` sem Supabase: rotas protegidas redirecionam para `/auth/error?reason=config`, e o webhook
+responde 500 sem segredo configurado.
+
+**Pendências:** e2e do fluxo de login com Auth real/simulado (Playwright), a planejar no polimento; e importar as
+cidades de verdade (a rede daqui bloqueia `download.geonames.org`). O guia completo está em `docs/SETUP.md`.
