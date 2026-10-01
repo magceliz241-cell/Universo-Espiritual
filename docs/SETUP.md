@@ -1,6 +1,6 @@
 # Configuração — Supabase, Vercel e Cakto
 
-Guia para colocar o Seu Universo no ar. Os passos que envolvem senhas, chaves e SQL de produção são feitos por
+Guia para colocar o Astarot no ar. Os passos que envolvem senhas, chaves e SQL de produção são feitos por
 você. O Claude deixa tudo pronto e explica cada passo.
 
 ## 1. Supabase (projeto novo)
@@ -22,15 +22,15 @@ você. O Claude deixa tudo pronto e explica cada passo.
 5. **Authentication → Emails → SMTP** (recomendado): Gmail do produto com senha de app
    (`smtp.gmail.com`, porta 465). Limite de ~500 e-mails/dia.
 6. **Authentication → Emails → Templates**: use texto simples, porque templates cheios de HTML caem no spam.
-   - *Confirm signup* — assunto `Confirme seu cadastro no Seu Universo`:
+   - *Confirm signup* — assunto `Confirme seu cadastro no Astarot`:
      ```html
      <p>Oi!</p>
-     <p>Recebemos seu cadastro no Seu Universo. Para ativar sua conta, clique no link abaixo:</p>
+     <p>Recebemos seu cadastro no Astarot. Para ativar sua conta, clique no link abaixo:</p>
      <p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email&next=/">Confirmar meu e-mail</a></p>
      <p>Se não foi você que criou essa conta, é só ignorar este e-mail.</p>
-     <p>Seu Universo</p>
+     <p>Astarot</p>
      ```
-   - *Reset password* — assunto `Crie uma nova senha no Seu Universo`:
+   - *Reset password* — assunto `Crie uma nova senha no Astarot`:
      ```html
      <p>Oi!</p>
      <p>Para criar uma nova senha, clique no link abaixo:</p>
@@ -80,8 +80,8 @@ Conferência: `GET /api/health/engine` → `ok: true`; `GET /api/webhooks/cakto`
 
 ## 4. Cakto
 
-1. Produto principal (acesso vitalício) + order bump "Relacionamento" (vitalício) + oferta avulsa do bump para
-   vender dentro do app (o link recebe `?email=` preenchido).
+1. Produto principal **Astarot** (R$ 19,90, acesso sem expiração) + order bump **Astarot Love** (R$ 9,90, sem
+   expiração) + oferta avulsa do Astarot Love para vender dentro do app (o link recebe `?email=` preenchido).
 2. "Acesso por e-mail" de cada produto → `https://<app>/auth/sign-up`.
 3. Integrações → Webhooks → URL `https://<app>/api/webhooks/cakto`, eventos **Compra aprovada**, **Reembolso** e
    **Chargeback**, com **todos os produtos marcados**. Copie o segredo para `CAKTO_WEBHOOK_SECRET`.

@@ -15,7 +15,7 @@ export async function LoveOffer() {
       <Card className="relative overflow-hidden p-6 md:p-10">
         <div aria-hidden className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-wine/30 blur-3xl" />
         <div className="relative">
-          <p className="eyebrow mb-3 text-rose">Relacionamentos</p>
+          <p className="eyebrow mb-3 text-rose">Astarot Love</p>
           <h1 className="text-display text-[2.3rem] md:text-[3rem]">O seu céu, em relação</h1>
           <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-ink-2">
             Entenda como você ama pela linguagem do seu mapa, compare o seu céu com o de outra pessoa e faça o Tarot do
@@ -36,12 +36,12 @@ export async function LoveOffer() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             {url ? (
               <ButtonLink href={url} className="bg-rose text-bg hover:bg-[#d693ab]">
-                Liberar relacionamentos
+                Liberar o Astarot Love
               </ButtonLink>
             ) : (
               <p className="text-sm text-ink-3">A oferta estará disponível em breve.</p>
             )}
-            <p className="text-xs text-ink-3">Acesso vitalício. Liberado na hora, na mesma conta.</p>
+            <p className="text-xs text-ink-3">Pagamento único. Liberado na hora, na mesma conta.</p>
           </div>
         </div>
       </Card>

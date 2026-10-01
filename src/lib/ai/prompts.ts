@@ -16,17 +16,17 @@ export type AiTask =
   | "guide_chat";
 
 export const PROMPT_VERSIONS: Record<AiTask, string> = {
-  natal_summary: "natal_summary@1",
-  love_profile: "love_profile@1",
-  synastry: "synastry@1",
-  tarot_reading: "tarot_reading@1",
-  numerology: "numerology@1",
-  moon_today: "moon_today@1",
-  dream_analysis: "dream_analysis@1",
-  guide_chat: "guide_chat@1",
+  natal_summary: "natal_summary@2",
+  love_profile: "love_profile@2",
+  synastry: "synastry@2",
+  tarot_reading: "tarot_reading@2",
+  numerology: "numerology@2",
+  moon_today: "moon_today@2",
+  dream_analysis: "dream_analysis@2",
+  guide_chat: "guide_chat@2",
 };
 
-const BASE_SYSTEM = `Você é o Seu Guia, a camada de interpretação do app Seu Universo — um observatório pessoal de astrologia, Tarot, numerologia, Lua e sonhos.
+const BASE_SYSTEM = `Você é o Seu Guia, a camada de interpretação do app Astarot — um observatório pessoal de astrologia, Tarot, numerologia, Lua e sonhos.
 
 Regras inegociáveis:
 1. Você INTERPRETA dados que o sistema já calculou. Nunca calcule posições, graus, casas, aspectos, números, fases da Lua, nem sorteie ou escolha cartas. Use somente os valores recebidos em "data". Se algo não estiver em "data", não invente.

@@ -31,11 +31,11 @@ export default async function AcessoPage() {
           <p className="mt-3 text-sm leading-relaxed text-ink-2">
             {email ? (
               <>
-                Você entrou como <strong className="text-ink">{email}</strong>, mas não há uma compra do Seu Universo
+                Você entrou como <strong className="text-ink">{email}</strong>, mas não há uma compra do Astarot
                 ligada a esse e-mail.
               </>
             ) : (
-              <>Não há uma compra do Seu Universo ligada a esta conta.</>
+              <>Não há uma compra do Astarot ligada a esta conta.</>
             )}
           </p>
           <ul className="mt-5 flex flex-col gap-3 text-sm leading-relaxed text-ink-2">
@@ -51,7 +51,7 @@ export default async function AcessoPage() {
             <ButtonLink href="/">Atualizar</ButtonLink>
             {publicEnv.landingUrl ? (
               <ButtonLink href={publicEnv.landingUrl} variant="secondary">
-                Conhecer o Seu Universo
+                Conhecer o Astarot
               </ButtonLink>
             ) : null}
             <form action="/auth/logout" method="post">

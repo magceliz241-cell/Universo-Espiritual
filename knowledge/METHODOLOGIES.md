@@ -1,4 +1,4 @@
-# Metodologias — Seu Universo
+# Metodologias — Astarot
 
 ## 1. Astrologia ocidental tropical — MVP
 

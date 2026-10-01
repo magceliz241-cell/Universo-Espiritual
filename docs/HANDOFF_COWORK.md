@@ -1,4 +1,4 @@
-# Seu Universo: passagem para o Claude Cowork
+# Astarot: passagem para o Claude Cowork
 
 > Para: Claude Cowork, operando o Chrome do Guilherme.
 > De: a sessão do Claude Code que construiu o app (30/09 a 01/10/2026).
@@ -24,13 +24,14 @@
 
 ## 1. O que é o produto
 
-**Seu Universo** é uma área de membros de espiritualidade, um "observatório pessoal". Tem mapa astral, Lua, Tarot,
+**Astarot** é uma área de membros de espiritualidade, um "observatório pessoal". Tem mapa astral, Lua, Tarot,
 numerologia, sonhos, amor/mapa do casal e o **Seu Guia** (IA). A regra central: **o software calcula, a IA só
 interpreta.**
 
 **Modelo de venda (decidido pelo Guilherme):**
-- **Plano único**, acesso **vitalício**.
-- **Order bump "Relacionamentos"**, também **vitalício**: libera Amor, Mapa do casal e Tarot do amor.
+- Produto principal **Astarot** (R$ 19,90, pagamento único; o acesso não expira).
+- Order bump **Astarot Love** (R$ 9,90, também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
+- "Vitalício" é característica, não nome de plano: nos produtos da Cakto use os nomes **Astarot** e **Astarot Love**.
 - O bump **também é vendido dentro do app**. Quem comprou sem ele vê a oferta, e o checkout abre com o e-mail da
   conta preenchido.
 - Login pelo Supabase com **confirmação de e-mail obrigatória**. A compra só se liga à conta depois que o e-mail é
@@ -63,7 +64,7 @@ Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/art
 A ordem importa: com a Vercel no ar, o Guilherme já consegue testar o app antes da Cakto existir.
 
 ### Etapa 1: Merge do código na `main`
-1. No GitHub, abra um Pull Request de `claude/clever-bell-8ngyya` → `main` (título: "Seu Universo: MVP").
+1. No GitHub, abra um Pull Request de `claude/clever-bell-8ngyya` → `main` (título: "Astarot: MVP").
 2. **Peça OK ao Guilherme** e faça o merge.
    - Se ele preferir não fazer merge ainda, a Vercel pode publicar direto da branch.
 
@@ -114,7 +115,7 @@ o CSV.
 2. Para liberar o acesso dele sem a Cakto, prepare este SQL (**ele roda**), trocando o e-mail:
    ```sql
    select public.cakto_apply_purchase('email-dele@exemplo.com', 'main', 'teste-manual-1');
-   select public.cakto_apply_purchase('email-dele@exemplo.com', 'love', 'teste-manual-2'); -- relacionamentos
+   select public.cakto_apply_purchase('email-dele@exemplo.com', 'love', 'teste-manual-2'); -- Astarot Love
    ```
    Recarregue o app: ele entra no Início.
 3. Roteiro: cadastrar nascimento → Mapa → "Ver minha leitura" (IA real) → Tarot → Lua → Numerologia → Sonhos → Seu Guia →
@@ -126,8 +127,8 @@ o CSV.
 ### Etapa 6: Cakto
 Siga `docs/SETUP.md` §4:
 1. Ele cria e confirma os produtos:
-   - **principal** (vitalício);
-   - **order bump "Relacionamentos"** (vitalício);
+   - **Astarot** (principal, sem expiração);
+   - **order bump "Astarot Love"** (sem expiração);
    - uma **oferta avulsa do bump** para vender dentro do app.
 2. Em cada produto, "Acesso por e-mail" → `https://<app>/auth/sign-up`.
 3. Webhook: URL `https://<app>/api/webhooks/cakto`, eventos **Compra aprovada + Reembolso + Chargeback**, **todos os
@@ -148,11 +149,11 @@ Siga `docs/SETUP.md` §4:
 ### Etapa 7: Publicar a landing (já está pronta em `landing/`)
 Guia completo em `landing/README.md`. Em resumo:
 1. Em `landing/config.js` (é o **único** arquivo a editar), com o Guilherme:
-   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Relacionamentos (R$ 9,90)** dentro
+   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Astarot Love (R$ 9,90)** dentro
      desse mesmo checkout;
    - `APP_URL`: URL do app, sem barra no fim;
    - `CONTACT_EMAIL`: e-mail de suporte;
-   - `META_PIXEL_ID`: pixel via UTMify **da conta do Seu Universo** (vazio = sem pixel).
+   - `META_PIXEL_ID`: pixel via UTMify **da conta do Astarot** (vazio = sem pixel).
 2. Script de captura de UTMs da UTMify: colar no `<head>` do `landing/index.html`, no comentário indicado.
 3. Vercel: *Add New → Project* com o **mesmo repositório**, **Root Directory = `landing`**, preset **Other**, sem
    build e sem variáveis.

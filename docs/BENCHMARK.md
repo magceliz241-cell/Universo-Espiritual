@@ -1,4 +1,4 @@
-# Benchmark de precisão — Seu Universo
+# Benchmark de precisão — Astarot
 
 > Gerado por `npm run benchmark`. Motor: XALEN commit `cc6edbec1f748ebdc4950ae6198f575c5ada73fa` via engine/ (su-ephem), modo analítico.
 > As margens abaixo são **limites de aceitação do nosso benchmark**, não uma afirmação de precisão absoluta do XALEN.

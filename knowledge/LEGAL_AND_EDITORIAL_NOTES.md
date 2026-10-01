@@ -15,7 +15,7 @@ O NOTICE atual identifica fontes externas, incluindo NASA/JPL, IAU, ESA/Hipparco
 
 ## Swiss Ephemeris
 
-Não utilizar Swiss Ephemeris como dependência/runtime do Seu Universo.
+Não utilizar Swiss Ephemeris como dependência/runtime do Astarot.
 
 ## Conteúdo
 

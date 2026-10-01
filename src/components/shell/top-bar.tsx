@@ -13,7 +13,7 @@ export function TopBar() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 md:h-16 md:px-6">
-        <Link href="/" aria-label="Seu Universo — início">
+        <Link href="/" aria-label="Astarot — início">
           <Wordmark />
         </Link>
         <nav aria-label="Seções" className="hidden items-center gap-1 md:flex">

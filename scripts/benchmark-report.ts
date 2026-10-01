@@ -13,7 +13,7 @@ const row = (label: string, s: S, f: (x: number) => string, limit: string, ok: b
   `| ${label} | ${s.n} | ${f(s.max)} | ${f(s.mean)} | ${f(s.rms)} | ${f(s.p95)} | ${f(s.p99)} | ${limit} | ${ok === null ? "registrado" : ok ? "✅" : "❌"} |`;
 
 const lines: string[] = [];
-lines.push("# Benchmark de precisão — Seu Universo", "");
+lines.push("# Benchmark de precisão — Astarot", "");
 lines.push(`> Gerado por \`npm run benchmark\`. Motor: XALEN commit \`${info?.xalen_commit ?? "?"}\` via ${info?.wrapper ?? "su-ephem"}, modo analítico.`);
 lines.push("> As margens abaixo são **limites de aceitação do nosso benchmark**, não uma afirmação de precisão absoluta do XALEN.", "");
 lines.push("## Política de fontes", "");

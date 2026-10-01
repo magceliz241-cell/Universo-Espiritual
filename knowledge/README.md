@@ -1,6 +1,6 @@
-# Seu Universo — Knowledge Base
+# Astarot — Knowledge Base
 
-Esta pasta contém a base editorial, metodológica e técnica usada pelo Seu Universo.
+Esta pasta contém a base editorial, metodológica e técnica usada pelo Astarot.
 
 ## Hierarquia de confiança
 

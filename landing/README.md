@@ -1,22 +1,22 @@
-# Landing do Seu Universo
+# Landing do Astarot
 
 Página de vendas estática (HTML, CSS e JS puros, sem build), publicada como um **segundo projeto na Vercel**, separado
 do app.
 
 | Arquivo | O que é |
 |---|---|
-| `index.html` | A página: hero com o mapa de exemplo e o cartão "O céu agora", céu ao vivo (Sol, Lua e planetas), problema, método, telas do app, Relacionamentos, teste "Descubra por onde começar", oferta, garantia, FAQ |
+| `index.html` | A página: hero com o mapa de exemplo e o cartão "O céu agora", céu ao vivo (Sol, Lua e planetas), problema, método, telas do app, Astarot Love, teste "Descubra por onde começar", oferta, garantia, FAQ |
 | `config.js` | **Única coisa a editar:** link do checkout, endereço do app, e-mail, pixel e preços exibidos |
 | `termos.html`, `privacidade.html` | Termos de Uso e Política de Privacidade (LGPD), com `legal.css` e `legal.js` |
 | `assets.js` | **Gerado.** Posições do Sol, da Lua e dos planetas (set/2026 a dez/2030), instantes das Luas Nova e Cheia e a roda do mapa de exemplo, calculados com o mesmo motor do app (XALEN) |
 | `sky.js` | Céu ao vivo: interpola as posições de `assets.js` para o segundo atual |
-| `img/` | Telas do app (`app-*.webp`), imagem de compartilhamento (`og.jpg`) e ícone |
+| `img/` | Telas do app (`app-*.webp`), imagens de clima (`amor-orbitas.webp` na seção do Astarot Love, `astrolabio.webp` no bloco do teste, `ceu-final.webp` no fechamento), imagem de compartilhamento (`og.jpg`) e ícone |
 | `vercel.json` | URLs sem `.html`, cabeçalhos de segurança e cache das imagens |
 
 ## Antes de publicar
 
 1. Em `config.js`, preencha:
-   - `CHECKOUT_URL`: checkout da Cakto do **plano principal (R$ 19,90)**, com o order bump **Relacionamentos
+   - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump **Astarot Love
      (R$ 9,90)** configurado dentro desse mesmo checkout.
    - `APP_URL`: endereço do app, sem barra no fim (aparece o link "Já comprei · Entrar").
    - `CONTACT_EMAIL`: e-mail de suporte (rodapé, FAQ, termos e privacidade).
@@ -28,7 +28,7 @@ do app.
    "UTMify - Script de captura de UTMs".
 3. **Imagem de compartilhamento:** depois do primeiro deploy, troque em `index.html`
    `<meta property="og:image" content="img/og.jpg">` pelo endereço completo
-   (ex.: `https://seuuniverso.com.br/img/og.jpg`). WhatsApp e Facebook só leem endereço completo.
+   (ex.: `https://astarot.com.br/img/og.jpg`). WhatsApp e Facebook só leem endereço completo.
 4. Confira se os preços em `config.js` batem com os da Cakto. A página só **exibe** o preço; quem cobra é a Cakto.
 
 ## Publicar na Vercel
@@ -65,5 +65,8 @@ do app.
   roda no CI.
 - **Telas do app:** os `img/app-*.webp` vieram do ambiente de testes (o Guia aparece sem leitura porque a IA ainda
   não estava conectada). Quando o app estiver no ar com a IA real, vale trocar por capturas novas, com 780×1688 px.
-- **Copy:** siga as regras de `knowledge/LEGAL_AND_EDITORIAL_NOTES.md`: sem promessa de resultado, sem porcentagem de
-  compatibilidade, sem medo nem urgência espiritual, linguagem neutra em gênero.
+- **Copy:** a página fala com quem acredita e quer o produto: sem avisos repetidos de "leitura simbólica" e sem
+  chamar o Guia de IA (ele é apresentado como quem traduz o mapa para linguagem simples). A transparência legal fica
+  nos Termos e na Privacidade, que continuam dizendo que as leituras são geradas por inteligência artificial. Limites
+  que continuam valendo (`knowledge/LEGAL_AND_EDITORIAL_NOTES.md`): nenhuma promessa de resultado garantido (amor,
+  dinheiro, saúde, "volta"), sem porcentagem de compatibilidade, linguagem neutra em gênero.

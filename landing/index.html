@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Seu Universo: o seu mapa astral, a Lua, o Tarot e um Guia no seu celular</title>
-<meta name="description" content="Mapa astral calculado com dados astronômicos reais, Lua do dia, Tarot, numerologia, diário de sonhos e o Seu Guia, que conversa com você a partir do seu mapa. Acesso vitalício.">
-<meta property="og:title" content="Seu Universo: não é sobre o seu signo, é sobre o seu céu inteiro">
-<meta property="og:description" content="Mapa astral, Lua, Tarot, numerologia, sonhos e um Guia no seu celular. Acesso vitalício.">
+<title>Astarot: o seu mapa astral, a Lua, o Tarot e um Guia no seu celular</title>
+<meta name="description" content="Mapa astral calculado com dados astronômicos reais, Lua do dia, Tarot, numerologia, diário de sonhos e o Seu Guia, que conversa com você a partir do seu mapa. Pagamento único.">
+<meta property="og:title" content="Astarot: não é só seu signo, é o seu céu inteiro">
+<meta property="og:description" content="Mapa astral, Lua, Tarot, numerologia, sonhos e o Seu Guia no seu celular. Pagamento único.">
 <meta property="og:image" content="img/og.jpg">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#090812">
@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-  /* Seu Universo — mesmos tokens do app (docs/DESIGN_SYSTEM.md). Página sempre escura. */
+  /* Astarot — mesmos tokens do app (docs/DESIGN_SYSTEM.md). Página sempre escura. */
   :root{
     --bg:#090812; --surface:#12101d; --surface-2:#181526; --surface-3:#201c2d;
     --line:rgba(255,255,255,.07); --line-strong:rgba(255,255,255,.13);
@@ -190,8 +190,30 @@
   .love li .g{font-family:var(--glyph);font-size:22px;color:var(--rose);text-align:center;line-height:1.3}
   .love li b{display:block;color:var(--ink);font-weight:500}
   .love-phones{display:flex;gap:14px;justify-content:center}
+  .love-bg{position:absolute;z-index:-1;top:-95px;right:-40px;width:380px;height:auto;mix-blend-mode:screen;pointer-events:none;
+    -webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent 92%);mask-image:linear-gradient(to bottom,#000 55%,transparent 92%)}
   .love-phones .phone{width:min(46%,220px)}
   .love-phones .phone:nth-child(2){transform:translateY(28px)}
+  .btn-rose{background:var(--rose);color:#1d0f17;box-shadow:0 14px 34px -14px rgba(201,130,156,.8)}
+  .btn-rose:hover{background:#d695ad;box-shadow:0 20px 40px -14px rgba(201,130,156,.9)}
+  .love .lead{margin-top:14px;font-size:17px}
+  .love-cta{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;padding:18px 20px;border-radius:18px;background:rgba(201,130,156,.10);border:1px solid rgba(201,130,156,.35)}
+  .love-price small{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+  .love-price b{display:block;font-family:var(--display);font-weight:400;font-size:40px;line-height:1.05;white-space:nowrap}
+  .love-price > span{display:block;font-size:13px;color:var(--ink-2)}
+  .love-cta .btn{flex:1 1 200px}
+  .offer-pair{display:grid;gap:34px;max-width:1080px;margin:40px auto 0;align-items:start}
+  .offer-pair .offer{margin:0;max-width:none}
+  .offer-love{border-color:rgba(201,130,156,.6);box-shadow:0 0 0 5px rgba(201,130,156,.07),0 40px 90px -40px rgba(201,130,156,.55);
+    background:radial-gradient(120% 70% at 100% 0%,rgba(201,130,156,.18),transparent 55%),linear-gradient(170deg,#21151f,#12101d 62%)}
+  .offer-love .offer-tag{background:var(--rose);color:#1d0f17}
+  .offer-love .offer-list li .g,.offer-love .price-sub b{color:var(--rose)}
+  .love-title{font-family:var(--display);font-weight:400;font-size:32px;line-height:1.1;display:flex;align-items:center;gap:10px}
+  .love-title .glyph{color:var(--rose);font-size:26px}
+  .combo{margin-top:16px;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line-strong);font-size:15px;color:var(--ink-2);text-align:center}
+  .combo b{color:var(--ink);font-weight:600}
+  .love-how{margin-top:14px;font-size:13.5px;color:var(--ink-3);text-align:center;line-height:1.5}
+  .love-how b{color:var(--ink);font-weight:500}
   .love-note{margin-top:26px;display:inline-block;font-size:14px;color:var(--ink);padding:10px 14px;border-radius:12px;background:rgba(201,130,156,.10);border:1px solid rgba(201,130,156,.3)}
   .love-note b{color:var(--rose);font-weight:600;white-space:nowrap}
 
@@ -204,6 +226,9 @@
   .quiz-points li i{flex:none;width:24px;height:24px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-style:normal;font-family:var(--display);font-size:14px;color:var(--gold);margin-top:2px}
   .orbit-art{position:relative;width:100%;max-width:180px;aspect-ratio:1/1;margin:0 auto}
   .orbit-art svg{width:100%;height:100%}
+  .quiz-art{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:16/10;border:1px solid rgba(214,181,110,.2)}
+  .quiz-art img{width:100%;height:100%;object-fit:cover;object-position:68% 42%}
+  .quiz-art::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,16,29,.55),transparent 45%)}
 
   /* ---------- OFERTA ---------- */
   .offer-sec{text-align:center}
@@ -252,7 +277,7 @@
   .seal small{font-size:10px;letter-spacing:.16em;text-transform:uppercase}
   .not-list{list-style:none;display:grid;gap:12px;margin-top:20px}
   .not-list li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
-  .not-list li::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--rose);margin-top:12px}
+  .not-list li::before{content:"✓";color:var(--gold);font-weight:600;line-height:1.45}
   .not-list b{color:var(--ink);font-weight:500}
 
   /* ---------- FAQ ---------- */
@@ -268,7 +293,11 @@
 
   /* ---------- FINAL ---------- */
   .final{text-align:center;padding:100px 0 110px;overflow:hidden}
-  .final .rings{position:absolute;left:50%;top:50%;width:900px;max-width:none;transform:translate(-50%,-50%);opacity:.55;pointer-events:none}
+  .final{min-height:680px;display:flex;align-items:flex-start;padding:110px 0 260px}
+  .final-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 100%;pointer-events:none}
+  .final::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(to bottom,var(--bg) 0%,rgba(9,8,18,.55) 22%,rgba(9,8,18,.25) 55%,rgba(9,8,18,.1) 80%,var(--bg) 100%),radial-gradient(60% 45% at 50% 32%,rgba(9,8,18,.6),transparent 70%)}
+  .final .wrap{width:100%}
   .final .h2{margin:0 auto;max-width:17ch}
   .final .lead{margin:18px auto 30px}
   footer{position:relative;z-index:1;padding:40px 0 46px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--ink-3)}
@@ -376,6 +405,10 @@
     .now-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
     .price-sub{text-align:right}
     .orbit-art{max-width:280px}
+    .quiz-art{aspect-ratio:4/5;max-width:340px;justify-self:end;width:100%}
+    .love-bg{top:-280px;right:0;width:800px}
+    .love-phones{align-self:end}
+    .final{min-height:760px;padding:140px 0 300px}
     .phones .phone:nth-child(even){transform:translateY(-26px)}
     .phone-dots{display:none}
     .phones .phone-m{display:none}
@@ -383,6 +416,8 @@
     .love-grid{grid-template-columns:1.1fr .9fr;gap:50px}
     .quiz-cta{grid-template-columns:1.3fr .7fr;padding:56px 52px}
     .offer{padding:46px 44px 34px}
+    .offer-pair{grid-template-columns:1fr 1fr;gap:26px}
+    .offer-pair .offer{padding:44px 36px 32px}
     .truth{grid-template-columns:1fr 1fr}
     .truth-card{padding:44px 40px}
   }
@@ -390,13 +425,13 @@
 </head>
 <body>
 
-<div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span><span class="js-timer-off">Acesso imediato no celular · </span>Acesso vitalício por R$&nbsp;<span class="js-price">19,90</span> · 7 dias de garantia</div>
+<div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span><span class="js-timer-off">Acesso imediato no celular · </span>Astarot por R$&nbsp;<span class="js-price">19,90</span>, pagamento único · 7 dias de garantia</div>
 
 <nav class="nav" aria-label="Topo">
   <div class="wrap">
-    <a class="brand" href="#" aria-label="Seu Universo">
+    <a class="brand" href="#" aria-label="Astarot">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>
-      Seu Universo
+      Astarot
     </a>
     <a class="login js-app-link" href="#" hidden>Já comprei · Entrar</a>
   </div>
@@ -407,12 +442,12 @@
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">Mapa astral · Lua · Tarot · Numerologia · Sonhos</span>
-      <h1>Não é sobre o seu signo. <em>É sobre o seu céu inteiro.</em></h1>
-      <p class="lead">O Seu Universo calcula o céu exato do momento em que você nasceu e transforma isso em leituras feitas para você. <strong>Mapa astral, Lua do dia, Tarot, numerologia, diário de sonhos e um Guia que conversa com você a partir do seu mapa.</strong> Tudo no seu celular.</p>
+      <h1>Não é só seu signo. <em>É o seu céu inteiro.</em></h1>
+      <p class="lead">O Astarot calcula o céu exato do momento em que você nasceu e transforma isso em leituras feitas para você. <strong>Mapa astral, Lua do dia, Tarot, numerologia, diário de sonhos e o Seu Guia, que traduz tudo isso para uma linguagem simples.</strong> Tudo no seu celular.</p>
       <div class="chips">
         <span class="chip"><i></i>Posições calculadas, não adivinhadas</span>
         <span class="chip"><i></i>Leituras feitas para o seu mapa</span>
-        <span class="chip"><i></i>Acesso vitalício</span>
+        <span class="chip"><i></i>Pagamento único, sem mensalidade</span>
       </div>
       <div class="hero-cta">
         <a class="btn" href="#oferta">
@@ -495,9 +530,9 @@
       </article>
       <article class="mstep s3 reveal">
         <span class="n">3</span>
-        <h3>O Seu Guia lê com você</h3>
-        <p>Uma IA que interpreta só o que foi calculado, com base numa biblioteca editorial própria. Ela não inventa posições e não sorteia cartas.</p>
-        <p class="tech">Linguagem simbólica, para refletir. Sem previsões garantidas.</p>
+        <h3>O Seu Guia traduz tudo para você</h3>
+        <p>Ele pega todos esses dados e transforma em uma linguagem fácil, como uma conversa: o que cada posição diz sobre a sua personalidade, os seus relacionamentos e o seu momento. Sem termos técnicos.</p>
+        <p class="tech">E você pode perguntar o que quiser: ele responde a partir do seu mapa.</p>
       </article>
     </div>
     <div class="rule reveal">
@@ -511,7 +546,7 @@
 <!-- ================= 4. APP ================= -->
 <section class="app-sec" id="app" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow reveal">Dentro do Seu Universo</span>
+    <span class="eyebrow reveal">Dentro do Astarot</span>
     <h2 class="h2 reveal">Um observatório pessoal <em>no seu bolso.</em></h2>
     <div class="phones reveal">
       <figure class="phone"><div class="frame"><img src="img/app-inicio.webp" alt="Tela inicial com a fase da Lua de hoje e o Sol, a Lua e o Ascendente" loading="lazy" width="390" height="844"></div><p><b>Seu céu hoje</b>A Lua do dia e o resumo do seu mapa.</p></figure>
@@ -531,17 +566,25 @@
 <section id="amor" style="padding-top:0">
   <div class="wrap">
     <div class="love">
+      <img class="love-bg" src="img/amor-orbitas.webp" alt="" loading="lazy" width="900" height="1125" aria-hidden="true">
       <div class="love-grid">
         <div>
-          <span class="eyebrow reveal">Relacionamentos</span>
+          <span class="eyebrow reveal">Astarot Love</span>
           <h2 class="h2 reveal">E quando o assunto é <em>amor.</em></h2>
+          <p class="lead reveal">Entenda como você ama, por que se atrai por certas pessoas e como o seu céu conversa com o de quem mexe com você.</p>
           <ul class="reveal">
-            <li><span class="g" aria-hidden="true">♀&#xFE0E;</span><div><b>Perfil amoroso</b>Como você ama, o que te atrai e do que precisa, pela linguagem de Vênus, Marte e da Lua.</div></li>
-            <li><span class="g" aria-hidden="true">☍&#xFE0E;</span><div><b>Mapa do casal</b>Compare o seu céu com o de outra pessoa: afinidades, pontos de atenção e o que um desperta no outro.</div></li>
-            <li><span class="g" aria-hidden="true">✦</span><div><b>Tarot do amor</b>Três cartas para refletir sobre o momento da relação.</div></li>
+            <li><span class="g" aria-hidden="true">♀&#xFE0E;</span><div><b>Seu perfil amoroso completo</b>Como você ama, o que te atrai, do que você precisa para se sentir em paz no amor e onde costuma tropeçar, a partir de Vênus, Marte, da Lua e das casas do amor.</div></li>
+            <li><span class="g" aria-hidden="true">☍&#xFE0E;</span><div><b>Mapa do casal</b>O seu céu lado a lado com o da outra pessoa, planeta por planeta.</div></li>
+            <li><span class="g" aria-hidden="true">☌&#xFE0E;</span><div><b>As conexões entre vocês</b>Os aspectos que ligam os dois mapas, do mais forte ao mais sutil: onde há química, onde há atrito.</div></li>
+            <li><span class="g" aria-hidden="true">✧</span><div><b>A leitura do casal pelo Seu Guia</b>Afinidades, diferenças, comunicação, afeto e desejo, e o que cada um desperta no outro, explicado em linguagem simples.</div></li>
+            <li><span class="g" aria-hidden="true">⚭</span><div><b>Compare com mais de uma pessoa</b>Parceiro, crush, ex: adicione quem quiser e veja cada combinação.</div></li>
+            <li><span class="g" aria-hidden="true">✦</span><div><b>Tarot do amor</b>Três cartas sobre a energia do momento, a dinâmica entre vocês e o que observar agora.</div></li>
           </ul>
-          <p class="love-note reveal">Complemento opcional no checkout: <b>+ R$&nbsp;<span class="js-bump">9,90</span></b>, também vitalício</p>
-          <p class="fine reveal" style="margin-top:12px">Sem porcentagem de compatibilidade e sem promessa de “volta”. Só leitura cuidadosa de dois céus.</p>
+          <div class="love-cta reveal">
+            <div class="love-price"><small>Astarot Love</small><b>+ R$&nbsp;<span class="js-bump">9,90</span></b><span>no mesmo checkout</span></div>
+            <a class="btn btn-rose" href="#oferta-amor">Quero o Astarot Love</a>
+          </div>
+          <p class="fine reveal" style="margin-top:14px">Nada de porcentagem de compatibilidade: é uma leitura de verdade dos dois mapas.</p>
         </div>
         <div class="love-phones reveal">
           <figure class="phone"><div class="frame"><img src="img/app-amor.webp" alt="Área de amor com Vênus, Marte, Lua e Sol" loading="lazy" width="390" height="844"></div></figure>
@@ -566,9 +609,8 @@
         </ul>
         <button type="button" class="btn js-quiz" style="margin-top:26px">Fazer o teste</button>
       </div>
-      <div class="orbit-art" aria-hidden="true">
-        <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="92" stroke="#f5f1ea" stroke-opacity=".12"/><circle cx="100" cy="100" r="64" stroke="#f5f1ea" stroke-opacity=".10" stroke-dasharray="2 5"/><circle cx="100" cy="100" r="36" stroke="#f5f1ea" stroke-opacity=".14"/><ellipse cx="100" cy="100" rx="92" ry="34" transform="rotate(-22 100 100)" stroke="#c58bcf" stroke-opacity=".35"/><circle cx="185" cy="66" r="5" fill="#d6b56e"/><circle cx="46" cy="148" r="3" fill="#c58bcf"/><circle cx="100" cy="100" r="9" fill="#f5f1ea" fill-opacity=".9"/></svg>
-      </div>
+      <div class="quiz-art" aria-hidden="true"><img src="img/astrolabio.webp" alt="" loading="lazy" width="800" height="1000"></div>
+      <template id="orbitTpl"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="92" stroke="#f5f1ea" stroke-opacity=".12"/><circle cx="100" cy="100" r="64" stroke="#f5f1ea" stroke-opacity=".10" stroke-dasharray="2 5"/><circle cx="100" cy="100" r="36" stroke="#f5f1ea" stroke-opacity=".14"/><ellipse cx="100" cy="100" rx="92" ry="34" transform="rotate(-22 100 100)" stroke="#c58bcf" stroke-opacity=".35"/><circle cx="185" cy="66" r="5" fill="#d6b56e"/><circle cx="46" cy="148" r="3" fill="#c58bcf"/><circle cx="100" cy="100" r="9" fill="#f5f1ea" fill-opacity=".9"/></svg></template>
     </div>
   </div>
 </section>
@@ -576,12 +618,13 @@
 <!-- ================= 7. OFERTA ================= -->
 <section id="oferta" class="offer-sec">
   <div class="wrap">
-    <span class="eyebrow reveal">Acesso vitalício</span>
+    <span class="eyebrow reveal">Astarot</span>
     <h2 class="h2 reveal">Seu céu, <em>para sempre</em> na palma da mão.</h2>
     <p class="offer-timer js-timer-wrap"><span class="dot"></span>Por tempo limitado · termina em <b class="js-timer">32:00</b></p>
+    <div class="offer-pair">
     <article class="offer reveal" id="plano">
       <span class="offer-tag">Pagamento único</span>
-      <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+      <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
       <p class="offer-sub">Tudo o que você precisa para conhecer e acompanhar o seu céu.</p>
       <ul class="offer-list">
         <li><span class="g" aria-hidden="true">☉&#xFE0E;</span><span><b>Mapa astral completo:</b> planetas, Ascendente, Meio do Céu, casas e aspectos, com Placidus, Whole Sign ou Equal</span></li>
@@ -589,21 +632,17 @@
         <li><span class="g" aria-hidden="true">✦</span><span><b>Tarot Rider-Waite-Smith:</b> carta do dia e pergunta aberta</span></li>
         <li><span class="g" aria-hidden="true">#</span><span><b>Numerologia pitagórica:</b> Caminho de Vida, Expressão, Alma e mais</span></li>
         <li><span class="g" aria-hidden="true">≈</span><span><b>Diário de sonhos</b> com leituras possíveis</span></li>
-        <li><span class="g" aria-hidden="true">✧</span><span><b>Seu Guia:</b> leituras e conversa a partir do seu mapa</span></li>
-        <li><span class="g" aria-hidden="true">∞</span><span><b>Acesso vitalício</b>, no celular e no computador, sem baixar aplicativo</span></li>
+        <li><span class="g" aria-hidden="true">✧</span><span><b>Seu Guia:</b> traduz o seu mapa em linguagem simples e responde às suas perguntas</span></li>
+        <li><span class="g" aria-hidden="true">∞</span><span><b>Acesso para sempre</b>, no celular e no computador, sem baixar aplicativo</span></li>
       </ul>
       <div class="price-row">
         <div class="price"><sup>R$</sup><span class="js-price">19,90</span></div>
-        <p class="price-sub"><b>acesso vitalício</b>pagamento único</p>
+        <p class="price-sub"><b>pagamento único</b>sem mensalidade</p>
       </div>
       <a class="btn btn-block js-checkout" href="#oferta">
         Quero o meu acesso
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <div class="bump">
-        <span class="g" aria-hidden="true">♀&#xFE0E;</span>
-        <span><b>No checkout, você pode adicionar Relacionamentos</b> por <span class="p">+ R$&nbsp;<span class="js-bump">9,90</span></span>: perfil amoroso, mapa do casal e Tarot do amor. Também vitalício, e também dá para adicionar depois, de dentro do app.</span>
-      </div>
       <div class="guar-row">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
@@ -611,6 +650,32 @@
         <span>Pix ou cartão</span>
       </div>
     </article>
+
+    <article class="offer offer-love reveal" id="oferta-amor">
+      <span class="offer-tag">Complemento</span>
+      <h3 class="love-title"><span class="glyph" aria-hidden="true">♀&#xFE0E;</span> Astarot Love</h3>
+      <p class="offer-sub">Para entender como você ama e como o seu céu conversa com o de outra pessoa.</p>
+      <ul class="offer-list">
+        <li><span class="g" aria-hidden="true">♀&#xFE0E;</span><span><b>Perfil amoroso completo:</b> como você ama, o que te atrai, suas necessidades e seus pontos de atenção</span></li>
+        <li><span class="g" aria-hidden="true">☍&#xFE0E;</span><span><b>Mapa do casal:</b> os dois céus lado a lado</span></li>
+        <li><span class="g" aria-hidden="true">☌&#xFE0E;</span><span><b>Conexões entre os mapas:</b> onde há química e onde há atrito</span></li>
+        <li><span class="g" aria-hidden="true">✧</span><span><b>Leitura do casal pelo Seu Guia:</b> afinidades, comunicação, afeto e desejo</span></li>
+        <li><span class="g" aria-hidden="true">⚭</span><span><b>Compare com mais de uma pessoa</b></span></li>
+        <li><span class="g" aria-hidden="true">✦</span><span><b>Tarot do amor:</b> três cartas sobre o momento da relação</span></li>
+        <li><span class="g" aria-hidden="true">∞</span><span><b>Para sempre</b>, na mesma conta do seu Astarot</span></li>
+      </ul>
+      <div class="price-row">
+        <div class="price"><sup>+R$</sup><span class="js-bump">9,90</span></div>
+        <p class="price-sub"><b>no mesmo checkout</b>pagamento único</p>
+      </div>
+      <p class="combo">Astarot + Astarot Love: <b>R$&nbsp;<span class="js-total">29,80</span></b></p>
+      <a class="btn btn-rose btn-block js-checkout" data-utm-content="oferta-amor" href="#oferta">
+        Quero o acesso completo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="love-how">No checkout, é só marcar <b>Astarot Love</b>. Se preferir, dá para adicionar depois, de dentro do app.</p>
+    </article>
+    </div>
     <p class="offer-note reveal"><b>7 dias de garantia incondicional:</b> se não for para você, devolvemos 100% do valor, sem perguntas.</p>
     <p class="offer-note reveal">Não sabe por onde começar? <button type="button" class="link-btn js-quiz">Faça o teste de 1 minuto</button></p>
   </div>
@@ -625,13 +690,13 @@
       <p>Entre, crie o seu mapa, use o Guia, tire as cartas. Se por qualquer motivo achar que não é para você, <strong>devolvemos 100% do seu dinheiro, sem perguntas e sem burocracia</strong>. É só pedir dentro de 7 dias após a compra.</p>
     </div>
     <div class="truth-card reveal">
-      <h3>Feito com cuidado</h3>
-      <p>Astrologia, Tarot, numerologia e sonhos são linguagens simbólicas. Elas servem para refletir e se conhecer. Por isso, o Seu Universo:</p>
+      <h3>Feito para você</h3>
+      <p>No Astarot, tudo parte do <strong>seu</strong> mapa, não de um texto pronto por signo.</p>
       <ul class="not-list">
-        <li><span><b>não promete resultados</b> no amor, no dinheiro ou na saúde;</span></li>
-        <li><span><b>não faz previsões garantidas</b> nem diagnósticos;</span></li>
-        <li><span><b>não substitui</b> orientação médica, psicológica, jurídica ou financeira;</span></li>
-        <li><span><b>não vende os seus dados.</b> Seu mapa e seus sonhos ficam na sua conta.</span></li>
+        <li><span><b>Leituras que falam de você,</b> calculadas com a sua data, horário e cidade;</span></li>
+        <li><span><b>Linguagem fácil:</b> o Guia traduz cada posição em palavras simples;</span></li>
+        <li><span><b>No seu ritmo:</b> 2 minutos por dia ou uma noite inteira de mergulho;</span></li>
+        <li><span><b>Seus dados protegidos:</b> seu mapa e seus sonhos ficam só na sua conta. Não vendemos dados.</span></li>
       </ul>
     </div>
   </div>
@@ -645,10 +710,10 @@
     <div class="faq">
       <details class="reveal"><summary>Quando e como recebo meu acesso?</summary><p><b>Na hora, direto no seu celular.</b> O acesso é liberado logo após a compra, para o e-mail que você informou no checkout. Crie sua conta com <b>esse mesmo e-mail</b>, confirme pelo link que chega na sua caixa de entrada (olhe também o spam e a aba Promoções) e pronto. Não precisa baixar aplicativo, e também funciona no computador.</p></details>
       <details class="reveal"><summary>Preciso saber meu horário de nascimento?</summary><p>Não é obrigatório. Sem o horário, você vê os planetas nos signos, a numerologia, a Lua, o Tarot e os sonhos normalmente. <b>O Ascendente e as casas dependem do horário</b>, e você pode adicioná-lo depois, quando descobrir (a certidão de nascimento costuma ter).</p></details>
-      <details class="reveal"><summary>O que é o Seu Guia? É uma IA?</summary><p>Sim. O Seu Guia é uma inteligência artificial que <b>interpreta os dados calculados</b> do seu mapa, com base na nossa biblioteca editorial. Ela não calcula posições e não sorteia cartas: isso é feito pelo sistema. As leituras são simbólicas, para reflexão.</p></details>
-      <details class="reveal"><summary>Astrologia é ciência?</summary><p>Não, e a gente não finge que é. <b>As posições dos planetas são cálculos astronômicos reais;</b> a interpretação é uma linguagem simbólica, usada para autoconhecimento e reflexão. Nada aqui é previsão garantida.</p></details>
-      <details class="reveal"><summary>O que vem no complemento de Relacionamentos?</summary><p>Perfil amoroso (Vênus, Marte e Lua), mapa do casal para comparar o seu céu com o de outra pessoa, e o Tarot do amor. Custa <b>+ R$&nbsp;<span class="js-bump">9,90</span></b> no checkout, é vitalício e também pode ser adicionado depois, de dentro do app.</p></details>
-      <details class="reveal"><summary>Meus dados ficam seguros?</summary><p>Sim. Seus dados de nascimento, sonhos e anotações ficam na sua conta, protegidos. Para gerar as leituras, a IA recebe só os dados calculados e o texto necessário, <b>sem o seu nome, e-mail ou endereço</b>. Não vendemos dados.</p></details>
+      <details class="reveal"><summary>O que é o Seu Guia?</summary><p>É a parte do Astarot que <b>traduz o seu mapa para você</b>. Ele pega os dados calculados (posições dos planetas, casas, aspectos, números, cartas) e explica tudo em linguagem simples, como uma conversa, sem termos técnicos. E você pode fazer perguntas: ele responde a partir do seu mapa.</p></details>
+      <details class="reveal"><summary>Preciso entender de astrologia?</summary><p>Não. Você só informa a data, o horário e a cidade de nascimento. <b>O sistema calcula o seu céu e o Seu Guia explica cada parte</b> em palavras simples. Quem já estuda astrologia encontra o mapa completo, com casas, aspectos e três sistemas de casas.</p></details>
+      <details class="reveal"><summary>O que vem no Astarot Love?</summary><p>Seu perfil amoroso completo, o mapa do casal com as conexões entre os dois céus, a leitura do casal pelo Seu Guia (com quantas pessoas você quiser comparar) e o Tarot do amor. Custa <b>+ R$&nbsp;<span class="js-bump">9,90</span></b>: é só marcar no checkout. É pagamento único e também pode ser adicionado depois, de dentro do app.</p></details>
+      <details class="reveal"><summary>Meus dados ficam seguros?</summary><p>Sim. Seus dados de nascimento, sonhos e anotações ficam na sua conta, protegidos. Para gerar as leituras, usamos só os dados calculados e o texto necessário, <b>sem o seu nome, e-mail ou endereço</b>. Não vendemos dados.</p></details>
       <details class="reveal"><summary>Tenho garantia?</summary><p><b>Sim: 7 dias de garantia incondicional.</b> Se achar que não é para você, devolvemos 100% do valor, sem perguntas. É só pedir o reembolso pela plataforma de pagamento<span class="js-email-wrap" hidden> ou pelo e-mail <a class="js-email" href="#"></a></span>.</p></details>
     </div>
   </div>
@@ -656,9 +721,9 @@
 
 <!-- ================= 10. FECHAMENTO ================= -->
 <section class="final">
-  <svg class="rings" viewBox="0 0 900 900" fill="none" aria-hidden="true"><g stroke="#f5f1ea" stroke-opacity=".06"><circle cx="450" cy="450" r="440"/><circle cx="450" cy="450" r="340" stroke-dasharray="2 7"/><circle cx="450" cy="450" r="240"/><ellipse cx="450" cy="450" rx="440" ry="160" transform="rotate(-16 450 450)"/></g><circle cx="868" cy="330" r="4" fill="#d6b56e" fill-opacity=".7"/><circle cx="160" cy="640" r="3" fill="#c58bcf" fill-opacity=".6"/></svg>
+  <img class="final-bg" src="img/ceu-final.webp" alt="" loading="lazy" width="1600" height="900" aria-hidden="true">
   <div class="wrap">
-    <span class="eyebrow reveal">Seu Universo</span>
+    <span class="eyebrow reveal">Astarot</span>
     <h2 class="h2 reveal">O céu do dia em que você nasceu <em>tem muito a dizer.</em></h2>
     <p class="lead reveal">Você não precisa entender de astrologia para começar. <strong>Precisa só da sua data, do seu horário e da sua cidade.</strong></p>
     <a class="btn reveal" href="#oferta">
@@ -670,27 +735,27 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
     <nav class="f-links" aria-label="Links institucionais">
       <a href="privacidade.html">Política de Privacidade</a>
       <a href="termos.html">Termos de Uso</a>
       <span class="js-email-wrap" hidden>Contato: <a class="js-email" href="#"></a></span>
     </nav>
-    <p>© <span id="y"></span> Seu Universo. Todos os direitos reservados.</p>
-    <p>Astrologia, Tarot, numerologia e interpretação de sonhos são linguagens simbólicas, oferecidas para reflexão e autoconhecimento. Não substituem orientação médica, psicológica, jurídica ou financeira. As telas mostradas são do app; o mapa do topo é um exemplo.</p>
+    <p>© <span id="y"></span> Astarot. Todos os direitos reservados.</p>
+    <p>Conteúdo de autoconhecimento. Não substitui orientação médica, psicológica, jurídica ou financeira. As telas mostradas são do app; o mapa do topo é um exemplo.</p>
   </div>
 </footer>
 
 <!-- Barra fixa (celular) -->
 <div class="sticky" id="sticky">
-  <div class="s-price"><small><span class="js-timer-wrap">Termina em <b class="js-timer">32:00</b></span><span class="js-timer-off">Acesso vitalício</span></small><b>R$<span class="js-price">19,90</span></b></div>
+  <div class="s-price"><small><span class="js-timer-wrap">Termina em <b class="js-timer">32:00</b></span><span class="js-timer-off">Pagamento único</span></small><b>R$<span class="js-price">19,90</span></b></div>
   <a class="btn" href="#oferta">Quero o meu acesso</a>
 </div>
 
 <!-- ================= QUIZ ================= -->
-<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra por onde começar no Seu Universo">
+<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra por onde começar no Astarot">
   <div class="quiz-top">
-    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
     <div class="q-progress"><i id="qBar"></i></div>
     <button class="q-close" type="button" id="qClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
@@ -707,6 +772,9 @@ var isSet = function (v) { return typeof v === "string" && v.length > 0 && v.ind
 (function () {
   if (CFG.PRICE) document.querySelectorAll(".js-price").forEach(function (el) { el.textContent = CFG.PRICE; });
   if (CFG.BUMP_PRICE) document.querySelectorAll(".js-bump").forEach(function (el) { el.textContent = CFG.BUMP_PRICE; });
+  var num = function (v) { return parseFloat(String(v || "").replace(/\./g, "").replace(",", ".")); };
+  var total = num(CFG.PRICE || "19,90") + num(CFG.BUMP_PRICE || "9,90");
+  if (isFinite(total)) document.querySelectorAll(".js-total").forEach(function (el) { el.textContent = total.toFixed(2).replace(".", ","); });
   if (isSet(CFG.CONTACT_EMAIL)) {
     document.querySelectorAll(".js-email").forEach(function (a) { a.textContent = CFG.CONTACT_EMAIL; a.href = "mailto:" + CFG.CONTACT_EMAIL; });
     document.querySelectorAll(".js-email-wrap").forEach(function (w) { w.hidden = false; });
@@ -728,7 +796,14 @@ function checkoutUrl(extra) {
   } catch (e) { return CFG.CHECKOUT_URL; }
 }
 function setCheckoutLinks(extra) {
-  document.querySelectorAll(".js-checkout").forEach(function (a) { a.href = checkoutUrl(extra); });
+  document.querySelectorAll(".js-checkout").forEach(function (a) {
+    /* o botão do cartão do Astarot Love marca a própria origem (utm_content=oferta-amor) */
+    var own = a.getAttribute("data-utm-content"), e = {};
+    if (extra) Object.keys(extra).forEach(function (k) { e[k] = extra[k]; });
+    if (own) e.utm_content = own;
+    var url = checkoutUrl(e);
+    a.href = url === "#oferta" && own ? "#oferta-amor" : url;
+  });
 }
 setCheckoutLinks();
 
@@ -951,7 +1026,7 @@ var R = {
   },
   trava: {
     generico: "<b>Cansou do genérico.</b> Aqui cada leitura parte do seu mapa, calculado com a sua data, horário e cidade.",
-    promessa: "<b>Sem promessas.</b> O Seu Universo usa a astrologia como linguagem para refletir, sem previsões garantidas.",
+    promessa: "<b>Sem frases feitas.</b> Cada leitura parte do seu mapa e diz o que ele mostra sobre você, sem exagero.",
     dificil: "<b>Sem complicação.</b> O Guia traduz o mapa em linguagem simples, com perguntas para você pensar.",
     meu: "<b>Agora é sobre o seu mapa.</b> Planetas, casas e aspectos do seu nascimento, não um texto por signo."
   },
@@ -981,7 +1056,7 @@ function buildResult(a) {
 (function () {
   var box = document.getElementById("quizBox"), body = document.getElementById("qBody"), bar = document.getElementById("qBar");
   var step = -1, ans = {}, lastFocus = null;
-  var ORBIT = document.querySelector(".orbit-art").innerHTML;
+  var ORBIT = document.getElementById("orbitTpl").innerHTML;
   function open(fromStart) {
     lastFocus = document.activeElement; ans = {};
     step = fromStart ? -1 : 0;
@@ -998,7 +1073,7 @@ function buildResult(a) {
   function intro() {
     bar.style.width = "0%";
     body.innerHTML = '<div class="q-intro q-anim"><div class="orbit-art" aria-hidden="true">' + ORBIT + '</div>'
-      + '<h2>Descubra por onde começar no <em>Seu Universo</em></h2>'
+      + '<h2>Descubra por onde começar no <em>Astarot</em></h2>'
       + '<p>Cinco perguntas rápidas sobre o que você quer entender agora.</p>'
       + '<button class="btn" type="button" id="qStart">Começar</button>'
       + '<p class="fine">Leva menos de 1 minuto.</p>'
@@ -1047,8 +1122,8 @@ function buildResult(a) {
       + '<li><span class="n">3</span><div>' + r.hora + '</div></li>'
       + '</ul>'
       + '<div class="r-rec"><small>Por onde seguir</small>'
-      + '<p><b>Acesso vitalício ao Seu Universo, por R$&nbsp;' + (CFG.PRICE || "19,90") + '.</b> ' + r.tempo + '</p>'
-      + (r.obj === "amor" ? '<p class="r-love">Como o seu foco é amor, vale adicionar <b>Relacionamentos</b> no checkout (+&nbsp;R$&nbsp;' + (CFG.BUMP_PRICE || "9,90") + '): perfil amoroso, mapa do casal e Tarot do amor.</p>' : "")
+      + '<p><b>Astarot, por R$&nbsp;' + (CFG.PRICE || "19,90") + ', pagamento único.</b> ' + r.tempo + '</p>'
+      + (r.obj === "amor" ? '<p class="r-love">Como o seu foco é amor, o <b>Astarot Love</b> é para você (+&nbsp;R$&nbsp;' + (CFG.BUMP_PRICE || "9,90") + ', é só marcar no checkout): perfil amoroso completo, mapa do casal, as conexões entre vocês e o Tarot do amor.</p>' : "")
       + '</div>'
       + '<a class="btn btn-block js-checkout" href="' + checkoutUrl({ utm_content: "quiz-" + r.obj }) + '" id="qBuy">Quero o meu acesso</a>'
       + '<a class="r-alt" href="#oferta" id="qOffer">Ver tudo o que vem no acesso</a>'
