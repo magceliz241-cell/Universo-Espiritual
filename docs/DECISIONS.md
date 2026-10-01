@@ -268,3 +268,10 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
 - Termos e Privacidade próprios (LGPD): dados de nascimento, sonhos e perguntas; fornecedores (Cakto, Supabase, Vercel,
   Groq, Meta/UTMify); a IA recebe só dados calculados e o texto necessário, sem nome, e-mail ou coordenadas.
 - `npm run test:landing` (Playwright, 390 px e 1280 px, também sem JS) entrou no CI.
+- **Céu ao vivo (pedido do Guilherme):** cartão "O céu agora" e seção com Sol, Lua e os 8 planetas, atualizados a cada
+  segundo. Caminho escolhido: séries pré-calculadas pelo XALEN (passo de 1, 2 ou 5 dias, em segundos de arco inteiros,
+  codificadas como diferenças) e interpolação de Lagrange de 6 pontos no navegador (`landing/sky.js`). Assim não entra
+  uma segunda fórmula astronômica, a landing não depende do app no ar e o motor (≈750 KB) não vai para quem chega por
+  anúncio. Fase e iluminação usam as mesmas regras de `src/lib/astro/moon.ts`. Erro máximo medido contra o motor:
+  1,4″ (Mercúrio), < 0,8″ nos demais; retrógrado idêntico ao do motor. Esse teste roda no `npm test`. Sem Ascendente,
+  que dependeria da cidade de quem visita. Validade: 01/09/2026–31/12/2030; fora disso, o bloco some.

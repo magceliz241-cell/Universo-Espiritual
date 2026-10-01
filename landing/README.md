@@ -5,10 +5,11 @@ do app.
 
 | Arquivo | O que é |
 |---|---|
-| `index.html` | A página: hero com o mapa de exemplo e a Lua de hoje, problema, método, telas do app, Relacionamentos, teste "Descubra por onde começar", oferta, garantia, FAQ |
+| `index.html` | A página: hero com o mapa de exemplo e o cartão "O céu agora", céu ao vivo (Sol, Lua e planetas), problema, método, telas do app, Relacionamentos, teste "Descubra por onde começar", oferta, garantia, FAQ |
 | `config.js` | **Única coisa a editar:** link do checkout, endereço do app, e-mail, pixel e preços exibidos |
 | `termos.html`, `privacidade.html` | Termos de Uso e Política de Privacidade (LGPD), com `legal.css` e `legal.js` |
-| `assets.js` | **Gerado.** Tabela da Lua (set/2026 a dez/2030), fases principais e a roda do mapa de exemplo, calculadas com o mesmo motor do app (XALEN) |
+| `assets.js` | **Gerado.** Posições do Sol, da Lua e dos planetas (set/2026 a dez/2030), instantes das Luas Nova e Cheia e a roda do mapa de exemplo, calculados com o mesmo motor do app (XALEN) |
+| `sky.js` | Céu ao vivo: interpola as posições de `assets.js` para o segundo atual |
 | `img/` | Telas do app (`app-*.webp`), imagem de compartilhamento (`og.jpg`) e ícone |
 | `vercel.json` | URLs sem `.html`, cabeçalhos de segurança e cache das imagens |
 
@@ -43,18 +44,24 @@ do app.
   anúncio. Quem termina o teste vai com `utm_content=quiz-<objetivo>` (`self`, `amor`, `momento`, `caminho`, `sonhos`).
 - **Contador "por tempo limitado":** 32 minutos a partir da primeira visita naquele navegador (fica salvo no
   aparelho). Quando zera, o contador some e a página continua normal.
-- **Lua de hoje:** lida de `assets.js` pela data de Brasília. Fora do período da tabela, o cartão simplesmente não
-  aparece.
+- **Céu ao vivo:** o cartão "O céu agora" (fase, posição e % iluminada da Lua, próxima Lua Nova ou Cheia) e a seção
+  "O céu deste minuto" (Sol, Lua e os 8 planetas, com signo, grau e ℞ quando retrógrado, além de quando a Lua troca de
+  signo) se atualizam a cada segundo, no horário do aparelho de quem visita. Não há servidor nem chamada ao app: o
+  `assets.js` traz as posições calculadas pelo XALEN a cada 1 dia (Sol e Lua), 2 dias (Mercúrio, Vênus, Marte) e 5
+  dias (Júpiter a Plutão), e o `sky.js` interpola para o instante atual. Erro máximo medido contra o motor: **1,4″**
+  (`npm test` confere em 1.500 instantes aleatórios). Peso: cerca de 130 KB (40 KB comprimido).
+- **Validade:** de 01/09/2026 a 31/12/2030. Fora disso, o cartão e a seção somem sozinhos. Para estender, mude as
+  datas em `tests/landing/generate-assets.test.ts` e rode `npm run build:landing-assets`.
 - **Teste "Descubra por onde começar":** 5 perguntas sobre interesse e rotina e uma sugestão de ponto de partida. As
   respostas ficam só no navegador. Os textos estão no fim do `index.html` (`QUIZ` e `R`). Link direto: `/#teste`.
 - **Sem JavaScript,** todo o conteúdo continua visível.
 
 ## Manutenção
 
-- **Regerar `assets.js`** (para estender a tabela da Lua ou mudar o mapa de exemplo):
+- **Regerar `assets.js`** (para estender o período do céu ao vivo ou mudar o mapa de exemplo):
   `npm run build:landing-assets` (gerador em `tests/landing/generate-assets.test.ts`).
 - **Testar:** `npm run test:landing` abre a página no Chromium em 390 px e 1280 px e confere: rolagem horizontal,
-  imagens, mapa, Lua, contador, teste, links de checkout com UTMs, e-mail, páginas legais e a página sem JS. Também
+  imagens, mapa, céu ao vivo (que ele anda com o relógio e some fora do período), contador, teste, links de checkout com UTMs, e-mail, páginas legais e a página sem JS. Também
   roda no CI.
 - **Telas do app:** os `img/app-*.webp` vieram do ambiente de testes (o Guia aparece sem leitura porque a IA ainda
   não estava conectada). Quando o app estiver no ar com a IA real, vale trocar por capturas novas, com 780×1688 px.

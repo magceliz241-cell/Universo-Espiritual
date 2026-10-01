@@ -26,7 +26,7 @@ npm run dev                  # http://localhost:3000
 | `npm run test:db` | migrations + RLS + regras de acesso num Postgres local (porta 55432) |
 | `npm run test:e2e` | roteiro Playwright contra o ambiente local (`tests/e2e/harness/start.sh`) |
 | `npm run test:landing` | landing no Chromium (celular e desktop, teste de interesses, checkout com UTMs) |
-| `npm run build:landing-assets` | regenera `landing/assets.js` (Lua e mapa de exemplo, com o XALEN) |
+| `npm run build:landing-assets` | regenera `landing/assets.js` (céu ao vivo e mapa de exemplo, com o XALEN) |
 | `npm run benchmark` | benchmark de precisão → `docs/BENCHMARK.md` |
 | `npm run benchmark:fetch-jpl` | busca as referências do JPL Horizons (precisa de rede) |
 | `npm run build:knowledge` | regenera o índice da KB depois de editar `knowledge/` |

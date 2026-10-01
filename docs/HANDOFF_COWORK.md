@@ -158,8 +158,9 @@ Guia completo em `landing/README.md`. Em resumo:
    build e sem variáveis.
 4. Depois do deploy: trocar o `og:image` do `index.html` pelo endereço completo da imagem
    (`https://<landing>/img/og.jpg`) e preencher `NEXT_PUBLIC_LANDING_URL` no projeto do app (redeploy).
-5. **Conferência:** abrir a landing no celular, clicar em "Quero o meu acesso" e ver o checkout da Cakto abrir com o
-   bump; fazer o teste "Descubra por onde começar" até o fim; abrir Termos e Privacidade e ver o e-mail certo.
+5. **Conferência:** abrir a landing no celular e ver o cartão "O céu agora" e a seção dos planetas com a hora mudando a
+   cada segundo (não precisam de configuração nem do app no ar); clicar em "Quero o meu acesso" e ver o checkout da
+   Cakto abrir com o bump; fazer o teste "Descubra por onde começar" até o fim; abrir Termos e Privacidade e ver o e-mail certo.
 
 Edições de texto da landing pelo GitHub são aceitáveis só em `config.js` e no script da UTMify. Mudanças de copy ou
 layout: anote e leve ao Claude Code.

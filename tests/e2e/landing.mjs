@@ -35,9 +35,13 @@ const check = (name, ok, extra = "") => {
 
 const browser = await chromium.launch({ executablePath });
 
-async function open(viewport, { config, query = "", page: file = "index.html" } = {}) {
+// Relógio fixo dentro do período do céu ao vivo (01/09/2026–31/12/2030), para o teste não depender da data real.
+const NOW = "2027-03-10T15:00:00-03:00";
+
+async function open(viewport, { config, query = "", page: file = "index.html", time = NOW } = {}) {
   const ctx = await browser.newContext({ viewport, deviceScaleFactor: 1, locale: "pt-BR", timezoneId: "America/Sao_Paulo" });
   const page = await ctx.newPage();
+  await page.clock.install({ time: new Date(time) });
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e)));
   page.on("console", (m) => { if (m.type() === "error") errors.push(m.text()); });
@@ -69,8 +73,10 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   await revealAll(page);
   check(`[${label}] sem rolagem horizontal`, await noOverflow(page));
   check(`[${label}] roda do mapa renderizada`, await page.locator("#wheel svg").count() === 1);
-  const sky = await page.locator(".js-sky-detail").textContent();
-  check(`[${label}] cartão da Lua de hoje preenchido`, await page.locator("#skyCard").isVisible() && /% iluminada · Lua em /.test(sky), sky);
+  const sky = await page.locator(".js-sky-moon").textContent();
+  check(`[${label}] cartão "O céu agora" preenchido`, await page.locator("#skyCard").isVisible() && /^Lua a \d+°\d\d′ de \S+ · \d+,\d% iluminada$/.test(sky), sky);
+  check(`[${label}] próxima Lua Nova/Cheia`, /^Próxima Lua (Nova|Cheia): \d\d\/\d\d, \d\dh\d\d$/.test(await page.locator(".js-sky-next").textContent()));
+  check(`[${label}] seção do céu ao vivo com 10 corpos`, await page.locator("#agora").isVisible() && await page.locator("#nowGrid .now-cell").count() === 10);
   check(`[${label}] contador rodando`, /^(3[0-2]|[0-2]\d):\d\d$/.test(await page.locator(".topbar .js-timer").textContent()));
   check(`[${label}] checkout sem link cai na oferta`, await page.locator(".js-checkout").first().getAttribute("href") === "#oferta");
   check(`[${label}] e-mail placeholder escondido`, !(await page.locator("footer .js-email-wrap").isVisible()));
@@ -131,7 +137,39 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   }
 }
 
-// 5) Sem JavaScript tudo continua legível (nada fica escondido pelo efeito de revelar)
+// 5) Céu ao vivo: anda com o relógio e some fora do período da tabela
+{
+  const { ctx, page, errors } = await open({ width: 390, height: 844 });
+  const moonDeg = async () => {
+    const t = await page.locator('#nowGrid [data-id="moon"] .dg').textContent();
+    const sg = await page.locator('#nowGrid [data-id="moon"] .sg').textContent();
+    const signs = ["Áries", "Touro", "Gêmeos", "Câncer", "Leão", "Virgem", "Libra", "Escorpião", "Sagitário", "Capricórnio", "Aquário", "Peixes"];
+    const [d, m] = t.match(/(\d+)°(\d+)/).slice(1).map(Number);
+    return signs.findIndex((x) => sg.endsWith(x)) * 30 + d + m / 60;
+  };
+  const clock1 = await page.locator(".js-now-clock").textContent();
+  const a = await moonDeg();
+  check("[ao vivo] relógio mostra a hora local", clock1 === "Atualizado às 15:00:00" || clock1 === "Atualizado às 15:00:01", clock1);
+  await page.clock.fastForward("02:00:00");
+  const b = await moonDeg();
+  const moved = ((b - a + 540) % 360) - 180;
+  check("[ao vivo] a Lua anda ~1° em 2 h", moved > 0.8 && moved < 1.4, `${moved.toFixed(3)}°`);
+  check("[ao vivo] relógio avançou", /17:00:0\d/.test(await page.locator(".js-now-clock").textContent()));
+  check("[ao vivo] próxima troca de signo da Lua", /^a Lua entra em \S+ daqui a .+ \(\d\d\/\d\d, \d\dh\d\d\)$/.test(await page.locator(".js-moon-ingress").textContent()),
+    await page.locator(".js-moon-ingress").textContent());
+  const rx = await page.locator("#nowGrid .now-cell.is-rx").count();
+  check("[ao vivo] retrógrados marcados só em planetas", rx <= 8 && await page.locator('#nowGrid [data-id="sun"].is-rx, #nowGrid [data-id="moon"].is-rx').count() === 0);
+  check("[ao vivo] sem erros", errors().length === 0, errors().join(" | "));
+  await ctx.close();
+
+  const late = await open({ width: 390, height: 844 }, { time: "2032-06-01T12:00:00Z" });
+  check("[ao vivo] fora do período: cartão e seção escondidos",
+    !(await late.page.locator("#skyCard").isVisible()) && !(await late.page.locator("#agora").isVisible()));
+  check("[ao vivo] fora do período: sem erros", late.errors().length === 0, late.errors().join(" | "));
+  await late.ctx.close();
+}
+
+// 6) Sem JavaScript tudo continua legível (nada fica escondido pelo efeito de revelar)
 {
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, javaScriptEnabled: false });
   const page = await ctx.newPage();

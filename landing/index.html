@@ -119,7 +119,24 @@
   .sky-card svg{width:52px;height:52px;flex:none}
   .sky-card small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
   .sky-card b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}
-  .sky-card span{font-size:12.5px;color:var(--ink-2)}
+  .sky-card span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.45}
+  a.sky-card{text-decoration:none;color:inherit}
+  .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7fcf9a;margin-right:7px;vertical-align:1px;animation:live 2s infinite}
+  @keyframes live{0%{box-shadow:0 0 0 0 rgba(127,207,154,.55)}70%{box-shadow:0 0 0 7px rgba(127,207,154,0)}100%{box-shadow:0 0 0 0 rgba(127,207,154,0)}}
+
+  /* ---------- CÉU AO VIVO ---------- */
+  .now-sec{padding-top:40px}
+  .now-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:34px}
+  .now-cell{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 14px 13px;display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;row-gap:1px;align-items:center}
+  .now-cell .g{grid-row:span 3;font-family:var(--glyph);font-weight:300;font-size:26px;color:var(--gold);text-align:center;line-height:1}
+  .now-cell .nm{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+  .now-cell .rx{font-style:normal;font-family:var(--glyph);font-size:13px;color:var(--rose);letter-spacing:0}
+  .now-cell .dg{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums}
+  .now-cell .sg{font-size:13.5px;color:var(--ink-2)}
+  .now-cell[data-id="moon"]{border-color:rgba(214,181,110,.35)}
+  .now-cell.is-rx{border-color:rgba(201,130,156,.3)}
+  .now-foot{margin-top:18px;font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .now-note{margin-top:8px}
 
   /* ---------- PROBLEMA ---------- */
   .problem-grid{display:grid;gap:36px;align-items:center}
@@ -336,7 +353,7 @@
     .js .reveal{opacity:1;transform:none;transition:none}
     .wheel svg,.q-anim,.q-loading .orbit-art svg{animation:none}
     .btn,.sticky{transition:none}
-    .offer-timer .dot{animation:none}
+    .offer-timer .dot,.live-dot{animation:none}
   }
 
   /* ================= DESKTOP ================= */
@@ -355,6 +372,8 @@
     .phones .phone{flex:1 1 0;width:auto;min-width:0;max-width:200px}
     .wheel-cap{position:absolute;right:2%;top:2%;margin:0;text-align:right;max-width:24ch}
     .sky-card{position:absolute;left:0;bottom:2%;margin:0}
+    .now-sec{padding-top:40px}
+    .now-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
     .price-sub{text-align:right}
     .orbit-art{max-width:280px}
     .phones .phone:nth-child(even){transform:translateY(-26px)}
@@ -406,20 +425,33 @@
       </div>
     </div>
 
-    <div class="observatory" aria-label="Mapa astral de exemplo e o céu de hoje">
+    <div class="observatory" aria-label="Mapa astral de exemplo e o céu de agora">
       <p class="wheel-cap">Mapa de exemplo · 15/08/1990 · 14h30 · São Paulo</p>
       <div class="wheel" id="wheel" role="img" aria-label="Roda de um mapa astral de exemplo, com signos, planetas, casas e aspectos"></div>
-      <div class="sky-card" id="skyCard" hidden>
+      <a class="sky-card" id="skyCard" href="#agora" hidden>
         <svg id="skyMoon" viewBox="0 0 100 100" aria-hidden="true"></svg>
         <div>
-          <small>O céu de hoje</small>
+          <small><i class="live-dot" aria-hidden="true"></i>O céu agora</small>
           <b class="js-sky-phase">Lua</b>
-          <span class="js-sky-detail"></span>
+          <span class="js-sky-moon"></span>
+          <span class="js-sky-next"></span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </header>
+
+<!-- ================= 1b. CÉU AO VIVO ================= -->
+<section id="agora" class="now-sec" hidden>
+  <div class="wrap">
+    <span class="eyebrow reveal">Enquanto você lê</span>
+    <h2 class="h2 reveal">O céu deste minuto, <em>calculado ao vivo.</em></h2>
+    <p class="lead reveal">Onde estão o Sol, a Lua e os planetas agora, atualizado a cada segundo. <strong>O seu mapa astral é a fotografia deste céu no minuto em que você nasceu.</strong></p>
+    <div class="now-grid reveal" id="nowGrid" aria-live="off"></div>
+    <p class="now-foot reveal"><i class="live-dot" aria-hidden="true"></i><span class="js-now-clock"></span><span class="sep"> · </span><span class="js-moon-ingress"></span></p>
+    <p class="fine reveal now-note">Posições geocêntricas no zodíaco tropical, calculadas com o mesmo motor astronômico do app. ℞ indica movimento retrógrado aparente.</p>
+  </div>
+</section>
 
 <!-- ================= 2. PROBLEMA ================= -->
 <section id="por-que">
@@ -666,6 +698,7 @@
 </div>
 
 <script src="assets.js"></script>
+<script src="sky.js"></script>
 <script>
 var CFG = window.SU_CONFIG || {};
 var isSet = function (v) { return typeof v === "string" && v.length > 0 && v.indexOf("SEU-") === -1; };
@@ -705,39 +738,93 @@ setCheckoutLinks();
   if (el && window.SU_WHEEL) el.innerHTML = window.SU_WHEEL;
 })();
 
-/* ---------- Lua de hoje (tabela calculada com o XALEN, 12h de Brasília) ---------- */
+/* ---------- Céu ao vivo (séries do XALEN em assets.js, interpoladas por sky.js) ---------- */
 var SIGN_PT = { aries: "Áries", taurus: "Touro", gemini: "Gêmeos", cancer: "Câncer", leo: "Leão", virgo: "Virgem", libra: "Libra", scorpio: "Escorpião", sagittarius: "Sagitário", capricorn: "Capricórnio", aquarius: "Aquário", pisces: "Peixes" };
+var SIGN_GLYPH = { aries: "♈", taurus: "♉", gemini: "♊", cancer: "♋", leo: "♌", virgo: "♍", libra: "♎", scorpio: "♏", sagittarius: "♐", capricorn: "♑", aquarius: "♒", pisces: "♓" };
+var BODIES = [["sun", "☉", "Sol"], ["moon", "☽", "Lua"], ["mercury", "☿", "Mercúrio"], ["venus", "♀", "Vênus"], ["mars", "♂", "Marte"], ["jupiter", "♃", "Júpiter"], ["saturn", "♄", "Saturno"], ["uranus", "♅", "Urano"], ["neptune", "♆", "Netuno"], ["pluto", "♇", "Plutão"]];
 function moonPath(k, waxing, southern) {
   var r = 46, rx = Math.abs(1 - 2 * k) * r;
   var litRight = waxing !== southern, outer = litRight ? 1 : 0, inner = k > 0.5 ? outer : 1 - outer;
   return "M 50 " + (50 - r) + " A " + r + " " + r + " 0 0 " + outer + " 50 " + (50 + r) + " A " + rx + " " + r + " 0 0 " + inner + " 50 " + (50 - r) + " Z";
 }
+function fmtDeg(d) {
+  var m = Math.floor(d * 60 + 1e-9), deg = Math.floor(m / 60), min = m % 60;
+  return deg + "°" + (min < 10 ? "0" : "") + min + "′";
+}
+function fmtWhen(ms) {
+  var d = new Date(ms);
+  var day = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit" }).format(d);
+  var hm = new Intl.DateTimeFormat("pt-BR", { hour: "2-digit", minute: "2-digit", hour12: false }).format(d).replace(":", "h");
+  return day + ", " + hm;
+}
+function fmtIn(ms) {
+  var min = Math.max(1, Math.round(ms / 60000)), d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60), m = min % 60;
+  if (d > 0) return d + (d === 1 ? " dia" : " dias") + (h ? " e " + h + " h" : "");
+  if (h > 0) return h + " h" + (m ? " e " + m + " min" : "");
+  return m + " min";
+}
 (function () {
-  var days = window.SU_MOON_DAYS, phases = window.SU_PHASES;
-  if (!days || !phases) return;
-  var today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
-  var row = null;
-  for (var i = 0; i < days.length; i++) if (days[i][0] === today) { row = days[i]; break; }
-  if (!row) return;
-  /* fases 1–3 crescem, 5–7 minguam; na Nova e na Cheia, decide pela iluminação do dia seguinte */
-  var k = row[2], p = row[1], next = days[i + 1];
-  var waxing = p >= 1 && p <= 3 ? true : p >= 5 ? false : next ? next[2] > k : p === 0;
-  var svg = document.getElementById("skyMoon");
-  svg.innerHTML = '<defs><radialGradient id="ml" cx="40%" cy="35%" r="75%"><stop offset="0%" stop-color="#f5f1ea"/><stop offset="100%" stop-color="#cfc6b3"/></radialGradient></defs>'
-    + '<circle cx="50" cy="50" r="46" fill="#1d1a29" stroke="rgba(245,241,234,.12)" stroke-width="1"/>'
-    + (k > 0.005 ? '<path d="' + moonPath(k, waxing, true) + '" fill="url(#ml)"/>' : "");
-  document.querySelector(".js-sky-phase").textContent = phases[row[1]];
-  var detail = Math.round(k * 100) + "% iluminada · Lua em " + SIGN_PT[row[3]];
-  var pr = window.SU_MOON_PRINCIPAL || [], now = Date.now();
-  for (var j = 0; j < pr.length; j++) {
-    if ((pr[j][1] === 0 || pr[j][1] === 4) && Date.parse(pr[j][0]) > now) {
-      var d = new Intl.DateTimeFormat("pt-BR", { timeZone: "America/Sao_Paulo", day: "2-digit", month: "2-digit" }).format(new Date(pr[j][0]));
-      detail += " · próxima " + phases[pr[j][1]] + " em " + d;
-      break;
+  var sky = window.SU_SKY, lib = window.SU_SKY_LIB, phases = window.SU_PHASES;
+  if (!sky || !lib || !phases || !lib.at(sky, Date.now())) return;
+  var card = document.getElementById("skyCard"), sec = document.getElementById("agora"), grid = document.getElementById("nowGrid");
+  var $ = function (sel) { return document.querySelector(sel); };
+  var cells = {};
+  grid.innerHTML = BODIES.map(function (b) {
+    return '<div class="now-cell" data-id="' + b[0] + '"><span class="g" aria-hidden="true">' + b[1] + '&#xFE0E;</span>'
+      + '<span class="nm">' + b[2] + '<i class="rx" hidden title="retrógrado">℞</i></span>'
+      + '<b class="dg"></b><span class="sg"></span></div>';
+  }).join("");
+  BODIES.forEach(function (b) {
+    var el = grid.querySelector('[data-id="' + b[0] + '"]');
+    cells[b[0]] = { dg: el.querySelector(".dg"), sg: el.querySelector(".sg"), rx: el.querySelector(".rx"), el: el };
+  });
+  var set = function (el, txt) { if (el.textContent !== txt) el.textContent = txt; };
+  var lastMoon = "", ingressAt = 0, ingress = null, principal = null;
+  var clockFmt = new Intl.DateTimeFormat("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+
+  function nextPrincipal(now) {
+    var pr = window.SU_MOON_PRINCIPAL || [];
+    for (var j = 0; j < pr.length; j++) {
+      var t = Date.parse(pr[j][0]);
+      if ((pr[j][1] === 0 || pr[j][1] === 4) && t > now) return { ms: t, label: phases[pr[j][1]] };
     }
+    return null;
   }
-  document.querySelector(".js-sky-detail").textContent = detail;
-  document.getElementById("skyCard").hidden = false;
+
+  function tick() {
+    var now = Date.now(), c = lib.at(sky, now);
+    if (!c) { card.hidden = true; sec.hidden = true; clearInterval(iv); return; }
+    var moon = c.bodies.moon, k = c.illumination;
+    /* Cartão do topo */
+    var moonKey = c.phaseIndex + ":" + Math.round(k * 200) + ":" + (c.waxing ? 1 : 0);
+    if (moonKey !== lastMoon) {
+      lastMoon = moonKey;
+      $("#skyMoon").innerHTML = '<defs><radialGradient id="ml" cx="40%" cy="35%" r="75%"><stop offset="0%" stop-color="#f5f1ea"/><stop offset="100%" stop-color="#cfc6b3"/></radialGradient></defs>'
+        + '<circle cx="50" cy="50" r="46" fill="#1d1a29" stroke="rgba(245,241,234,.12)" stroke-width="1"/>'
+        + (k > 0.005 ? '<path d="' + moonPath(k, c.waxing, true) + '" fill="url(#ml)"/>' : "");
+    }
+    set($(".js-sky-phase"), phases[c.phaseIndex]);
+    set($(".js-sky-moon"), "Lua a " + fmtDeg(moon.deg) + " de " + SIGN_PT[moon.sign] + " · " + (k * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "% iluminada");
+    if (!principal || principal.ms <= now) principal = nextPrincipal(now);
+    set($(".js-sky-next"), principal ? "Próxima " + principal.label + ": " + fmtWhen(principal.ms) : "");
+    /* Planetas */
+    BODIES.forEach(function (b) {
+      var p = c.bodies[b[0]], cell = cells[b[0]];
+      set(cell.dg, fmtDeg(p.deg));
+      set(cell.sg, SIGN_GLYPH[p.sign] + "︎ " + SIGN_PT[p.sign]);
+      var rx = b[0] !== "sun" && b[0] !== "moon" && p.retrograde;
+      if (cell.rx.hidden === rx) { cell.rx.hidden = !rx; cell.el.classList.toggle("is-rx", rx); }
+    });
+    set($(".js-now-clock"), "Atualizado às " + clockFmt.format(new Date(now)));
+    /* Próxima troca de signo da Lua (recalcula a cada minuto) */
+    if (!ingress || now - ingressAt > 60000 || ingress.ms <= now) {
+      ingress = lib.nextIngress(sky, "moon", now, 4); ingressAt = now;
+    }
+    set($(".js-moon-ingress"), ingress ? "a Lua entra em " + SIGN_PT[ingress.sign] + " daqui a " + fmtIn(ingress.ms - now) + " (" + fmtWhen(ingress.ms) + ")" : "");
+  }
+  var iv = setInterval(tick, 1000);
+  tick();
+  card.hidden = false; sec.hidden = false;
 })();
 
 /* ---------- Revelar ao rolar ---------- */
