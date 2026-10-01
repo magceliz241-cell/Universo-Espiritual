@@ -48,6 +48,8 @@ async function newPage(width) {
 async function shot(page, name) {
   if (!SHOTS) return;
   await page.waitForTimeout(400);
+  // Barras fixas viram estáticas para a captura de página inteira não repeti-las no meio.
+  await page.addStyleTag({ content: "header.sticky,nav[aria-label='Navegação principal']{position:static!important}" }).catch(() => {});
   await page.screenshot({ path: `${SHOTS}/${name}.png`, fullPage: true });
 }
 /** Espera o elemento aparecer (a página chega em streaming por causa do loading.tsx). */
@@ -248,6 +250,7 @@ try {
       const resp = await page.goto(`${APP}${path}`);
       const ok = resp?.status() === 200 && (await noOverflow(page)) && !(await page.getByText(/undefined|NaN/).count());
       check(`página ${path} @${width}px`, ok, `status ${resp?.status()}`);
+      if (process.env.TOUR) await shot(page, `tour-${width}-${path.replace(/[/?=]+/g, "_").replace(/^_|_$/g, "") || "inicio"}`);
     }
   }
   await page.setViewportSize({ width: 390, height: 900 });
