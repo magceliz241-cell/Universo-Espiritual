@@ -15,7 +15,7 @@ export function Wordmark({ className }: { className?: string }) {
   return (
     <span className={cn("inline-flex items-center gap-2 text-ink", className)}>
       <Mark />
-      <span className="text-display text-[1.35rem] leading-none">Seu Universo</span>
+      <span className="text-display text-[1.35rem] leading-none">Astarot</span>
     </span>
   );
 }

@@ -22,7 +22,7 @@ const glyphs = Noto_Sans_Symbols({
 });
 
 export const metadata: Metadata = {
-  title: { default: "Seu Universo", template: "%s · Seu Universo" },
+  title: { default: "Astarot", template: "%s · Astarot" },
   description: "Seu observatório pessoal: mapa astral, Lua, Tarot, numerologia, sonhos e o seu Guia.",
   robots: { index: false, follow: false },
 };

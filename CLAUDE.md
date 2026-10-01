@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# Seu Universo — regras do projeto
+# Astarot — regras do projeto
 
 Leia antes de qualquer mudança:
 - `docs/MASTER_PROMPT.md` — instrução mestre do produto.

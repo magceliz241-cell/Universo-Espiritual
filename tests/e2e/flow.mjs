@@ -157,7 +157,7 @@ try {
 
   // 10. Amor sem o bump → oferta com e-mail preenchido
   await page.goto(`${APP}/amor`);
-  const offer = page.getByRole("link", { name: "Liberar relacionamentos" });
+  const offer = page.getByRole("link", { name: "Liberar o Astarot Love" });
   const href = await offer.getAttribute("href").catch(() => null);
   check("amor sem bump → oferta com checkout e e-mail", Boolean(href?.includes(encodeURIComponent(email))), href ?? "");
   await shot(page, "08-amor-oferta");
@@ -166,7 +166,7 @@ try {
   const w2 = await webhook(purchase(email, "offer-love-app-e2e", `ord-${run}-2`));
   check("webhook bump → processed", w2.status === 200 && w2.body.outcomes?.[0]?.result === "applied", JSON.stringify(w2.body));
   await page.goto(`${APP}/amor`);
-  check("amor liberado após o bump", !(await visible(page.getByRole("link", { name: "Liberar relacionamentos" })).catch(() => false)));
+  check("amor liberado após o bump", !(await visible(page.getByRole("link", { name: "Liberar o Astarot Love" })).catch(() => false)));
   await shot(page, "09-amor");
 
   // 11b. Tarot: sorteio no servidor, cartas viram, leitura
@@ -240,7 +240,7 @@ try {
 
   // 11h. Perfil
   await page.goto(`${APP}/perfil`);
-  check("perfil: acesso vitalício com relacionamentos", (await page.getByText("vitalício").count()) === 2);
+  check("perfil: Astarot e Astarot Love ativos", (await page.getByText("ativo", { exact: true }).count()) === 2);
   await shot(page, "19-perfil");
 
   // 11i. Todas as páginas em 390 e 1280: sem erro e sem rolagem lateral

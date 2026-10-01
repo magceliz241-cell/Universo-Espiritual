@@ -4,7 +4,7 @@
 
 ### Conceito central
 
-**Seu Universo — um observatório pessoal do universo.**
+**Astarot — um observatório pessoal do universo.**
 
 A interface deve transmitir:
 
@@ -201,7 +201,7 @@ TECNOLOGIA → sans-serif limpa
 
 Nome:
 
-**Seu Universo**
+**Astarot**
 
 Tratamento:
 
@@ -323,7 +323,7 @@ Estrutura:
 
 ```text
 ┌──────────────────────────────────────────────┐
-│ Seu Universo                         Perfil  │
+│ Astarot                         Perfil  │
 │                                              │
 │ Boa noite, [Nome]                            │
 │                                              │
@@ -949,7 +949,7 @@ Se não:
 
 # 35. Personalidade
 
-O Seu Universo deve transmitir:
+O Astarot deve transmitir:
 
 > "Isso foi feito especialmente para mim."
 

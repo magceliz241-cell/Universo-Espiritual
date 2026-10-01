@@ -20,7 +20,7 @@ export async function drawAction(spread: string, question?: string): Promise<Dra
   const parsed = input.safeParse({ spread, question: question || undefined });
   if (!parsed.success) return { ok: false, message: "Tiragem inválida." };
   const s = SPREADS[parsed.data.spread];
-  if (s.love && tier !== "love") return { ok: false, message: "O Tarot do amor faz parte das áreas de relacionamento." };
+  if (s.love && tier !== "love") return { ok: false, message: "O Tarot do amor faz parte do Astarot Love." };
 
   const cards = drawSpread(s.id);
   const { data, error } = await db

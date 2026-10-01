@@ -18,7 +18,7 @@ import { SPREADS } from "@/lib/tarot/draw";
  */
 type Out = AiOutcome<Interpretation>;
 const noProfile: Out = { ok: false, message: "Adicione seus dados de nascimento primeiro." };
-const needsLove: Out = { ok: false, message: "Esta leitura faz parte das áreas de relacionamento." };
+const needsLove: Out = { ok: false, message: "Esta leitura faz parte do Astarot Love." };
 
 const parseSystem = (s: string | undefined): HouseSystem =>
   s === "whole_sign" || s === "equal" ? s : DEFAULT_HOUSE_SYSTEM;

@@ -120,16 +120,16 @@ export function TarotTable({
             <p className="mt-1 text-xs leading-relaxed text-ink-3">{s.description}</p>
             <p className="mt-2 text-[11px] text-ink-3">
               {s.positions.length} {s.positions.length === 1 ? "carta" : "cartas"}
-              {s.locked ? " · relacionamentos" : ""}
+              {s.locked ? " · Astarot Love" : ""}
             </p>
           </button>
         ))}
       </div>
       {spreads.some((s) => s.locked) ? (
         <p className="-mt-4 text-xs text-ink-3">
-          O Tarot do amor faz parte das{" "}
+          O Tarot do amor faz parte do{" "}
           <Link href="/amor" className="underline underline-offset-4 hover:text-ink">
-            áreas de relacionamento
+            Astarot Love
           </Link>
           .
         </p>

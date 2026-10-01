@@ -64,16 +64,16 @@ export default async function PerfilPage() {
         <SectionTitle>Seu acesso</SectionTitle>
         <Card className="flex flex-col gap-3 p-5 text-sm">
           <p className="flex items-center justify-between">
-            <span className="text-ink">Seu Universo</span>
-            <span className="text-gold">vitalício</span>
+            <span className="text-ink">Astarot</span>
+            <span className="text-gold">ativo</span>
           </p>
           <p className="flex items-center justify-between">
-            <span className="text-ink">Relacionamentos</span>
-            <span className={tier === "love" ? "text-gold" : "text-ink-3"}>{tier === "love" ? "vitalício" : "não incluído"}</span>
+            <span className="text-ink">Astarot Love</span>
+            <span className={tier === "love" ? "text-gold" : "text-ink-3"}>{tier === "love" ? "ativo" : "não incluído"}</span>
           </p>
           {offer ? (
             <ButtonLink href={offer} variant="secondary" className="mt-2 self-start">
-              Liberar relacionamentos
+              Liberar o Astarot Love
             </ButtonLink>
           ) : null}
         </Card>

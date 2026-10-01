@@ -290,3 +290,23 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   linguagem fácil. Sem sugerir que é uma pessoa. Termos e Privacidade continuam informando o uso de inteligência
   artificial (transparência/LGPD). Isto substitui a linha "IA identificada como IA" da entrada anterior, só na landing.
 - Continua proibido prometer resultado garantido (regra da base editorial e das plataformas de anúncio).
+
+## Nome do produto: Astarot (2026-10-01, decisão do Guilherme)
+
+- O produto passa a se chamar **Astarot**. Trocado em tudo o que a pessoa vê: landing (página, Termos, Privacidade,
+  `og.jpg`), telas do app (marca, título das páginas, tela de acesso, perfil), apresentação do Seu Guia no prompt do
+  sistema (versões dos prompts foram para `@2`, o que invalida o cache de leituras antigas), base editorial
+  (`knowledge/`, com `generated.ts` regenerado) e guias (README, CLAUDE.md, SETUP, HANDOFF, DESIGN_SYSTEM, avisos de
+  terceiros).
+- **Ficam com o nome antigo, de propósito:** identificadores internos (`su-ephem`, prefixos `SU_`, nome do pacote
+  npm, pasta e repositório), comentários das migrations e do motor (`engine/`, `vendor/su-ephem`, `build-xalen.sh`,
+  para não alterar o artefato reproduzível) e o histórico (MASTER_PROMPT, PLANO_TECNICO, entradas anteriores deste
+  registro). Nada disso aparece para quem usa.
+- Telas do app na landing recapturadas com o nome novo (harness e2e, 65/65).
+- **Imagens de clima** escolhidas entre as enviadas: órbitas entrelaçadas (Relacionamentos), astrolábio (teste) e
+  pessoa sob a Via Láctea (fechamento). Ficaram de fora o pergaminho (tom claro destoa do visual) e a segunda versão
+  da cena noturna (duplicada). Só na landing, não no app.
+- **Nomes dos produtos:** o principal é só **Astarot** e o complemento de relacionamentos é **Astarot Love**.
+  "Vitalício" deixou de aparecer como nome de plano (selo da oferta, barra do topo, resultado do quiz, perfil): o acesso
+  não expira por natureza, e a página fala em "pagamento único, sem mensalidade". No app, o perfil mostra "Astarot ·
+  ativo" e "Astarot Love · ativo/não incluído", e a oferta interna virou "Liberar o Astarot Love". Termos atualizados.

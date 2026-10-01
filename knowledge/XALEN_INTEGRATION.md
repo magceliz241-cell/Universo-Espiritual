@@ -2,7 +2,7 @@
 
 ## Decisão
 
-O Seu Universo utilizará **XALEN Ephemeris** como motor astronômico/astrológico local.
+O Astarot utilizará **XALEN Ephemeris** como motor astronômico/astrológico local.
 
 Repositório oficial:
 https://github.com/vedika-io/xalen-ephemeris
@@ -61,7 +61,7 @@ A documentação do XALEN relata validações contra JPL DE440 e Swiss Ephemeris
 - Lua: RMS ~2,8 arcsec / máximo ~12 arcsec em AD 1600–2100 contra pyswisseph;
 - DE440: sub-arcsecond para corpos suportados quando o kernel está disponível.
 
-Esses são números publicados pelo projeto, não uma garantia independente nossa. O Seu Universo deve executar seus próprios testes de aceitação.
+Esses são números publicados pelo projeto, não uma garantia independente nossa. O Astarot deve executar seus próprios testes de aceitação.
 
 ## DE440
 

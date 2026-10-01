@@ -1,4 +1,4 @@
-# Seu Universo
+# Astarot
 
 Área de membros de espiritualidade/esoterismo: mapa astral, amor e mapa do casal, Tarot, numerologia, Lua, sonhos e
 o Seu Guia (IA). **O software calcula; a IA interpreta.**

@@ -188,7 +188,7 @@ describe("orquestração", () => {
     const f = fakeFetch([groqResponse(GOOD)]);
     const r = await generate(store, "user-1", input, { fetchImpl: f.impl });
     expect(r).toMatchObject({ cacheHit: false, generationId: "gen-1" });
-    expect(saved[0]).toMatchObject({ task: "natal_summary", model: "openai/gpt-oss-120b", prompt_version: "natal_summary@1", tokens_in: 1200, tokens_out: 300, error: null });
+    expect(saved[0]).toMatchObject({ task: "natal_summary", model: "openai/gpt-oss-120b", prompt_version: "natal_summary@2", tokens_in: 1200, tokens_out: 300, error: null });
     expect(saved[0].knowledge_version).toMatch(/^2\.0\+/);
     expect(usage[0].meta.cache_hit).toBe(false);
     expect(JSON.stringify({ saved, usage })).not.toContain(KEY);
