@@ -275,3 +275,18 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   anúncio. Fase e iluminação usam as mesmas regras de `src/lib/astro/moon.ts`. Erro máximo medido contra o motor:
   1,4″ (Mercúrio), < 0,8″ nos demais; retrógrado idêntico ao do motor. Esse teste roda no `npm test`. Sem Ascendente,
   que dependeria da cidade de quem visita. Validade: 01/09/2026–31/12/2030; fora disso, o bloco some.
+
+## Landing: ajustes de conversão (2026-10-01, pedido do Guilherme)
+
+- Título do topo: **"Não é só seu signo. É o seu céu inteiro."** (também no `og:title` e na imagem `og.jpg`).
+- **Relacionamentos com destaque próprio:** a seção de amor ganhou 6 benefícios, preço e botão; a oferta passou a ter
+  dois cartões lado a lado (Seu Universo R$ 19,90 e Relacionamentos + R$ 9,90, com o total combinado). O checkout é o
+  mesmo; o botão do cartão do amor marca `utm_content=oferta-amor`. Benefícios listados conferidos com o que o app
+  entrega (perfil amoroso, mapa do casal, conexões entre os mapas, leitura do casal, várias pessoas, Tarot do amor).
+- **Menos avisos, mais produto:** saíram os avisos repetidos de "linguagem simbólica", o FAQ "Astrologia é ciência?"
+  e o cartão "Feito com cuidado" (virou "Feito para você"). O rodapé mantém uma linha curta ("não substitui orientação
+  médica…"), e Termos/Privacidade seguem completos.
+- **Seu Guia sem o rótulo "IA" na landing:** apresentado como a parte do app que pega os dados calculados e traduz para
+  linguagem fácil. Sem sugerir que é uma pessoa. Termos e Privacidade continuam informando o uso de inteligência
+  artificial (transparência/LGPD). Isto substitui a linha "IA identificada como IA" da entrada anterior, só na landing.
+- Continua proibido prometer resultado garantido (regra da base editorial e das plataformas de anúncio).

@@ -79,6 +79,14 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   check(`[${label}] seção do céu ao vivo com 10 corpos`, await page.locator("#agora").isVisible() && await page.locator("#nowGrid .now-cell").count() === 10);
   check(`[${label}] contador rodando`, /^(3[0-2]|[0-2]\d):\d\d$/.test(await page.locator(".topbar .js-timer").textContent()));
   check(`[${label}] checkout sem link cai na oferta`, await page.locator(".js-checkout").first().getAttribute("href") === "#oferta");
+  check(`[${label}] título do topo`, (await page.locator("h1").textContent()) === "Não é só seu signo. É o seu céu inteiro.");
+  check(`[${label}] oferta de Relacionamentos em destaque`, await page.locator("#oferta-amor").isVisible()
+    && (await page.locator("#oferta-amor .js-total").textContent()) === "29,80"
+    && await page.locator("#amor .love-cta").isVisible());
+  check(`[${label}] botão de Relacionamentos sem link cai no cartão do amor`, await page.locator('#oferta-amor .js-checkout').getAttribute("href") === "#oferta-amor");
+  const bodyText = await page.locator("body").innerText();
+  check(`[${label}] sem "IA", "inteligência artificial" ou "simbólico" na página`, !/\bIA\b|intelig[êe]ncia artificial|simb[óo]lic/i.test(bodyText),
+    (bodyText.match(/.{0,40}(\bIA\b|intelig[êe]ncia artificial|simb[óo]lic).{0,40}/i) || [""])[0]);
   check(`[${label}] e-mail placeholder escondido`, !(await page.locator("footer .js-email-wrap").isVisible()));
   check(`[${label}] link "Entrar" escondido sem APP_URL`, !(await page.locator(".js-app-link").isVisible()));
   const imgsOk = await page.evaluate(() => Promise.all([...document.images].map((i) => {
@@ -116,6 +124,8 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   const href = new URL(await b.page.locator(".js-checkout").first().getAttribute("href"));
   check(`[${label}] checkout usa CHECKOUT_URL`, href.origin + href.pathname === CHECKOUT);
   check(`[${label}] checkout mantém UTMs`, href.searchParams.get("utm_source") === "fb" && href.searchParams.get("utm_campaign") === "lanc");
+  const lh = new URL(await b.page.locator("#oferta-amor .js-checkout").getAttribute("href"));
+  check(`[${label}] checkout do cartão do amor marca a origem`, lh.origin + lh.pathname === CHECKOUT && lh.searchParams.get("utm_content") === "oferta-amor" && lh.searchParams.get("utm_source") === "fb");
   check(`[${label}] e-mail de contato aparece`, await b.page.locator("footer .js-email").textContent() === "contato@exemplo.com");
   check(`[${label}] link "Entrar" aponta para o app`, await b.page.locator(".js-app-link").getAttribute("href") === "https://app.exemplo.com/auth/login");
   await b.page.locator(".hero .js-quiz").click();

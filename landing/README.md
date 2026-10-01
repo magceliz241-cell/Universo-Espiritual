@@ -65,5 +65,8 @@ do app.
   roda no CI.
 - **Telas do app:** os `img/app-*.webp` vieram do ambiente de testes (o Guia aparece sem leitura porque a IA ainda
   não estava conectada). Quando o app estiver no ar com a IA real, vale trocar por capturas novas, com 780×1688 px.
-- **Copy:** siga as regras de `knowledge/LEGAL_AND_EDITORIAL_NOTES.md`: sem promessa de resultado, sem porcentagem de
-  compatibilidade, sem medo nem urgência espiritual, linguagem neutra em gênero.
+- **Copy:** a página fala com quem acredita e quer o produto: sem avisos repetidos de "leitura simbólica" e sem
+  chamar o Guia de IA (ele é apresentado como quem traduz o mapa para linguagem simples). A transparência legal fica
+  nos Termos e na Privacidade, que continuam dizendo que as leituras são geradas por inteligência artificial. Limites
+  que continuam valendo (`knowledge/LEGAL_AND_EDITORIAL_NOTES.md`): nenhuma promessa de resultado garantido (amor,
+  dinheiro, saúde, "volta"), sem porcentagem de compatibilidade, linguagem neutra em gênero.
