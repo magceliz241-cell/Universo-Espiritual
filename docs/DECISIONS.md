@@ -321,3 +321,10 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   em largura total, colado na seção dos planetas, com uma informação por linha; seções e cartões mais compactos; telas
   repetidas do amor e a nota de garantia duplicada saíram. Página no celular: de ~14.900 para ~12.500 px.
 - "O sistema calcula" virou **"O Astarot calcula"** (título do método, passo 2, Tarot e FAQ).
+
+## Conector Supabase (2026-10-01, pedido do Guilherme)
+
+- Projeto do Supabase criado pelo Guilherme: ref `vyynstiepcqvxitwsipx`. Conector (MCP) do Supabase ligado na conta
+  do Claude, com acesso total, para facilitar o trabalho do Cowork e das próximas sessões.
+- Regra (em `CLAUDE.md` e `docs/HANDOFF_COWORK.md`): leitura livre; qualquer alteração só depois de explicar o que
+  será feito, por que, o que muda e se dá para desfazer, e receber o "pode" para aquele comando específico.

@@ -14,9 +14,17 @@
 - **Senhas, chaves e segredos ele mesmo cola.** Você nunca digita: service role do Supabase, chave da Groq, segredo do
   webhook da Cakto, senha de app do Gmail. Também não leia arquivos `.env`.
 - **Criar conta em qualquer serviço é ele quem faz** (Supabase, Vercel, Groq, Gmail, Cakto).
-- **SQL que grava no banco de produção é ele quem roda.** Deixe pronto, explique o que faz e diga "cola e clica em Run".
+- **SQL que grava no banco de produção:** se o **conector Supabase** estiver ativo na conversa (projeto
+  `vyynstiepcqvxitwsipx`), você pode executá-lo pelo conector, **mas só depois de pedir permissão ao Guilherme para
+  aquele comando específico**, explicando em linguagem simples o que ele faz e por que é necessário (veja
+  "Conector Supabase" abaixo). Sem o conector, deixe o SQL pronto, explique e diga "cola e clica em Run".
 - **Peça OK antes de:** fazer merge, salvar configurações importantes, criar o webhook ou apagar qualquer coisa.
 - Antes de dizer que algo está pronto, **mostre a evidência** (print, resposta de uma URL de diagnóstico).
+- **Conector Supabase:** consultas que só leem (listar tabelas, conferir regras de segurança, contar cidades, ver
+  logs) podem ser feitas sem pedir. Tudo o que **altera** algo (migrations, `insert`/`update`/`delete`, criar ou apagar
+  tabela, função, branch ou Edge Function, mudar configuração) exige, antes de cada execução: (1) o comando ou o
+  resumo do que será feito, (2) por que é necessário, (3) o que muda e se dá para desfazer, e (4) o "pode" do
+  Guilherme. Uma permissão vale para aquele comando, não para os próximos. Nunca rode nada contra outro projeto.
 - Se a skill **"área de membros Cakto" (modelo Shape 28°)** estiver disponível, use-a como referência de jeito de
   operar o Chrome. **Este app, porém, segue a própria estrutura**, descrita abaixo, e não é cópia do Shape 28°.
 
@@ -70,9 +78,12 @@ Guilherme se ele quer fazer o merge antes de seguir.
 
 ### Etapa 2: Supabase (projeto novo)
 Siga `docs/SETUP.md` §1. Em resumo:
-1. Ele cria um projeto **novo** no Supabase.
-2. **SQL Editor**: ele roda os 3 arquivos de `supabase/migrations/` **na ordem do nome** (0100, 0200, 0300). Abra cada
-   um no GitHub, copie o conteúdo e diga "cola e clica em Run".
+1. ✅ O projeto já existe: ref **`vyynstiepcqvxitwsipx`**. Não crie outro.
+2. Rode os 3 arquivos de `supabase/migrations/` **na ordem do nome** (0100, 0200, 0300):
+   - **Com o conector Supabase:** peça permissão para cada arquivo (diga o nome, em uma frase o que ele cria e que é
+     seguro rodar de novo) e aplique pelo conector, como migration. Depois confira listando as tabelas e as regras
+     de segurança (RLS ligada em todas).
+   - **Sem o conector:** abra cada arquivo no GitHub, copie o conteúdo e diga "cola e clica em Run" no SQL Editor.
    - Aviso de "destructive operation" é esperado (são `drop ... if exists` que recriam regras). É seguro.
 3. **Authentication → Email**: **Confirm email LIGADO**. Nunca desligue para "facilitar".
 4. **Templates de e-mail**: use os textos simples do SETUP §1.6. Os links usam `token_hash` e funcionam em qualquer
@@ -114,7 +125,8 @@ o CSV.
 ### Etapa 5: Testar o app de verdade (antes da Cakto)
 1. Peça ao Guilherme para criar uma conta no app com um e-mail dele e confirmar pelo e-mail.
    - Ele vai cair em **"Ainda não encontramos sua compra"**, o que é o certo, porque ainda não há compra.
-2. Para liberar o acesso dele sem a Cakto, prepare este SQL (**ele roda**), trocando o e-mail:
+2. Para liberar o acesso dele sem a Cakto, prepare este SQL trocando o e-mail (**ele roda**, ou você roda pelo
+   conector depois de pedir permissão):
    ```sql
    select public.cakto_apply_purchase('email-dele@exemplo.com', 'main', 'teste-manual-1');
    select public.cakto_apply_purchase('email-dele@exemplo.com', 'love', 'teste-manual-2'); -- Astarot Love
