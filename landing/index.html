@@ -119,7 +119,7 @@
   .sky-card svg{width:52px;height:52px;flex:none}
   .sky-card small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
   .sky-card b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}
-  .sky-card span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.45}
+  .sky-card span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.45;white-space:nowrap}
   a.sky-card{text-decoration:none;color:inherit}
   .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7fcf9a;margin-right:7px;vertical-align:1px;animation:live 2s infinite}
   @keyframes live{0%{box-shadow:0 0 0 0 rgba(127,207,154,.55)}70%{box-shadow:0 0 0 7px rgba(127,207,154,0)}100%{box-shadow:0 0 0 0 rgba(127,207,154,0)}}
@@ -393,6 +393,65 @@
     .offer-timer .dot,.live-dot{animation:none}
   }
 
+  /* ================= CELULAR: mais direto, menos rolagem ================= */
+  @media (max-width:759px){
+    section{padding:56px 0}
+    .topbar{font-size:12.5px;padding:8px 12px}
+    .tb-extra{display:none}
+    .nav{padding:12px 0}
+    .hero{padding:6px 0 0}
+    .hero-grid{gap:22px}
+    .hero h1{font-size:clamp(42px,12vw,56px)}
+    .hero .lead{font-size:16.5px;margin-top:14px}
+    .chips{display:none}
+    .hero-cta{margin-top:22px}
+    .cta-or{display:none}
+    .wheel-cap{font-size:10px}
+    .sky-card{margin:-4% 0 0;max-width:none;width:100%;justify-content:center;padding:14px 16px}
+    .sky-card > div{text-align:left}
+    .sky-card svg{width:44px;height:44px}
+    .sky-card span{font-size:12.5px}
+    .sky-card b{font-size:19px}
+    .now-sec{padding-top:34px}
+    .now-grid{margin-top:22px}
+    .now-cell{padding:12px 12px 11px}
+    .now-cell .dg{font-size:23px}
+    .lead{font-size:16.5px}
+    .contrast{gap:10px;margin-top:18px}
+    .contrast p{font-size:16px}
+    .quote{margin-top:22px}
+    .problem-grid{gap:24px}
+    .fact{padding:14px 16px;grid-template-columns:44px minmax(0,1fr);gap:12px}
+    .fact .g{font-size:28px}
+    .fact b{font-size:20px}
+    .method-steps{margin-top:26px;gap:10px}
+    .mstep{padding:20px 18px}
+    .mstep .n{font-size:34px}
+    .mstep h3{font-size:24px;margin:8px 0 6px}
+    .mstep p{font-size:15px}
+    .mstep .tech{margin-top:10px;padding-top:9px}
+    .rule{margin-top:20px;gap:8px}
+    .rule span{font-size:13px;padding:6px 12px}
+    .phones{margin-top:26px}
+    .love{padding:30px 20px}
+    .love ul{gap:12px;margin-top:20px}
+    .love li{font-size:15px}
+    .love-phones{display:none}
+    .quiz-cta{padding-top:30px}
+    .offer-pair{margin-top:26px}
+    .offer{padding:30px 20px 24px}
+    .offer-list{gap:10px;margin:18px 0;padding:16px 0}
+    .offer-list li{font-size:15px}
+    .price{font-size:64px}
+    .truth{gap:10px}
+    .truth-card{padding:24px 20px}
+    .seal{width:76px;height:76px;margin-bottom:14px}
+    .seal b{font-size:32px}
+    .faq{margin-top:22px}
+    summary{padding:15px 0}
+    .final{min-height:600px;padding:80px 0 230px}
+  }
+
   /* ================= DESKTOP ================= */
   @media (min-width:760px){
     body{padding-bottom:0}
@@ -408,7 +467,7 @@
     .phones{justify-content:center;overflow:visible;margin:48px 0 0;padding:0;flex-wrap:nowrap}
     .phones .phone{flex:1 1 0;width:auto;min-width:0;max-width:200px}
     .wheel-cap{position:absolute;right:2%;top:2%;margin:0;text-align:right;max-width:24ch}
-    .sky-card{position:absolute;left:0;bottom:2%;margin:0}
+    .sky-card{position:absolute;left:0;bottom:2%;margin:0;max-width:340px}
     .now-sec{padding-top:40px}
     .now-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
     .price-sub{text-align:right}
@@ -435,7 +494,7 @@
 </head>
 <body>
 
-<div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span><span class="js-timer-off">Acesso imediato no celular · </span>Astarot por R$&nbsp;<span class="js-price">19,90</span>, pagamento único · 7 dias de garantia</div>
+<div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span>Seu mapa astral completo, explicado pelo Seu Guia<span class="tb-extra"> · 7 dias de garantia</span></div>
 
 <nav class="nav" aria-label="Topo">
   <div class="wrap">
@@ -453,11 +512,11 @@
     <div>
       <span class="eyebrow">Mapa astral · Lua · Tarot · Numerologia · Sonhos</span>
       <h1>Não é só seu signo. <em>É o seu céu inteiro.</em></h1>
-      <p class="lead">O Astarot calcula o céu exato do momento em que você nasceu e transforma isso em leituras feitas para você. <strong>Mapa astral, Lua do dia, Tarot, numerologia, diário de sonhos e o Seu Guia, que traduz tudo isso para uma linguagem simples.</strong> Tudo no seu celular.</p>
+      <p class="lead">O Astarot calcula o céu do momento em que você nasceu e <strong>o Seu Guia traduz tudo para uma linguagem simples.</strong> Mapa astral, Lua do dia, Tarot, numerologia e sonhos, no seu celular.</p>
       <div class="chips">
         <span class="chip"><i></i>Posições calculadas, não adivinhadas</span>
         <span class="chip"><i></i>Leituras feitas para o seu mapa</span>
-        <span class="chip"><i></i>Pagamento único, sem mensalidade</span>
+        <span class="chip"><i></i>Acesso imediato no celular</span>
       </div>
       <div class="hero-cta">
         <a class="btn" href="#oferta">
@@ -466,7 +525,7 @@
         </a>
         <span class="cta-or">ou</span>
         <button type="button" class="btn btn-ghost js-quiz">Descubra por onde começar</button>
-        <p class="fine">Pagamento único · Acesso imediato · 7 dias de garantia</p>
+        <p class="fine">Acesso imediato · 7 dias de garantia</p>
       </div>
     </div>
 
@@ -479,6 +538,7 @@
           <small><i class="live-dot" aria-hidden="true"></i>O céu agora</small>
           <b class="js-sky-phase">Lua</b>
           <span class="js-sky-moon"></span>
+          <span class="js-sky-illum"></span>
           <span class="js-sky-next"></span>
         </div>
       </a>
@@ -523,7 +583,7 @@
 <section id="metodo" style="padding-top:0">
   <div class="wrap">
     <span class="eyebrow reveal">Como funciona</span>
-    <h2 class="h2 reveal">O sistema calcula. <em>O Seu Guia interpreta.</em></h2>
+    <h2 class="h2 reveal">O Astarot calcula. <em>O Seu Guia interpreta.</em></h2>
     <p class="lead reveal">Muita coisa que se vende como “mapa personalizado” é texto pronto por signo. Aqui, cada leitura parte das <strong>posições reais dos planetas no seu momento de nascimento</strong>.</p>
     <div class="method-steps">
       <article class="mstep reveal">
@@ -534,7 +594,7 @@
       </article>
       <article class="mstep reveal">
         <span class="n">2</span>
-        <h3>O sistema calcula o seu céu</h3>
+        <h3>O Astarot calcula o seu céu</h3>
         <p>Posições do Sol, da Lua e dos planetas, Ascendente, Meio do Céu, as doze casas e os aspectos entre eles.</p>
         <p class="tech">Motor de efemérides astronômicas (teorias VSOP87 e ELP2000), com precisão de segundos de arco.</p>
       </article>
@@ -546,7 +606,7 @@
       </article>
     </div>
     <div class="rule reveal">
-      <span><b>Tarot:</b> o sistema sorteia, o Guia lê</span>
+      <span><b>Tarot:</b> o Astarot sorteia, o Guia lê</span>
       <span><b>Numerologia:</b> método pitagórico, sempre o mesmo resultado</span>
       <span><b>Lua:</b> fase real do dia</span>
     </div>
@@ -689,7 +749,6 @@
       <p class="love-how">No checkout do Astarot, é só marcar <b>Astarot Love</b>. Se preferir, dá para adicionar depois, de dentro do app.</p>
     </article>
     </div>
-    <p class="offer-note reveal"><b>7 dias de garantia incondicional:</b> se não for para você, devolvemos 100% do valor, sem perguntas.</p>
     <p class="offer-note reveal">Não sabe por onde começar? <button type="button" class="link-btn js-quiz">Faça o teste de 1 minuto</button></p>
   </div>
 </section>
@@ -724,7 +783,7 @@
       <details class="reveal"><summary>Quando e como recebo meu acesso?</summary><p><b>Na hora, direto no seu celular.</b> O acesso é liberado logo após a compra, para o e-mail que você informou no checkout. Crie sua conta com <b>esse mesmo e-mail</b>, confirme pelo link que chega na sua caixa de entrada (olhe também o spam e a aba Promoções) e pronto. Não precisa baixar aplicativo, e também funciona no computador.</p></details>
       <details class="reveal"><summary>Preciso saber meu horário de nascimento?</summary><p>Não é obrigatório. Sem o horário, você vê os planetas nos signos, a numerologia, a Lua, o Tarot e os sonhos normalmente. <b>O Ascendente e as casas dependem do horário</b>, e você pode adicioná-lo depois, quando descobrir (a certidão de nascimento costuma ter).</p></details>
       <details class="reveal"><summary>O que é o Seu Guia?</summary><p>É a parte do Astarot que <b>traduz o seu mapa para você</b>. Ele pega os dados calculados (posições dos planetas, casas, aspectos, números, cartas) e explica tudo em linguagem simples, como uma conversa, sem termos técnicos. E você pode fazer perguntas: ele responde a partir do seu mapa.</p></details>
-      <details class="reveal"><summary>Preciso entender de astrologia?</summary><p>Não. Você só informa a data, o horário e a cidade de nascimento. <b>O sistema calcula o seu céu e o Seu Guia explica cada parte</b> em palavras simples. Quem já estuda astrologia encontra o mapa completo, com casas, aspectos e três sistemas de casas.</p></details>
+      <details class="reveal"><summary>Preciso entender de astrologia?</summary><p>Não. Você só informa a data, o horário e a cidade de nascimento. <b>O Astarot calcula o seu céu e o Seu Guia explica cada parte</b> em palavras simples. Quem já estuda astrologia encontra o mapa completo, com casas, aspectos e três sistemas de casas.</p></details>
       <details class="reveal"><summary>O que vem no Astarot Love?</summary><p><b>Tudo do Astarot</b> (mapa astral, Lua, Tarot, numerologia, sonhos e Seu Guia) <b>e mais</b>: seu perfil amoroso completo, o mapa do casal com as conexões entre os dois céus, a leitura do casal pelo Seu Guia (com quantas pessoas você quiser comparar) e o Tarot do amor. Fica <b>R$&nbsp;<span class="js-total">29,90</span> no total</b>: é o Astarot com o Astarot Love (+ R$&nbsp;<span class="js-bump">10,00</span>) marcado no checkout. É pagamento único e também pode ser adicionado depois, de dentro do app.</p></details>
       <details class="reveal"><summary>Meus dados ficam seguros?</summary><p>Sim. Seus dados de nascimento, sonhos e anotações ficam na sua conta, protegidos. Para gerar as leituras, usamos só os dados calculados e o texto necessário, <b>sem o seu nome, e-mail ou endereço</b>. Não vendemos dados.</p></details>
       <details class="reveal"><summary>Tenho garantia?</summary><p><b>Sim: 7 dias de garantia incondicional.</b> Se achar que não é para você, devolvemos 100% do valor, sem perguntas. É só pedir o reembolso pela plataforma de pagamento<span class="js-email-wrap" hidden> ou pelo e-mail <a class="js-email" href="#"></a></span>.</p></details>
@@ -892,7 +951,8 @@ function fmtIn(ms) {
         + (k > 0.005 ? '<path d="' + moonPath(k, c.waxing, true) + '" fill="url(#ml)"/>' : "");
     }
     set($(".js-sky-phase"), phases[c.phaseIndex]);
-    set($(".js-sky-moon"), "Lua a " + fmtDeg(moon.deg) + " de " + SIGN_PT[moon.sign] + " · " + (k * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "% iluminada");
+    set($(".js-sky-moon"), "Lua a " + fmtDeg(moon.deg) + " de " + SIGN_PT[moon.sign]);
+    set($(".js-sky-illum"), (k * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "% iluminada");
     if (!principal || principal.ms <= now) principal = nextPrincipal(now);
     set($(".js-sky-next"), principal ? "Próxima " + principal.label + ": " + fmtWhen(principal.ms) : "");
     /* Planetas */

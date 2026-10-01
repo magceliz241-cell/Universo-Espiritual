@@ -74,7 +74,7 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   check(`[${label}] sem rolagem horizontal`, await noOverflow(page));
   check(`[${label}] roda do mapa renderizada`, await page.locator("#wheel svg").count() === 1);
   const sky = await page.locator(".js-sky-moon").textContent();
-  check(`[${label}] cartão "O céu agora" preenchido`, await page.locator("#skyCard").isVisible() && /^Lua a \d+°\d\d′ de \S+ · \d+,\d% iluminada$/.test(sky), sky);
+  check(`[${label}] cartão "O céu agora" preenchido`, await page.locator("#skyCard").isVisible() && /^Lua a \d+°\d\d′ de \S+$/.test(sky) && /^\d+,\d% iluminada$/.test(await page.locator(".js-sky-illum").textContent()), sky);
   check(`[${label}] próxima Lua Nova/Cheia`, /^Próxima Lua (Nova|Cheia): \d\d\/\d\d, \d\dh\d\d$/.test(await page.locator(".js-sky-next").textContent()));
   check(`[${label}] seção do céu ao vivo com 10 corpos`, await page.locator("#agora").isVisible() && await page.locator("#nowGrid .now-cell").count() === 10);
   check(`[${label}] contador rodando`, /^(3[0-2]|[0-2]\d):\d\d$/.test(await page.locator(".topbar .js-timer").textContent()));

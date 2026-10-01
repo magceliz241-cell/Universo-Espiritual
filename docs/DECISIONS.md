@@ -316,3 +316,8 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   teste (como as órbitas na seção do amor), com máscara em degradê e mistura de luz.
 - **Preço do Astarot Love:** R$ 29,90 no total (Astarot R$ 19,90 + complemento R$ 10,00 no checkout). O total da
   página é calculado a partir de `PRICE` e `BUMP_PRICE` em `landing/config.js`.
+- **Celular mais direto:** barra do topo sem preço nem "pagamento único" (contador + "Seu mapa astral completo,
+  explicado pelo Seu Guia"); texto do topo encurtado; etiquetas e o "ou" escondidos no celular; cartão "O céu agora"
+  em largura total, colado na seção dos planetas, com uma informação por linha; seções e cartões mais compactos; telas
+  repetidas do amor e a nota de garantia duplicada saíram. Página no celular: de ~14.900 para ~12.500 px.
+- "O sistema calcula" virou **"O Astarot calcula"** (título do método, passo 2, Tarot e FAQ).
