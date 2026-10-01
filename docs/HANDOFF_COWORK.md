@@ -30,7 +30,7 @@ interpreta.**
 
 **Modelo de venda (decidido pelo Guilherme):**
 - Produto principal **Astarot** (R$ 19,90, pagamento único; o acesso não expira).
-- Order bump **Astarot Love** (R$ 9,90, também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
+- Order bump **Astarot Love** (R$ 10,00, total R$ 29,90 com o Astarot; também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
 - "Vitalício" é característica, não nome de plano: nos produtos da Cakto use os nomes **Astarot** e **Astarot Love**.
 - O bump **também é vendido dentro do app**. Quem comprou sem ele vê a oferta, e o checkout abre com o e-mail da
   conta preenchido.
@@ -41,8 +41,9 @@ interpreta.**
 
 ## 2. O que já está pronto (não refaça)
 
-**Código:** repositório `magceliz241-cell/Universo-Espiritual`, branch **`claude/clever-bell-8ngyya`**
-(ainda **não** foi feito merge na `main`).
+**Código:** repositório `magceliz241-cell/Universo-Espiritual`, já na branch **`main`** (o Guilherme fez o merge
+dos Pull Requests). O Claude Code trabalha na branch `claude/clever-bell-8ngyya` e abre um PR a cada rodada de
+mudanças; o Guilherme faz o merge.
 
 | Parte | Situação |
 |---|---|
@@ -51,9 +52,9 @@ interpreta.**
 | Banco: 3 migrations em `supabase/migrations/` (tabelas, regras de segurança, acesso Cakto, cidades) | ✅ prontas, **não rodadas** em produção |
 | Webhook da Cakto em `/api/webhooks/cakto` (compra, bump, reembolso, chargeback) | ✅ pronto |
 | IA (Groq, modelo `openai/gpt-oss-120b`) | ✅ pronta, **falta a chave** |
-| Testes: 129 unitários, 18 de banco, 65/65 de ponta a ponta no navegador | ✅ passando |
+| Testes: 132 unitários, 18 de banco, 65/65 de ponta a ponta no navegador | ✅ passando |
 | Base de cidades (GeoNames) | ⚠️ script pronto, **dados não importados** |
-| Landing page de vendas em `landing/` (R$ 19,90 + bump R$ 9,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ pronta, **falta preencher `landing/config.js` e publicar** |
+| Landing page de vendas em `landing/` (Astarot R$ 19,90 + Astarot Love R$ 10,00 = R$ 29,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ **publicada** em https://universo-espiritual-landing.vercel.app (projeto próprio na Vercel, Root Directory `landing`); **falta preencher `landing/config.js`** |
 
 Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/artifact/1kUWoqfgZtixUL9ufH5qw9
 
@@ -63,10 +64,9 @@ Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/art
 
 A ordem importa: com a Vercel no ar, o Guilherme já consegue testar o app antes da Cakto existir.
 
-### Etapa 1: Merge do código na `main`
-1. No GitHub, abra um Pull Request de `claude/clever-bell-8ngyya` → `main` (título: "Astarot: MVP").
-2. **Peça OK ao Guilherme** e faça o merge.
-   - Se ele preferir não fazer merge ainda, a Vercel pode publicar direto da branch.
+### Etapa 1: Merge do código na `main` (✅ já feito)
+O código já está na `main`. Se houver algum Pull Request aberto do Claude Code quando você começar, pergunte ao
+Guilherme se ele quer fazer o merge antes de seguir.
 
 ### Etapa 2: Supabase (projeto novo)
 Siga `docs/SETUP.md` §1. Em resumo:
@@ -81,7 +81,9 @@ Siga `docs/SETUP.md` §1. Em resumo:
 6. Anote para a Vercel: *Project URL* e chave *anon/publishable* (públicas) e *service_role* (secreta, ele cola).
 
 ### Etapa 3: Vercel
-1. Ele importa o repositório na Vercel (framework Next.js detectado sozinho, Node 22). Não mude o comando de build.
+1. Ele importa o repositório na Vercel **de novo, como um projeto novo** (o projeto que já existe,
+   `universo-espiritual-landing`, é só da landing). Neste projeto do app, o **Root Directory fica na raiz** (padrão),
+   framework Next.js detectado sozinho, Node 22. Não mude o comando de build.
 2. Variáveis de ambiente: tabela completa em `docs/SETUP.md` §3. Nesta etapa bastam:
    - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (ele cola)
    - `NEXT_PUBLIC_APP_URL` (a URL final da Vercel, sem barra no fim)
@@ -149,14 +151,14 @@ Siga `docs/SETUP.md` §4:
 ### Etapa 7: Publicar a landing (já está pronta em `landing/`)
 Guia completo em `landing/README.md`. Em resumo:
 1. Em `landing/config.js` (é o **único** arquivo a editar), com o Guilherme:
-   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Astarot Love (R$ 9,90)** dentro
+   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Astarot Love (R$ 10,00, total R$ 29,90)** dentro
      desse mesmo checkout;
    - `APP_URL`: URL do app, sem barra no fim;
    - `CONTACT_EMAIL`: e-mail de suporte;
    - `META_PIXEL_ID`: pixel via UTMify **da conta do Astarot** (vazio = sem pixel).
 2. Script de captura de UTMs da UTMify: colar no `<head>` do `landing/index.html`, no comentário indicado.
-3. Vercel: *Add New → Project* com o **mesmo repositório**, **Root Directory = `landing`**, preset **Other**, sem
-   build e sem variáveis.
+3. Vercel: ✅ já feito. O projeto `universo-espiritual-landing` publica a pasta `landing` da `main` em
+   https://universo-espiritual-landing.vercel.app. Cada merge na `main` atualiza o site sozinho.
 4. Depois do deploy: trocar o `og:image` do `index.html` pelo endereço completo da imagem
    (`https://<landing>/img/og.jpg`) e preencher `NEXT_PUBLIC_LANDING_URL` no projeto do app (redeploy).
 5. **Conferência:** abrir a landing no celular e ver o cartão "O céu agora" e a seção dos planetas com a hora mudando a
@@ -199,7 +201,7 @@ pelo GitHub.
 
 ## 6. Checklist final (mostre ao Guilherme)
 
-- [ ] Merge na `main` feito
+- [x] Merge na `main` feito
 - [ ] Supabase: 3 migrations rodadas, Confirm email ligado, templates e SMTP configurados, Site URL correta
 - [ ] Vercel no ar; `/api/health/engine` → `ok: true`
 - [ ] Cidades importadas (mais de 150 mil; busca por "sao paulo" funciona)
@@ -207,4 +209,5 @@ pelo GitHub.
 - [ ] Cakto: produtos, bump e oferta avulsa criados; webhook com os 3 eventos e todos os produtos marcados
 - [ ] `/api/webhooks/cakto` (GET) → tudo `true`
 - [ ] Compra real: principal libera; bump dentro do app libera Amor na hora; reembolso bloqueia
-- [ ] Landing: `config.js` preenchido, UTMify colada, publicada (Root Directory `landing`), `og:image` com endereço completo, `NEXT_PUBLIC_LANDING_URL` preenchida
+- [x] Landing publicada (Root Directory `landing`)
+- [ ] Landing: `config.js` preenchido, UTMify colada, `og:image` com endereço completo, `NEXT_PUBLIC_LANDING_URL` preenchida

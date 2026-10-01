@@ -6,7 +6,7 @@
    ============================================================ */
 window.SU_CONFIG = {
   /* Checkout da Cakto do PLANO PRINCIPAL (R$ 19,90), com o order bump
-     "Astarot Love" (R$ 9,90) configurado dentro desse mesmo checkout. */
+     "Astarot Love" (R$ 10,00, total R$ 29,90) configurado dentro desse mesmo checkout. */
   CHECKOUT_URL: "SEU-LINK-AQUI",
 
   /* Endereço do app (área de membros), para o link "Já comprei? Entrar". Sem barra no fim. */
@@ -22,5 +22,5 @@ window.SU_CONFIG = {
 
   /* Preços exibidos na página (o valor cobrado é sempre o da Cakto). */
   PRICE: "19,90",
-  BUMP_PRICE: "9,90",
+  BUMP_PRICE: "10,00",
 };

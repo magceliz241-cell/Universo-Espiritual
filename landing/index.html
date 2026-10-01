@@ -591,7 +591,7 @@
             <li><span class="g" aria-hidden="true">✦</span><div><b>Tarot do amor</b>Três cartas sobre a energia do momento, a dinâmica entre vocês e o que observar agora.</div></li>
           </ul>
           <div class="love-cta reveal">
-            <div class="love-price"><small>Astarot Love</small><b>R$&nbsp;<span class="js-total">29,80</span></b><span>tudo do Astarot + o amor (só + R$&nbsp;<span class="js-bump">9,90</span>)</span></div>
+            <div class="love-price"><small>Astarot Love</small><b>R$&nbsp;<span class="js-total">29,90</span></b><span>tudo do Astarot + o amor (só + R$&nbsp;<span class="js-bump">10,00</span>)</span></div>
             <a class="btn btn-rose" href="#oferta-amor">Quero o Astarot Love</a>
           </div>
           <p class="fine reveal" style="margin-top:14px">Nada de porcentagem de compatibilidade: é uma leitura de verdade dos dois mapas.</p>
@@ -679,8 +679,8 @@
         <li><span class="g" aria-hidden="true">✦</span><span><b>Tarot do amor:</b> três cartas sobre o momento da relação</span></li>
       </ul>
       <div class="price-row">
-        <div class="price"><sup>R$</sup><span class="js-total">29,80</span></div>
-        <p class="price-sub"><b>tudo junto, pagamento único</b>Astarot R$&nbsp;<span class="js-price">19,90</span> + Love R$&nbsp;<span class="js-bump">9,90</span></p>
+        <div class="price"><sup>R$</sup><span class="js-total">29,90</span></div>
+        <p class="price-sub"><b>tudo junto, pagamento único</b>Astarot R$&nbsp;<span class="js-price">19,90</span> + Love R$&nbsp;<span class="js-bump">10,00</span></p>
       </div>
       <a class="btn btn-rose btn-block js-checkout" data-utm-content="oferta-amor" href="#oferta">
         Quero o Astarot Love
@@ -725,7 +725,7 @@
       <details class="reveal"><summary>Preciso saber meu horário de nascimento?</summary><p>Não é obrigatório. Sem o horário, você vê os planetas nos signos, a numerologia, a Lua, o Tarot e os sonhos normalmente. <b>O Ascendente e as casas dependem do horário</b>, e você pode adicioná-lo depois, quando descobrir (a certidão de nascimento costuma ter).</p></details>
       <details class="reveal"><summary>O que é o Seu Guia?</summary><p>É a parte do Astarot que <b>traduz o seu mapa para você</b>. Ele pega os dados calculados (posições dos planetas, casas, aspectos, números, cartas) e explica tudo em linguagem simples, como uma conversa, sem termos técnicos. E você pode fazer perguntas: ele responde a partir do seu mapa.</p></details>
       <details class="reveal"><summary>Preciso entender de astrologia?</summary><p>Não. Você só informa a data, o horário e a cidade de nascimento. <b>O sistema calcula o seu céu e o Seu Guia explica cada parte</b> em palavras simples. Quem já estuda astrologia encontra o mapa completo, com casas, aspectos e três sistemas de casas.</p></details>
-      <details class="reveal"><summary>O que vem no Astarot Love?</summary><p><b>Tudo do Astarot</b> (mapa astral, Lua, Tarot, numerologia, sonhos e Seu Guia) <b>e mais</b>: seu perfil amoroso completo, o mapa do casal com as conexões entre os dois céus, a leitura do casal pelo Seu Guia (com quantas pessoas você quiser comparar) e o Tarot do amor. Fica <b>R$&nbsp;<span class="js-total">29,80</span> no total</b>: é o Astarot com o Astarot Love (+ R$&nbsp;<span class="js-bump">9,90</span>) marcado no checkout. É pagamento único e também pode ser adicionado depois, de dentro do app.</p></details>
+      <details class="reveal"><summary>O que vem no Astarot Love?</summary><p><b>Tudo do Astarot</b> (mapa astral, Lua, Tarot, numerologia, sonhos e Seu Guia) <b>e mais</b>: seu perfil amoroso completo, o mapa do casal com as conexões entre os dois céus, a leitura do casal pelo Seu Guia (com quantas pessoas você quiser comparar) e o Tarot do amor. Fica <b>R$&nbsp;<span class="js-total">29,90</span> no total</b>: é o Astarot com o Astarot Love (+ R$&nbsp;<span class="js-bump">10,00</span>) marcado no checkout. É pagamento único e também pode ser adicionado depois, de dentro do app.</p></details>
       <details class="reveal"><summary>Meus dados ficam seguros?</summary><p>Sim. Seus dados de nascimento, sonhos e anotações ficam na sua conta, protegidos. Para gerar as leituras, usamos só os dados calculados e o texto necessário, <b>sem o seu nome, e-mail ou endereço</b>. Não vendemos dados.</p></details>
       <details class="reveal"><summary>Tenho garantia?</summary><p><b>Sim: 7 dias de garantia incondicional.</b> Se achar que não é para você, devolvemos 100% do valor, sem perguntas. É só pedir o reembolso pela plataforma de pagamento<span class="js-email-wrap" hidden> ou pelo e-mail <a class="js-email" href="#"></a></span>.</p></details>
     </div>
@@ -786,7 +786,7 @@ var isSet = function (v) { return typeof v === "string" && v.length > 0 && v.ind
   if (CFG.PRICE) document.querySelectorAll(".js-price").forEach(function (el) { el.textContent = CFG.PRICE; });
   if (CFG.BUMP_PRICE) document.querySelectorAll(".js-bump").forEach(function (el) { el.textContent = CFG.BUMP_PRICE; });
   var num = function (v) { return parseFloat(String(v || "").replace(/\./g, "").replace(",", ".")); };
-  var total = num(CFG.PRICE || "19,90") + num(CFG.BUMP_PRICE || "9,90");
+  var total = num(CFG.PRICE || "19,90") + num(CFG.BUMP_PRICE || "10,00");
   if (isFinite(total)) document.querySelectorAll(".js-total").forEach(function (el) { el.textContent = total.toFixed(2).replace(".", ","); });
   if (isSet(CFG.CONTACT_EMAIL)) {
     document.querySelectorAll(".js-email").forEach(function (a) { a.textContent = CFG.CONTACT_EMAIL; a.href = "mailto:" + CFG.CONTACT_EMAIL; });
@@ -1136,7 +1136,7 @@ function buildResult(a) {
       + '</ul>'
       + '<div class="r-rec"><small>Por onde seguir</small>'
       + '<p><b>Astarot, por R$&nbsp;' + (CFG.PRICE || "19,90") + ', pagamento único.</b> ' + r.tempo + '</p>'
-      + (r.obj === "amor" ? '<p class="r-love">Como o seu foco é amor, o <b>Astarot Love</b> é para você: tudo do Astarot + perfil amoroso completo, mapa do casal, as conexões entre vocês e o Tarot do amor. É só marcar no checkout (+&nbsp;R$&nbsp;' + (CFG.BUMP_PRICE || "9,90") + ').</p>' : "")
+      + (r.obj === "amor" ? '<p class="r-love">Como o seu foco é amor, o <b>Astarot Love</b> é para você: tudo do Astarot + perfil amoroso completo, mapa do casal, as conexões entre vocês e o Tarot do amor. É só marcar no checkout (+&nbsp;R$&nbsp;' + (CFG.BUMP_PRICE || "10,00") + ').</p>' : "")
       + '</div>'
       + '<a class="btn btn-block js-checkout" href="' + checkoutUrl({ utm_content: "quiz-" + r.obj }) + '" id="qBuy">Quero o meu acesso</a>'
       + '<a class="r-alt" href="#oferta" id="qOffer">Ver tudo o que vem no acesso</a>'

@@ -81,7 +81,7 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   check(`[${label}] checkout sem link cai na oferta`, await page.locator(".js-checkout").first().getAttribute("href") === "#oferta");
   check(`[${label}] título do topo`, (await page.locator("h1").textContent()) === "Não é só seu signo. É o seu céu inteiro.");
   check(`[${label}] oferta de Relacionamentos em destaque`, await page.locator("#oferta-amor").isVisible()
-    && (await page.locator("#oferta-amor .js-total").textContent()) === "29,80"
+    && (await page.locator("#oferta-amor .js-total").textContent()) === "29,90"
     && await page.locator("#amor .love-cta").isVisible());
   check(`[${label}] botão de Relacionamentos sem link cai no cartão do amor`, await page.locator('#oferta-amor .js-checkout').getAttribute("href") === "#oferta-amor");
   const bodyText = await page.locator("body").innerText();
@@ -119,7 +119,7 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   await ctx.close();
 
   // 3) Config preenchida + UTMs da URL repassadas ao checkout
-  const cfg = { CHECKOUT_URL: CHECKOUT, APP_URL: "https://app.exemplo.com", CONTACT_EMAIL: "contato@exemplo.com", META_PIXEL_ID: "", PRICE: "19,90", BUMP_PRICE: "9,90" };
+  const cfg = { CHECKOUT_URL: CHECKOUT, APP_URL: "https://app.exemplo.com", CONTACT_EMAIL: "contato@exemplo.com", META_PIXEL_ID: "", PRICE: "19,90", BUMP_PRICE: "10,00" };
   const b = await open(viewport, { config: cfg, query: "?utm_source=fb&utm_campaign=lanc" });
   const href = new URL(await b.page.locator(".js-checkout").first().getAttribute("href"));
   check(`[${label}] checkout usa CHECKOUT_URL`, href.origin + href.pathname === CHECKOUT);

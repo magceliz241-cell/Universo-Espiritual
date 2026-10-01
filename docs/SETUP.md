@@ -80,7 +80,7 @@ Conferência: `GET /api/health/engine` → `ok: true`; `GET /api/webhooks/cakto`
 
 ## 4. Cakto
 
-1. Produto principal **Astarot** (R$ 19,90, acesso sem expiração) + order bump **Astarot Love** (R$ 9,90, sem
+1. Produto principal **Astarot** (R$ 19,90, acesso sem expiração) + order bump **Astarot Love** (R$ 10,00, total R$ 29,90; sem
    expiração) + oferta avulsa do Astarot Love para vender dentro do app (o link recebe `?email=` preenchido).
 2. "Acesso por e-mail" de cada produto → `https://<app>/auth/sign-up`.
 3. Integrações → Webhooks → URL `https://<app>/api/webhooks/cakto`, eventos **Compra aprovada**, **Reembolso** e

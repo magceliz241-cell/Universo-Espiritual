@@ -17,7 +17,7 @@ do app.
 
 1. Em `config.js`, preencha:
    - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump **Astarot Love
-     (R$ 9,90)** configurado dentro desse mesmo checkout.
+     (R$ 10,00, total R$ 29,90)** configurado dentro desse mesmo checkout.
    - `APP_URL`: endereço do app, sem barra no fim (aparece o link "Já comprei · Entrar").
    - `CONTACT_EMAIL`: e-mail de suporte (rodapé, FAQ, termos e privacidade).
    - `META_PIXEL_ID`: ID do pixel via UTMify **desta conta**. Vazio = nenhum pixel carrega.
@@ -32,6 +32,9 @@ do app.
 4. Confira se os preços em `config.js` batem com os da Cakto. A página só **exibe** o preço; quem cobra é a Cakto.
 
 ## Publicar na Vercel
+
+✅ **Já publicada** em https://universo-espiritual-landing.vercel.app (projeto `universo-espiritual-landing`). Cada
+merge na `main` atualiza o site sozinho. Os passos abaixo ficam como referência, caso seja preciso recriar o projeto.
 
 1. *Add New → Project*, importe o mesmo repositório.
 2. **Root Directory: `landing`**. Framework Preset: **Other**. Sem comando de build, sem variáveis de ambiente.
