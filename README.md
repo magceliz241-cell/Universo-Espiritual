@@ -1,22 +1,33 @@
 # Seu Universo
 
-Área de membros de espiritualidade/esoterismo: mapa astral, amor/sinastria, Tarot, numerologia, Lua, sonhos e
-um guia de IA. O software calcula; a IA interpreta.
+Área de membros de espiritualidade/esoterismo: mapa astral, amor e mapa do casal, Tarot, numerologia, Lua, sonhos e
+o Seu Guia (IA). **O software calcula; a IA interpreta.**
 
-- Plano e decisões: [`docs/PLANO_TECNICO.md`](docs/PLANO_TECNICO.md), [`docs/DECISIONS.md`](docs/DECISIONS.md)
-- Design: [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md)
+- Plano, decisões e benchmark: [`docs/PLANO_TECNICO.md`](docs/PLANO_TECNICO.md), [`docs/DECISIONS.md`](docs/DECISIONS.md),
+  [`docs/BENCHMARK.md`](docs/BENCHMARK.md)
+- Design: [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) · Configuração (Supabase, Vercel, Cakto): [`docs/SETUP.md`](docs/SETUP.md)
+- Licenças de terceiros: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
+
+## Stack
+Next.js 16 (App Router) · TypeScript · Tailwind 4 · Supabase (Auth + Postgres + RLS) · Groq `openai/gpt-oss-120b` ·
+XALEN Ephemeris (Rust → WebAssembly, via wrapper próprio `engine/`) · Vercel.
 
 ## Desenvolvimento
-
 ```bash
 npm install
-npm run dev        # http://localhost:3000
-npm test           # Vitest
-npm run typecheck
-npm run lint
+cp .env.example .env.local   # preencha (nunca commite)
+npm run dev                  # http://localhost:3000
 ```
 
-O motor astronômico é o [XALEN Ephemeris](https://github.com/vedika-io/xalen-ephemeris) (Apache-2.0), usado por um
-wrapper Rust próprio (`engine/`), compilado para WebAssembly e versionado em `vendor/su-ephem/`. Para reproduzir o artefato:
-`npm run build:xalen` (requer Rust e `wasm-bindgen-cli 0.2.129`).
-Construído com XALEN Ephemeris; ver `vendor/su-ephem/XALEN-LICENSE` e `XALEN-NOTICE`.
+| Comando | O que faz |
+|---|---|
+| `npm test` | testes unitários (motor, tempo/fuso, aspectos, KB, IA, webhook, numerologia, Tarot, Lua) |
+| `npm run test:db` | migrations + RLS + regras de acesso num Postgres local (porta 55432) |
+| `npm run test:e2e` | roteiro Playwright contra o ambiente local (`tests/e2e/harness/start.sh`) |
+| `npm run benchmark` | benchmark de precisão → `docs/BENCHMARK.md` |
+| `npm run benchmark:fetch-jpl` | busca as referências do JPL Horizons (precisa de rede) |
+| `npm run build:knowledge` | regenera o índice da KB depois de editar `knowledge/` |
+| `npm run build:xalen` | recompila o motor (Rust + `wasm-bindgen-cli 0.2.129`) |
+| `npm run lint` / `npm run typecheck` | qualidade |
+
+Construído com XALEN Ephemeris (Apache-2.0); ver `vendor/su-ephem/XALEN-LICENSE` e `XALEN-NOTICE`.

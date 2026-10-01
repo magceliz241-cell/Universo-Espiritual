@@ -50,6 +50,10 @@ async function shot(page, name) {
   await page.waitForTimeout(400);
   await page.screenshot({ path: `${SHOTS}/${name}.png`, fullPage: true });
 }
+/** Espera o elemento aparecer (a página chega em streaming por causa do loading.tsx). */
+const visible = (locator, timeout = 10000) =>
+  locator.first().waitFor({ state: "visible", timeout }).then(() => true, () => false);
+
 async function noOverflow(page) {
   const r = await page.evaluate(() => {
     const ok = document.documentElement.scrollWidth <= window.innerWidth + 1;
@@ -99,7 +103,7 @@ try {
   await page.fill("#password", password);
   await page.click("button[type=submit]");
   await page.getByText("ainda não foi confirmado").waitFor({ timeout: 10000 });
-  check("login sem confirmar avisa e oferece reenvio", await page.getByText("Reenviar e-mail de confirmação").isVisible());
+  check("login sem confirmar avisa e oferece reenvio", await visible(page.getByText("Reenviar e-mail de confirmação")));
 
   // 4. Link inválido → erro amigável
   await page.goto(`${APP}/auth/confirm?token_hash=invalido&type=email&next=/`);
@@ -109,7 +113,7 @@ try {
   const th = await outboxLink(email, "signup");
   await page.goto(`${APP}/auth/confirm?token_hash=${th}&type=email&next=/`);
   check("confirmação entra e, sem compra, vai para /acesso", page.url().endsWith("/acesso"), page.url());
-  check("/acesso mostra o e-mail", await page.getByText(email).isVisible());
+  check("/acesso mostra o e-mail", await visible(page.getByText(email)));
   await shot(page, "03-acesso");
 
   // 6. Compra aprovada (webhook) libera na hora
@@ -117,8 +121,8 @@ try {
   check("webhook compra → processed", w1.status === 200 && w1.body.outcomes?.[0]?.status === "processed", JSON.stringify(w1.body));
   await page.goto(`${APP}/`);
   check("com compra → dashboard", page.url() === `${APP}/`, page.url());
-  check("dashboard: estado vazio do mapa", await page.getByText("Ainda não criamos seu mapa").isVisible());
-  check("dashboard: fase da Lua", await page.getByText("Fase da Lua").isVisible());
+  check("dashboard: estado vazio do mapa", await visible(page.getByText("Ainda não criamos seu mapa")));
+  check("dashboard: fase da Lua", await visible(page.getByText("Fase da Lua")));
   check("dashboard sem rolagem lateral (390px)", await noOverflow(page));
   await shot(page, "04-dashboard-vazio");
 
@@ -134,8 +138,8 @@ try {
   await page.click("button[type=submit]");
   await page.waitForURL(`${APP}/mapa`, { timeout: 15000 });
   check("salvar nascimento → /mapa", true);
-  check("mapa: roda renderizada", (await page.locator("svg[aria-label^='Mapa astral']").count()) === 1);
-  check("mapa: Sol em Leão na tabela", await page.getByRole("row", { name: /Sol.*Leão/ }).isVisible());
+  check("mapa: roda renderizada", await visible(page.locator("svg[aria-label^='Mapa astral']")));
+  check("mapa: Sol em Leão na tabela", await visible(page.getByRole("row", { name: /Sol.*Leão/ })));
   check("mapa sem rolagem lateral (390px)", await noOverflow(page));
   await shot(page, "06-mapa");
 
@@ -160,7 +164,7 @@ try {
   const w2 = await webhook(purchase(email, "offer-love-app-e2e", `ord-${run}-2`));
   check("webhook bump → processed", w2.status === 200 && w2.body.outcomes?.[0]?.result === "applied", JSON.stringify(w2.body));
   await page.goto(`${APP}/amor`);
-  check("amor liberado após o bump", !(await page.getByRole("link", { name: "Liberar relacionamentos" }).isVisible().catch(() => false)));
+  check("amor liberado após o bump", !(await visible(page.getByRole("link", { name: "Liberar relacionamentos" })).catch(() => false)));
   await shot(page, "09-amor");
 
   // 11b. Tarot: sorteio no servidor, cartas viram, leitura
@@ -181,7 +185,7 @@ try {
   // 11c. Numerologia
   await page.goto(`${APP}/numerologia`);
   check("numerologia: Caminho de Vida 6 (15/08/1990)", (await page.locator("p.text-display").first().textContent())?.trim() === "6");
-  check("numerologia: expressão calculada (nome informado)", await page.getByText("Expressão").isVisible());
+  check("numerologia: expressão calculada (nome informado)", await visible(page.getByText("Expressão")));
   await shot(page, "14-numerologia");
 
   // 11d. Lua: diário de intenção
@@ -199,12 +203,12 @@ try {
   await page.locator("label", { hasText: "Medo" }).click();
   await page.getByRole("button", { name: "Guardar e ler" }).click();
   await page.waitForURL(/\/sonhos\/[0-9a-f-]{36}$/, { timeout: 15000 });
-  check("sonhos: símbolos Água e Cobra identificados", (await page.getByText("Água", { exact: true }).isVisible()) && (await page.getByText("Cobra", { exact: true }).isVisible()));
+  check("sonhos: símbolos Água e Cobra identificados", (await visible(page.getByText("Água", { exact: true }))) && (await visible(page.getByText("Cobra", { exact: true }))));
   await page.getByRole("button", { name: "Ler meu sonho" }).click();
   await page.getByText("dream_analysis").waitFor({ timeout: 15000 });
   check("sonhos: leitura do Guia", true);
   await page.reload();
-  check("sonhos: leitura salva reaparece", await page.getByText("dream_analysis").isVisible());
+  check("sonhos: leitura salva reaparece", await visible(page.getByText("dream_analysis")));
   await shot(page, "16-sonho");
 
   // 11f. Seu Guia
@@ -224,8 +228,8 @@ try {
   await page.getByRole("option", { name: /Recife/ }).click();
   await page.click("button[type=submit]");
   await page.waitForURL(/\/amor\/sinastria/, { timeout: 15000 });
-  check("sinastria: Você & Rafa", await page.getByRole("heading", { name: "Você & Rafa" }).isVisible());
-  check("sinastria: aviso de horário desconhecido", await page.getByText("Sem o horário de Rafa").isVisible());
+  check("sinastria: Você & Rafa", await visible(page.getByRole("heading", { name: "Você & Rafa" })));
+  check("sinastria: aviso de horário desconhecido", await visible(page.getByText("Sem o horário de Rafa")));
   await page.getByRole("button", { name: "Ler o mapa do casal" }).click();
   await page.getByText("synastry").waitFor({ timeout: 15000 });
   check("sinastria: leitura do Guia", true);

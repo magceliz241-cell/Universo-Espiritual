@@ -232,3 +232,19 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
 - `npm run benchmark` (pesado: fora do `npm test`), `npm run benchmark:fetch-jpl` (requer rede).
 - Pendências: fixtures do JPL; modo DE440 no benchmark (Plutão ≤ 5″ e teste apertado da Lua), que exige expor o
   provedor DE440 no wrapper e baixar o kernel só no ambiente de benchmark.
+
+## Fase 9 — Polimento (2026-10-01)
+
+- Cabeçalhos de segurança em todas as rotas: `X-Content-Type-Options`, `Referrer-Policy`, `X-Frame-Options: DENY`,
+  `Permissions-Policy`, HSTS e CSP mínima (`frame-ancestors 'none'`, `object-src 'none'`, `base-uri 'self'`,
+  `form-action` próprio). Sem `X-Powered-By`.
+- `tests/e2e/check-bundle.mjs`: o bundle do cliente não contém segredos (valores de service role, Groq e webhook), a
+  KB, o prompt do sistema nem o motor. ✅
+- Limite por IP na busca pública de cidades (60/min, em memória por instância). A IA já tem limite diário e o
+  webhook é assinado.
+- Páginas de erro, carregamento e 404 com a voz do produto (sem stack trace). Ícone próprio (`app/icon.svg`).
+- `THIRD_PARTY_NOTICES.md` (XALEN Apache-2.0 + ERFA BSD-3, GeoNames CC-BY 4.0, fontes OFL, dependências). Nenhuma
+  dependência copyleft/não comercial, e Hipparcos fora.
+- CI (`.github/workflows/ci.yml`): lint, tipos, unitários, build, checagem do bundle e testes de banco com Postgres 16.
+- E2E de novo em 65/65. Com o `loading.tsx` as páginas chegam em streaming, então o roteiro passou a *esperar* os
+  elementos em vez de checar no primeiro instante.

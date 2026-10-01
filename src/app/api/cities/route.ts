@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { normalizeCityQuery } from "@/lib/cities/normalize";
 import { supabaseConfigured } from "@/lib/env";
+import { clientIp, rateLimit } from "@/lib/rate-limit";
 import { createClient } from "@/lib/supabase/server";
 
 /** Busca de cidades (dado público GeoNames). GET /api/cities?q=sao pau&country=BR */
@@ -8,6 +9,9 @@ export async function GET(request: NextRequest) {
   const q = normalizeCityQuery(request.nextUrl.searchParams.get("q") ?? "");
   const country = (request.nextUrl.searchParams.get("country") ?? "").toUpperCase();
   if (q.length < 2) return Response.json({ cities: [] });
+  if (!rateLimit(`cities:${clientIp(request.headers)}`, 60, 60_000)) {
+    return Response.json({ error: "muitas buscas" }, { status: 429 });
+  }
   if (!supabaseConfigured()) return Response.json({ error: "indisponível" }, { status: 503 });
 
   const supabase = await createClient();
