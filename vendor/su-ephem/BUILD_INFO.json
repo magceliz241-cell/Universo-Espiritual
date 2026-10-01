@@ -1,0 +1,13 @@
+{
+  "engine": "xalen",
+  "xalen_source": "https://github.com/vedika-io/xalen-ephemeris",
+  "xalen_commit": "cc6edbec1f748ebdc4950ae6198f575c5ada73fa",
+  "wrapper": "engine/ (su-ephem)",
+  "cargo_flags": "--locked --release --target wasm32-unknown-unknown (xalen-* com default-features = false)",
+  "hip_catalog_linked": false,
+  "wasm_bindgen": "0.2.129",
+  "wasm_bindgen_target": "web (initSync com bytes lidos pelo app)",
+  "rustc": "rustc 1.97.0 (2d8144b78 2026-07-07)",
+  "wasm_sha256": "3a304e379f54b884015a4c096eb83a8edfccdb7c10945eea5bf977658cc50b04",
+  "license": "XALEN: Apache-2.0 (+ BSD-3-Clause no porte ERFA de xalen-coords); ver XALEN-LICENSE e XALEN-NOTICE"
+}

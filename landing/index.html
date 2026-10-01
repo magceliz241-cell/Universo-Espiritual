@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Seu Universo: o seu mapa astral, a Lua, o Tarot e um Guia no seu celular</title>
+<meta name="description" content="Mapa astral calculado com dados astronômicos reais, Lua do dia, Tarot, numerologia, diário de sonhos e o Seu Guia, que conversa com você a partir do seu mapa. Acesso vitalício.">
+<meta property="og:title" content="Seu Universo: não é sobre o seu signo, é sobre o seu céu inteiro">
+<meta property="og:description" content="Mapa astral, Lua, Tarot, numerologia, sonhos e um Guia no seu celular. Acesso vitalício.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#090812">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml">
+
+<script>document.documentElement.classList.add("js");</script>
+<script src="config.js"></script>
+<script>
+  /* Pixel da Meta via UTMify: só carrega se META_PIXEL_ID estiver preenchido em config.js */
+  (function () {
+    var id = window.SU_CONFIG && window.SU_CONFIG.META_PIXEL_ID;
+    if (!id) return;
+    window.pixelId = id;
+    var a = document.createElement("script");
+    a.async = true; a.defer = true;
+    a.src = "https://cdn.utmify.com.br/scripts/pixel/pixel.js";
+    document.head.appendChild(a);
+  })();
+</script>
+<!-- UTMify - Script de captura de UTMs: cole aqui o script gerado pela UTMify para ESTA conta -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+  /* Seu Universo — mesmos tokens do app (docs/DESIGN_SYSTEM.md). Página sempre escura. */
+  :root{
+    --bg:#090812; --surface:#12101d; --surface-2:#181526; --surface-3:#201c2d;
+    --line:rgba(255,255,255,.07); --line-strong:rgba(255,255,255,.13);
+    --ink:#f5f1ea; --ink-2:#a7a2b5; --ink-3:#8a849a;
+    --gold:#d6b56e; --violet:#8b72c9; --violet-2:#9a83d3; --lilac:#c58bcf;
+    --rose:#c9829c; --wine:#6d3d55;
+    /* nomes usados pela roda do mapa (mesmo componente do app) */
+    --color-ink:var(--ink); --color-ink-3:var(--ink-3); --color-gold:var(--gold); --color-violet:var(--violet); --color-rose:var(--rose);
+    --display:"Instrument Serif","Cormorant Garamond",Georgia,serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --glyph:"Noto Sans Symbols","Segoe UI Symbol",serif;
+    --wrap:1120px; --ease:cubic-bezier(.22,1,.36,1);
+    color-scheme:dark;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  [hidden]{display:none!important}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;
+    padding-bottom:86px;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+    background-image:radial-gradient(1100px 600px at 88% -6%,rgba(139,114,201,.14),transparent 60%),radial-gradient(900px 520px at -12% 38%,rgba(214,181,110,.05),transparent 60%);
+  }
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.035;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px;position:relative;z-index:1}
+  section{padding:84px 0;position:relative}
+  :focus-visible{outline:2px solid var(--lilac);outline-offset:3px;border-radius:6px}
+
+  /* ---------- Tipografia ---------- */
+  .h2,h1,h3{font-family:var(--display);font-weight:400;letter-spacing:-.01em;text-wrap:balance}
+  .h2{font-size:clamp(38px,6.2vw,64px);line-height:1.02;max-width:18ch}
+  .h2 em,h1 em{font-style:italic;color:var(--gold)}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);margin-bottom:18px}
+  .eyebrow::before{content:"";width:18px;height:1px;background:var(--gold)}
+  .lead{color:var(--ink-2);font-size:18px;max-width:58ch;margin-top:18px}
+  .lead strong{color:var(--ink);font-weight:500}
+  .glyph{font-family:var(--glyph);font-weight:300;font-variant-emoji:text;line-height:1}
+
+  /* ---------- Marca ---------- */
+  .brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-size:22px;line-height:1;text-decoration:none}
+  .brand svg{width:24px;height:24px;flex:none}
+
+  /* ---------- Botões ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--violet);color:var(--ink);text-decoration:none;border:0;cursor:pointer;
+    font:600 16px/1 var(--sans);letter-spacing:.01em;padding:19px 28px;border-radius:14px;text-align:center;
+    box-shadow:0 14px 34px -14px rgba(139,114,201,.75);transition:transform .2s var(--ease),box-shadow .2s var(--ease),background-color .2s}
+  .btn:hover{background:var(--violet-2);transform:translateY(-2px);box-shadow:0 20px 40px -14px rgba(139,114,201,.85)}
+  .btn:active{transform:none}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-ghost{background:rgba(255,255,255,.04);box-shadow:none;border:1px solid var(--line-strong)}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);box-shadow:none}
+  .btn-block{width:100%}
+  .fine{font-size:13.5px;color:var(--ink-3)}
+
+  /* ---------- Topo ---------- */
+  .topbar{position:relative;z-index:2;background:linear-gradient(90deg,rgba(214,181,110,.10),rgba(139,114,201,.12));border-bottom:1px solid var(--line);color:var(--ink);text-align:center;font-size:13px;font-weight:500;padding:9px 16px;letter-spacing:.01em}
+  .topbar b{color:var(--gold);font-variant-numeric:tabular-nums;font-weight:600}
+  .nav{position:relative;z-index:2;padding:18px 0}
+  .nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .nav a.login{font-size:14px;color:var(--ink-2);text-decoration:none;border:1px solid var(--line-strong);padding:8px 14px;border-radius:99px}
+  .nav a.login:hover{color:var(--ink)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:18px 0 56px}
+  .hero-grid{display:grid;gap:34px;align-items:center}
+  .hero h1{font-size:clamp(46px,10.5vw,92px);line-height:.98;max-width:13ch}
+  .hero .lead{color:#c9c4d4}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 28px}
+  .chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:#e2dde9;padding:7px 12px;border-radius:99px;background:rgba(255,255,255,.04);border:1px solid var(--line-strong)}
+  .chip i{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .hero-cta{display:flex;flex-direction:column;gap:10px}
+  .cta-or{align-self:center;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+
+  .observatory{position:relative;max-width:560px;width:100%;margin:0 auto}
+  .observatory::before{content:"";position:absolute;inset:6% 6% auto;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,rgba(139,114,201,.20),transparent 68%);filter:blur(20px)}
+  .wheel{position:relative;aspect-ratio:1/1;max-width:100%}
+  .wheel svg{width:100%;height:100%;animation:wheelIn 1.4s var(--ease) both}
+  @keyframes wheelIn{from{opacity:0;transform:rotate(-8deg) scale(.96)}to{opacity:1;transform:none}}
+  .wheel-cap{margin-bottom:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);text-align:center;line-height:1.5}
+  .sky-card{position:relative;margin:-6% auto 0;display:flex;align-items:center;gap:14px;background:rgba(18,16,29,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line-strong);border-radius:18px;padding:12px 16px 12px 12px;box-shadow:0 20px 50px -24px rgba(0,0,0,.8);max-width:min(300px,86%)}
+  .sky-card svg{width:52px;height:52px;flex:none}
+  .sky-card small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+  .sky-card b{display:block;font-family:var(--display);font-weight:400;font-size:21px;line-height:1.1}
+  .sky-card span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.45}
+  a.sky-card{text-decoration:none;color:inherit}
+  .live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#7fcf9a;margin-right:7px;vertical-align:1px;animation:live 2s infinite}
+  @keyframes live{0%{box-shadow:0 0 0 0 rgba(127,207,154,.55)}70%{box-shadow:0 0 0 7px rgba(127,207,154,0)}100%{box-shadow:0 0 0 0 rgba(127,207,154,0)}}
+
+  /* ---------- CÉU AO VIVO ---------- */
+  .now-sec{padding-top:40px}
+  .now-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:34px}
+  .now-cell{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 14px 13px;display:grid;grid-template-columns:30px minmax(0,1fr);column-gap:10px;row-gap:1px;align-items:center}
+  .now-cell .g{grid-row:span 3;font-family:var(--glyph);font-weight:300;font-size:26px;color:var(--gold);text-align:center;line-height:1}
+  .now-cell .nm{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:6px}
+  .now-cell .rx{font-style:normal;font-family:var(--glyph);font-size:13px;color:var(--rose);letter-spacing:0}
+  .now-cell .dg{font-family:var(--display);font-weight:400;font-size:26px;line-height:1.05;font-variant-numeric:tabular-nums}
+  .now-cell .sg{font-size:13.5px;color:var(--ink-2)}
+  .now-cell[data-id="moon"]{border-color:rgba(214,181,110,.35)}
+  .now-cell.is-rx{border-color:rgba(201,130,156,.3)}
+  .now-foot{margin-top:18px;font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .now-note{margin-top:8px}
+
+  /* ---------- PROBLEMA ---------- */
+  .problem-grid{display:grid;gap:36px;align-items:center}
+  .contrast{display:grid;gap:14px;margin-top:26px;max-width:52ch}
+  .contrast p{color:var(--ink-2);font-size:17.5px}
+  .contrast p b{color:var(--ink);font-weight:500}
+  .quote{margin-top:30px;padding-left:18px;border-left:1px solid var(--gold);font-family:var(--display);font-style:italic;font-size:clamp(25px,3.6vw,32px);line-height:1.2;max-width:26ch}
+  .facts{display:grid;gap:12px}
+  .fact{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px;display:grid;grid-template-columns:58px minmax(0,1fr);gap:16px;align-items:center}
+  .fact .g{font-family:var(--glyph);font-weight:300;font-size:34px;color:var(--gold);text-align:center;line-height:1}
+  .fact .g.txt{font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.12em}
+  .fact b{display:block;font-family:var(--display);font-weight:400;font-size:24px;line-height:1.15}
+  .fact span{font-size:14.5px;color:var(--ink-2)}
+
+  /* ---------- MÉTODO ---------- */
+  .method-steps{display:grid;gap:14px;margin-top:44px;counter-reset:s}
+  .mstep{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 24px;overflow:hidden}
+  .mstep::after{content:"";position:absolute;right:-50px;top:-50px;width:160px;height:160px;border-radius:50%;border:1px solid rgba(255,255,255,.05)}
+  .mstep .n{font-family:var(--display);font-style:italic;font-size:44px;line-height:1;color:var(--gold)}
+  .mstep h3{font-size:28px;line-height:1.1;margin:14px 0 8px}
+  .mstep p{color:var(--ink-2);font-size:15.5px}
+  .mstep .tech{margin-top:16px;font-size:12px;letter-spacing:.06em;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px}
+  .mstep.s3{border-color:rgba(197,139,207,.35);background:radial-gradient(120% 90% at 100% 0%,rgba(139,114,201,.16),transparent 60%),var(--surface)}
+  .mstep.s3 .n{color:var(--lilac)}
+  .rule{margin-top:34px;display:flex;flex-wrap:wrap;gap:10px}
+  .rule span{font-size:14px;color:var(--ink-2);padding:8px 14px;border-radius:99px;border:1px solid var(--line-strong);background:rgba(255,255,255,.02)}
+  .rule span b{color:var(--ink);font-weight:500}
+
+  /* ---------- APP ---------- */
+  .app-sec{overflow:hidden}
+  .phones{display:flex;gap:16px;margin-top:44px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 18px;margin-left:-16px;margin-right:-16px;scrollbar-width:none}
+  .phones::-webkit-scrollbar{display:none}
+  .phones.is-loop{scroll-snap-type:none;overflow-x:hidden;touch-action:pan-y}
+  .phone{flex:none;width:228px;scroll-snap-align:start;scroll-margin-left:16px}
+  .phone .frame{border-radius:34px;padding:8px;background:linear-gradient(160deg,#2a2538,#14111f);border:1px solid var(--line-strong);box-shadow:0 30px 60px -30px rgba(0,0,0,.85)}
+  .phone img{width:100%;height:auto;aspect-ratio:390/844;object-fit:cover;object-position:top;border-radius:27px;background:var(--surface-2)}
+  .phone p{font-size:14px;color:var(--ink-2);margin-top:12px;text-align:center;line-height:1.45}
+  .phone p b{display:block;color:var(--ink);font-family:var(--display);font-weight:400;font-size:20px;line-height:1.2;margin-bottom:2px}
+  .phone-dots{display:flex;justify-content:center;gap:8px;margin-top:4px}
+  .phone-dots i{width:7px;height:7px;border-radius:99px;background:rgba(255,255,255,.18);transition:width .3s,background .3s}
+  .phone-dots i.on{width:20px;background:var(--gold)}
+
+  /* ---------- AMOR ---------- */
+  .love{border-radius:30px;padding:40px 22px;position:relative;overflow:hidden;isolation:isolate;border:1px solid rgba(201,130,156,.25);
+    background:radial-gradient(90% 80% at 0% 0%,rgba(109,61,85,.45),transparent 60%),radial-gradient(70% 60% at 100% 100%,rgba(214,181,110,.08),transparent 60%),var(--surface)}
+  .love .eyebrow{color:var(--rose)} .love .eyebrow::before{background:var(--rose)}
+  .love .h2 em{color:var(--rose)}
+  .love-grid{display:grid;gap:30px;align-items:center}
+  .love ul{list-style:none;display:grid;gap:14px;margin-top:26px}
+  .love li{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;color:var(--ink-2);font-size:16px}
+  .love li .g{font-family:var(--glyph);font-size:22px;color:var(--rose);text-align:center;line-height:1.3}
+  .love li b{display:block;color:var(--ink);font-weight:500}
+  .love-phones{display:flex;gap:14px;justify-content:center}
+  .love-phones .phone{width:min(46%,220px)}
+  .love-phones .phone:nth-child(2){transform:translateY(28px)}
+  .love-note{margin-top:26px;display:inline-block;font-size:14px;color:var(--ink);padding:10px 14px;border-radius:12px;background:rgba(201,130,156,.10);border:1px solid rgba(201,130,156,.3)}
+  .love-note b{color:var(--rose);font-weight:600;white-space:nowrap}
+
+  /* ---------- QUIZ CTA ---------- */
+  .quiz-cta{border-radius:30px;padding:38px 22px;position:relative;overflow:hidden;border:1px solid rgba(139,114,201,.3);
+    background:radial-gradient(110% 90% at 100% 0%,rgba(139,114,201,.20),transparent 58%),var(--surface);display:grid;gap:26px;align-items:center}
+  .quiz-points{list-style:none;display:grid;gap:10px;margin-top:22px}
+  .quiz-points li{display:flex;gap:12px;align-items:flex-start;color:var(--ink-2);font-size:16px}
+  .quiz-points li b{color:var(--ink);font-weight:500}
+  .quiz-points li i{flex:none;width:24px;height:24px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-style:normal;font-family:var(--display);font-size:14px;color:var(--gold);margin-top:2px}
+  .orbit-art{position:relative;width:100%;max-width:180px;aspect-ratio:1/1;margin:0 auto}
+  .orbit-art svg{width:100%;height:100%}
+
+  /* ---------- OFERTA ---------- */
+  .offer-sec{text-align:center}
+  .offer-sec .h2,.offer-sec .lead{margin-left:auto;margin-right:auto}
+  .offer-timer{display:inline-flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 8px;margin-top:18px;padding:8px 14px;border-radius:99px;border:1px solid rgba(214,181,110,.35);background:rgba(214,181,110,.07);font-size:14px;font-weight:500}
+  .offer-timer b{color:var(--gold);font-variant-numeric:tabular-nums;font-weight:600}
+  .offer-timer .dot{width:7px;height:7px;border-radius:50%;background:#e2795f;animation:tick 1.6s infinite}
+  @keyframes tick{0%{box-shadow:0 0 0 0 rgba(226,121,95,.6)}70%{box-shadow:0 0 0 8px rgba(226,121,95,0)}100%{box-shadow:0 0 0 0 rgba(226,121,95,0)}}
+  .offer{max-width:560px;margin:40px auto 0;text-align:left;position:relative;border-radius:30px;padding:36px 24px 28px;
+    background:radial-gradient(120% 70% at 100% 0%,rgba(214,181,110,.12),transparent 55%),linear-gradient(170deg,#1b1828,#12101d 60%);
+    border:1px solid rgba(214,181,110,.45);box-shadow:0 0 0 5px rgba(214,181,110,.05),0 40px 90px -40px rgba(139,114,201,.6)}
+  .offer-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:#1b1610;font-size:11.5px;font-weight:700;padding:7px 14px;border-radius:99px;white-space:nowrap;letter-spacing:.12em;text-transform:uppercase}
+  .offer .brand{font-size:30px}
+  .offer-sub{color:var(--ink-2);font-size:15px;margin-top:6px}
+  .offer-list{list-style:none;display:grid;gap:12px;margin:24px 0;padding:22px 0;border-top:1px solid var(--line-strong);border-bottom:1px solid var(--line-strong)}
+  .offer-list li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .offer-list li .g{font-family:var(--glyph);font-size:18px;color:var(--gold);text-align:center;line-height:1.3}
+  .offer-list li b{color:var(--ink);font-weight:500}
+  .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .price{font-family:var(--display);font-size:78px;line-height:.9;letter-spacing:-.02em}
+  .price sup{font-family:var(--sans);font-size:20px;vertical-align:top;position:relative;top:10px;margin-right:4px;color:var(--ink-2)}
+  .price-sub{color:var(--ink-3);font-size:14px;line-height:1.35}
+  .price-sub b{display:block;color:var(--gold);font-weight:600;font-size:15px}
+  .offer .btn{margin-top:22px}
+  .bump{margin-top:16px;border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;
+    background:rgba(109,61,85,.28);border:1px dashed rgba(201,130,156,.55);font-size:14.5px;color:var(--ink-2);line-height:1.45}
+  .bump .g{font-family:var(--glyph);font-size:22px;color:var(--rose);line-height:1.2;text-align:center}
+  .bump b{color:var(--ink);font-weight:500}
+  .bump .p{color:var(--rose);font-weight:600;white-space:nowrap}
+  .guar-row{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:22px;font-size:13px;color:var(--ink-3);font-weight:500}
+  .guar-row span{display:inline-flex;align-items:center;gap:6px}
+  .guar-row svg{width:15px;height:15px;color:var(--gold)}
+  .offer-note{color:var(--ink-2);font-size:15px;margin:22px auto 0;max-width:54ch}
+  .offer-note b{color:var(--ink);font-weight:500}
+  .link-btn{background:none;border:0;padding:0;font:inherit;color:var(--lilac);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+  /* ---------- GARANTIA + CUIDADO ---------- */
+  .truth{display:grid;gap:14px}
+  .truth-card{border-radius:26px;padding:32px 24px;border:1px solid var(--line);background:var(--surface)}
+  .truth-card h3{font-size:clamp(32px,4.6vw,44px);line-height:1.04}
+  .truth-card p{margin-top:14px;color:var(--ink-2)}
+  .truth-card p strong{color:var(--ink);font-weight:500}
+  .seal{display:inline-grid;place-items:center;width:96px;height:96px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);text-align:center;margin-bottom:20px;position:relative}
+  .seal::after{content:"";position:absolute;inset:6px;border-radius:50%;border:1px dashed rgba(214,181,110,.4)}
+  .seal b{font-family:var(--display);font-weight:400;font-size:40px;line-height:.9;display:block}
+  .seal small{font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+  .not-list{list-style:none;display:grid;gap:12px;margin-top:20px}
+  .not-list li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;color:var(--ink-2);font-size:15.5px;line-height:1.45}
+  .not-list li::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--rose);margin-top:12px}
+  .not-list b{color:var(--ink);font-weight:500}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin-top:36px;display:grid;gap:10px;max-width:800px}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:0 20px;transition:border-color .2s}
+  details[open]{border-color:var(--line-strong)}
+  summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:500;display:flex;justify-content:space-between;gap:16px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:24px;font-weight:300;color:var(--gold);flex:none;transition:transform .25s var(--ease)}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 0 18px;color:var(--ink-2);font-size:16px}
+  details p b{color:var(--ink);font-weight:500}
+
+  /* ---------- FINAL ---------- */
+  .final{text-align:center;padding:100px 0 110px;overflow:hidden}
+  .final .rings{position:absolute;left:50%;top:50%;width:900px;max-width:none;transform:translate(-50%,-50%);opacity:.55;pointer-events:none}
+  .final .h2{margin:0 auto;max-width:17ch}
+  .final .lead{margin:18px auto 30px}
+  footer{position:relative;z-index:1;padding:40px 0 46px;border-top:1px solid var(--line);text-align:center;font-size:13px;color:var(--ink-3)}
+  footer .brand{margin-bottom:14px}
+  .f-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin:0 0 16px}
+  .f-links a{color:var(--ink);font-weight:500;text-underline-offset:3px}
+  footer p+p{margin-top:8px}
+  footer p{max-width:80ch;margin-left:auto;margin-right:auto}
+
+  /* ---------- Barra fixa (celular) ---------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(9,8,18,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:14px;transform:translateY(110%);transition:transform .3s var(--ease)}
+  .sticky.show{transform:none}
+  .sticky .s-price{line-height:1.15}
+  .sticky .s-price b{font-family:var(--display);font-size:24px;font-weight:400}
+  .sticky .s-price small{display:block;font-size:11.5px;color:var(--ink-3)}
+  .sticky .s-price small b{font-family:var(--sans);font-size:11.5px;color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums}
+  .sticky .btn{flex:1;padding:15px 16px;font-size:15px}
+
+  /* ---------- Contador ---------- */
+  .js-timer-off{display:none}
+  .timer-done .js-timer-wrap{display:none}
+  .timer-done .js-timer-off{display:inline}
+
+  /* ================= QUIZ ================= */
+  .quiz{position:fixed;inset:0;z-index:100;background:var(--bg);display:none;flex-direction:column;overflow-y:auto;
+    background-image:radial-gradient(900px 500px at 90% -10%,rgba(139,114,201,.16),transparent 60%)}
+  .quiz.open{display:flex}
+  .quiz-top{display:flex;align-items:center;gap:14px;padding:16px;max-width:680px;width:100%;margin:0 auto}
+  .quiz-top .brand{font-size:18px}
+  .q-progress{flex:1;height:3px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+  .q-progress i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--lilac),var(--gold));transition:width .4s var(--ease)}
+  .q-close{background:none;border:0;color:var(--ink-2);cursor:pointer;width:40px;height:40px;border-radius:10px;display:grid;place-items:center}
+  .q-close:hover{background:rgba(255,255,255,.06)}
+  .q-close svg{width:22px;height:22px}
+  .quiz-body{flex:1;max-width:680px;width:100%;margin:0 auto;padding:18px 16px 44px}
+  .q-step{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+  .q-title{font-family:var(--display);font-weight:400;font-size:clamp(32px,7vw,44px);line-height:1.05;margin:10px 0 26px}
+  .q-opts{display:grid;gap:10px}
+  .q-opt{text-align:left;background:var(--surface);border:1px solid var(--line-strong);color:var(--ink);cursor:pointer;font:500 16.5px/1.35 var(--sans);padding:17px 18px;border-radius:14px;display:flex;align-items:center;gap:14px;transition:border-color .15s,background .15s,transform .1s}
+  .q-opt:hover{border-color:rgba(139,114,201,.6)}
+  .q-opt:active{transform:scale(.99)}
+  .q-opt.sel{border-color:var(--violet);background:rgba(139,114,201,.12)}
+  .q-opt .k{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--ink-2)}
+  .q-opt.sel .k{background:var(--violet);border-color:var(--violet);color:var(--ink)}
+  .q-back{margin-top:18px;background:none;border:0;color:var(--ink-3);font:500 14px var(--sans);cursor:pointer;padding:8px 0}
+  .q-back:hover{color:var(--ink)}
+  .q-anim{animation:qin .4s var(--ease) both}
+  @keyframes qin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .q-intro{text-align:center;padding-top:5vh;max-width:560px;margin:0 auto}
+  .q-intro .orbit-art{max-width:180px;margin-bottom:18px}
+  .q-intro h2{font-family:var(--display);font-weight:400;font-size:clamp(38px,8.6vw,58px);line-height:1.02}
+  .q-intro h2 em{font-style:italic;color:var(--gold)}
+  .q-intro p{color:var(--ink-2);font-size:17.5px;margin:16px auto 0;max-width:38ch}
+  .q-intro .btn{margin-top:28px;min-width:min(100%,320px)}
+  .q-intro .fine{margin-top:14px}
+  .q-skip{display:inline-block;margin-top:20px;background:none;border:0;color:var(--ink-3);font:500 14px var(--sans);cursor:pointer;text-decoration:underline}
+  .q-loading{text-align:center;padding-top:12vh}
+  .q-loading .orbit-art{max-width:150px}
+  .q-loading .orbit-art svg{animation:spin 2.4s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .q-loading p{color:var(--ink-2);margin-top:16px}
+  .r-kicker{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+  .r-title{font-family:var(--display);font-weight:400;font-size:clamp(34px,7.4vw,50px);line-height:1.04;margin:10px 0 14px}
+  .r-text{color:var(--ink-2);font-size:16.5px}
+  .r-list{list-style:none;display:grid;gap:10px;margin:22px 0 24px}
+  .r-list li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;grid-template-columns:26px minmax(0,1fr);gap:12px;font-size:15px;color:var(--ink-2);line-height:1.45}
+  .r-list li b{color:var(--ink);display:block;font-weight:500;margin-bottom:2px}
+  .r-list .n{width:26px;height:26px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:15px}
+  .r-rec{margin:20px 0 10px;border-radius:18px;padding:20px 18px;border:1px solid rgba(214,181,110,.45);background:radial-gradient(120% 80% at 100% 0%,rgba(214,181,110,.14),transparent 60%),var(--surface-2)}
+  .r-rec small{display:block;font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .r-rec p{font-size:16px;margin-top:8px;color:var(--ink-2)}
+  .r-rec p b{color:var(--ink);font-weight:500}
+  .r-rec .r-love{margin-top:12px;font-size:14.5px;color:var(--ink);padding:10px 12px;border-radius:12px;background:rgba(109,61,85,.3);border:1px dashed rgba(201,130,156,.5)}
+  .r-alt{display:block;text-align:center;margin-top:12px;color:var(--ink-2);font-weight:500;font-size:15px}
+
+  /* ---------- Revelar (só com JS; sem JS tudo aparece) ---------- */
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .js .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .js .reveal{opacity:1;transform:none;transition:none}
+    .wheel svg,.q-anim,.q-loading .orbit-art svg{animation:none}
+    .btn,.sticky{transition:none}
+    .offer-timer .dot,.live-dot{animation:none}
+  }
+
+  /* ================= DESKTOP ================= */
+  @media (min-width:760px){
+    body{padding-bottom:0}
+    section{padding:120px 0}
+    .sticky{display:none}
+    .nav{padding:24px 0}
+    .hero{padding:24px 0 90px}
+    .hero-grid{grid-template-columns:1.05fr .95fr;gap:40px}
+    .hero-cta{flex-direction:row;align-items:center;flex-wrap:wrap;gap:12px}
+    .hero-cta .fine{flex-basis:100%}
+    .problem-grid{grid-template-columns:1.1fr .9fr;gap:60px}
+    .method-steps{grid-template-columns:repeat(3,1fr)}
+    .phones{justify-content:center;overflow:visible;margin:48px 0 0;padding:0;flex-wrap:nowrap}
+    .phones .phone{flex:1 1 0;width:auto;min-width:0;max-width:200px}
+    .wheel-cap{position:absolute;right:2%;top:2%;margin:0;text-align:right;max-width:24ch}
+    .sky-card{position:absolute;left:0;bottom:2%;margin:0}
+    .now-sec{padding-top:40px}
+    .now-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+    .price-sub{text-align:right}
+    .orbit-art{max-width:280px}
+    .phones .phone:nth-child(even){transform:translateY(-26px)}
+    .phone-dots{display:none}
+    .phones .phone-m{display:none}
+    .love{padding:64px 56px}
+    .love-grid{grid-template-columns:1.1fr .9fr;gap:50px}
+    .quiz-cta{grid-template-columns:1.3fr .7fr;padding:56px 52px}
+    .offer{padding:46px 44px 34px}
+    .truth{grid-template-columns:1fr 1fr}
+    .truth-card{padding:44px 40px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span><span class="js-timer-off">Acesso imediato no celular · </span>Acesso vitalício por R$&nbsp;<span class="js-price">19,90</span> · 7 dias de garantia</div>
+
+<nav class="nav" aria-label="Topo">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Seu Universo">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>
+      Seu Universo
+    </a>
+    <a class="login js-app-link" href="#" hidden>Já comprei · Entrar</a>
+  </div>
+</nav>
+
+<!-- ================= 1. HERO ================= -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Mapa astral · Lua · Tarot · Numerologia · Sonhos</span>
+      <h1>Não é sobre o seu signo. <em>É sobre o seu céu inteiro.</em></h1>
+      <p class="lead">O Seu Universo calcula o céu exato do momento em que você nasceu e transforma isso em leituras feitas para você. <strong>Mapa astral, Lua do dia, Tarot, numerologia, diário de sonhos e um Guia que conversa com você a partir do seu mapa.</strong> Tudo no seu celular.</p>
+      <div class="chips">
+        <span class="chip"><i></i>Posições calculadas, não adivinhadas</span>
+        <span class="chip"><i></i>Leituras feitas para o seu mapa</span>
+        <span class="chip"><i></i>Acesso vitalício</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="#oferta">
+          Quero conhecer o meu céu
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <span class="cta-or">ou</span>
+        <button type="button" class="btn btn-ghost js-quiz">Descubra por onde começar</button>
+        <p class="fine">Pagamento único · Acesso imediato · 7 dias de garantia</p>
+      </div>
+    </div>
+
+    <div class="observatory" aria-label="Mapa astral de exemplo e o céu de agora">
+      <p class="wheel-cap">Mapa de exemplo · 15/08/1990 · 14h30 · São Paulo</p>
+      <div class="wheel" id="wheel" role="img" aria-label="Roda de um mapa astral de exemplo, com signos, planetas, casas e aspectos"></div>
+      <a class="sky-card" id="skyCard" href="#agora" hidden>
+        <svg id="skyMoon" viewBox="0 0 100 100" aria-hidden="true"></svg>
+        <div>
+          <small><i class="live-dot" aria-hidden="true"></i>O céu agora</small>
+          <b class="js-sky-phase">Lua</b>
+          <span class="js-sky-moon"></span>
+          <span class="js-sky-next"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 1b. CÉU AO VIVO ================= -->
+<section id="agora" class="now-sec" hidden>
+  <div class="wrap">
+    <span class="eyebrow reveal">Enquanto você lê</span>
+    <h2 class="h2 reveal">O céu deste minuto, <em>calculado ao vivo.</em></h2>
+    <p class="lead reveal">Onde estão o Sol, a Lua e os planetas agora, atualizado a cada segundo. <strong>O seu mapa astral é a fotografia deste céu no minuto em que você nasceu.</strong></p>
+    <div class="now-grid reveal" id="nowGrid" aria-live="off"></div>
+    <p class="now-foot reveal"><i class="live-dot" aria-hidden="true"></i><span class="js-now-clock"></span><span class="sep"> · </span><span class="js-moon-ingress"></span></p>
+    <p class="fine reveal now-note">Posições geocêntricas no zodíaco tropical, calculadas com o mesmo motor astronômico do app. ℞ indica movimento retrógrado aparente.</p>
+  </div>
+</section>
+
+<!-- ================= 2. PROBLEMA ================= -->
+<section id="por-que">
+  <div class="wrap problem-grid">
+    <div>
+      <span class="eyebrow reveal">Por que o horóscopo parece genérico</span>
+      <h2 class="h2 reveal">Doze signos para bilhões de pessoas <em>não explicam você.</em></h2>
+      <div class="contrast reveal">
+        <p>O horóscopo fala com o seu signo. <b>O seu mapa fala com você.</b></p>
+        <p>O signo solar é só uma peça. A Lua, o Ascendente, os outros planetas e as doze casas formam a combinação que a astrologia lê como o <b>seu céu de nascimento</b>.</p>
+        <p>E essa combinação depende de <b>data, horário e cidade</b>. Por isso duas pessoas do mesmo signo podem ter mapas muito diferentes.</p>
+      </div>
+      <p class="quote reveal">“Você é de Leão” é uma frase. O seu mapa é uma conversa.</p>
+    </div>
+    <div class="facts reveal" aria-label="Por que o horário e o lugar importam">
+      <div class="fact"><span class="g" aria-hidden="true">☽&#xFE0E;</span><div><b>A Lua muda de signo a cada 2 dias e meio</b><span>Quem nasceu no mesmo dia pode ter a Lua em signos diferentes.</span></div></div>
+      <div class="fact"><span class="g txt" aria-hidden="true">ASC</span><div><b>O Ascendente muda a cada 2 horas, em média</b><span>Por isso o horário de nascimento faz tanta diferença.</span></div></div>
+      <div class="fact"><span class="g" aria-hidden="true">⌖</span><div><b>O lugar muda as casas</b><span>A mesma hora em São Paulo e em Recife dá um mapa diferente.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. MÉTODO ================= -->
+<section id="metodo" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Como funciona</span>
+    <h2 class="h2 reveal">O sistema calcula. <em>O Seu Guia interpreta.</em></h2>
+    <p class="lead reveal">Muita coisa que se vende como “mapa personalizado” é texto pronto por signo. Aqui, cada leitura parte das <strong>posições reais dos planetas no seu momento de nascimento</strong>.</p>
+    <div class="method-steps">
+      <article class="mstep reveal">
+        <span class="n">1</span>
+        <h3>Você conta quando e onde nasceu</h3>
+        <p>Data, horário e cidade. Não sabe o horário? Tudo bem: o mapa sai sem Ascendente e casas, e o resto continua valendo.</p>
+        <p class="tech">Fuso e horário de verão antigos são resolvidos automaticamente.</p>
+      </article>
+      <article class="mstep reveal">
+        <span class="n">2</span>
+        <h3>O sistema calcula o seu céu</h3>
+        <p>Posições do Sol, da Lua e dos planetas, Ascendente, Meio do Céu, as doze casas e os aspectos entre eles.</p>
+        <p class="tech">Motor de efemérides astronômicas (teorias VSOP87 e ELP2000), com precisão de segundos de arco.</p>
+      </article>
+      <article class="mstep s3 reveal">
+        <span class="n">3</span>
+        <h3>O Seu Guia lê com você</h3>
+        <p>Uma IA que interpreta só o que foi calculado, com base numa biblioteca editorial própria. Ela não inventa posições e não sorteia cartas.</p>
+        <p class="tech">Linguagem simbólica, para refletir. Sem previsões garantidas.</p>
+      </article>
+    </div>
+    <div class="rule reveal">
+      <span><b>Tarot:</b> o sistema sorteia, o Guia lê</span>
+      <span><b>Numerologia:</b> método pitagórico, sempre o mesmo resultado</span>
+      <span><b>Lua:</b> fase real do dia</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. APP ================= -->
+<section class="app-sec" id="app" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Dentro do Seu Universo</span>
+    <h2 class="h2 reveal">Um observatório pessoal <em>no seu bolso.</em></h2>
+    <div class="phones reveal">
+      <figure class="phone"><div class="frame"><img src="img/app-inicio.webp" alt="Tela inicial com a fase da Lua de hoje e o Sol, a Lua e o Ascendente" loading="lazy" width="390" height="844"></div><p><b>Seu céu hoje</b>A Lua do dia e o resumo do seu mapa.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-mapa.webp" alt="Mapa astral com a roda de signos, planetas e casas" loading="lazy" width="390" height="844"></div><p><b>Mapa astral</b>Roda, posições, aspectos e casas.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-tarot.webp" alt="Três cartas de Tarot reveladas" loading="lazy" width="390" height="844"></div><p><b>Tarot</b>Carta do dia e pergunta aberta.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-lua.webp" alt="Lua grande com a porcentagem iluminada e o campo de intenção" loading="lazy" width="390" height="844"></div><p><b>Lua</b>Fase, intenção e diário.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-numerologia.webp" alt="Número do Caminho de Vida em destaque" loading="lazy" width="390" height="844"></div><p><b>Numerologia</b>Os números da sua data e do seu nome.</p></figure>
+      <figure class="phone"><div class="frame"><img src="img/app-guia.webp" alt="Tela Pergunte ao seu mapa com sugestões de perguntas" loading="lazy" width="390" height="844"></div><p><b>Seu Guia</b>Pergunte ao seu mapa.</p></figure>
+      <figure class="phone phone-m"><div class="frame"><img src="img/app-sonhos.webp" alt="Diário de sonhos com o campo para escrever o sonho" loading="lazy" width="390" height="844"></div><p><b>Sonhos</b>Diário com leituras possíveis.</p></figure>
+    </div>
+    <div class="phone-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="lead reveal" style="margin-top:30px">E ainda o <strong>diário de sonhos</strong>: você escreve o que sonhou, o app encontra os símbolos do relato e o Guia oferece leituras possíveis. Nunca diagnósticos.</p>
+  </div>
+</section>
+
+<!-- ================= 5. AMOR (bump) ================= -->
+<section id="amor" style="padding-top:0">
+  <div class="wrap">
+    <div class="love">
+      <div class="love-grid">
+        <div>
+          <span class="eyebrow reveal">Relacionamentos</span>
+          <h2 class="h2 reveal">E quando o assunto é <em>amor.</em></h2>
+          <ul class="reveal">
+            <li><span class="g" aria-hidden="true">♀&#xFE0E;</span><div><b>Perfil amoroso</b>Como você ama, o que te atrai e do que precisa, pela linguagem de Vênus, Marte e da Lua.</div></li>
+            <li><span class="g" aria-hidden="true">☍&#xFE0E;</span><div><b>Mapa do casal</b>Compare o seu céu com o de outra pessoa: afinidades, pontos de atenção e o que um desperta no outro.</div></li>
+            <li><span class="g" aria-hidden="true">✦</span><div><b>Tarot do amor</b>Três cartas para refletir sobre o momento da relação.</div></li>
+          </ul>
+          <p class="love-note reveal">Complemento opcional no checkout: <b>+ R$&nbsp;<span class="js-bump">9,90</span></b>, também vitalício</p>
+          <p class="fine reveal" style="margin-top:12px">Sem porcentagem de compatibilidade e sem promessa de “volta”. Só leitura cuidadosa de dois céus.</p>
+        </div>
+        <div class="love-phones reveal">
+          <figure class="phone"><div class="frame"><img src="img/app-amor.webp" alt="Área de amor com Vênus, Marte, Lua e Sol" loading="lazy" width="390" height="844"></div></figure>
+          <figure class="phone"><div class="frame"><img src="img/app-casal.webp" alt="Mapa do casal comparando os signos de duas pessoas" loading="lazy" width="390" height="844"></div></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. QUIZ CTA ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="quiz-cta reveal">
+      <div>
+        <span class="eyebrow">Em menos de 1 minuto</span>
+        <h2 class="h2">Descubra <em>por onde começar.</em></h2>
+        <ul class="quiz-points">
+          <li><i>1</i><span><b>Responda 5 perguntas rápidas</b> sobre o que você quer entender agora.</span></li>
+          <li><i>2</i><span><b>Veja o seu ponto de partida</b> dentro do app.</span></li>
+          <li><i>3</i><span><b>Comece no seu ritmo</b>, pela parte que mais faz sentido para você.</span></li>
+        </ul>
+        <button type="button" class="btn js-quiz" style="margin-top:26px">Fazer o teste</button>
+      </div>
+      <div class="orbit-art" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="92" stroke="#f5f1ea" stroke-opacity=".12"/><circle cx="100" cy="100" r="64" stroke="#f5f1ea" stroke-opacity=".10" stroke-dasharray="2 5"/><circle cx="100" cy="100" r="36" stroke="#f5f1ea" stroke-opacity=".14"/><ellipse cx="100" cy="100" rx="92" ry="34" transform="rotate(-22 100 100)" stroke="#c58bcf" stroke-opacity=".35"/><circle cx="185" cy="66" r="5" fill="#d6b56e"/><circle cx="46" cy="148" r="3" fill="#c58bcf"/><circle cx="100" cy="100" r="9" fill="#f5f1ea" fill-opacity=".9"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. OFERTA ================= -->
+<section id="oferta" class="offer-sec">
+  <div class="wrap">
+    <span class="eyebrow reveal">Acesso vitalício</span>
+    <h2 class="h2 reveal">Seu céu, <em>para sempre</em> na palma da mão.</h2>
+    <p class="offer-timer js-timer-wrap"><span class="dot"></span>Por tempo limitado · termina em <b class="js-timer">32:00</b></p>
+    <article class="offer reveal" id="plano">
+      <span class="offer-tag">Pagamento único</span>
+      <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+      <p class="offer-sub">Tudo o que você precisa para conhecer e acompanhar o seu céu.</p>
+      <ul class="offer-list">
+        <li><span class="g" aria-hidden="true">☉&#xFE0E;</span><span><b>Mapa astral completo:</b> planetas, Ascendente, Meio do Céu, casas e aspectos, com Placidus, Whole Sign ou Equal</span></li>
+        <li><span class="g" aria-hidden="true">☽&#xFE0E;</span><span><b>Lua do dia</b> com intenção e diário</span></li>
+        <li><span class="g" aria-hidden="true">✦</span><span><b>Tarot Rider-Waite-Smith:</b> carta do dia e pergunta aberta</span></li>
+        <li><span class="g" aria-hidden="true">#</span><span><b>Numerologia pitagórica:</b> Caminho de Vida, Expressão, Alma e mais</span></li>
+        <li><span class="g" aria-hidden="true">≈</span><span><b>Diário de sonhos</b> com leituras possíveis</span></li>
+        <li><span class="g" aria-hidden="true">✧</span><span><b>Seu Guia:</b> leituras e conversa a partir do seu mapa</span></li>
+        <li><span class="g" aria-hidden="true">∞</span><span><b>Acesso vitalício</b>, no celular e no computador, sem baixar aplicativo</span></li>
+      </ul>
+      <div class="price-row">
+        <div class="price"><sup>R$</sup><span class="js-price">19,90</span></div>
+        <p class="price-sub"><b>acesso vitalício</b>pagamento único</p>
+      </div>
+      <a class="btn btn-block js-checkout" href="#oferta">
+        Quero o meu acesso
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="bump">
+        <span class="g" aria-hidden="true">♀&#xFE0E;</span>
+        <span><b>No checkout, você pode adicionar Relacionamentos</b> por <span class="p">+ R$&nbsp;<span class="js-bump">9,90</span></span>: perfil amoroso, mapa do casal e Tarot do amor. Também vitalício, e também dá para adicionar depois, de dentro do app.</span>
+      </div>
+      <div class="guar-row">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Acesso imediato</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>7 dias de garantia</span>
+        <span>Pix ou cartão</span>
+      </div>
+    </article>
+    <p class="offer-note reveal"><b>7 dias de garantia incondicional:</b> se não for para você, devolvemos 100% do valor, sem perguntas.</p>
+    <p class="offer-note reveal">Não sabe por onde começar? <button type="button" class="link-btn js-quiz">Faça o teste de 1 minuto</button></p>
+  </div>
+</section>
+
+<!-- ================= 8. GARANTIA + CUIDADO ================= -->
+<section style="padding-top:0">
+  <div class="wrap truth">
+    <div class="truth-card reveal">
+      <div class="seal" aria-hidden="true"><div><b>7</b><small>dias</small></div></div>
+      <h3>Garantia incondicional de 7 dias</h3>
+      <p>Entre, crie o seu mapa, use o Guia, tire as cartas. Se por qualquer motivo achar que não é para você, <strong>devolvemos 100% do seu dinheiro, sem perguntas e sem burocracia</strong>. É só pedir dentro de 7 dias após a compra.</p>
+    </div>
+    <div class="truth-card reveal">
+      <h3>Feito com cuidado</h3>
+      <p>Astrologia, Tarot, numerologia e sonhos são linguagens simbólicas. Elas servem para refletir e se conhecer. Por isso, o Seu Universo:</p>
+      <ul class="not-list">
+        <li><span><b>não promete resultados</b> no amor, no dinheiro ou na saúde;</span></li>
+        <li><span><b>não faz previsões garantidas</b> nem diagnósticos;</span></li>
+        <li><span><b>não substitui</b> orientação médica, psicológica, jurídica ou financeira;</span></li>
+        <li><span><b>não vende os seus dados.</b> Seu mapa e seus sonhos ficam na sua conta.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9. FAQ ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow reveal">Dúvidas</span>
+    <h2 class="h2 reveal">Perguntas frequentes</h2>
+    <div class="faq">
+      <details class="reveal"><summary>Quando e como recebo meu acesso?</summary><p><b>Na hora, direto no seu celular.</b> O acesso é liberado logo após a compra, para o e-mail que você informou no checkout. Crie sua conta com <b>esse mesmo e-mail</b>, confirme pelo link que chega na sua caixa de entrada (olhe também o spam e a aba Promoções) e pronto. Não precisa baixar aplicativo, e também funciona no computador.</p></details>
+      <details class="reveal"><summary>Preciso saber meu horário de nascimento?</summary><p>Não é obrigatório. Sem o horário, você vê os planetas nos signos, a numerologia, a Lua, o Tarot e os sonhos normalmente. <b>O Ascendente e as casas dependem do horário</b>, e você pode adicioná-lo depois, quando descobrir (a certidão de nascimento costuma ter).</p></details>
+      <details class="reveal"><summary>O que é o Seu Guia? É uma IA?</summary><p>Sim. O Seu Guia é uma inteligência artificial que <b>interpreta os dados calculados</b> do seu mapa, com base na nossa biblioteca editorial. Ela não calcula posições e não sorteia cartas: isso é feito pelo sistema. As leituras são simbólicas, para reflexão.</p></details>
+      <details class="reveal"><summary>Astrologia é ciência?</summary><p>Não, e a gente não finge que é. <b>As posições dos planetas são cálculos astronômicos reais;</b> a interpretação é uma linguagem simbólica, usada para autoconhecimento e reflexão. Nada aqui é previsão garantida.</p></details>
+      <details class="reveal"><summary>O que vem no complemento de Relacionamentos?</summary><p>Perfil amoroso (Vênus, Marte e Lua), mapa do casal para comparar o seu céu com o de outra pessoa, e o Tarot do amor. Custa <b>+ R$&nbsp;<span class="js-bump">9,90</span></b> no checkout, é vitalício e também pode ser adicionado depois, de dentro do app.</p></details>
+      <details class="reveal"><summary>Meus dados ficam seguros?</summary><p>Sim. Seus dados de nascimento, sonhos e anotações ficam na sua conta, protegidos. Para gerar as leituras, a IA recebe só os dados calculados e o texto necessário, <b>sem o seu nome, e-mail ou endereço</b>. Não vendemos dados.</p></details>
+      <details class="reveal"><summary>Tenho garantia?</summary><p><b>Sim: 7 dias de garantia incondicional.</b> Se achar que não é para você, devolvemos 100% do valor, sem perguntas. É só pedir o reembolso pela plataforma de pagamento<span class="js-email-wrap" hidden> ou pelo e-mail <a class="js-email" href="#"></a></span>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 10. FECHAMENTO ================= -->
+<section class="final">
+  <svg class="rings" viewBox="0 0 900 900" fill="none" aria-hidden="true"><g stroke="#f5f1ea" stroke-opacity=".06"><circle cx="450" cy="450" r="440"/><circle cx="450" cy="450" r="340" stroke-dasharray="2 7"/><circle cx="450" cy="450" r="240"/><ellipse cx="450" cy="450" rx="440" ry="160" transform="rotate(-16 450 450)"/></g><circle cx="868" cy="330" r="4" fill="#d6b56e" fill-opacity=".7"/><circle cx="160" cy="640" r="3" fill="#c58bcf" fill-opacity=".6"/></svg>
+  <div class="wrap">
+    <span class="eyebrow reveal">Seu Universo</span>
+    <h2 class="h2 reveal">O céu do dia em que você nasceu <em>tem muito a dizer.</em></h2>
+    <p class="lead reveal">Você não precisa entender de astrologia para começar. <strong>Precisa só da sua data, do seu horário e da sua cidade.</strong></p>
+    <a class="btn reveal" href="#oferta">
+      Começar agora
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+    <nav class="f-links" aria-label="Links institucionais">
+      <a href="privacidade.html">Política de Privacidade</a>
+      <a href="termos.html">Termos de Uso</a>
+      <span class="js-email-wrap" hidden>Contato: <a class="js-email" href="#"></a></span>
+    </nav>
+    <p>© <span id="y"></span> Seu Universo. Todos os direitos reservados.</p>
+    <p>Astrologia, Tarot, numerologia e interpretação de sonhos são linguagens simbólicas, oferecidas para reflexão e autoconhecimento. Não substituem orientação médica, psicológica, jurídica ou financeira. As telas mostradas são do app; o mapa do topo é um exemplo.</p>
+  </div>
+</footer>
+
+<!-- Barra fixa (celular) -->
+<div class="sticky" id="sticky">
+  <div class="s-price"><small><span class="js-timer-wrap">Termina em <b class="js-timer">32:00</b></span><span class="js-timer-off">Acesso vitalício</span></small><b>R$<span class="js-price">19,90</span></b></div>
+  <a class="btn" href="#oferta">Quero o meu acesso</a>
+</div>
+
+<!-- ================= QUIZ ================= -->
+<div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra por onde começar no Seu Universo">
+  <div class="quiz-top">
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Seu Universo</span>
+    <div class="q-progress"><i id="qBar"></i></div>
+    <button class="q-close" type="button" id="qClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="quiz-body" id="qBody"></div>
+</div>
+
+<script src="assets.js"></script>
+<script src="sky.js"></script>
+<script>
+var CFG = window.SU_CONFIG || {};
+var isSet = function (v) { return typeof v === "string" && v.length > 0 && v.indexOf("SEU-") === -1; };
+
+/* ---------- Preços e contatos vindos de config.js ---------- */
+(function () {
+  if (CFG.PRICE) document.querySelectorAll(".js-price").forEach(function (el) { el.textContent = CFG.PRICE; });
+  if (CFG.BUMP_PRICE) document.querySelectorAll(".js-bump").forEach(function (el) { el.textContent = CFG.BUMP_PRICE; });
+  if (isSet(CFG.CONTACT_EMAIL)) {
+    document.querySelectorAll(".js-email").forEach(function (a) { a.textContent = CFG.CONTACT_EMAIL; a.href = "mailto:" + CFG.CONTACT_EMAIL; });
+    document.querySelectorAll(".js-email-wrap").forEach(function (w) { w.hidden = false; });
+  }
+  if (isSet(CFG.APP_URL)) {
+    document.querySelectorAll(".js-app-link").forEach(function (a) { a.href = CFG.APP_URL.replace(/\/+$/, "") + "/auth/login"; a.hidden = false; });
+  }
+  var y = document.getElementById("y"); if (y) y.textContent = new Date().getFullYear();
+})();
+
+/* ---------- Checkout (mantém as UTMs da URL) ---------- */
+function checkoutUrl(extra) {
+  if (!isSet(CFG.CHECKOUT_URL)) return "#oferta";
+  try {
+    var u = new URL(CFG.CHECKOUT_URL);
+    new URLSearchParams(location.search).forEach(function (v, k) { if (!u.searchParams.has(k)) u.searchParams.set(k, v); });
+    if (extra) Object.keys(extra).forEach(function (k) { u.searchParams.set(k, extra[k]); });
+    return u.toString();
+  } catch (e) { return CFG.CHECKOUT_URL; }
+}
+function setCheckoutLinks(extra) {
+  document.querySelectorAll(".js-checkout").forEach(function (a) { a.href = checkoutUrl(extra); });
+}
+setCheckoutLinks();
+
+/* ---------- Mapa de exemplo (mesma roda do app) ---------- */
+(function () {
+  var el = document.getElementById("wheel");
+  if (el && window.SU_WHEEL) el.innerHTML = window.SU_WHEEL;
+})();
+
+/* ---------- Céu ao vivo (séries do XALEN em assets.js, interpoladas por sky.js) ---------- */
+var SIGN_PT = { aries: "Áries", taurus: "Touro", gemini: "Gêmeos", cancer: "Câncer", leo: "Leão", virgo: "Virgem", libra: "Libra", scorpio: "Escorpião", sagittarius: "Sagitário", capricorn: "Capricórnio", aquarius: "Aquário", pisces: "Peixes" };
+var SIGN_GLYPH = { aries: "♈", taurus: "♉", gemini: "♊", cancer: "♋", leo: "♌", virgo: "♍", libra: "♎", scorpio: "♏", sagittarius: "♐", capricorn: "♑", aquarius: "♒", pisces: "♓" };
+var BODIES = [["sun", "☉", "Sol"], ["moon", "☽", "Lua"], ["mercury", "☿", "Mercúrio"], ["venus", "♀", "Vênus"], ["mars", "♂", "Marte"], ["jupiter", "♃", "Júpiter"], ["saturn", "♄", "Saturno"], ["uranus", "♅", "Urano"], ["neptune", "♆", "Netuno"], ["pluto", "♇", "Plutão"]];
+function moonPath(k, waxing, southern) {
+  var r = 46, rx = Math.abs(1 - 2 * k) * r;
+  var litRight = waxing !== southern, outer = litRight ? 1 : 0, inner = k > 0.5 ? outer : 1 - outer;
+  return "M 50 " + (50 - r) + " A " + r + " " + r + " 0 0 " + outer + " 50 " + (50 + r) + " A " + rx + " " + r + " 0 0 " + inner + " 50 " + (50 - r) + " Z";
+}
+function fmtDeg(d) {
+  var m = Math.floor(d * 60 + 1e-9), deg = Math.floor(m / 60), min = m % 60;
+  return deg + "°" + (min < 10 ? "0" : "") + min + "′";
+}
+function fmtWhen(ms) {
+  var d = new Date(ms);
+  var day = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit" }).format(d);
+  var hm = new Intl.DateTimeFormat("pt-BR", { hour: "2-digit", minute: "2-digit", hour12: false }).format(d).replace(":", "h");
+  return day + ", " + hm;
+}
+function fmtIn(ms) {
+  var min = Math.max(1, Math.round(ms / 60000)), d = Math.floor(min / 1440), h = Math.floor((min % 1440) / 60), m = min % 60;
+  if (d > 0) return d + (d === 1 ? " dia" : " dias") + (h ? " e " + h + " h" : "");
+  if (h > 0) return h + " h" + (m ? " e " + m + " min" : "");
+  return m + " min";
+}
+(function () {
+  var sky = window.SU_SKY, lib = window.SU_SKY_LIB, phases = window.SU_PHASES;
+  if (!sky || !lib || !phases || !lib.at(sky, Date.now())) return;
+  var card = document.getElementById("skyCard"), sec = document.getElementById("agora"), grid = document.getElementById("nowGrid");
+  var $ = function (sel) { return document.querySelector(sel); };
+  var cells = {};
+  grid.innerHTML = BODIES.map(function (b) {
+    return '<div class="now-cell" data-id="' + b[0] + '"><span class="g" aria-hidden="true">' + b[1] + '&#xFE0E;</span>'
+      + '<span class="nm">' + b[2] + '<i class="rx" hidden title="retrógrado">℞</i></span>'
+      + '<b class="dg"></b><span class="sg"></span></div>';
+  }).join("");
+  BODIES.forEach(function (b) {
+    var el = grid.querySelector('[data-id="' + b[0] + '"]');
+    cells[b[0]] = { dg: el.querySelector(".dg"), sg: el.querySelector(".sg"), rx: el.querySelector(".rx"), el: el };
+  });
+  var set = function (el, txt) { if (el.textContent !== txt) el.textContent = txt; };
+  var lastMoon = "", ingressAt = 0, ingress = null, principal = null;
+  var clockFmt = new Intl.DateTimeFormat("pt-BR", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+
+  function nextPrincipal(now) {
+    var pr = window.SU_MOON_PRINCIPAL || [];
+    for (var j = 0; j < pr.length; j++) {
+      var t = Date.parse(pr[j][0]);
+      if ((pr[j][1] === 0 || pr[j][1] === 4) && t > now) return { ms: t, label: phases[pr[j][1]] };
+    }
+    return null;
+  }
+
+  function tick() {
+    var now = Date.now(), c = lib.at(sky, now);
+    if (!c) { card.hidden = true; sec.hidden = true; clearInterval(iv); return; }
+    var moon = c.bodies.moon, k = c.illumination;
+    /* Cartão do topo */
+    var moonKey = c.phaseIndex + ":" + Math.round(k * 200) + ":" + (c.waxing ? 1 : 0);
+    if (moonKey !== lastMoon) {
+      lastMoon = moonKey;
+      $("#skyMoon").innerHTML = '<defs><radialGradient id="ml" cx="40%" cy="35%" r="75%"><stop offset="0%" stop-color="#f5f1ea"/><stop offset="100%" stop-color="#cfc6b3"/></radialGradient></defs>'
+        + '<circle cx="50" cy="50" r="46" fill="#1d1a29" stroke="rgba(245,241,234,.12)" stroke-width="1"/>'
+        + (k > 0.005 ? '<path d="' + moonPath(k, c.waxing, true) + '" fill="url(#ml)"/>' : "");
+    }
+    set($(".js-sky-phase"), phases[c.phaseIndex]);
+    set($(".js-sky-moon"), "Lua a " + fmtDeg(moon.deg) + " de " + SIGN_PT[moon.sign] + " · " + (k * 100).toLocaleString("pt-BR", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + "% iluminada");
+    if (!principal || principal.ms <= now) principal = nextPrincipal(now);
+    set($(".js-sky-next"), principal ? "Próxima " + principal.label + ": " + fmtWhen(principal.ms) : "");
+    /* Planetas */
+    BODIES.forEach(function (b) {
+      var p = c.bodies[b[0]], cell = cells[b[0]];
+      set(cell.dg, fmtDeg(p.deg));
+      set(cell.sg, SIGN_GLYPH[p.sign] + "︎ " + SIGN_PT[p.sign]);
+      var rx = b[0] !== "sun" && b[0] !== "moon" && p.retrograde;
+      if (cell.rx.hidden === rx) { cell.rx.hidden = !rx; cell.el.classList.toggle("is-rx", rx); }
+    });
+    set($(".js-now-clock"), "Atualizado às " + clockFmt.format(new Date(now)));
+    /* Próxima troca de signo da Lua (recalcula a cada minuto) */
+    if (!ingress || now - ingressAt > 60000 || ingress.ms <= now) {
+      ingress = lib.nextIngress(sky, "moon", now, 4); ingressAt = now;
+    }
+    set($(".js-moon-ingress"), ingress ? "a Lua entra em " + SIGN_PT[ingress.sign] + " daqui a " + fmtIn(ingress.ms - now) + " (" + fmtWhen(ingress.ms) + ")" : "");
+  }
+  var iv = setInterval(tick, 1000);
+  tick();
+  card.hidden = false; sec.hidden = false;
+})();
+
+/* ---------- Revelar ao rolar ---------- */
+(function () {
+  var els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(function (el) { el.classList.add("in"); }); return; }
+  var io = new IntersectionObserver(function (en) {
+    en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  els.forEach(function (el) { io.observe(el); });
+})();
+
+/* ---------- Contador de 32 min "por tempo limitado" (começa na 1ª visita) ---------- */
+(function () {
+  var DUR = 32 * 60 * 1000, KEY = "su_timer_start", start = Date.now();
+  try { var v = +localStorage.getItem(KEY); if (v && v <= start) start = v; else localStorage.setItem(KEY, String(start)); } catch (e) {}
+  var els = document.querySelectorAll(".js-timer");
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function tick() {
+    var left = Math.max(0, DUR - (Date.now() - start));
+    var t = Math.ceil(left / 1000), txt = pad(Math.floor(t / 60)) + ":" + pad(t % 60);
+    els.forEach(function (el) { el.textContent = txt; });
+    if (left <= 0) { document.documentElement.classList.add("timer-done"); clearInterval(iv); }
+  }
+  var iv = setInterval(tick, 1000); tick();
+})();
+
+/* ---------- Carrossel das telas (celular): contínuo ---------- */
+(function () {
+  var row = document.querySelector(".phones"), dots = document.querySelectorAll(".phone-dots i");
+  if (!row || !window.matchMedia || !matchMedia("(max-width:759px)").matches) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var originals = Array.prototype.slice.call(row.children), n = originals.length;
+  originals.forEach(function (el) {
+    var c = el.cloneNode(true); c.setAttribute("aria-hidden", "true");
+    c.querySelectorAll("img").forEach(function (im) { im.alt = ""; });
+    row.appendChild(c);
+  });
+  row.classList.add("is-loop");
+  var SPEED = 40, pos = 0, last = 0, visible = true;
+  function setW() { return row.children[n].offsetLeft - row.children[0].offsetLeft; }
+  function stepW() { return row.children[1].offsetLeft - row.children[0].offsetLeft; }
+  function upd() { var c = Math.round(row.scrollLeft / stepW()) % n; dots.forEach(function (d, i) { d.classList.toggle("on", i === c); }); }
+  if ("IntersectionObserver" in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: .2 }).observe(row);
+  function frame(t) {
+    var dt = last ? Math.min(0.05, (t - last) / 1000) : 0; last = t;
+    if (visible && !document.hidden) { pos += SPEED * dt; var w = setW(); if (pos >= w) pos -= w; row.scrollLeft = pos; upd(); }
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+
+/* ---------- Botões que levam aos planos: param com o preço à vista ---------- */
+(function () {
+  var card = document.getElementById("plano");
+  if (!card) return;
+  function target() {
+    var r = card.getBoundingClientRect(), top = r.top + scrollY, bottom = r.bottom + scrollY;
+    return (bottom - top + 40 <= innerHeight) ? top - 24 : bottom + 16 - innerHeight;
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a");
+    if (!a || a.getAttribute("href") !== "#oferta") return;
+    e.preventDefault();
+    window.scrollTo({ top: Math.max(0, target()), behavior: "smooth" });
+  });
+})();
+
+/* ---------- Barra fixa (celular) ---------- */
+(function () {
+  var s = document.getElementById("sticky"), hero = document.querySelector(".hero"), offer = document.getElementById("oferta");
+  if (!("IntersectionObserver" in window)) { s.classList.add("show"); return; }
+  var h = true, o = false;
+  function upd() { s.classList.toggle("show", !h && !o); }
+  new IntersectionObserver(function (e) { h = e[0].isIntersecting; upd(); }).observe(hero);
+  new IntersectionObserver(function (e) { o = e[0].isIntersecting; upd(); }, { threshold: .1 }).observe(offer);
+})();
+
+/* =========================================================
+   QUIZ "DESCUBRA POR ONDE COMEÇAR" — edite os textos aqui.
+   Regra de copy: perguntas sobre interesse e rotina; nenhuma promessa de resultado.
+   ========================================================= */
+var QUIZ = [
+  { key: "obj", q: "O que você mais quer entender agora?", opts: [
+    { t: "Quem eu sou, de verdade", v: "self" },
+    { t: "Meus relacionamentos", v: "amor" },
+    { t: "O momento que estou vivendo", v: "momento" },
+    { t: "Minhas escolhas e caminhos", v: "caminho" },
+    { t: "Meus sonhos", v: "sonhos" } ] },
+  { key: "exp", q: "Qual é a sua relação com a astrologia?", opts: [
+    { t: "Estou começando agora", v: "zero" },
+    { t: "Leio meu horóscopo às vezes", v: "horoscopo" },
+    { t: "Conheço meu Sol, Lua e Ascendente", v: "basico" },
+    { t: "Já estudo o meu mapa", v: "estudo" } ] },
+  { key: "hora", q: "Você sabe o horário em que nasceu?", opts: [
+    { t: "Sei o horário exato", v: "exato" },
+    { t: "Sei mais ou menos", v: "aprox" },
+    { t: "Não sei", v: "nao" },
+    { t: "Consigo descobrir (certidão, família)", v: "descobrir" } ] },
+  { key: "trava", q: "O que mais te incomoda nos conteúdos de astrologia?", opts: [
+    { t: "São genéricos demais", v: "generico" },
+    { t: "Prometem coisas demais", v: "promessa" },
+    { t: "São difíceis de entender", v: "dificil" },
+    { t: "Nunca falam do meu mapa", v: "meu" } ] },
+  { key: "tempo", q: "Quanto tempo por dia você teria para esse momento?", opts: [
+    { t: "Uns 2 minutos", v: "2" },
+    { t: "De 5 a 10 minutos", v: "10" },
+    { t: "Mais tempo: gosto de me aprofundar", v: "mais" } ] }
+];
+var R = {
+  title: {
+    self: "Seu ponto de partida é o seu mapa: Sol, Lua e Ascendente",
+    amor: "Seu ponto de partida é o seu perfil amoroso",
+    momento: "Seu ponto de partida é o céu de hoje",
+    caminho: "Seu ponto de partida é conversar com o seu mapa",
+    sonhos: "Seu ponto de partida é o diário de sonhos"
+  },
+  why: {
+    self: "<b>Comece pelo mapa.</b> O Sol, a Lua e o Ascendente são a base da leitura, e o Seu Guia explica como os três conversam no seu céu.",
+    amor: "<b>Comece por Vênus, Marte e a Lua.</b> O perfil amoroso mostra como você ama, e o mapa do casal compara o seu céu com o de outra pessoa.",
+    momento: "<b>Comece pela Lua e pela carta do dia.</b> A fase real da Lua e uma carta para observar o dia, com um convite de intenção.",
+    caminho: "<b>Comece pelo Seu Guia.</b> Pergunte ao seu mapa sobre o que está em jogo; as respostas partem do seu céu calculado.",
+    sonhos: "<b>Comece pelo diário de sonhos.</b> Escreva o que sonhou: o app encontra os símbolos e o Guia oferece leituras possíveis."
+  },
+  trava: {
+    generico: "<b>Cansou do genérico.</b> Aqui cada leitura parte do seu mapa, calculado com a sua data, horário e cidade.",
+    promessa: "<b>Sem promessas.</b> O Seu Universo usa a astrologia como linguagem para refletir, sem previsões garantidas.",
+    dificil: "<b>Sem complicação.</b> O Guia traduz o mapa em linguagem simples, com perguntas para você pensar.",
+    meu: "<b>Agora é sobre o seu mapa.</b> Planetas, casas e aspectos do seu nascimento, não um texto por signo."
+  },
+  hora: {
+    exato: "<b>Seu mapa sai completo.</b> Com o horário exato, você vê o Ascendente e as doze casas.",
+    aprox: "<b>O horário aproximado já serve para começar.</b> Se descobrir o exato depois, é só atualizar.",
+    nao: "<b>Dá para começar sem o horário.</b> Você vê os planetas nos signos, a Lua, o Tarot, a numerologia e os sonhos. Ascendente e casas ficam para quando souber.",
+    descobrir: "<b>Vale descobrir o horário.</b> A certidão costuma ter, e ele libera o Ascendente e as casas. Enquanto isso, o resto já funciona."
+  },
+  tempo: {
+    "2": "Em 2 minutos por dia: a Lua de hoje e a carta do dia.",
+    "10": "Em 5 a 10 minutos: a Lua, uma carta e uma pergunta ao Seu Guia.",
+    mais: "Com mais tempo: o mapa completo, aspecto por aspecto, e conversas mais longas com o Guia."
+  }
+};
+
+function buildResult(a) {
+  var obj = a.obj ? a.obj.v : "self";
+  return {
+    obj: obj, title: R.title[obj], why: R.why[obj],
+    trava: R.trava[a.trava ? a.trava.v : "generico"],
+    hora: R.hora[a.hora ? a.hora.v : "aprox"],
+    tempo: R.tempo[a.tempo ? a.tempo.v : "10"]
+  };
+}
+
+(function () {
+  var box = document.getElementById("quizBox"), body = document.getElementById("qBody"), bar = document.getElementById("qBar");
+  var step = -1, ans = {}, lastFocus = null;
+  var ORBIT = document.querySelector(".orbit-art").innerHTML;
+  function open(fromStart) {
+    lastFocus = document.activeElement; ans = {};
+    step = fromStart ? -1 : 0;
+    box.classList.add("open"); document.body.style.overflow = "hidden"; render();
+  }
+  function close() {
+    box.classList.remove("open"); document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  function goOffer() {
+    close();
+    var el = document.getElementById("plano"); if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  function intro() {
+    bar.style.width = "0%";
+    body.innerHTML = '<div class="q-intro q-anim"><div class="orbit-art" aria-hidden="true">' + ORBIT + '</div>'
+      + '<h2>Descubra por onde começar no <em>Seu Universo</em></h2>'
+      + '<p>Cinco perguntas rápidas sobre o que você quer entender agora.</p>'
+      + '<button class="btn" type="button" id="qStart">Começar</button>'
+      + '<p class="fine">Leva menos de 1 minuto.</p>'
+      + '<button class="q-skip" type="button" id="qSkip">Prefiro ver a página primeiro</button></div>';
+    document.getElementById("qStart").addEventListener("click", function () { step = 0; render(); });
+    document.getElementById("qSkip").addEventListener("click", close);
+    document.getElementById("qStart").focus({ preventScroll: true });
+  }
+  function render() {
+    if (step < 0) return intro();
+    bar.style.width = (step / QUIZ.length * 100) + "%";
+    if (step >= QUIZ.length) return loading();
+    var it = QUIZ[step];
+    var html = '<div class="q-anim"><p class="q-step">Pergunta ' + (step + 1) + ' de ' + QUIZ.length + '</p><h2 class="q-title">' + it.q + '</h2><div class="q-opts">';
+    it.opts.forEach(function (o, i) {
+      var sel = ans[it.key] && ans[it.key].v === o.v ? " sel" : "";
+      html += '<button class="q-opt' + sel + '" type="button" data-i="' + i + '"><span class="k">' + "ABCDE"[i] + '</span>' + o.t + '</button>';
+    });
+    html += '</div><button class="q-back" type="button">← Voltar</button></div>';
+    body.innerHTML = html;
+    body.querySelectorAll(".q-opt").forEach(function (b) {
+      b.addEventListener("click", function () {
+        b.classList.add("sel");
+        ans[it.key] = it.opts[+b.dataset.i];
+        setTimeout(function () { step++; render(); }, 220);
+      });
+    });
+    body.querySelector(".q-back").addEventListener("click", function () { step--; render(); });
+    var first = body.querySelector(".q-opt"); if (first) first.focus({ preventScroll: true });
+    box.scrollTop = 0;
+  }
+  function loading() {
+    body.innerHTML = '<div class="q-loading q-anim"><div class="orbit-art" aria-hidden="true">' + ORBIT + '</div><p>Montando a sua sugestão…</p></div>';
+    setTimeout(result, 1100);
+  }
+  function result() {
+    var r = buildResult(ans);
+    setCheckoutLinks({ utm_content: "quiz-" + r.obj });
+    try { sessionStorage.setItem("su_quiz", r.obj); } catch (e) {}
+    body.innerHTML = '<div class="q-anim">'
+      + '<p class="r-kicker">Sugestão para você</p>'
+      + '<h2 class="r-title">' + r.title + '</h2>'
+      + '<ul class="r-list">'
+      + '<li><span class="n">1</span><div>' + r.why + '</div></li>'
+      + '<li><span class="n">2</span><div>' + r.trava + '</div></li>'
+      + '<li><span class="n">3</span><div>' + r.hora + '</div></li>'
+      + '</ul>'
+      + '<div class="r-rec"><small>Por onde seguir</small>'
+      + '<p><b>Acesso vitalício ao Seu Universo, por R$&nbsp;' + (CFG.PRICE || "19,90") + '.</b> ' + r.tempo + '</p>'
+      + (r.obj === "amor" ? '<p class="r-love">Como o seu foco é amor, vale adicionar <b>Relacionamentos</b> no checkout (+&nbsp;R$&nbsp;' + (CFG.BUMP_PRICE || "9,90") + '): perfil amoroso, mapa do casal e Tarot do amor.</p>' : "")
+      + '</div>'
+      + '<a class="btn btn-block js-checkout" href="' + checkoutUrl({ utm_content: "quiz-" + r.obj }) + '" id="qBuy">Quero o meu acesso</a>'
+      + '<a class="r-alt" href="#oferta" id="qOffer">Ver tudo o que vem no acesso</a>'
+      + '<button class="q-back" type="button" id="qRedo">Refazer</button>'
+      + '</div>';
+    bar.style.width = "100%";
+    var buy = document.getElementById("qBuy");
+    if (buy.getAttribute("href") === "#oferta") buy.addEventListener("click", function (e) { e.preventDefault(); goOffer(); });
+    document.getElementById("qOffer").addEventListener("click", function (e) { e.preventDefault(); goOffer(); });
+    document.getElementById("qRedo").addEventListener("click", function () { step = 0; ans = {}; render(); });
+    box.scrollTop = 0;
+  }
+  document.querySelectorAll(".js-quiz").forEach(function (b) { b.addEventListener("click", function () { open(false); }); });
+  document.getElementById("qClose").addEventListener("click", close);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && box.classList.contains("open")) close(); });
+  if (location.hash === "#teste") open(true);
+})();
+</script>
+</body>
+</html>

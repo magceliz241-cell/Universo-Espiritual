@@ -1,0 +1,5 @@
+3448439	São Paulo	Sao Paulo	Sampa,Sao Paulo	-23.5475	-46.63611	P	PPLA	BR		27	3448433			10021295		769	America/Sao_Paulo	2024-01-01
+3390760	Recife	Recife		-8.05389	-34.88111	P	PPLA	BR		30				1478098		8	America/Recife	2024-01-01
+2643743	London	London		51.50853	-0.12574	P	PPLC	GB		ENG	GLA			8961989		25	Europe/London	2024-01-01
+3471872	Aracaju	Aracaju		-10.91111	-37.07167	P	PPLA	BR		28				571149		4	America/Maceio	2024-01-01
+9999999	Sitio Fantasma	Sitio Fantasma		-10	-40	S	FRM	BR		05				0		0	America/Bahia	2024-01-01

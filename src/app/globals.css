@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/*
+ * Seu Universo — design tokens (docs/DESIGN_SYSTEM.md §3–§11, §23).
+ * O app é sempre escuro ("observatório pessoal"); não há tema claro.
+ * Não introduzir cores/tipografia fora destes tokens sem aprovação.
+ */
+@theme {
+  /* Superfícies */
+  --color-bg: #090812;
+  --color-surface: #12101d;
+  --color-surface-2: #181526;
+  --color-surface-3: #201c2d;
+  --color-line: rgb(255 255 255 / 0.06);
+  --color-line-strong: rgb(255 255 255 / 0.12);
+
+  /* Texto */
+  --color-ink: #f5f1ea;
+  --color-ink-2: #a7a2b5;
+  --color-ink-3: #777185;
+
+  /* Destaques */
+  --color-gold: #d6b56e;
+  --color-violet: #8b72c9;
+  --color-lilac: #c58bcf;
+
+  /* Amor (com moderação) */
+  --color-rose: #c9829c;
+  --color-wine: #6d3d55;
+
+  /* Estados */
+  --color-danger: #e08a8a;
+
+  /* Tipografia: serif = astrologia; sans = interface */
+  --font-display: var(--font-instrument-serif), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-glyph: var(--font-glyphs), "Noto Sans Symbols", "Segoe UI Symbol", serif;
+
+  /* Raios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+
+  /* Motion */
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-micro: 150ms;
+  --duration-normal: 250ms;
+  --duration-complex: 550ms;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  /* Ambiente: gradientes radiais sutis sobre fundo sólido (sem imagem de galáxia). */
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, rgb(139 114 201 / 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgb(214 181 110 / 0.05), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grain quase imperceptível */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+::selection {
+  background: rgb(139 114 201 / 0.35);
+}
+
+/* Foco sempre visível (acessibilidade) */
+:focus-visible {
+  outline: 2px solid var(--color-lilac);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .text-display {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+  .glyph {
+    font-family: var(--font-glyph);
+    font-weight: 300;
+    font-variant-emoji: text;
+    line-height: 1;
+  }
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ink-3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
