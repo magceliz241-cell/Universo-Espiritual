@@ -30,7 +30,7 @@ interpreta.**
 
 **Modelo de venda (decidido pelo Guilherme):**
 - Produto principal **Astarot** (R$ 19,90, pagamento único; o acesso não expira).
-- Order bump **Astarot Love** (R$ 9,90, também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
+- Order bump **Astarot Love** (R$ 10,00, total R$ 29,90 com o Astarot; também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
 - "Vitalício" é característica, não nome de plano: nos produtos da Cakto use os nomes **Astarot** e **Astarot Love**.
 - O bump **também é vendido dentro do app**. Quem comprou sem ele vê a oferta, e o checkout abre com o e-mail da
   conta preenchido.
@@ -53,7 +53,7 @@ interpreta.**
 | IA (Groq, modelo `openai/gpt-oss-120b`) | ✅ pronta, **falta a chave** |
 | Testes: 129 unitários, 18 de banco, 65/65 de ponta a ponta no navegador | ✅ passando |
 | Base de cidades (GeoNames) | ⚠️ script pronto, **dados não importados** |
-| Landing page de vendas em `landing/` (R$ 19,90 + bump R$ 9,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ pronta, **falta preencher `landing/config.js` e publicar** |
+| Landing page de vendas em `landing/` (Astarot R$ 19,90 + Astarot Love R$ 10,00 = R$ 29,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ pronta, **falta preencher `landing/config.js` e publicar** |
 
 Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/artifact/1kUWoqfgZtixUL9ufH5qw9
 
@@ -149,7 +149,7 @@ Siga `docs/SETUP.md` §4:
 ### Etapa 7: Publicar a landing (já está pronta em `landing/`)
 Guia completo em `landing/README.md`. Em resumo:
 1. Em `landing/config.js` (é o **único** arquivo a editar), com o Guilherme:
-   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Astarot Love (R$ 9,90)** dentro
+   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Astarot Love (R$ 10,00, total R$ 29,90)** dentro
      desse mesmo checkout;
    - `APP_URL`: URL do app, sem barra no fim;
    - `CONTACT_EMAIL`: e-mail de suporte;

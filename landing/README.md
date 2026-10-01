@@ -17,7 +17,7 @@ do app.
 
 1. Em `config.js`, preencha:
    - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump **Astarot Love
-     (R$ 9,90)** configurado dentro desse mesmo checkout.
+     (R$ 10,00, total R$ 29,90)** configurado dentro desse mesmo checkout.
    - `APP_URL`: endereço do app, sem barra no fim (aparece o link "Já comprei · Entrar").
    - `CONTACT_EMAIL`: e-mail de suporte (rodapé, FAQ, termos e privacidade).
    - `META_PIXEL_ID`: ID do pixel via UTMify **desta conta**. Vazio = nenhum pixel carrega.

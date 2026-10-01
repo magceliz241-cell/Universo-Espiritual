@@ -314,3 +314,5 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   o preço total (R$ 29,80 = Astarot R$ 19,90 + Love R$ 9,90); a seção do amor, o FAQ e o quiz seguem a mesma lógica.
 - **Imagens fundidas à página:** o astrolábio deixou de ser um cartão com moldura e passou a se misturar ao painel do
   teste (como as órbitas na seção do amor), com máscara em degradê e mistura de luz.
+- **Preço do Astarot Love:** R$ 29,90 no total (Astarot R$ 19,90 + complemento R$ 10,00 no checkout). O total da
+  página é calculado a partir de `PRICE` e `BUMP_PRICE` em `landing/config.js`.
