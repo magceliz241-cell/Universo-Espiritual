@@ -49,8 +49,10 @@ você. O Claude deixa tudo pronto e explica cada passo.
      --admin1 admin1CodesASCII.txt --dump-date AAAA-MM-DD --upsert
    ```
    O comando precisa de `NEXT_PUBLIC_SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` definidos **no seu terminal**
-   (você cola a chave; ela não vai para o repositório). Outra opção é `--out cities.csv` e importar o CSV pela
-   tela *Table Editor → cities → Import data*.
+   (você cola a chave; ela não vai para o repositório).
+   **Sem chave nenhuma (recomendado):** troque `--upsert` por `--out cidades.csv --chunk 20000`. São gerados
+   `cidades-001.csv`, `cidades-002.csv`… (cada um com cabeçalho). Importe um por vez em
+   *Table Editor → cities → Insert → Import data from CSV*.
 3. Atribuição obrigatória: "Dados de cidades: GeoNames (geonames.org), CC-BY 4.0". Ela já está prevista na tela "Sobre".
 
 ## 3. Vercel

@@ -8,6 +8,8 @@
  * Uso:
  *   node scripts/import-cities.ts --cities cities1000.txt --cities BR.txt \
  *     --admin1 admin1CodesASCII.txt --dump-date 2026-10-01 --out cities.csv
+ *   node scripts/import-cities.ts ... --out cidades.csv --chunk 20000   (gera cidades-001.csv, cidades-002.csv…,
+ *     cada um com cabeçalho, para importar pela tela do Supabase em partes)
  *   node scripts/import-cities.ts ... --upsert   (usa NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY)
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -31,7 +33,16 @@ for (const f of cityFiles) parseCities(readFileSync(f, "utf8"), admin1, dumpDate
 console.log(`${rows.size} cidades`);
 
 const out = one("--out");
-if (out) {
+const chunk = Number(one("--chunk") ?? 0);
+if (out && chunk > 0) {
+  const list = [...rows.values()];
+  const base = out.replace(/\.csv$/i, "");
+  for (let i = 0, n = 1; i < list.length; i += chunk, n++) {
+    const file = `${base}-${String(n).padStart(3, "0")}.csv`;
+    writeFileSync(file, toCsv(list.slice(i, i + chunk)));
+    console.log(`CSV: ${file}`);
+  }
+} else if (out) {
   writeFileSync(out, toCsv(rows.values()));
   console.log(`CSV: ${out}`);
 }
