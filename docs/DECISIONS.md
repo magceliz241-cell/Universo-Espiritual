@@ -310,3 +310,7 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   "Vitalício" deixou de aparecer como nome de plano (selo da oferta, barra do topo, resultado do quiz, perfil): o acesso
   não expira por natureza, e a página fala em "pagamento único, sem mensalidade". No app, o perfil mostra "Astarot ·
   ativo" e "Astarot Love · ativo/não incluído", e a oferta interna virou "Liberar o Astarot Love". Termos atualizados.
+- **Astarot Love deixa claro que inclui tudo:** o cartão mostra "Tudo do Astarot incluído" + "as áreas do amor", com
+  o preço total (R$ 29,80 = Astarot R$ 19,90 + Love R$ 9,90); a seção do amor, o FAQ e o quiz seguem a mesma lógica.
+- **Imagens fundidas à página:** o astrolábio deixou de ser um cartão com moldura e passou a se misturar ao painel do
+  teste (como as órbitas na seção do amor), com máscara em degradê e mistura de luz.
