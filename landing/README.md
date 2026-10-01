@@ -33,6 +33,9 @@ do app.
 
 ## Publicar na Vercel
 
+✅ **Já publicada** em https://universo-espiritual-landing.vercel.app (projeto `universo-espiritual-landing`). Cada
+merge na `main` atualiza o site sozinho. Os passos abaixo ficam como referência, caso seja preciso recriar o projeto.
+
 1. *Add New → Project*, importe o mesmo repositório.
 2. **Root Directory: `landing`**. Framework Preset: **Other**. Sem comando de build, sem variáveis de ambiente.
 3. Deploy. Se quiser, conecte um domínio próprio.
