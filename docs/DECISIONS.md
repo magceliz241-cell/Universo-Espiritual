@@ -248,3 +248,23 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
 - CI (`.github/workflows/ci.yml`): lint, tipos, unitários, build, checagem do bundle e testes de banco com Postgres 16.
 - E2E de novo em 65/65. Com o `loading.tsx` as páginas chegam em streaming, então o roteiro passou a *esperar* os
   elementos em vez de checar no primeiro instante.
+
+## Landing de vendas (2026-10-01)
+
+- Pasta `landing/` neste repositório: HTML/CSS/JS estáticos, sem build, publicada como **segundo projeto na Vercel**
+  (Root Directory `landing`). Estrutura inspirada na landing do Calistenic 28 (contador, quiz, oferta, barra fixa no
+  celular, termos/privacidade), com o visual do `docs/DESIGN_SYSTEM.md`.
+- Oferta (decisão do Guilherme): plano único **R$ 19,90 vitalício** + order bump **Relacionamentos R$ 9,90** no mesmo
+  checkout da Cakto (também vendido dentro do app). **Garantia incondicional de 7 dias.** Contador "por tempo limitado"
+  de 32 min por navegador. Espaço para pixel/UTMify.
+- `landing/config.js` concentra tudo que muda (checkout, app, e-mail, pixel, preços). Placeholders `SEU-...` escondem
+  o trecho correspondente, para nunca publicar um link quebrado.
+- Mapa de exemplo e Lua de hoje são **dados calculados pelo XALEN** (`landing/assets.js`, gerado por
+  `npm run build:landing-assets`), não ilustrações: a regra "o software calcula" vale também para a página de vendas.
+- Quiz "Descubra por onde começar": 5 perguntas de interesse e rotina, sugestão de ponto de partida, sem promessa e sem
+  "processamento místico" falso; marca `utm_content=quiz-<objetivo>` no checkout. Respostas ficam só no navegador.
+- Copy segue `knowledge/LEGAL_AND_EDITORIAL_NOTES.md`: sem promessa de resultado, sem porcentagem de compatibilidade,
+  "astrologia não é ciência" dito com clareza no FAQ, linguagem neutra em gênero, IA identificada como IA.
+- Termos e Privacidade próprios (LGPD): dados de nascimento, sonhos e perguntas; fornecedores (Cakto, Supabase, Vercel,
+  Groq, Meta/UTMify); a IA recebe só dados calculados e o texto necessário, sem nome, e-mail ou coordenadas.
+- `npm run test:landing` (Playwright, 390 px e 1280 px, também sem JS) entrou no CI.

@@ -22,6 +22,18 @@ jobs:
       - name: Bundle do cliente sem segredos
         run: node tests/e2e/check-bundle.mjs
 
+  landing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:landing
+
   database:
     runs-on: ubuntu-latest
     services:

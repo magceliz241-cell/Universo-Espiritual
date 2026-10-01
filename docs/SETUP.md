@@ -89,7 +89,14 @@ Conferência: `GET /api/health/engine` → `ok: true`; `GET /api/webhooks/cakto`
 5. O botão "Testar" da Cakto usa ids falsos, então o resultado esperado é `needs_review` no log
    (`cakto_webhook_events`).
 
-## 5. Testes locais do banco
+## 5. Landing (`landing/`)
+
+Página estática, publicada como um **segundo projeto na Vercel** com o mesmo repositório e **Root Directory =
+`landing`** (preset *Other*, sem build). Antes de publicar, preencha `landing/config.js` (checkout, app, e-mail,
+pixel) e cole o script da UTMify no `<head>` do `index.html`. Detalhes em `landing/README.md`.
+Teste: `npm run test:landing`.
+
+## 6. Testes locais do banco
 
 ```bash
 # Postgres 16 local na porta 55432 (socket em /tmp), depois:

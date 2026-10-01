@@ -52,7 +52,7 @@ interpreta.**
 | IA (Groq, modelo `openai/gpt-oss-120b`) | ✅ pronta, **falta a chave** |
 | Testes: 129 unitários, 18 de banco, 65/65 de ponta a ponta no navegador | ✅ passando |
 | Base de cidades (GeoNames) | ⚠️ script pronto, **dados não importados** |
-| Landing page de vendas | ❌ **não existe ainda** (fora do que foi construído) |
+| Landing page de vendas em `landing/` (R$ 19,90 + bump R$ 9,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ pronta, **falta preencher `landing/config.js` e publicar** |
 
 Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/artifact/1kUWoqfgZtixUL9ufH5qw9
 
@@ -136,7 +136,7 @@ Siga `docs/SETUP.md` §4:
    - `CAKTO_MAIN_IDS`: ids/códigos do produto e das ofertas do **principal**, separados por vírgula
    - `CAKTO_LOVE_IDS`: ids/códigos do **bump**, tanto o do checkout da landing quanto o da oferta avulsa
    - `NEXT_PUBLIC_CHECKOUT_LOVE_URL`: link de checkout da oferta avulsa do bump
-   - `NEXT_PUBLIC_LANDING_URL`: URL da landing, quando existir
+   - `NEXT_PUBLIC_LANDING_URL`: URL da landing (Etapa 7)
 
    **Um mesmo id nunca pode estar nas duas listas.**
 5. **Conferência:** `GET https://<app>/api/webhooks/cakto` → todos `true`. O botão "Testar" da Cakto usa ids falsos, então
@@ -145,12 +145,24 @@ Siga `docs/SETUP.md` §4:
    ver que entrou. Depois comprar o bump **pela oferta dentro do app** e ver que Amor libera sem sair. Reembolso pela
    Cakto, se quiser testar o bloqueio.
 
-### Etapa 7: Landing page (não existe ainda)
-- Plano único + order bump de Relacionamentos no checkout da Cakto.
-- Visual alinhado a `docs/DESIGN_SYSTEM.md`.
-- FAQ com "crie a conta com o mesmo e-mail da compra".
-- Sem promessas de resultado (regras editoriais em `knowledge/LEGAL_AND_EDITORIAL_NOTES.md`).
-- **Combine o conteúdo com o Guilherme antes de construir.** Depois preencha `NEXT_PUBLIC_LANDING_URL`.
+### Etapa 7: Publicar a landing (já está pronta em `landing/`)
+Guia completo em `landing/README.md`. Em resumo:
+1. Em `landing/config.js` (é o **único** arquivo a editar), com o Guilherme:
+   - `CHECKOUT_URL`: checkout da Cakto do **principal (R$ 19,90)**, com o bump **Relacionamentos (R$ 9,90)** dentro
+     desse mesmo checkout;
+   - `APP_URL`: URL do app, sem barra no fim;
+   - `CONTACT_EMAIL`: e-mail de suporte;
+   - `META_PIXEL_ID`: pixel via UTMify **da conta do Seu Universo** (vazio = sem pixel).
+2. Script de captura de UTMs da UTMify: colar no `<head>` do `landing/index.html`, no comentário indicado.
+3. Vercel: *Add New → Project* com o **mesmo repositório**, **Root Directory = `landing`**, preset **Other**, sem
+   build e sem variáveis.
+4. Depois do deploy: trocar o `og:image` do `index.html` pelo endereço completo da imagem
+   (`https://<landing>/img/og.jpg`) e preencher `NEXT_PUBLIC_LANDING_URL` no projeto do app (redeploy).
+5. **Conferência:** abrir a landing no celular, clicar em "Quero o meu acesso" e ver o checkout da Cakto abrir com o
+   bump; fazer o teste "Descubra por onde começar" até o fim; abrir Termos e Privacidade e ver o e-mail certo.
+
+Edições de texto da landing pelo GitHub são aceitáveis só em `config.js` e no script da UTMify. Mudanças de copy ou
+layout: anote e leve ao Claude Code.
 
 ---
 
@@ -193,4 +205,4 @@ pelo GitHub.
 - [ ] Cakto: produtos, bump e oferta avulsa criados; webhook com os 3 eventos e todos os produtos marcados
 - [ ] `/api/webhooks/cakto` (GET) → tudo `true`
 - [ ] Compra real: principal libera; bump dentro do app libera Amor na hora; reembolso bloqueia
-- [ ] Landing combinada com o Guilherme e publicada; `NEXT_PUBLIC_LANDING_URL` preenchida
+- [ ] Landing: `config.js` preenchido, UTMify colada, publicada (Root Directory `landing`), `og:image` com endereço completo, `NEXT_PUBLIC_LANDING_URL` preenchida

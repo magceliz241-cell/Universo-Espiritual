@@ -1,0 +1,21 @@
+/* Estilo das páginas legais (termos.html e privacidade.html) — mesmos tokens da landing */
+:root{--bg:#090812;--surface:#12101d;--line:rgba(255,255,255,.08);--ink:#f5f1ea;--ink-2:#b4afc1;--ink-3:#8a849a;--gold:#d6b56e;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:0 16px}
+header{border-bottom:1px solid var(--line);padding:18px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:inline-flex;align-items:center;gap:9px;font-family:"Instrument Serif",Georgia,serif;font-size:22px;line-height:1;text-decoration:none;color:var(--ink)}
+.brand svg{width:22px;height:22px}
+header a.back{color:var(--ink-2);font-size:14px;font-weight:500}
+main{padding:44px 0 60px}
+h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(38px,7vw,54px);line-height:1.02}
+.upd{color:var(--ink-3);font-size:14px;margin:12px 0 30px}
+h2{font-size:18px;font-weight:600;margin:34px 0 10px;color:var(--gold)}
+p,li{color:var(--ink-2)} p+p{margin-top:12px}
+ul{margin:10px 0 0 20px} li+li{margin-top:6px}
+strong{color:var(--ink);font-weight:600} a{color:var(--ink);text-underline-offset:3px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;text-align:center;font-size:13px;color:var(--ink-3)}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-bottom:12px}
+footer nav a{color:var(--ink);font-weight:500}

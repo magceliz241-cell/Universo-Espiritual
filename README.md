@@ -7,6 +7,7 @@ o Seu Guia (IA). **O software calcula; a IA interpreta.**
   [`docs/BENCHMARK.md`](docs/BENCHMARK.md)
 - Design: [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) · Configuração (Supabase, Vercel, Cakto): [`docs/SETUP.md`](docs/SETUP.md)
 - Licenças de terceiros: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
+- Landing de vendas (estática, projeto separado na Vercel): [`landing/`](landing/README.md)
 
 ## Stack
 Next.js 16 (App Router) · TypeScript · Tailwind 4 · Supabase (Auth + Postgres + RLS) · Groq `openai/gpt-oss-120b` ·
@@ -24,6 +25,8 @@ npm run dev                  # http://localhost:3000
 | `npm test` | testes unitários (motor, tempo/fuso, aspectos, KB, IA, webhook, numerologia, Tarot, Lua) |
 | `npm run test:db` | migrations + RLS + regras de acesso num Postgres local (porta 55432) |
 | `npm run test:e2e` | roteiro Playwright contra o ambiente local (`tests/e2e/harness/start.sh`) |
+| `npm run test:landing` | landing no Chromium (celular e desktop, teste de interesses, checkout com UTMs) |
+| `npm run build:landing-assets` | regenera `landing/assets.js` (Lua e mapa de exemplo, com o XALEN) |
 | `npm run benchmark` | benchmark de precisão → `docs/BENCHMARK.md` |
 | `npm run benchmark:fetch-jpl` | busca as referências do JPL Horizons (precisa de rede) |
 | `npm run build:knowledge` | regenera o índice da KB depois de editar `knowledge/` |
