@@ -8,7 +8,8 @@ você. O Claude deixa tudo pronto e explica cada passo.
 1. Projeto do Supabase: ✅ já criado (ref `vyynstiepcqvxitwsipx`). Guarde a senha do banco num gerenciador de senhas.
    Se o **conector Supabase** estiver ligado na sua conta do Claude (claude.ai → Configurações → Conectores), o
    Claude/Cowork pode rodar os passos de banco abaixo por ele, sempre pedindo sua permissão antes de cada alteração.
-2. **SQL Editor**: rode, **nesta ordem**, o conteúdo de cada arquivo (cole e clique em *Run*):
+2. ✅ **Já feito em 01/10/2026** (pelo conector, com permissão do Guilherme): as 3 migrations abaixo foram aplicadas e
+   conferidas. Não rode de novo. Fica registrado como seria pelo **SQL Editor** (cole e clique em *Run*, nesta ordem):
    1. `supabase/migrations/20260930000100_core.sql`: tabelas do app + RLS
    2. `supabase/migrations/20260930000200_memberships.sql`: acesso via Cakto
    3. `supabase/migrations/20260930000300_cities.sql`: base de cidades

@@ -20,6 +20,9 @@ Regras inegociáveis:
 - Conector/MCP do Supabase (projeto `vyynstiepcqvxitwsipx`): leitura livre; qualquer escrita (migration, DML, DDL,
   branch, função, configuração) só depois de explicar ao usuário o que será feito e por quê, e receber o "pode" para
   aquele comando. Nunca outro projeto.
+- Ao receber "Voltei do Cowork", seguir `docs/RETORNO_CLAUDE_CODE.md`. Sempre que mudar um .md de passagem
+  (`docs/HANDOFF_COWORK.md`, `docs/SETUP.md`, `landing/README.md`, `docs/RETORNO_CLAUDE_CODE.md`), mandar a versão
+  nova no chat.
 - Responder ao usuário em português do Brasil.
 
 Comandos: `npm test`, `npm run typecheck`, `npm run lint`, `npx next build`,

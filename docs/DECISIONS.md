@@ -328,3 +328,11 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   do Claude, com acesso total, para facilitar o trabalho do Cowork e das próximas sessões.
 - Regra (em `CLAUDE.md` e `docs/HANDOFF_COWORK.md`): leitura livre; qualquer alteração só depois de explicar o que
   será feito, por que, o que muda e se dá para desfazer, e receber o "pode" para aquele comando específico.
+- **Migrations aplicadas em produção (01/10/2026):** `core`, `memberships` e `cities`, pelo conector, com o "pode" do
+  Guilherme para as três. Conferido: 12 tabelas com RLS, 14 políticas, 10 funções, 2 gatilhos em `auth.users`,
+  extensões `pgcrypto` e `pg_trgm`; visitante não executa `cakto_apply_purchase` nem lê `memberships`. O verificador
+  de segurança deu 2 avisos esperados (`cakto_webhook_events` sem política, de propósito; `my_access()` executável por
+  quem está logado, de propósito).
+- **Volta ao Claude Code automatizada:** o Cowork termina com a Etapa 8 (dados não secretos da landing + 9 capturas do
+  app + mensagem pronta), e o Claude Code segue `docs/RETORNO_CLAUDE_CODE.md` (diagnóstico, landing, telas, Tarot,
+  tom do app, testes, PR). O Cowork deixa de editar a landing pelo GitHub.

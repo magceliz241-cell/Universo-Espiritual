@@ -8,6 +8,7 @@ o Seu Guia (IA). **O software calcula; a IA interpreta.**
 - Design: [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md) · Configuração (Supabase, Vercel, Cakto): [`docs/SETUP.md`](docs/SETUP.md)
 - Licenças de terceiros: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
 - Landing de vendas (estática, projeto separado na Vercel): [`landing/`](landing/README.md)
+- Passagem para o Cowork e volta: [`docs/HANDOFF_COWORK.md`](docs/HANDOFF_COWORK.md) → [`docs/RETORNO_CLAUDE_CODE.md`](docs/RETORNO_CLAUDE_CODE.md)
 
 ## Stack
 Next.js 16 (App Router) · TypeScript · Tailwind 4 · Supabase (Auth + Postgres + RLS) · Groq `openai/gpt-oss-120b` ·
