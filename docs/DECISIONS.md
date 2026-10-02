@@ -343,3 +343,13 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
 - **Planos lado a lado também no celular:** versão compacta (só os nomes dos benefícios, preço menor, selos de
   garantia e o aviso "é só marcar no checkout" embaixo dos dois cartões). Botões passam a dizer "Quero o Astarot" e
   "Quero o Astarot Love".
+
+## Astarot e Astarot Love como produtos separados (2026-10-02, decisão do Guilherme)
+
+- Cada plano é um produto na Cakto, com checkout próprio: **Astarot** (R$ 19,90, com order bump do Love de + R$ 10,00)
+  e **Astarot Love** (R$ 29,90, inclui tudo do Astarot, sem bump). Dentro do app, o upgrade do Love (+ R$ 10,00)
+  continua para quem tem só o Astarot.
+- Webhook: nova lista `CAKTO_FULL_IDS` para o produto Astarot Love; a compra aplica `main` e `love` no mesmo pedido, e
+  o reembolso desse pedido revoga os dois (sem mudança no banco). `GET /api/webhooks/cakto` ganhou `full_ids`.
+- Landing: `CHECKOUT_LOVE_URL` e `LOVE_PRICE` no `config.js`; os botões do Love (cartão, seção do amor e quiz com foco
+  em amor) levam ao checkout próprio; saiu a explicação "é só marcar no checkout" do cartão do Love.

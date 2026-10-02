@@ -45,6 +45,7 @@ export async function GET() {
     supabase_admin: adminConfigured(),
     main_ids: cfg.main.length > 0,
     love_ids: cfg.love.length > 0,
+    full_ids: (cfg.full ?? []).length > 0,
     config_ok: configProblems(cfg).length === 0,
   });
 }

@@ -71,24 +71,29 @@ Importe o repositório. Variáveis de ambiente (Settings → Environment Variabl
 | `GROQ_MODEL` | config | `openai/gpt-oss-120b` |
 | `NEXT_PUBLIC_APP_URL` | pública | URL de produção |
 | `NEXT_PUBLIC_LANDING_URL` | pública | URL da landing |
-| `NEXT_PUBLIC_CHECKOUT_LOVE_URL` | pública | checkout Cakto do bump de relacionamento vendido dentro do app |
+| `NEXT_PUBLIC_CHECKOUT_LOVE_URL` | pública | checkout Cakto da **oferta de upgrade** do Astarot Love vendida dentro do app (+ R$ 10,00, para quem já tem o Astarot) |
 | `CAKTO_WEBHOOK_SECRET` | **secreta** | segredo do webhook na Cakto (você cola) |
 | `CAKTO_MAIN_IDS` | config | ids/códigos do produto e das ofertas do plano principal, separados por vírgula |
-| `CAKTO_LOVE_IDS` | config | ids/códigos do bump (checkout da landing **e** oferta dentro do app) |
+| `CAKTO_LOVE_IDS` | config | ids/códigos do Astarot Love **como complemento**: order bump no checkout do Astarot **e** oferta de upgrade dentro do app (liberam só o Love) |
+| `CAKTO_FULL_IDS` | config | ids/códigos do produto **Astarot Love vendido sozinho** (R$ 29,90, checkout próprio; libera o Astarot **e** o Love) |
 
 Variáveis `NEXT_PUBLIC_*` entram no build, então depois de mudar alguma é preciso fazer **redeploy**.
-Um id nunca pode estar nas duas listas.
+Um id nunca pode estar em duas listas.
 
 Conferência: `GET /api/health/engine` → `ok: true`; `GET /api/webhooks/cakto` → tudo `true`.
 
 ## 4. Cakto
 
-1. Produto principal **Astarot** (R$ 19,90, acesso sem expiração) + order bump **Astarot Love** (R$ 10,00, total R$ 29,90; sem
-   expiração) + oferta avulsa do Astarot Love para vender dentro do app (o link recebe `?email=` preenchido).
+1. Três vendas na Cakto, todas sem expiração:
+   - produto **Astarot** (R$ 19,90), com **order bump "Astarot Love"** (+ R$ 10,00) no próprio checkout;
+   - produto **Astarot Love** (R$ 29,90), com **checkout próprio**, que já inclui tudo do Astarot (sem bump);
+   - **oferta de upgrade do Astarot Love** (+ R$ 10,00) para vender dentro do app a quem já tem o Astarot (o link recebe
+     `?email=` preenchido).
 2. "Acesso por e-mail" de cada produto → `https://<app>/auth/sign-up`.
 3. Integrações → Webhooks → URL `https://<app>/api/webhooks/cakto`, eventos **Compra aprovada**, **Reembolso** e
    **Chargeback**, com **todos os produtos marcados**. Copie o segredo para `CAKTO_WEBHOOK_SECRET`.
-4. Copie os ids de produto/oferta para `CAKTO_MAIN_IDS` e `CAKTO_LOVE_IDS`.
+4. Copie os ids de produto/oferta: Astarot → `CAKTO_MAIN_IDS`; order bump e oferta de upgrade → `CAKTO_LOVE_IDS`;
+   produto Astarot Love → `CAKTO_FULL_IDS`.
 5. O botão "Testar" da Cakto usa ids falsos, então o resultado esperado é `needs_review` no log
    (`cakto_webhook_events`).
 

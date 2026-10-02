@@ -4,7 +4,7 @@ import { parseCaktoPayload } from "@/lib/cakto/parse";
 import { type ProcessingStatus, processCaktoEvent, sanitize, type WebhookStore } from "@/lib/cakto/process";
 import { secretMatches } from "@/lib/cakto/secret";
 
-const cfg = { main: ["prod-main", "offer-main"], love: ["prod-love", "offer-love-app"] };
+const cfg = { main: ["prod-main", "offer-main"], love: ["prod-love", "offer-love-app"], full: ["prod-full"] };
 
 const payload = (event: string, over: Record<string, unknown> = {}) => ({
   secret: "s3cr3t",
@@ -69,12 +69,15 @@ describe("classify", () => {
     expect(classify(["offer-love-app"], cfg)).toEqual(["love"]);
     expect(classify(["prod-main", "prod-love"], cfg)).toEqual(["main", "love"]);
     expect(classify(["qualquer"], cfg)).toEqual([]);
+    // Astarot Love vendido sozinho libera o principal e o Love
+    expect(classify(["prod-full"], cfg)).toEqual(["main", "love"]);
   });
 
   it("aponta configuração inválida", () => {
     expect(configProblems(cfg)).toEqual([]);
-    expect(configProblems({ main: ["a"], love: ["a"] })).toHaveLength(1);
-    expect(configProblems({ main: [], love: [] })).toHaveLength(2);
+    expect(configProblems({ main: ["a"], love: ["a"], full: ["f"] })).toHaveLength(1);
+    expect(configProblems({ main: ["a"], love: ["b"], full: ["a"] })).toHaveLength(1);
+    expect(configProblems({ main: [], love: [], full: [] })).toHaveLength(3);
   });
 });
 
@@ -94,6 +97,17 @@ describe("processamento", () => {
     const out = await processCaktoEvent(parseCaktoPayload(body), body, cfg, store);
     expect(out.map((o) => o.eventKey)).toEqual(["purchase_approved:ord-1:main", "purchase_approved:ord-1:love"]);
     expect(calls).toHaveLength(2);
+  });
+
+  it("Astarot Love vendido sozinho aplica principal e Love no mesmo pedido; reembolso revoga uma vez", async () => {
+    const { store, calls } = fakeStore();
+    const body = payload("purchase_approved", { product: { id: "prod-full" } });
+    const out = await processCaktoEvent(parseCaktoPayload(body), body, cfg, store);
+    expect(out.map((o) => o.eventKey)).toEqual(["purchase_approved:ord-1:main", "purchase_approved:ord-1:love"]);
+    expect(calls).toEqual(["buy:ana@example.com:main:ord-1", "buy:ana@example.com:love:ord-1"]);
+    const refund = payload("refunded", { product: { id: "prod-full" } });
+    await processCaktoEvent(parseCaktoPayload(refund), refund, cfg, store);
+    expect(calls.filter((c) => c.startsWith("revoke"))).toEqual(["revoke:ord-1:refunded"]);
   });
 
   it("comprador sem conta fica user_pending", async () => {

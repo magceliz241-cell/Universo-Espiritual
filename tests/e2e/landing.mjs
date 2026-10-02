@@ -23,6 +23,7 @@ if (!BASE) {
 }
 const SHOTS = process.env.SHOTS || "";
 const CHECKOUT = "https://pay.cakto.com.br/teste123";
+const CHECKOUT_LOVE = "https://pay.cakto.com.br/love456";
 const executablePath = fs.existsSync("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
   ? "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
   : undefined;
@@ -78,7 +79,7 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   check(`[${label}] próxima Lua Nova/Cheia`, /^Próxima Lua (Nova|Cheia): \d\d\/\d\d, \d\dh\d\d$/.test(await page.locator(".js-sky-next").textContent()));
   check(`[${label}] seção do céu ao vivo com 10 corpos`, await page.locator("#agora").isVisible() && await page.locator("#nowGrid .now-cell").count() === 10);
   check(`[${label}] contador rodando`, /^(3[0-2]|[0-2]\d):\d\d$/.test(await page.locator(".topbar .js-timer").textContent()));
-  check(`[${label}] checkout sem link cai na oferta`, await page.locator(".js-checkout").first().getAttribute("href") === "#oferta");
+  check(`[${label}] checkout sem link cai na oferta`, await page.locator("#plano .js-checkout").getAttribute("href") === "#oferta");
   check(`[${label}] título do topo`, (await page.locator("h1").textContent()) === "Não é só seu signo. É o seu céu inteiro.");
   check(`[${label}] oferta de Relacionamentos em destaque`, await page.locator("#oferta-amor").isVisible()
     && (await page.locator("#oferta-amor .js-total").textContent()) === "29,90"
@@ -119,13 +120,13 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   await ctx.close();
 
   // 3) Config preenchida + UTMs da URL repassadas ao checkout
-  const cfg = { CHECKOUT_URL: CHECKOUT, APP_URL: "https://app.exemplo.com", CONTACT_EMAIL: "contato@exemplo.com", META_PIXEL_ID: "", PRICE: "19,90", BUMP_PRICE: "10,00" };
+  const cfg = { CHECKOUT_URL: CHECKOUT, APP_URL: "https://app.exemplo.com", CONTACT_EMAIL: "contato@exemplo.com", META_PIXEL_ID: "", PRICE: "19,90", BUMP_PRICE: "10,00", CHECKOUT_LOVE_URL: CHECKOUT_LOVE, LOVE_PRICE: "29,90" };
   const b = await open(viewport, { config: cfg, query: "?utm_source=fb&utm_campaign=lanc" });
-  const href = new URL(await b.page.locator(".js-checkout").first().getAttribute("href"));
+  const href = new URL(await b.page.locator("#plano .js-checkout").getAttribute("href"));
   check(`[${label}] checkout usa CHECKOUT_URL`, href.origin + href.pathname === CHECKOUT);
   check(`[${label}] checkout mantém UTMs`, href.searchParams.get("utm_source") === "fb" && href.searchParams.get("utm_campaign") === "lanc");
   const lh = new URL(await b.page.locator("#oferta-amor .js-checkout").getAttribute("href"));
-  check(`[${label}] checkout do cartão do amor marca a origem`, lh.origin + lh.pathname === CHECKOUT && lh.searchParams.get("utm_content") === "oferta-amor" && lh.searchParams.get("utm_source") === "fb");
+  check(`[${label}] cartão do amor leva ao checkout próprio do Astarot Love`, lh.origin + lh.pathname === CHECKOUT_LOVE && lh.searchParams.get("utm_content") === "oferta-amor" && lh.searchParams.get("utm_source") === "fb");
   check(`[${label}] e-mail de contato aparece`, await b.page.locator("footer .js-email").textContent() === "contato@exemplo.com");
   check(`[${label}] link "Entrar" aponta para o app`, await b.page.locator(".js-app-link").getAttribute("href") === "https://app.exemplo.com/auth/login");
   await b.page.locator(".hero .js-quiz").click();
@@ -133,7 +134,10 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   for (let i = 0; i < 4; i++) { await b.page.waitForTimeout(350); await b.page.locator(".q-opt").first().click(); }
   await b.page.locator("#qBuy").waitFor({ timeout: 4000 });
   const qh = new URL(await b.page.locator("#qBuy").getAttribute("href"));
-  check(`[${label}] checkout do quiz marca utm_content`, qh.searchParams.get("utm_content") === "quiz-sonhos" && qh.searchParams.get("utm_source") === "fb");
+  check(`[${label}] checkout do quiz marca utm_content`, qh.origin + qh.pathname === CHECKOUT && qh.searchParams.get("utm_content") === "quiz-sonhos" && qh.searchParams.get("utm_source") === "fb");
+  const sec = new URL(await b.page.locator("#amor .love-cta .js-checkout").getAttribute("href"));
+  check(`[${label}] botão da seção do amor leva ao checkout do Love`, sec.origin + sec.pathname === CHECKOUT_LOVE && sec.searchParams.get("utm_content") === "secao-amor");
+  check(`[${label}] sem explicação de "marcar no checkout" no cartão do Love`, (await b.page.locator("#oferta-amor").innerText()).indexOf("marcar") === -1);
   check(`[${label}] sem erros no console (config preenchida)`, b.errors().length === 0, b.errors().join(" | "));
   await b.ctx.close();
 
