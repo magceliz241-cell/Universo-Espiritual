@@ -336,3 +336,10 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
 - **Volta ao Claude Code automatizada:** o Cowork termina com a Etapa 8 (dados não secretos da landing + 9 capturas do
   app + mensagem pronta), e o Claude Code segue `docs/RETORNO_CLAUDE_CODE.md` (diagnóstico, landing, telas, Tarot,
   tom do app, testes, PR). O Cowork deixa de editar a landing pelo GitHub.
+- **"Tudo em um só lugar" (pedido do Guilherme):** o cartão "Feito para você", logo abaixo dos planos, virou um
+  comparativo "Por aí × No Astarot" (um site para cada coisa / texto pronto por signo / termos técnicos / previsão
+  igual para todos × tudo junto / leitura do seu mapa / Seu Guia em linguagem simples / céu calculado com precisão),
+  sem citar concorrentes nem prometer exclusividade absoluta ("é raro").
+- **Planos lado a lado também no celular:** versão compacta (só os nomes dos benefícios, preço menor, selos de
+  garantia e o aviso "é só marcar no checkout" embaixo dos dois cartões). Botões passam a dizer "Quero o Astarot" e
+  "Quero o Astarot Love".
