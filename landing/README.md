@@ -15,6 +15,9 @@ do app.
 
 ## Antes de publicar
 
+> No fluxo atual, quem preenche isto é o **Claude Code**, com os dados que o Cowork junta (Etapas 7 e 8 de
+> `docs/HANDOFF_COWORK.md` e Passo 2 de `docs/RETORNO_CLAUDE_CODE.md`). Os passos abaixo valem se for feito à mão.
+
 1. Em `config.js`, preencha:
    - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump **Astarot Love
      (R$ 10,00, total R$ 29,90)** configurado dentro desse mesmo checkout.

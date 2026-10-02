@@ -321,3 +321,25 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   em largura total, colado na seção dos planetas, com uma informação por linha; seções e cartões mais compactos; telas
   repetidas do amor e a nota de garantia duplicada saíram. Página no celular: de ~14.900 para ~12.500 px.
 - "O sistema calcula" virou **"O Astarot calcula"** (título do método, passo 2, Tarot e FAQ).
+
+## Conector Supabase (2026-10-01, pedido do Guilherme)
+
+- Projeto do Supabase criado pelo Guilherme: ref `vyynstiepcqvxitwsipx`. Conector (MCP) do Supabase ligado na conta
+  do Claude, com acesso total, para facilitar o trabalho do Cowork e das próximas sessões.
+- Regra (em `CLAUDE.md` e `docs/HANDOFF_COWORK.md`): leitura livre; qualquer alteração só depois de explicar o que
+  será feito, por que, o que muda e se dá para desfazer, e receber o "pode" para aquele comando específico.
+- **Migrations aplicadas em produção (01/10/2026):** `core`, `memberships` e `cities`, pelo conector, com o "pode" do
+  Guilherme para as três. Conferido: 12 tabelas com RLS, 14 políticas, 10 funções, 2 gatilhos em `auth.users`,
+  extensões `pgcrypto` e `pg_trgm`; visitante não executa `cakto_apply_purchase` nem lê `memberships`. O verificador
+  de segurança deu 2 avisos esperados (`cakto_webhook_events` sem política, de propósito; `my_access()` executável por
+  quem está logado, de propósito).
+- **Volta ao Claude Code automatizada:** o Cowork termina com a Etapa 8 (dados não secretos da landing + 9 capturas do
+  app + mensagem pronta), e o Claude Code segue `docs/RETORNO_CLAUDE_CODE.md` (diagnóstico, landing, telas, Tarot,
+  tom do app, testes, PR). O Cowork deixa de editar a landing pelo GitHub.
+- **"Tudo em um só lugar" (pedido do Guilherme):** o cartão "Feito para você", logo abaixo dos planos, virou um
+  comparativo "Por aí × No Astarot" (um site para cada coisa / texto pronto por signo / termos técnicos / previsão
+  igual para todos × tudo junto / leitura do seu mapa / Seu Guia em linguagem simples / céu calculado com precisão),
+  sem citar concorrentes nem prometer exclusividade absoluta ("é raro").
+- **Planos lado a lado também no celular:** versão compacta (só os nomes dos benefícios, preço menor, selos de
+  garantia e o aviso "é só marcar no checkout" embaixo dos dois cartões). Botões passam a dizer "Quero o Astarot" e
+  "Quero o Astarot Love".
