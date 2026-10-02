@@ -17,12 +17,13 @@ Voltei do Cowork. Siga docs/RETORNO_CLAUDE_CODE.md.
 
 APP_URL: https://...                      (endereço do app na Vercel, sem barra no fim)
 LANDING_URL: https://universo-espiritual-landing.vercel.app   (ou o domínio próprio)
-CHECKOUT_URL: https://pay.cakto.com.br/...  (checkout do Astarot com o bump Astarot Love)
+CHECKOUT_URL: https://pay.cakto.com.br/...        (Astarot, com o bump do Love)
+CHECKOUT_LOVE_URL: https://pay.cakto.com.br/...   (Astarot Love, checkout próprio)
 CONTACT_EMAIL: ...
 META_PIXEL_ID: ...                        (ou "sem pixel")
 UTMIFY_SCRIPT:
 <cole aqui o script de captura de UTMs da UTMify, inteiro>
-PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 10,00
+PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 29,90 · bump/upgrade do Love 10,00
 TELAS: 9 capturas do app em anexo          (ou "sem telas")
 O QUE O COWORK NÃO CONSEGUIU FAZER: ...   (ou "nada")
 ```
@@ -61,7 +62,7 @@ simples.
 
 **App e landing**, com `curl`:
 - `$APP_URL/api/health/engine` → `"ok": true`.
-- `$APP_URL/api/webhooks/cakto` (GET) → todos os itens `true`.
+- `$APP_URL/api/webhooks/cakto` (GET) → todos os itens `true` (inclui `full_ids`).
 - `$APP_URL/auth/login` → 200.
 - `$LANDING_URL` → 200.
 - Se a rede desta sessão bloquear algum endereço, diga qual e siga em frente. Para saber como liberar, consulte a
@@ -71,14 +72,14 @@ Entregue uma tabela ✅/❌. Para cada ❌ de configuração (painel da Vercel, 
 exatamente onde clicar. Não tente contornar.
 
 ### Passo 2: landing com os dados reais
-1. `landing/config.js`: preencher `CHECKOUT_URL`, `APP_URL`, `CONTACT_EMAIL`, `META_PIXEL_ID` (vazio se "sem pixel"),
-   `PRICE` e `BUMP_PRICE` conforme a mensagem.
+1. `landing/config.js`: preencher `CHECKOUT_URL`, `CHECKOUT_LOVE_URL`, `APP_URL`, `CONTACT_EMAIL`, `META_PIXEL_ID`
+   (vazio se "sem pixel"), `PRICE`, `LOVE_PRICE` e `BUMP_PRICE` conforme a mensagem.
 2. `UTMIFY_SCRIPT`: colar no `<head>` de `landing/index.html`, no lugar do comentário
    `<!-- UTMify - Script de captura de UTMs ... -->`. Confira antes que o script carrega só de domínio da UTMify
    (`utmify.com.br`). Se trouxer qualquer outra coisa, pergunte antes de colar.
 3. `og:image` em `landing/index.html`: trocar `img/og.jpg` por `<LANDING_URL>/img/og.jpg` (endereço completo).
-4. Validar: `npm run test:landing` e uma conferência no Playwright de que o botão de compra leva ao `CHECKOUT_URL`
-   mantendo as UTMs. O checkout da Cakto em si não abre daqui: peça ao Guilherme um clique de conferência depois
+4. Validar: `npm run test:landing` e uma conferência no Playwright de que o botão do Astarot leva ao `CHECKOUT_URL`
+   e os do Love ao `CHECKOUT_LOVE_URL`, mantendo as UTMs. O checkout da Cakto em si não abre daqui: peça ao Guilherme um clique de conferência depois
    do merge.
 
 ### Passo 3: telas reais do app na landing
@@ -129,9 +130,9 @@ para linguagem simples. Aplicar o mesmo tom aos **textos fixos das telas do app*
 
 ### Passo 8: checklist de lançamento (mostrar ao Guilherme)
 - [ ] Diagnóstico do Passo 1 todo ✅
-- [ ] Landing com checkout, e-mail, pixel e UTMify; botão de compra abre a Cakto com o bump (clique do Guilherme)
+- [ ] Landing com os dois checkouts, e-mail, pixel e UTMify; Astarot abre com o bump, Astarot Love abre o próprio (clique do Guilherme)
 - [ ] Telas reais do app na landing
-- [ ] Compra real feita: Astarot libera; Astarot Love dentro do app libera o Amor na hora; reembolso bloqueia
+- [ ] Compra real feita: Astarot libera; upgrade dentro do app libera o Amor na hora; Astarot Love libera tudo; reembolso bloqueia
 - [ ] Vercel Pro (o plano Hobby é para uso não comercial): decisão do Guilherme
 - [ ] Nome Astarot conferido no INPI: decisão do Guilherme
 

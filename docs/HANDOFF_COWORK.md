@@ -39,9 +39,10 @@ interpreta.**
 
 **Modelo de venda (decidido pelo Guilherme):**
 - Produto principal **Astarot** (R$ 19,90, pagamento único; o acesso não expira).
-- Order bump **Astarot Love** (R$ 10,00, total R$ 29,90 com o Astarot; também sem expiração): libera Amor, Mapa do casal e Tarot do amor.
+- Produto **Astarot Love** (R$ 29,90, checkout próprio): tudo do Astarot + Amor, Mapa do casal e Tarot do amor.
+- No checkout do Astarot existe o **order bump Astarot Love** (+ R$ 10,00), para quem quiser levar o Love ali mesmo.
 - "Vitalício" é característica, não nome de plano: nos produtos da Cakto use os nomes **Astarot** e **Astarot Love**.
-- O bump **também é vendido dentro do app**. Quem comprou sem ele vê a oferta, e o checkout abre com o e-mail da
+- O Love **também é vendido dentro do app** como upgrade (+ R$ 10,00). Quem tem só o Astarot vê a oferta, e o checkout abre com o e-mail da
   conta preenchido.
 - Login pelo Supabase com **confirmação de e-mail obrigatória**. A compra só se liga à conta depois que o e-mail é
   confirmado.
@@ -63,7 +64,7 @@ mudanças; o Guilherme faz o merge.
 | IA (Groq, modelo `openai/gpt-oss-120b`) | ✅ pronta, **falta a chave** |
 | Testes: 132 unitários, 18 de banco, 65/65 de ponta a ponta no navegador | ✅ passando |
 | Base de cidades (GeoNames) | ⚠️ tabela criada e vazia; script pronto, **dados não importados** (Etapa 4) |
-| Landing page de vendas em `landing/` (Astarot R$ 19,90 + Astarot Love R$ 10,00 = R$ 29,90, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ **publicada** em https://universo-espiritual-landing.vercel.app (projeto próprio na Vercel, Root Directory `landing`); **falta preencher `landing/config.js`** |
+| Landing page de vendas em `landing/` (Astarot R$ 19,90 e Astarot Love R$ 29,90, cada um com checkout próprio, teste de interesses, garantia de 7 dias, termos e privacidade) | ✅ **publicada** em https://universo-espiritual-landing.vercel.app (projeto próprio na Vercel, Root Directory `landing`); **falta preencher `landing/config.js`** |
 
 Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/artifact/1kUWoqfgZtixUL9ufH5qw9
 
@@ -143,22 +144,25 @@ o CSV.
 Siga `docs/SETUP.md` §4:
 1. Ele cria e confirma os produtos:
    - **Astarot** (principal, sem expiração);
-   - **order bump "Astarot Love"** (sem expiração);
-   - uma **oferta avulsa do bump** para vender dentro do app.
+   - **order bump "Astarot Love"** (+ R$ 10,00) dentro do checkout do Astarot;
+   - **Astarot Love** (R$ 29,90), produto próprio com checkout próprio, sem bump;
+   - uma **oferta de upgrade do Astarot Love** (+ R$ 10,00) para vender dentro do app.
 2. Em cada produto, "Acesso por e-mail" → `https://<app>/auth/sign-up`.
 3. Webhook: URL `https://<app>/api/webhooks/cakto`, eventos **Compra aprovada + Reembolso + Chargeback**, **todos os
    produtos marcados**. O segredo vai para `CAKTO_WEBHOOK_SECRET` na Vercel (ele cola).
 4. Na Vercel, preencha e faça **redeploy**:
    - `CAKTO_MAIN_IDS`: ids/códigos do produto e das ofertas do **principal**, separados por vírgula
-   - `CAKTO_LOVE_IDS`: ids/códigos do **bump**, tanto o do checkout da landing quanto o da oferta avulsa
-   - `NEXT_PUBLIC_CHECKOUT_LOVE_URL`: link de checkout da oferta avulsa do bump
+   - `CAKTO_LOVE_IDS`: ids/códigos do **order bump** do Love e da **oferta de upgrade** dentro do app
+   - `CAKTO_FULL_IDS`: ids/códigos do produto **Astarot Love** (R$ 29,90), que libera tudo
+   - `NEXT_PUBLIC_CHECKOUT_LOVE_URL`: link de checkout da oferta de upgrade (dentro do app)
    - `NEXT_PUBLIC_LANDING_URL`: URL da landing (Etapa 7)
 
-   **Um mesmo id nunca pode estar nas duas listas.**
+   **Um mesmo id nunca pode estar em duas listas.**
 5. **Conferência:** `GET https://<app>/api/webhooks/cakto` → todos `true`. O botão "Testar" da Cakto usa ids falsos, então
    o resultado esperado no log (`cakto_webhook_events`) é `needs_review`.
-6. **Compra real de teste** (ele faz) com um e-mail novo: comprar o principal sem o bump, criar a conta, confirmar,
-   ver que entrou. Depois comprar o bump **pela oferta dentro do app** e ver que Amor libera sem sair. Reembolso pela
+6. **Compra real de teste** (ele faz) com um e-mail novo: comprar o Astarot sem o bump, criar a conta, confirmar,
+   ver que entrou. Depois comprar o Love **pela oferta dentro do app** e ver que Amor libera sem sair. Se quiser,
+   testar também o produto **Astarot Love** com outro e-mail: tudo deve liberar de uma vez. Reembolso pela
    Cakto, se quiser testar o bloqueio.
 
 ### Etapa 7: Juntar os dados da landing (você **não** edita a landing)
@@ -166,12 +170,13 @@ A landing já está no ar (https://universo-espiritual-landing.vercel.app, proje
 Vercel; cada merge na `main` atualiza o site). Quem preenche a configuração e publica é o Claude Code, na Etapa 8.
 Sua parte é **juntar estes dados com o Guilherme** (nenhum deles é segredo):
 1. `APP_URL`: endereço do app na Vercel (Etapa 3), sem barra no fim.
-2. `CHECKOUT_URL`: link do checkout da Cakto do **Astarot (R$ 19,90)** com o bump **Astarot Love (R$ 10,00)** no
-   mesmo checkout (Etapa 6). Abra o link e confirme que o bump aparece.
+2. `CHECKOUT_URL`: link do checkout da Cakto do **Astarot (R$ 19,90)** (Etapa 6). Abra e confirme que o order bump
+   do Astarot Love (+ R$ 10,00) aparece.
+   `CHECKOUT_LOVE_URL`: link do checkout do produto **Astarot Love (R$ 29,90)**. Abra e confirme o preço.
 3. `CONTACT_EMAIL`: e-mail de suporte que vai aparecer no site, nos Termos e na Privacidade.
 4. `META_PIXEL_ID`: ID do pixel na UTMify **da conta do Astarot** (ou "sem pixel").
 5. `UTMIFY_SCRIPT`: o script de captura de UTMs que a UTMify mostra para essa conta (copie inteiro).
-6. Confirme na Cakto os preços: Astarot 19,90 e Astarot Love 10,00.
+6. Confirme na Cakto os preços: Astarot 19,90 · Astarot Love 29,90 · bump e upgrade do Love 10,00.
 7. No projeto do **app** na Vercel, preencha `NEXT_PUBLIC_LANDING_URL` com o endereço da landing e faça redeploy.
 
 ### Etapa 8: Capturar as telas e devolver ao Claude Code
@@ -193,12 +198,13 @@ Voltei do Cowork. Siga docs/RETORNO_CLAUDE_CODE.md.
 
 APP_URL: https://...
 LANDING_URL: https://universo-espiritual-landing.vercel.app
-CHECKOUT_URL: https://pay.cakto.com.br/...
+CHECKOUT_URL: https://pay.cakto.com.br/...        (Astarot, com o bump do Love)
+CHECKOUT_LOVE_URL: https://pay.cakto.com.br/...   (Astarot Love, checkout próprio)
 CONTACT_EMAIL: ...
 META_PIXEL_ID: ...            (ou "sem pixel")
 UTMIFY_SCRIPT:
 <script da UTMify, inteiro>
-PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 10,00
+PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 29,90 · bump/upgrade do Love 10,00
 TELAS: 9 capturas do app em anexo
 O QUE O COWORK NÃO CONSEGUIU FAZER: ...   (ou "nada")
 ```
@@ -246,9 +252,9 @@ pelo GitHub.
 - [ ] Vercel no ar; `/api/health/engine` → `ok: true`
 - [ ] Cidades importadas (mais de 150 mil; busca por "sao paulo" funciona)
 - [ ] Teste com acesso manual: todas as telas abrem e a leitura do Guia funciona com a IA real
-- [ ] Cakto: produtos, bump e oferta avulsa criados; webhook com os 3 eventos e todos os produtos marcados
+- [ ] Cakto: Astarot (com bump), Astarot Love e oferta de upgrade criados; webhook com os 3 eventos e todos os produtos marcados
 - [ ] `/api/webhooks/cakto` (GET) → tudo `true`
-- [ ] Compra real: principal libera; bump dentro do app libera Amor na hora; reembolso bloqueia
+- [ ] Compra real: Astarot libera; upgrade dentro do app libera Amor na hora; Astarot Love libera tudo; reembolso bloqueia
 - [x] Landing publicada (Root Directory `landing`)
 - [ ] Dados da landing juntados (Etapa 7) e `NEXT_PUBLIC_LANDING_URL` preenchida no app
 - [ ] 9 capturas feitas e mensagem de volta entregue ao Guilherme (Etapa 8)

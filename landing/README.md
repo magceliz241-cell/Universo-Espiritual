@@ -19,8 +19,9 @@ do app.
 > `docs/HANDOFF_COWORK.md` e Passo 2 de `docs/RETORNO_CLAUDE_CODE.md`). Os passos abaixo valem se for feito à mão.
 
 1. Em `config.js`, preencha:
-   - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump **Astarot Love
-     (R$ 10,00, total R$ 29,90)** configurado dentro desse mesmo checkout.
+   - `CHECKOUT_URL`: checkout da Cakto do **Astarot (R$ 19,90)**, com o order bump opcional do Astarot Love
+     (+ R$ 10,00) dentro dele.
+   - `CHECKOUT_LOVE_URL`: checkout próprio do produto **Astarot Love (R$ 29,90)**, que já inclui o Astarot.
    - `APP_URL`: endereço do app, sem barra no fim (aparece o link "Já comprei · Entrar").
    - `CONTACT_EMAIL`: e-mail de suporte (rodapé, FAQ, termos e privacidade).
    - `META_PIXEL_ID`: ID do pixel via UTMify **desta conta**. Vazio = nenhum pixel carrega.
@@ -46,7 +47,8 @@ merge na `main` atualiza o site sozinho. Os passos abaixo ficam como referência
 
 ## Como a página funciona
 
-- **Checkout:** todo botão "Quero o meu acesso" vai para `CHECKOUT_URL`, repassando as UTMs que vieram no link do
+- **Checkout:** "Quero o Astarot" vai para `CHECKOUT_URL`; os botões "Quero o Astarot Love" (cartão e seção do amor)
+  vão para `CHECKOUT_LOVE_URL` (`utm_content=oferta-amor` ou `secao-amor`). Todos repassam as UTMs que vieram no link do
   anúncio. Quem termina o teste vai com `utm_content=quiz-<objetivo>` (`self`, `amor`, `momento`, `caminho`, `sonhos`).
 - **Contador "por tempo limitado":** 32 minutos a partir da primeira visita naquele navegador (fica salvo no
   aparelho). Quando zera, o contador some e a página continua normal.

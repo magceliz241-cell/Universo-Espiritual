@@ -60,6 +60,7 @@ NEXT_PUBLIC_LANDING_URL=https://landing.exemplo.test
 CAKTO_WEBHOOK_SECRET=e2e-webhook-secret
 CAKTO_MAIN_IDS=prod-main-e2e,offer-main-e2e
 CAKTO_LOVE_IDS=prod-love-e2e,offer-love-app-e2e
+CAKTO_FULL_IDS=prod-full-e2e
 GROQ_API_KEY=gsk_e2e_fake
 GROQ_BASE_URL=http://127.0.0.1:54399
 AI_RETRY_DELAY_MS=0
