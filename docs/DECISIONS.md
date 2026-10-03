@@ -353,3 +353,32 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   o reembolso desse pedido revoga os dois (sem mudança no banco). `GET /api/webhooks/cakto` ganhou `full_ids`.
 - Landing: `CHECKOUT_LOVE_URL` e `LOVE_PRICE` no `config.js`; os botões do Love (cartão, seção do amor e quiz com foco
   em amor) levam ao checkout próprio; saiu a explicação "é só marcar no checkout" do cartão do Love.
+
+## Visual do app com a estética da capa (2026-10-03, decisão do Guilherme)
+
+- Aplicada ao app a estética da capa do produto: logo dourado em maiúsculas com a estrela no "O", céu roxo estrelado,
+  cartões de vidro roxo com borda dourada, ícones dourados de traço fino, Início em grade (faixa de fases da Lua,
+  atalhos 3×2, cartão do Seu Guia), Lua realista, roda do mapa em dourado, planetas em lista, menu lateral no celular.
+  Detalhes em `docs/DESIGN_SYSTEM.md` (atualização de 03/10).
+- Só visual: nenhuma funcionalidade nova (Manifestação, Jornadas etc. ficaram de fora, como pedido).
+- Tarot com a arte original Rider-Waite-Smith (1909, domínio público), convertida para traço dourado sobre roxo
+  (`public/tarot/`, 78 cartas, ~2,7 MB, carregadas sob demanda). Escaneamentos de um repositório MIT; só o traço é
+  aproveitado e a marca da gráfica é recortada. Script reproduzível: `scripts/build-tarot-art.mjs`.
+- Landing: logo novo e telas do app recapturadas no visual novo (e2e 65/65).
+
+## Ajustes pós-criativos (2026-10-03)
+
+- **Logo dos criativos:** o "ASTAROT" com floreios no A e no R (fonte de desenho próprio, não existe pronta)
+  recortado da capa, recolorido no dourado do app e usado como imagem com transparência (`public/brand/astarot-logo.webp`,
+  `landing/img/logo.webp`).
+- **App mais perto dos criativos, sem copiar:** leitura do mapa em blocos ("O que o seu mapa revela", "Seus pontos
+  fortes", "Seus desafios", "No amor"; prompt `natal_summary@3`) e a seção "O essencial do seu mapa" (Sol, Lua e
+  Ascendente com uma explicação curta e os temas do signo, da base editorial). Mantida a paleta dourada (sem a roda
+  multicolorida dos criativos).
+- **Landing:** o bloco "Descubra por onde começar" virou o comparativo "Tudo em um só lugar" (o teste continua no
+  topo e embaixo dos planos); garantia em cartão único; brilho saturado (dourado/roxo, pulsando devagar) atrás do
+  mapa do topo; a roda de exemplo regenerada com as cores novas.
+- **Cowork:** nova Etapa 6.0 para conferir os produtos Astarot e Astarot Love já criados na Cakto (entregável ainda
+  pendente). Etapa 3 avisa que o Guilherme pode já ter criado o projeto do app na Vercel.
+- **Login com Google:** plano em `docs/PLANO_LOGIN_GOOGLE.md` (sem mudança no banco; botão atrás de
+  `NEXT_PUBLIC_GOOGLE_AUTH`).

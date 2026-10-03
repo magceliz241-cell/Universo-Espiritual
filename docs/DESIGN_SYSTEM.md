@@ -1,3 +1,23 @@
+> **Atualização de 03/10/2026 (decisão do Guilherme): estética da capa Astarot.** Onde esta seção divergir do texto
+> antigo abaixo, vale esta:
+> - **Marca:** logo "ASTAROT" em maiúsculas clássicas (fonte Cinzel) com degradê dourado e uma estrela de quatro
+>   pontas dentro do "O"; símbolo de estrela sobre lua crescente; lema "SEU MAPA. SEUS CICLOS. SEUS SINAIS."
+>   (`src/components/brand/wordmark.tsx`).
+> - **Fundo:** céu noturno roxo com estrelas pequenas e brilhos dourados (SVG leve, sem foto), sobre gradientes
+>   roxos. Substitui a regra antiga "não usar imagem de galáxia" só no sentido de permitir estrelas desenhadas.
+> - **Cores:** superfícies roxas (`#0a0714` → `#241c3c`), bordas em dourado translúcido, dourado com degradê
+>   (`#f1d9a0` → `#d6b56e` → `#a8853f`) para marca, ícones e destaques; violeta continua nos botões principais.
+> - **Cartões:** "vidro roxo" (`.surface-glass`) com borda dourada fina.
+> - **Ícones:** traço fino dourado (sol, carta com losango, infinito, lua, lótus, estrela) em `shell/icons.tsx`.
+> - **Início:** saudação "Olá, Nome ✦" com a Lua ao lado, faixa de fases da Lua, grade de atalhos 3×2 e cartão do
+>   Seu Guia.
+> - **Lua:** desenho realista (mares, crateras, textura), girado no hemisfério sul.
+> - **Tarot:** arte original Rider-Waite-Smith (1909, domínio público) em traço dourado sobre roxo, com moldura
+>   dourada e número romano; verso com estrela e lua douradas.
+> - **Mapa:** roda em dourado sobre roxo; planetas em lista com ícone num círculo dourado ("Sol · em Leão · Casa 10").
+> - Funcionalidades que aparecem na capa e não existem no app (Manifestação, Jornadas, Explorar, Histórico) **não**
+>   foram criadas, por decisão do Guilherme.
+
 # SEU UNIVERSO — DIREÇÃO DE ARTE & DESIGN SYSTEM
 
 ## 1. Visão da marca

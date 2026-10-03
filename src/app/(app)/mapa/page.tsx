@@ -4,7 +4,8 @@ import { ChartWheel } from "@/components/astrology/chart-wheel";
 import { HouseSystemPicker } from "@/components/astrology/house-system-picker";
 import { PlanetTable } from "@/components/astrology/planet-table";
 import { GuideCard } from "@/components/ai/guide-card";
-import { SignGlyph } from "@/components/celestial/glyph";
+import { BodyGlyph, SignGlyph } from "@/components/celestial/glyph";
+import { Card } from "@/components/ui/card";
 import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Notice } from "@/components/ui/notice";
@@ -15,9 +16,18 @@ import type { HouseSystem } from "@/lib/astro/types";
 import { getOrCreateChart, getSelfProfile } from "@/lib/charts/service";
 import { requireMember } from "@/lib/data/session";
 import { formatDatePt } from "@/lib/greeting";
+import { kb } from "@/lib/knowledge/ids";
+import { kbSection } from "@/lib/knowledge/sections";
 import { interpretNatal } from "../interpret-actions";
 
 export const metadata: Metadata = { title: "Seu mapa" };
+
+/** O que cada ponto representa (texto fixo do produto) — estilo dos criativos. */
+const ESSENCE = {
+  sun: "Sua identidade, sua essência e o que te move.",
+  moon: "Suas emoções, suas necessidades e o que te traz segurança.",
+  ascendant: "Como você se apresenta e a primeira impressão que causa.",
+} as const;
 
 const SYSTEM_NAMES: Record<string, string> = { placidus: "Placidus", whole_sign: "Whole Sign", equal: "Equal", porphyry: "Porphyry" };
 
@@ -50,6 +60,27 @@ export default async function MapaPage({ searchParams }: PageProps<"/mapa">) {
         {self.place_label ? ` · ${self.place_label}` : ""}
       </PageHeader>
 
+      <nav aria-label="Partes do mapa" className="-mt-6 flex gap-1.5 overflow-x-auto pb-1">
+        {[
+          ["#roda", "Mapa"],
+          ["#planetas", "Planetas"],
+          ["#aspectos", "Aspectos"],
+          ...(chart.houses.length ? [["#casas", "Casas"]] : []),
+        ].map(([href, label], i) => (
+          <a
+            key={href}
+            href={href}
+            className={
+              i === 0
+                ? "shrink-0 rounded-full border border-gold/50 bg-gold/10 px-4 py-1.5 text-sm text-gold"
+                : "shrink-0 rounded-full border border-line px-4 py-1.5 text-sm text-ink-2 hover:border-gold/40 hover:text-ink"
+            }
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+
       {!b.time_known ? (
         <Notice>
           Sem o horário de nascimento, o mapa mostra os planetas nos signos, mas não as casas nem o Ascendente.
@@ -65,15 +96,52 @@ export default async function MapaPage({ searchParams }: PageProps<"/mapa">) {
         </Notice>
       ) : null}
 
-      <section className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+      <section className="grid scroll-mt-20 items-start gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]" id="roda">
         <div className="flex flex-col gap-6">
           <ChartWheel chart={chart} className="mx-auto w-full max-w-[560px] animate-[fade-in_700ms_var(--ease-soft)]" />
           {b.time_known ? <HouseSystemPicker current={system} /> : null}
         </div>
-        <div className="flex flex-col gap-4">
-          <SectionTitle>Posições</SectionTitle>
-          <PlanetTable chart={chart} />
+        <div className="flex flex-col gap-2">
+          <SectionTitle>
+            <span id="essencial">O essencial do seu mapa</span>
+          </SectionTitle>
+          <ul className="flex flex-col gap-3">
+            {(
+              [
+                ["sun", "Sol", chart.planets.sun],
+                ["moon", "Lua", chart.planets.moon],
+                ...(chart.angles ? [["ascendant", "Ascendente", { ...chart.angles.ascendant, house: null }] as const] : []),
+              ] as const
+            ).map(([key, label, p]) => {
+              const themes = kbSection(kb.sign(p.sign), "Temas simbólicos");
+              return (
+                <li key={key}>
+                  <Card className="flex gap-4 p-4">
+                    <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold/45 bg-gold/5 text-gold">
+                      {key === "ascendant" ? <span className="font-brand text-[11px] tracking-[0.08em]">ASC</span> : <BodyGlyph body={key} className="text-xl" />}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-display text-[1.35rem] leading-tight text-gold">{label}</p>
+                      <p className="text-xs tabular-nums text-ink-3">
+                        {p.degree}°{String(p.minute).padStart(2, "0")}′ em {SIGN_NAMES[p.sign]}
+                        {"house" in p && p.house ? ` · Casa ${p.house}` : ""}
+                      </p>
+                      <p className="mt-1.5 text-[14.5px] leading-relaxed text-ink-2">
+                        {ESSENCE[key]}
+                        {themes ? ` Em ${SIGN_NAMES[p.sign]}, fala de ${themes}.` : ""}
+                      </p>
+                    </div>
+                  </Card>
+                </li>
+              );
+            })}
+          </ul>
         </div>
+      </section>
+
+      <section className="flex scroll-mt-20 flex-col gap-2" id="planetas">
+        <SectionTitle>Planetas</SectionTitle>
+        <PlanetTable chart={chart} />
       </section>
 
       <section>
@@ -84,14 +152,14 @@ export default async function MapaPage({ searchParams }: PageProps<"/mapa">) {
         />
       </section>
 
-      <section>
+      <section id="aspectos" className="scroll-mt-20">
         <SectionTitle>Aspectos</SectionTitle>
         <p className="-mt-2 mb-4 text-sm text-ink-3">Os encontros angulares mais exatos do seu mapa (orbe em graus).</p>
         <AspectList aspects={chart.aspects} />
       </section>
 
       {chart.houses.length ? (
-        <section>
+        <section id="casas" className="scroll-mt-20">
           <SectionTitle>Casas</SectionTitle>
           <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {chart.houses.map((h) => (

@@ -1,6 +1,6 @@
 import { SignGlyph, BodyGlyph } from "@/components/celestial/glyph";
-import { ANGLE_NAMES, BODY_NAMES, SIGN_NAMES } from "@/lib/astro/labels";
-import type { BirthChart, PlanetId, PointId } from "@/lib/astro/types";
+import { ANGLE_NAMES, ANGLE_SHORT, BODY_NAMES, SIGN_NAMES } from "@/lib/astro/labels";
+import type { BirthChart, PlanetId, PointId, SignId } from "@/lib/astro/types";
 
 const ROWS: (PlanetId | PointId)[] = [
   "sun", "moon", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "true_node", "chiron", "mean_lilith",
@@ -8,65 +8,100 @@ const ROWS: (PlanetId | PointId)[] = [
 
 const deg = (d: number, m: number) => `${d}°${String(m).padStart(2, "0")}′`;
 
-export function PlanetTable({ chart }: { chart: BirthChart }) {
+function Row({
+  icon,
+  name,
+  sign,
+  degree,
+  minute,
+  house,
+  showHouse,
+  retro,
+}: {
+  icon: React.ReactNode;
+  name: string;
+  sign: SignId;
+  degree: number;
+  minute: number;
+  house?: number | null;
+  showHouse: boolean;
+  retro?: boolean;
+}) {
   return (
-    <div className="overflow-hidden rounded-[var(--radius-lg)] border border-line">
-      <table className="w-full text-sm">
-        <caption className="sr-only">Posições dos planetas e pontos</caption>
-        <thead className="bg-surface-2 text-left text-xs text-ink-3">
-          <tr>
-            <th scope="col" className="px-4 py-2.5 font-normal">Corpo</th>
-            <th scope="col" className="px-2 py-2.5 font-normal">Signo</th>
-            <th scope="col" className="px-2 py-2.5 text-right font-normal">Grau</th>
-            {chart.houses.length ? <th scope="col" className="px-4 py-2.5 text-right font-normal">Casa</th> : null}
-          </tr>
-        </thead>
-        <tbody>
-          {chart.angles ? (
-            (["ascendant", "mc"] as const).map((k) => (
-              <tr key={k} className="border-t border-line bg-surface">
-                <th scope="row" className="px-4 py-2.5 text-left font-normal text-gold">
-                  {ANGLE_NAMES[k]}
-                </th>
-                <td className="px-2 py-2.5">
-                  <span className="inline-flex items-center gap-1.5">
-                    <SignGlyph sign={chart.angles![k].sign} className="text-base text-ink-2" />
-                    {SIGN_NAMES[chart.angles![k].sign]}
-                  </span>
-                </td>
-                <td className="px-2 py-2.5 text-right tabular-nums text-ink-2">{deg(chart.angles![k].degree, chart.angles![k].minute)}</td>
-                {chart.houses.length ? <td className="px-4 py-2.5 text-right text-ink-3">—</td> : null}
-              </tr>
+    <tr className="surface-glass">
+      <th scope="row" className="rounded-l-[var(--radius-md)] border-y border-l border-line py-2.5 pl-3 pr-2 text-left font-normal">
+        <span className="flex items-center gap-3">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/45 bg-gold/5 text-gold">{icon}</span>
+          <span className="min-w-0">
+            <span className="block text-[15px] text-ink">
+              {name}
+              {retro ? (
+                <abbr title="retrógrado" className="ml-1.5 text-xs text-lilac no-underline">
+                  R
+                </abbr>
+              ) : null}
+            </span>
+            <span className="flex items-center gap-1 text-xs text-ink-2">
+              em {SIGN_NAMES[sign]} <SignGlyph sign={sign} className="text-[13px] text-gold/80" />
+            </span>
+          </span>
+        </span>
+      </th>
+      <td className={`border-y border-line px-2 py-2.5 text-right text-sm tabular-nums text-ink-2 ${showHouse ? "" : "rounded-r-[var(--radius-md)] border-r pr-4"}`}>
+        {deg(degree, minute)}
+      </td>
+      {showHouse ? (
+        <td className="rounded-r-[var(--radius-md)] border-y border-r border-line py-2.5 pl-2 pr-4 text-right text-sm text-ink-3">
+          {house ? `Casa ${house}` : "—"}
+        </td>
+      ) : null}
+    </tr>
+  );
+}
+
+export function PlanetTable({ chart }: { chart: BirthChart }) {
+  const showHouse = chart.houses.length > 0;
+  return (
+    <table className="w-full border-separate border-spacing-y-2 text-sm">
+      <caption className="sr-only">Posições dos planetas e pontos</caption>
+      <thead className="sr-only">
+        <tr>
+          <th scope="col">Corpo e signo</th>
+          <th scope="col">Grau</th>
+          {showHouse ? <th scope="col">Casa</th> : null}
+        </tr>
+      </thead>
+      <tbody>
+        {chart.angles
+          ? (["ascendant", "mc"] as const).map((k) => (
+              <Row
+                key={k}
+                icon={<span className="font-brand text-[10px] tracking-[0.08em]">{ANGLE_SHORT[k]}</span>}
+                name={ANGLE_NAMES[k]}
+                sign={chart.angles![k].sign}
+                degree={chart.angles![k].degree}
+                minute={chart.angles![k].minute}
+                showHouse={showHouse}
+              />
             ))
-          ) : null}
-          {ROWS.map((b) => {
-            const p = b in chart.planets ? chart.planets[b as PlanetId] : chart.points[b as PointId];
-            return (
-              <tr key={b} className="border-t border-line bg-surface">
-                <th scope="row" className="px-4 py-2.5 text-left font-normal">
-                  <span className="inline-flex items-center gap-2">
-                    <BodyGlyph body={b} className="w-5 text-center text-lg text-ink-2" />
-                    {BODY_NAMES[b]}
-                    {p.retrograde ? (
-                      <abbr title="retrógrado" className="text-xs text-lilac no-underline">
-                        R
-                      </abbr>
-                    ) : null}
-                  </span>
-                </th>
-                <td className="px-2 py-2.5">
-                  <span className="inline-flex items-center gap-1.5">
-                    <SignGlyph sign={p.sign} className="text-base text-ink-2" />
-                    {SIGN_NAMES[p.sign]}
-                  </span>
-                </td>
-                <td className="px-2 py-2.5 text-right tabular-nums text-ink-2">{deg(p.degree, p.minute)}</td>
-                {chart.houses.length ? <td className="px-4 py-2.5 text-right tabular-nums text-ink-2">{p.house}</td> : null}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
+          : null}
+        {ROWS.map((b) => {
+          const p = b in chart.planets ? chart.planets[b as PlanetId] : chart.points[b as PointId];
+          return (
+            <Row
+              key={b}
+              icon={<BodyGlyph body={b} className="text-lg" />}
+              name={BODY_NAMES[b]}
+              sign={p.sign}
+              degree={p.degree}
+              minute={p.minute}
+              house={p.house}
+              showHouse={showHouse}
+              retro={p.retrograde}
+            />
+          );
+        })}
+      </tbody>
+    </table>
   );
 }

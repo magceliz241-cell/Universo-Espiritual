@@ -16,7 +16,7 @@ export type AiTask =
   | "guide_chat";
 
 export const PROMPT_VERSIONS: Record<AiTask, string> = {
-  natal_summary: "natal_summary@2",
+  natal_summary: "natal_summary@3",
   love_profile: "love_profile@2",
   synastry: "synastry@2",
   tarot_reading: "tarot_reading@2",
@@ -57,7 +57,7 @@ const GUIDE_FORMAT = {
 
 const INSTRUCTIONS: Record<AiTask, string> = {
   natal_summary:
-    "Escreva 'Seu mapa revela...'. Uma seção para o Sol, uma para a Lua e, se houver Ascendente em data, uma para o Ascendente (heading no formato 'Sol em <signo>'). Combine planeta (função) + signo (estilo) + casa (área), quando houver casa. Se time_known for false, explique em uma frase que casas e Ascendente dependem do horário de nascimento e, se moon_sign_range tiver mais de um signo, que a Lua pode estar em qualquer um deles.",
+    "Escreva 'Seu mapa revela...' no summary. Uma seção para o Sol, uma para a Lua e, se houver Ascendente em data, uma para o Ascendente (heading no formato 'Sol em <signo>'). Combine planeta (função) + signo (estilo) + casa (área), quando houver casa. Depois, três seções com estes headings exatos: 'Seus pontos fortes' e 'Seus desafios' (cada uma com 3 a 4 qualidades curtas separadas por ' · ', seguidas de uma frase que as ligue ao mapa) e 'No amor' (2 a 3 frases a partir de Vênus, Lua e da casa 7, se houver). Desafios descritos com cuidado, como pontos a observar, nunca como defeitos. Se time_known for false, explique em uma frase que casas e Ascendente dependem do horário de nascimento e, se moon_sign_range tiver mais de um signo, que a Lua pode estar em qualquer um deles.",
   love_profile:
     "Escreva o perfil amoroso a partir de Vênus, Marte, Lua e Sol, das casas 5 e 7 (se houver) e dos aspectos que envolvem Vênus e Marte. Seções sugeridas: como você ama, o que te atrai, necessidades emocionais, pontos de atenção. Sem previsões e sem rótulos fixos.",
   synastry:

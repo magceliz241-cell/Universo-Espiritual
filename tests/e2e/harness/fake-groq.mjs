@@ -15,10 +15,17 @@ function reply(task, data) {
   return {
     title: "Uma leitura possível",
     summary: `Leitura simbólica (${task}) gerada a partir dos dados calculados pelo sistema.`,
-    sections: [
-      { heading: "Primeiro olhar", body: "Na tradição simbólica, estes elementos convidam à observação, não a certezas." },
-      { heading: "Para integrar", body: "Uma leitura possível é olhar para isso como um convite, e não como destino." },
-    ],
+    sections: task === "natal_summary"
+      ? [
+          { heading: "Sol em Leão", body: "Na tradição astrológica, o Sol em Leão fala de expressão, calor e vontade de criar." },
+          { heading: "Seus pontos fortes", body: "Generosidade · Criatividade · Coragem · Presença. O seu mapa mostra uma energia que gosta de iluminar o que toca." },
+          { heading: "Seus desafios", body: "Orgulho · Impaciência · Autocobrança. Pontos para observar com carinho, não defeitos." },
+          { heading: "No amor", body: "Uma leitura possível: você ama com entrega e precisa de reconhecimento e admiração." },
+        ]
+      : [
+          { heading: "Primeiro olhar", body: "Na tradição simbólica, estes elementos convidam à observação, não a certezas." },
+          { heading: "Para integrar", body: "Uma leitura possível é olhar para isso como um convite, e não como destino." },
+        ],
     reflection_questions: ["O que desta leitura faz sentido para você agora?"],
     practice: "Anote em poucas linhas o que chamou sua atenção.",
   };

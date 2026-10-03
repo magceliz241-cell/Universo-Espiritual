@@ -6,7 +6,7 @@ body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-
 header{border-bottom:1px solid var(--line);padding:18px 0}
 header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
 .brand{display:inline-flex;align-items:center;gap:9px;font-family:"Instrument Serif",Georgia,serif;font-size:22px;line-height:1;text-decoration:none;color:var(--ink)}
-.brand svg{width:22px;height:22px}
+.brand .lg{height:28px;width:auto;display:block}
 header a.back{color:var(--ink-2);font-size:14px;font-weight:500}
 main{padding:44px 0 60px}
 h1{font-family:"Instrument Serif",Georgia,serif;font-weight:400;font-size:clamp(38px,7vw,54px);line-height:1.02}
