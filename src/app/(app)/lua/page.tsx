@@ -24,7 +24,6 @@ export default async function LuaPage() {
   const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
   const { data: entry } = await db.from("moon_journeys").select("intention, journal").eq("entry_date", today).maybeSingle();
   const symbolic = kbSection(kb.moonPhase(s.phaseSlug), "Uso simbólico no produto");
-  const fmt = (iso: string) => formatDatePt(iso, tz, { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" });
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-12">
@@ -48,19 +47,19 @@ export default async function LuaPage() {
 
       <section>
         <SectionTitle>Próximas fases</SectionTitle>
-        <ul className="grid grid-cols-2 gap-3">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {s.next.map((n) => (
-            <li key={n.phase} className="flex items-center gap-3 rounded-[var(--radius-md)] border border-line bg-surface px-3.5 py-3">
+            <li key={n.phase} className="surface-glass flex flex-col items-center gap-1 rounded-[var(--radius-md)] border border-line px-3 py-4 text-center">
               <MoonPhase
                 illumination={n.phase === "new_moon" ? 0 : n.phase === "full_moon" ? 1 : 0.5}
                 waxing={n.phase !== "last_quarter"}
-                size={32}
+                size={40}
                 southern={(self?.latitude ?? -15) < 0}
               />
-              <span className="flex flex-col">
-                <span className="text-sm text-ink">{n.label}</span>
-                <span className="text-xs text-ink-3">{fmt(n.instant)}</span>
-              </span>
+              <span className="text-display mt-2 text-[2rem] leading-none text-gold-gradient">{formatDatePt(n.instant, tz, { day: "numeric" })}</span>
+              <span className="font-brand text-[11px] tracking-[0.16em] text-ink-2">{formatDatePt(n.instant, tz, { month: "short" }).replace(".", "").toUpperCase()}</span>
+              <span className="mt-1 text-xs text-ink">{n.label}</span>
+              <span className="text-[11px] text-ink-3">{formatDatePt(n.instant, tz, { hour: "2-digit", minute: "2-digit" })}</span>
             </li>
           ))}
         </ul>

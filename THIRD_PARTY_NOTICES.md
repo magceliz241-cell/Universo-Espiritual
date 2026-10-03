@@ -15,7 +15,13 @@
 - GeoNames (https://www.geonames.org), licença **Creative Commons Attribution 4.0**. Atribuição exibida em Perfil → Sobre.
 
 ## Fontes tipográficas (via next/font, auto-hospedadas)
-- Instrument Serif, Inter e Noto Sans Symbols: **SIL Open Font License 1.1**.
+- Cinzel, Instrument Serif, Inter e Noto Sans Symbols: **SIL Open Font License 1.1**.
+
+## Arte do Tarot
+- Cartas do baralho Rider-Waite-Smith, ilustradas por Pamela Colman Smith (1909, falecida em 1951): **domínio
+  público** no Brasil (Lei 9.610/98, art. 41) e nos EUA. Escaneamentos do repositório `metabismuth/tarot-json`
+  (licença MIT). Em `public/tarot/` só o traço original é usado, recolorido em dourado sobre roxo; a borda e a faixa
+  de título (onde fica a marca da gráfica da reedição) são recortadas. Gerado por `scripts/build-tarot-art.mjs`.
 
 ## Dependências JavaScript diretas (produção)
 | Pacote | Versão | Licença |

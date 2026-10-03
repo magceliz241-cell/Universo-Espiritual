@@ -353,3 +353,15 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   o reembolso desse pedido revoga os dois (sem mudança no banco). `GET /api/webhooks/cakto` ganhou `full_ids`.
 - Landing: `CHECKOUT_LOVE_URL` e `LOVE_PRICE` no `config.js`; os botões do Love (cartão, seção do amor e quiz com foco
   em amor) levam ao checkout próprio; saiu a explicação "é só marcar no checkout" do cartão do Love.
+
+## Visual do app com a estética da capa (2026-10-03, decisão do Guilherme)
+
+- Aplicada ao app a estética da capa do produto: logo dourado em maiúsculas com a estrela no "O", céu roxo estrelado,
+  cartões de vidro roxo com borda dourada, ícones dourados de traço fino, Início em grade (faixa de fases da Lua,
+  atalhos 3×2, cartão do Seu Guia), Lua realista, roda do mapa em dourado, planetas em lista, menu lateral no celular.
+  Detalhes em `docs/DESIGN_SYSTEM.md` (atualização de 03/10).
+- Só visual: nenhuma funcionalidade nova (Manifestação, Jornadas etc. ficaram de fora, como pedido).
+- Tarot com a arte original Rider-Waite-Smith (1909, domínio público), convertida para traço dourado sobre roxo
+  (`public/tarot/`, 78 cartas, ~2,7 MB, carregadas sob demanda). Escaneamentos de um repositório MIT; só o traço é
+  aproveitado e a marca da gráfica é recortada. Script reproduzível: `scripts/build-tarot-art.mjs`.
+- Landing: logo novo e telas do app recapturadas no visual novo (e2e 65/65).

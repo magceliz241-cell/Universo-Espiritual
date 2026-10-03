@@ -15,7 +15,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Navegação principal"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-bg/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-line bg-gradient-to-b from-[#120d22]/95 to-[#0a0714]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md md:hidden"
     >
       <ul className="mx-auto grid max-w-md grid-cols-5">
         {PRIMARY_NAV.map((item) => {
@@ -26,11 +26,12 @@ export function BottomNav() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "flex h-16 flex-col items-center justify-center gap-1 text-[11px] transition-colors duration-[var(--duration-micro)]",
-                  active ? "text-ink" : "text-ink-3 hover:text-ink-2",
+                  "relative flex h-16 flex-col items-center justify-center gap-1 text-[11px] transition-colors duration-[var(--duration-micro)]",
+                  active ? "text-gold" : "text-ink-3 hover:text-ink-2",
                 )}
               >
-                <NavIcon name={item.icon} className={active ? (item.icon === "guide" ? "text-lilac" : "text-gold") : undefined} />
+                {active ? <span aria-hidden className="absolute top-0 h-px w-8 bg-gradient-to-r from-transparent via-gold to-transparent" /> : null}
+                <NavIcon name={item.icon} className={active ? "text-gold drop-shadow-[0_0_6px_rgb(214_181_110_/_0.45)]" : undefined} />
                 {item.label}
               </Link>
             </li>

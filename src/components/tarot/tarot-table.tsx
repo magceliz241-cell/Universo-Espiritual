@@ -66,7 +66,7 @@ export function TarotTable({
                     <CardBack />
                   </div>
                   <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                    <CardFace name={c.name} arcana={c.arcana} number={c.number} suit={c.suit} reversed={c.reversed} />
+                    <CardFace cardId={c.cardId} name={c.name} arcana={c.arcana} number={c.number} rank={c.rank} reversed={c.reversed} />
                   </div>
                 </div>
               </div>

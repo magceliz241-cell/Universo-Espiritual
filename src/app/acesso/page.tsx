@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
-import { Wordmark } from "@/components/brand/wordmark";
+import { BrandHero } from "@/components/brand/wordmark";
 import { OrbitalDecoration } from "@/components/celestial/orbital-decoration";
 import { Button, ButtonLink } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -23,9 +23,7 @@ export default async function AcessoPage() {
     <main className="relative flex min-h-dvh flex-col items-center overflow-hidden px-4 py-10 sm:justify-center">
       <OrbitalDecoration className="absolute -top-40 left-1/2 w-[720px] max-w-none -translate-x-1/2 opacity-80" />
       <div className="relative w-full max-w-[440px]">
-        <div className="mb-10 flex justify-center">
-          <Wordmark />
-        </div>
+        <BrandHero className="mb-9" />
         <Card className="p-6 sm:p-8">
           <h1 className="text-display text-[2rem]">Ainda não encontramos sua compra</h1>
           <p className="mt-3 text-sm leading-relaxed text-ink-2">

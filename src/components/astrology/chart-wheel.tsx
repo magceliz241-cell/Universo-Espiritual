@@ -76,25 +76,25 @@ export function ChartWheel({ chart, className }: { chart: BirthChart; className?
     <svg viewBox={`-22 -22 ${SIZE + 44} ${SIZE + 44}`} role="img" aria-label={title} className={className}>
       <defs>
         <radialGradient id="wheel-bg" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#141122" />
-          <stop offset="100%" stopColor="#0c0a16" />
+          <stop offset="0%" stopColor="#22183c" />
+          <stop offset="100%" stopColor="#0f0b1c" />
         </radialGradient>
       </defs>
 
       <circle cx={C} cy={C} r={R_OUT} fill="url(#wheel-bg)" />
 
       {/* Traços de grau: 1° curtos, 5° médios, 10° longos */}
-      <g stroke="var(--color-ink)" strokeLinecap="round">
+      <g stroke="var(--color-gold)" strokeLinecap="round">
         {Array.from({ length: 360 }, (_, d) => {
           const len = d % 10 === 0 ? 9 : d % 5 === 0 ? 6 : 3;
           const a = polar(d, R_SIGN_IN, zero);
           const b = polar(d, R_SIGN_IN + len, zero);
-          return <line key={d} x1={a.x} y1={a.y} x2={b.x} y2={b.y} strokeOpacity={d % 30 === 0 ? 0 : 0.18} strokeWidth={0.7} />;
+          return <line key={d} x1={a.x} y1={a.y} x2={b.x} y2={b.y} strokeOpacity={d % 30 === 0 ? 0 : 0.32} strokeWidth={0.7} />;
         })}
       </g>
 
       {/* Anel zodiacal */}
-      <g fill="none" stroke="var(--color-ink)" strokeOpacity="0.16" strokeWidth="0.8">
+      <g fill="none" stroke="var(--color-gold)" strokeOpacity="0.38" strokeWidth="0.8">
         <circle cx={C} cy={C} r={R_OUT} />
         <circle cx={C} cy={C} r={R_SIGN_IN} />
         <circle cx={C} cy={C} r={R_HOUSE_IN} />
@@ -105,7 +105,7 @@ export function ChartWheel({ chart, className }: { chart: BirthChart; className?
         const g = polar(i * 30 + 15, (R_OUT + R_SIGN_IN) / 2 + 4, zero);
         return (
           <g key={s}>
-            <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="var(--color-ink)" strokeOpacity="0.2" strokeWidth="0.8" />
+            <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="var(--color-gold)" strokeOpacity="0.32" strokeWidth="0.8" />
             <text
               x={g.x}
               y={g.y}
@@ -113,8 +113,8 @@ export function ChartWheel({ chart, className }: { chart: BirthChart; className?
               dominantBaseline="central"
               className="glyph"
               fontSize="22"
-              fill="var(--color-ink)"
-              fillOpacity="0.82"
+              fill="var(--color-gold)"
+              fillOpacity="0.92"
             >
               <title>{SIGN_NAMES[s]}</title>
               {SIGN_GLYPHS[s] + VS15}

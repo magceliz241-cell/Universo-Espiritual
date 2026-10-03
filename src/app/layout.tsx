@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Serif, Inter, Noto_Sans_Symbols } from "next/font/google";
+import { Cinzel, Instrument_Serif, Inter, Noto_Sans_Symbols } from "next/font/google";
 import "./globals.css";
 
 const serif = Instrument_Serif({
@@ -7,6 +7,13 @@ const serif = Instrument_Serif({
   subsets: ["latin"],
   weight: "400",
   style: ["normal", "italic"],
+});
+
+/** Marca e rótulos em maiúsculas (logo ASTAROT). */
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 const inter = Inter({
@@ -28,13 +35,13 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#090812",
+  themeColor: "#0a0714",
   colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={`${serif.variable} ${inter.variable} ${glyphs.variable} h-full`}>
+    <html lang="pt-BR" className={`${serif.variable} ${cinzel.variable} ${inter.variable} ${glyphs.variable} h-full`}>
       <body className="relative min-h-full">
         <div className="relative z-10 flex min-h-full flex-col">{children}</div>
       </body>

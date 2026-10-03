@@ -30,7 +30,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
   /* Astarot — mesmos tokens do app (docs/DESIGN_SYSTEM.md). Página sempre escura. */
@@ -75,8 +75,11 @@
   .glyph{font-family:var(--glyph);font-weight:300;font-variant-emoji:text;line-height:1}
 
   /* ---------- Marca ---------- */
-  .brand{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-size:22px;line-height:1;text-decoration:none}
-  .brand svg{width:24px;height:24px;flex:none}
+  .brand{display:inline-flex;align-items:center;gap:8px;font-size:21px;line-height:1;text-decoration:none}
+  .brand .mk{width:.9em;height:1.12em;flex:none}
+  .bw{font-family:"Cinzel","Trajan Pro",Georgia,serif;font-weight:500;letter-spacing:.08em;background:linear-gradient(180deg,#f6e2ad,#d6b56e 50%,#a8853f);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .bo{position:relative;display:inline-block}
+  .bo svg{position:absolute;left:50%;top:52%;width:.62em;height:.62em;transform:translate(-50%,-50%)}
 
   /* ---------- Botões ---------- */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--violet);color:var(--ink);text-decoration:none;border:0;cursor:pointer;
@@ -451,7 +454,7 @@
     .offer-pair .offer{padding:26px 12px 16px;border-radius:20px}
     .offer-tag{font-size:9.5px;padding:5px 9px;letter-spacing:.08em;top:-11px}
     .offer .brand,.love-title{font-size:21px;gap:6px}
-    .offer .brand svg{width:18px;height:18px}
+    .offer .brand .mk{width:.85em;height:1.05em}
     .love-title .glyph{font-size:17px}
     .offer-pair .offer-sub{display:none}
     .offer-list{gap:7px;margin:12px 0;padding:12px 0}
@@ -520,14 +523,14 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="lgGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2ad"/><stop offset=".6" stop-color="#d6b56e"/><stop offset="1" stop-color="#a8853f"/></linearGradient></defs></svg>
 
 <div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span>Seu mapa astral completo, explicado pelo Seu Guia<span class="tb-extra"> · 7 dias de garantia</span></div>
 
 <nav class="nav" aria-label="Topo">
   <div class="wrap">
     <a class="brand" href="#" aria-label="Astarot">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>
-      Astarot
+      <svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span>
     </a>
     <a class="login js-app-link" href="#" hidden>Já comprei · Entrar</a>
   </div>
@@ -721,7 +724,7 @@
     <div class="offer-pair">
     <article class="offer reveal" id="plano">
       <span class="offer-tag">Pagamento único</span>
-      <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
+      <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
       <p class="offer-sub">Tudo o que você precisa para conhecer e acompanhar o seu céu.</p>
       <ul class="offer-list">
         <li><span class="g" aria-hidden="true">☉&#xFE0E;</span><span><b>Mapa astral completo</b><span class="d">: planetas, Ascendente, Meio do Céu, casas e aspectos, com Placidus, Whole Sign ou Equal</span></span></li>
@@ -835,7 +838,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
+    <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
     <nav class="f-links" aria-label="Links institucionais">
       <a href="privacidade.html">Política de Privacidade</a>
       <a href="termos.html">Termos de Uso</a>
@@ -855,7 +858,7 @@
 <!-- ================= QUIZ ================= -->
 <div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra por onde começar no Astarot">
   <div class="quiz-top">
-    <span class="brand"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#f5f1ea" stroke-opacity=".55" stroke-width="1.2"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(-24 12 12)" stroke="#f5f1ea" stroke-opacity=".35"/><circle cx="19.2" cy="8.6" r="1.7" fill="#d6b56e"/></svg>Astarot</span>
+    <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
     <div class="q-progress"><i id="qBar"></i></div>
     <button class="q-close" type="button" id="qClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>

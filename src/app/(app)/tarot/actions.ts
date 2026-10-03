@@ -6,7 +6,7 @@ import { CARD_BY_ID } from "@/lib/tarot/deck";
 import { type DrawnCard, drawSpread, SPREADS, TAROT_RNG, TAROT_VERSION } from "@/lib/tarot/draw";
 
 export type DrawResult =
-  | { ok: true; id: string; cards: (DrawnCard & { name: string; arcana: "major" | "minor"; number: number | null; suit: string | null })[] }
+  | { ok: true; id: string; cards: (DrawnCard & { name: string; arcana: "major" | "minor"; number: number | null; suit: string | null; rank: string | null })[] }
   | { ok: false; message: string };
 
 const input = z.object({
@@ -37,7 +37,7 @@ export async function drawAction(spread: string, question?: string): Promise<Dra
     id: data.id,
     cards: cards.map((c) => {
       const card = CARD_BY_ID.get(c.cardId)!;
-      return { ...c, name: card.name, arcana: card.arcana, number: card.number, suit: card.suit };
+      return { ...c, name: card.name, arcana: card.arcana, number: card.number, suit: card.suit, rank: card.rank };
     }),
   };
 }
