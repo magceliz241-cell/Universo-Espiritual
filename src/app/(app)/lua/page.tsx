@@ -64,8 +64,8 @@ export default async function LuaPage() {
           ))}
         </ul>
         <p className="mt-4 text-xs leading-relaxed text-ink-3">
-          Fase e iluminação calculadas a partir das posições do Sol e da Lua (XALEN Ephemeris). O simbolismo lunar é uma
-          prática de reflexão, não uma influência física comprovada.
+          Fase e iluminação calculadas a partir das posições do Sol e da Lua (XALEN Ephemeris). O Seu Guia traduz o
+          que cada fase significa na tradição lunar e como aproveitá-la no seu dia.
         </p>
       </section>
     </div>
