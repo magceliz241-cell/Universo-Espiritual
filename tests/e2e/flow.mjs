@@ -130,12 +130,12 @@ try {
 
   // 7. Dados de nascimento com busca de cidade
   await page.goto(`${APP}/perfil/nascimento`);
-  await page.fill("#name", "Ana");
+  await page.fill("#name", "Luna");
   await page.fill("#date", "1990-08-15");
   await page.fill("#time", "14:30");
   await page.fill("#cityId", "sao pa");
   await page.getByRole("option", { name: /São Paulo/ }).click();
-  await page.fill("#birthName", "Ana Souza");
+  await page.fill("#birthName", "Luna Souza");
   await shot(page, "05-nascimento");
   await page.click("button[type=submit]");
   await page.waitForURL(`${APP}/mapa`, { timeout: 15000 });

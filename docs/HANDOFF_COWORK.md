@@ -167,8 +167,9 @@ o CSV.
    select public.cakto_apply_purchase('email-dele@exemplo.com', 'love', 'teste-manual-2'); -- Astarot Love
    ```
    Recarregue o app: ele entra no Início.
-3. Roteiro: cadastrar nascimento → Mapa → "Ver minha leitura" (IA real) → Tarot → Lua → Numerologia → Sonhos → Seu Guia →
-   Amor → Mapa do casal. No fim, se ele quiser, remova o acesso de teste:
+3. Roteiro: cadastrar nascimento com os dados de exemplo (nome **Luna**, nome completo de nascimento **Luna Souza**,
+   **15/08/1990, 14h30, São Paulo**; assim as capturas da Etapa 8 já saem prontas) → Mapa → "Ver minha leitura"
+   (IA real) → Tarot → Lua → Numerologia → Sonhos → Seu Guia → Amor → Mapa do casal (com a **Rafa**). No fim, se ele quiser, remova o acesso de teste:
    ```sql
    select public.cakto_apply_revocation('teste-manual-1', 'email-dele@exemplo.com', 'refunded');
    ```
@@ -227,8 +228,8 @@ Sua parte é **juntar estes dados com o Guilherme** (nenhum deles é segredo):
 ### Etapa 8: Capturar as telas e devolver ao Claude Code
 **8.1 Capturas das telas do app** (vão substituir as telas de teste na landing):
 1. Use a conta de teste do Guilherme com acesso ao Astarot e ao Astarot Love (Etapa 5). Para nenhuma tela mostrar
-   dado real, o nome de exibição deve ser **"Ana"**, com o nascimento de exemplo **15/08/1990, 14h30, São Paulo** e
-   uma pessoa no mapa do casal chamada **"Rafa"**. Se a conta estiver com dados reais, peça para trocar antes.
+   dado real, o nome de exibição deve ser **"Luna"** (nome completo de nascimento **"Luna Souza"**), com o
+   nascimento de exemplo **15/08/1990, 14h30, São Paulo** e uma pessoa no mapa do casal chamada **"Rafa"**. Se a conta estiver com dados reais, peça para trocar antes.
 2. No Chrome: DevTools → modo dispositivo → **iPhone 12 Pro (390 × 844)**, zoom 100%.
 3. Capture a área visível (⋮ → *Capture screenshot*) destas 9 telas, nesta ordem:
    `/` (Início) · `/mapa` · `/lua` · `/tarot` (depois de tirar as 3 cartas e abrir a leitura) · `/numerologia` ·

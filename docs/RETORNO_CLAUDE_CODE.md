@@ -88,7 +88,7 @@ exatamente onde clicar. Não tente contornar.
 - Se vierem as 9 capturas: recorte cada uma mantendo o topo, em 780×1688 px (390 de largura em 2×), converta para
   WebP (qualidade ~74, com `sharp`) e substitua `landing/img/app-{inicio,mapa,lua,tarot,numerologia,guia,amor,casal,sonhos}.webp`.
 - Antes de publicar, confira que nenhuma tela mostra e-mail, nome real ou dados pessoais do Guilherme (o Cowork usa
-  a conta de teste com o nome "Ana"). Se aparecer algo pessoal, pergunte.
+  a conta de teste com o nome "Luna"). Se aparecer algo pessoal, pergunte.
 - Sem capturas: mantenha as atuais.
 
 ### Passo 4: base editorial do Tarot (78 cartas)
