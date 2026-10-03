@@ -1,22 +1,28 @@
-# 13 — Death
+# 13 — Death (A Morte)
 
 ## Palavras-chave
-fim de ciclo, transformação, desapego, transição
+encerramento, transformação, fim de ciclo, renovação
 
 ## Expressão reversa / bloqueada
-resistência à mudança, apego ao passado
+apego, medo de mudar, fim adiado, transição arrastada
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Morte, no Tarot, fala de transformação, não de morte física. É a carta do encerramento necessário para que algo novo possa nascer. Na tradição, o sol que nasce ao fundo da imagem lembra que todo fim abre espaço.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Fim de uma fase da relação ou de um padrão afetivo. Pode ser a transformação de um vínculo, não necessariamente o seu término.
+
+## Trabalho/propósito
+Encerramento de um projeto, mudança de função ou de área. Abre espaço para o que vem a seguir.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a reconhecer o que já terminou em você e ainda está sendo carregado por hábito.
+
+## Reversa
+Invertida, pode indicar apego ao que já acabou ou uma transição arrastada pelo medo do novo.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escolha algo pequeno para encerrar esta semana: um objeto, uma tarefa pendente, um compromisso que já não faz sentido.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

@@ -1,22 +1,28 @@
-# 17 — The Star
+# 17 — The Star (A Estrela)
 
 ## Palavras-chave
-esperança, inspiração, renovação, orientação
+esperança, cura, inspiração, serenidade
 
 ## Expressão reversa / bloqueada
-desânimo, expectativa idealizada, falta de aterramento
+desânimo, descrença, desconexão, falta de fé em si
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Estrela mostra uma figura que derrama água sob um céu estrelado: é a carta da esperança renovada depois da tempestade. Fala de cura, inspiração e confiança no futuro. Na tradição, sucede a Torre como um respiro.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Fase de reconexão, ternura e abertura gradual. Favorece relações em que se pode ser quem se é.
+
+## Trabalho/propósito
+Inspiração, visão de longo prazo e trabalhos criativos. Bom momento para retomar um sonho com passos realistas.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a reencontrar o que te dá sentido e a cuidar da própria esperança.
+
+## Reversa
+Invertida, pode indicar desânimo, perda de confiança ou dificuldade de enxergar saídas. Pede cuidado com a própria fé em si.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escreva um desejo para os próximos seis meses e um pequeno gesto que você pode fazer por ele hoje.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

@@ -1,22 +1,28 @@
-# 18 — The Moon
+# 18 — The Moon (A Lua)
 
 ## Palavras-chave
-incerteza, imaginação, sonhos, ambiguidade
+intuição, incerteza, imaginação, sonhos
 
 ## Expressão reversa / bloqueada
-confusão, medo projetado, interpretação precipitada
+confusão que se dissipa, medo que perde força, ou ilusão que se aprofunda
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Lua ilumina um caminho entre duas torres, com cães e um lagostim que sai da água: é a carta do que ainda não está claro. Fala de intuição, sonhos e medos. Na tradição, nem tudo é o que parece sob a luz da Lua.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Inseguranças, projeções ou falta de clareza. Pede conversas francas antes de tirar conclusões.
+
+## Trabalho/propósito
+Cenário incerto, informações incompletas. Vale checar dados antes de decidir e confiar no tempo.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a separar o que você teme do que realmente está acontecendo.
+
+## Reversa
+Invertida, pode indicar que a confusão começa a se dissipar, ou que a ilusão se aprofunda. Observe o que fica mais claro.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escreva um medo atual e, ao lado, os fatos concretos que você conhece. Compare as duas listas.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

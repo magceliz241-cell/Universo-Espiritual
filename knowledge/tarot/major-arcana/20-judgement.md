@@ -1,22 +1,28 @@
-# 20 — Judgement
+# 20 — Judgement (O Julgamento)
 
 ## Palavras-chave
-reavaliação, chamado, despertar, decisão
+despertar, renovação, chamado, avaliação
 
 ## Expressão reversa / bloqueada
-culpa, autocondenação, resistência ao chamado
+autocrítica, dúvida, chamado ignorado, dificuldade de seguir em frente
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Julgamento mostra figuras que se levantam ao som de uma trombeta: é a carta do despertar e da renovação. Fala de avaliar a trajetória e responder a um chamado. Na tradição, representa o momento de renascer com mais consciência.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Olhar o passado afetivo com clareza e decidir o que se leva adiante. Pode indicar retomadas conscientes ou um encerramento maduro.
+
+## Trabalho/propósito
+Chamado para uma nova etapa profissional ou avaliação do caminho até aqui.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a ouvir o que te chama agora e a perdoar versões antigas de si.
+
+## Reversa
+Invertida, pode indicar autocrítica dura, dúvida diante do chamado ou dificuldade de soltar o passado.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escreva uma carta curta para a pessoa que você era há cinco anos, dizendo o que aprendeu desde então.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

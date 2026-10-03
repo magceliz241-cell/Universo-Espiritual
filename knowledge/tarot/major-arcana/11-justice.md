@@ -1,22 +1,28 @@
-# 11 — Justice
+# 11 — Justice (A Justiça)
 
 ## Palavras-chave
-equilíbrio, consequência, clareza, responsabilidade
+equilíbrio, verdade, responsabilidade, consequência
 
 ## Expressão reversa / bloqueada
-rigidez, julgamento, falta de imparcialidade
+parcialidade, desonestidade, evitar responsabilidade, desequilíbrio
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Justiça segura a balança e a espada: é a carta da clareza, da verdade e das consequências. Fala de decisões tomadas com honestidade. Na tradição, representa o equilíbrio entre causa e efeito.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Reciprocidade e honestidade. A carta pergunta se as trocas na relação são justas e se as conversas difíceis estão sendo feitas.
+
+## Trabalho/propósito
+Contratos, acordos, decisões objetivas e responsabilidade pelas próprias escolhas. Favorece agir com transparência.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a assumir a sua parte em uma situação, sem se culpar por tudo nem culpar só os outros.
+
+## Reversa
+Invertida, pode indicar desequilíbrio nas trocas, decisões parciais ou fuga de uma conversa necessária.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escreva uma situação pendente em duas colunas: o que é responsabilidade sua e o que não é. Aja sobre a primeira coluna.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

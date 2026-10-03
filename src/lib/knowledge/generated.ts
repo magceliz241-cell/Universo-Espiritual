@@ -2,7 +2,7 @@
 // Rode: npm run build:knowledge
 import type { KnowledgeDoc } from "./types";
 
-export const KNOWLEDGE_VERSION = "2.0+d875080a1953";
+export const KNOWLEDGE_VERSION = "2.0+96afbd50c9c4";
 
 export const DOCS: Record<string, KnowledgeDoc> = {
  "AI_CONTEXT_RULES": {
@@ -790,8 +790,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/00-the-fool": {
   "id": "tarot/major-arcana/00-the-fool",
   "domain": "tarot",
-  "title": "00 — The Fool",
-  "content": "# 00 — The Fool\n\n## Palavras-chave\nnovos começos, abertura, espontaneidade\n\n## Expressão reversa / bloqueada\nimprudência, falta de planejamento\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "00 — The Fool (O Louco)",
+  "content": "# 00 — The Fool (O Louco)\n\n## Palavras-chave\nnovos começos, abertura, espontaneidade, confiança no caminho\n\n## Expressão reversa / bloqueada\nimprudência, salto sem olhar, medo de começar, adiamento por excesso de cautela\n\n## Leitura geral\nO Louco é o primeiro passo antes de qualquer certeza. A figura caminha leve, perto da borda, com pouca bagagem: fala de curiosidade, de disposição para o novo e de aprender fazendo. Na tradição, é a carta do início da jornada, quando ainda não se sabe tudo e isso não impede o movimento.\n\n## Amor\nAbertura para conhecer alguém ou para olhar uma relação com olhos de novidade. Pode sugerir leveza, vontade de experimentar e menos roteiro pronto. Vale observar se a liberdade desejada cabe no vínculo ou se está servindo para evitar compromisso.\n\n## Trabalho/propósito\nMomento de testar uma ideia, mudar de área ou começar um projeto sem ter o mapa completo. A carta favorece o primeiro passo pequeno e reversível, mais do que a aposta total.\n\n## Autoconhecimento\nConvida a reconhecer onde você se permite começar sem garantias e onde o medo de errar trava tudo. Também mostra a diferença entre confiar e ignorar sinais.\n\n## Reversa\nInvertida, a energia do começo pode virar pressa sem direção ou, ao contrário, paralisia. Pergunte se o salto está sem preparo mínimo ou se a cautela já virou desculpa para não sair do lugar.\n\n## Ação/reflexão\nEscolha uma coisa nova e pequena para experimentar nesta semana, com prazo curto. No fim, anote o que aprendeu, não só o resultado.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -800,8 +800,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/01-the-magician": {
   "id": "tarot/major-arcana/01-the-magician",
   "domain": "tarot",
-  "title": "01 — The Magician",
-  "content": "# 01 — The Magician\n\n## Palavras-chave\niniciativa, habilidade, recursos, manifestação prática\n\n## Expressão reversa / bloqueada\nmanipulação, dispersão, potencial não utilizado\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "01 — The Magician (O Mago)",
+  "content": "# 01 — The Magician (O Mago)\n\n## Palavras-chave\niniciativa, habilidade, foco, transformar ideia em ação\n\n## Expressão reversa / bloqueada\ndispersão, talento parado, manipulação, promessa sem entrega\n\n## Leitura geral\nO Mago tem sobre a mesa os quatro elementos do baralho: tudo de que precisa já está ao alcance. A carta fala de concentrar intenção e recursos para fazer algo acontecer. Na tradição, é o canal entre o que se imagina e o que se concretiza.\n\n## Amor\nComunicação clara e iniciativa: dizer o que se quer, propor, dar o primeiro passo. Pede atenção à coerência entre palavra e gesto, para que o charme não substitua a presença real.\n\n## Trabalho/propósito\nBoa carta para apresentar um projeto, vender uma ideia ou começar algo com as ferramentas que já existem. O ponto é escolher um foco e usar o que está disponível, em vez de esperar o cenário ideal.\n\n## Autoconhecimento\nAjuda a reconhecer habilidades que você subestima e a perceber onde a energia se espalha em muitas frentes.\n\n## Reversa\nInvertida, pode indicar energia dispersa, talento que não chega a sair do papel ou uso da habilidade para convencer mais do que para construir. Vale conferir se há intenção clara por trás do esforço.\n\n## Ação/reflexão\nListe quatro recursos que você já tem (um conhecimento, uma pessoa, um objeto, um tempo livre) e use dois deles numa ação concreta hoje.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -810,8 +810,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/02-the-high-priestess": {
   "id": "tarot/major-arcana/02-the-high-priestess",
   "domain": "tarot",
-  "title": "02 — The High Priestess",
-  "content": "# 02 — The High Priestess\n\n## Palavras-chave\nintuição, silêncio, mistério, conhecimento interno\n\n## Expressão reversa / bloqueada\npassividade, segredos, desconexão da intuição\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "02 — The High Priestess (A Sacerdotisa)",
+  "content": "# 02 — The High Priestess (A Sacerdotisa)\n\n## Palavras-chave\nintuição, silêncio, conhecimento interior, mistério\n\n## Expressão reversa / bloqueada\ndesconexão da intuição, segredos, excesso de recolhimento, ignorar o que se sente\n\n## Leitura geral\nA Sacerdotisa guarda o véu entre o que se vê e o que se pressente. É a carta da escuta interna, da paciência e do saber que não vem por argumento. Na tradição, aponta que nem tudo precisa ser resolvido agora: algumas respostas amadurecem no silêncio.\n\n## Amor\nSugere observar mais do que agir: perceber o que não está sendo dito, respeitar o próprio ritmo e o do outro. Pode indicar uma conexão profunda, porém reservada.\n\n## Trabalho/propósito\nMomento de estudar, pesquisar e ouvir antes de decidir. A carta favorece trabalhos de análise, escuta e cuidado com informações sensíveis.\n\n## Autoconhecimento\nConvida a confiar na percepção sutil e a distinguir intuição de ansiedade. A pergunta é: o que você já sabe e ainda não admitiu?\n\n## Reversa\nInvertida, pode mostrar desconexão do que se sente, segredos que pesam ou um recolhimento que virou isolamento. Também pode pedir que algo guardado seja finalmente nomeado.\n\n## Ação/reflexão\nReserve dez minutos em silêncio, sem tela, e escreva a primeira resposta que vier para a sua pergunta. Releia no dia seguinte.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -820,8 +820,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/03-the-empress": {
   "id": "tarot/major-arcana/03-the-empress",
   "domain": "tarot",
-  "title": "03 — The Empress",
-  "content": "# 03 — The Empress\n\n## Palavras-chave\nfertilidade simbólica, criação, cuidado, abundância\n\n## Expressão reversa / bloqueada\nexcesso, dependência, estagnação\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "03 — The Empress (A Imperatriz)",
+  "content": "# 03 — The Empress (A Imperatriz)\n\n## Palavras-chave\nfertilidade criativa, cuidado, abundância, prazer dos sentidos\n\n## Expressão reversa / bloqueada\ndescuido de si, dependência, excesso de doação, bloqueio criativo\n\n## Leitura geral\nA Imperatriz está cercada de natureza que cresce: é a carta do que floresce com tempo, cuidado e prazer. Fala de nutrir, criar e receber. Na tradição, representa a força generativa, aquilo que transforma semente em colheita.\n\n## Amor\nAfeto que se expressa em cuidado, toque, presença e conforto. Pode falar de uma fase mais calorosa, ou do convite para cuidar de si com a mesma dedicação oferecida ao outro.\n\n## Trabalho/propósito\nBoa carta para projetos criativos e para tudo que precisa de cultivo contínuo. Indica crescimento orgânico, não forçado.\n\n## Autoconhecimento\nConvida a perceber como você se nutre: corpo, descanso, beleza, prazer. Também pergunta onde o cuidado com os outros apagou o cuidado consigo.\n\n## Reversa\nInvertida, pode indicar criatividade travada, autocuidado esquecido ou cuidado que virou controle. Observe se você está dando mais do que tem.\n\n## Ação/reflexão\nFaça hoje algo só pelo prazer dos sentidos (uma refeição feita com calma, um banho demorado, uma caminhada ao ar livre) e repare no efeito no seu humor.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -830,8 +830,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/04-the-emperor": {
   "id": "tarot/major-arcana/04-the-emperor",
   "domain": "tarot",
-  "title": "04 — The Emperor",
-  "content": "# 04 — The Emperor\n\n## Palavras-chave\nestrutura, autoridade, limites, liderança\n\n## Expressão reversa / bloqueada\nrigidez, controle, autoritarismo\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "04 — The Emperor (O Imperador)",
+  "content": "# 04 — The Emperor (O Imperador)\n\n## Palavras-chave\nestrutura, liderança, limites, responsabilidade\n\n## Expressão reversa / bloqueada\nrigidez, autoritarismo, falta de limites, dificuldade com regras\n\n## Leitura geral\nO Imperador está firme no trono de pedra: é a carta da ordem, do planejamento e da autoridade que protege. Fala de criar estrutura para que algo dure. Na tradição, representa o princípio que organiza o mundo.\n\n## Amor\nPede clareza de compromisso, limites saudáveis e estabilidade. Vale observar se a relação tem segurança ou se o controle ocupou o lugar do cuidado.\n\n## Trabalho/propósito\nFavorece organização, liderança, contratos e planejamento de longo prazo. É hora de assumir o comando do que é seu.\n\n## Autoconhecimento\nAjuda a olhar sua relação com regras e autoridade: as que você cria, as que respeita e as que talvez precise rever.\n\n## Reversa\nInvertida, a estrutura pode endurecer em rigidez ou faltar por completo. Pergunte se há controle demais ou responsabilidade de menos.\n\n## Ação/reflexão\nDefina uma regra simples para a sua semana (um horário, um limite, uma rotina) e cumpra por sete dias.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -840,8 +840,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/05-the-hierophant": {
   "id": "tarot/major-arcana/05-the-hierophant",
   "domain": "tarot",
-  "title": "05 — The Hierophant",
-  "content": "# 05 — The Hierophant\n\n## Palavras-chave\ntradição, ensino, valores, instituição\n\n## Expressão reversa / bloqueada\ndogmatismo, conformidade, resistência\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "05 — The Hierophant (O Hierofante)",
+  "content": "# 05 — The Hierophant (O Hierofante)\n\n## Palavras-chave\ntradição, ensino, valores, pertencimento\n\n## Expressão reversa / bloqueada\ndogmatismo, conformismo, rebeldia sem rumo, questionamento das regras\n\n## Leitura geral\nO Hierofante ensina diante de dois discípulos: é a carta da transmissão de saberes, dos rituais e das instituições. Fala de aprender com quem veio antes e de encontrar sentido em valores compartilhados.\n\n## Amor\nRelações com valores em comum, compromissos formais e a influência da família ou da cultura. Pode pedir conversa sobre o que cada pessoa considera essencial.\n\n## Trabalho/propósito\nBom momento para estudar com alguém experiente, buscar formação ou seguir um método testado. Também pode indicar trabalho em instituições.\n\n## Autoconhecimento\nConvida a separar as crenças que você escolheu das que apenas herdou.\n\n## Reversa\nInvertida, pode indicar necessidade de questionar regras que já não servem, ou conformismo que impede caminho próprio. Também pode mostrar rebeldia que só reage, sem propor.\n\n## Ação/reflexão\nEscreva três valores que guiam suas decisões. Ao lado de cada um, anote de onde ele veio e se ainda faz sentido.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -850,8 +850,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/06-the-lovers": {
   "id": "tarot/major-arcana/06-the-lovers",
   "domain": "tarot",
-  "title": "06 — The Lovers",
-  "content": "# 06 — The Lovers\n\n## Palavras-chave\nescolha, vínculo, valores, união\n\n## Expressão reversa / bloqueada\nindecisão, conflito de valores, idealização\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "06 — The Lovers (Os Enamorados)",
+  "content": "# 06 — The Lovers (Os Enamorados)\n\n## Palavras-chave\nescolha, união, alinhamento de valores, afinidade\n\n## Expressão reversa / bloqueada\ndesalinhamento, indecisão, escolha evitada, relação desequilibrada\n\n## Leitura geral\nOs Enamorados mostram duas figuras sob uma presença que as abençoa: é a carta do encontro e, sobretudo, da escolha. Fala de decidir de acordo com o que se valoriza de verdade. Na tradição, une amor e consciência.\n\n## Amor\nAfinidade, atração e o convite a uma escolha consciente. Pede honestidade sobre o que cada pessoa quer, e não só sobre o que sente.\n\n## Trabalho/propósito\nPode indicar parcerias, sociedades ou a decisão entre dois caminhos. A carta pergunta qual opção está mais alinhada com seus valores.\n\n## Autoconhecimento\nAjuda a perceber se suas escolhas refletem o que você acredita ou o que esperam de você.\n\n## Reversa\nInvertida, pode apontar desalinhamento entre o que se diz e o que se faz, indecisão prolongada ou uma relação em que só uma parte escolhe.\n\n## Ação/reflexão\nDiante de uma decisão, escreva os dois caminhos e, para cada um, o valor pessoal que ele honra. Escolha pelo valor, não pelo medo.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -860,8 +860,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/07-the-chariot": {
   "id": "tarot/major-arcana/07-the-chariot",
   "domain": "tarot",
-  "title": "07 — The Chariot",
-  "content": "# 07 — The Chariot\n\n## Palavras-chave\ndireção, determinação, movimento, autocontrole\n\n## Expressão reversa / bloqueada\npressa, conflito interno, perda de direção\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "07 — The Chariot (O Carro)",
+  "content": "# 07 — The Chariot (O Carro)\n\n## Palavras-chave\ndeterminação, direção, avanço, autocontrole\n\n## Expressão reversa / bloqueada\nfalta de direção, forças em conflito, pressa, perda de controle\n\n## Leitura geral\nO Carro avança puxado por duas esfinges de cores opostas: é a carta de conduzir forças diferentes na mesma direção. Fala de vontade, foco e movimento. Na tradição, representa a vitória que vem do domínio de si.\n\n## Amor\nIniciativa e decisão para fazer a relação andar. Pede alinhamento: as duas pessoas querem ir para o mesmo lugar?\n\n## Trabalho/propósito\nFase de avanço, metas claras e esforço concentrado. Bom para mudanças, viagens e projetos que exigem disciplina.\n\n## Autoconhecimento\nMostra como você lida com impulsos opostos dentro de si e se consegue manter o rumo sem atropelar ninguém.\n\n## Reversa\nInvertida, pode indicar energia sem direção, metas em conflito ou pressa que tira o controle. Vale desacelerar para recuperar o rumo.\n\n## Ação/reflexão\nEscolha uma meta para os próximos sete dias e escreva o único passo diário que leva até ela.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -870,8 +870,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/08-strength": {
   "id": "tarot/major-arcana/08-strength",
   "domain": "tarot",
-  "title": "08 — Strength",
-  "content": "# 08 — Strength\n\n## Palavras-chave\ncoragem, compaixão, domínio interior, serenidade\n\n## Expressão reversa / bloqueada\nforça bruta, insegurança, repressão\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "08 — Strength (A Força)",
+  "content": "# 08 — Strength (A Força)\n\n## Palavras-chave\ncoragem gentil, paciência, autodomínio, compaixão\n\n## Expressão reversa / bloqueada\ninsegurança, impulsividade, força bruta, autocrítica\n\n## Leitura geral\nA Força mostra uma figura que acalma um leão com as mãos, sem luta. É a carta da coragem que não precisa de violência: firmeza, paciência e compaixão. Na tradição, fala de lidar com instintos sem negá-los.\n\n## Amor\nPaciência e ternura para atravessar fases difíceis. A carta valoriza a firmeza calma, que acolhe sem se anular.\n\n## Trabalho/propósito\nIndica persistência e capacidade de lidar com pressão sem perder a cabeça. Liderar pelo exemplo, não pelo grito.\n\n## Autoconhecimento\nConvida a perceber como você trata seus próprios impulsos e medos: com dureza ou com firmeza gentil.\n\n## Reversa\nInvertida, pode indicar insegurança, explosões ou uma autocrítica dura demais. A força está fora de equilíbrio, para mais ou para menos.\n\n## Ação/reflexão\nNa próxima situação que te irritar, respire três vezes antes de responder e observe o que muda.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -880,8 +880,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/09-the-hermit": {
   "id": "tarot/major-arcana/09-the-hermit",
   "domain": "tarot",
-  "title": "09 — The Hermit",
-  "content": "# 09 — The Hermit\n\n## Palavras-chave\nintrospecção, busca, sabedoria, recolhimento\n\n## Expressão reversa / bloqueada\nisolamento, fechamento, excesso de introspecção\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "09 — The Hermit (O Eremita)",
+  "content": "# 09 — The Hermit (O Eremita)\n\n## Palavras-chave\nrecolhimento, busca interior, sabedoria, orientação\n\n## Expressão reversa / bloqueada\nisolamento, solidão excessiva, fuga, recusa de ajuda\n\n## Leitura geral\nO Eremita caminha sozinho com uma lanterna: é a carta da pausa para enxergar melhor. Fala de introspecção, estudo e da sabedoria que vem da experiência. Na tradição, a luz que ele carrega também orienta outras pessoas.\n\n## Amor\nTempo para entender o que se quer antes de se envolver, ou um momento mais reservado dentro da relação. Solidão escolhida não é falta de amor.\n\n## Trabalho/propósito\nFavorece estudo, especialização, planejamento e trabalho solitário e profundo. Pode indicar a busca de um mentor ou o papel de orientar alguém.\n\n## Autoconhecimento\nConvida a ouvir a própria voz longe do ruído e a reconhecer o que você já aprendeu.\n\n## Reversa\nInvertida, o recolhimento pode virar isolamento ou fuga. Também pode indicar resistência a pedir orientação.\n\n## Ação/reflexão\nSepare um período curto do dia, sem redes sociais, para caminhar ou escrever sobre uma única pergunta.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -890,8 +890,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/10-wheel-of-fortune": {
   "id": "tarot/major-arcana/10-wheel-of-fortune",
   "domain": "tarot",
-  "title": "10 — Wheel of Fortune",
-  "content": "# 10 — Wheel of Fortune\n\n## Palavras-chave\nciclos, mudança, oportunidade, movimento\n\n## Expressão reversa / bloqueada\ninstabilidade, resistência ao ciclo, sensação de falta de controle\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "10 — Wheel of Fortune (A Roda da Fortuna)",
+  "content": "# 10 — Wheel of Fortune (A Roda da Fortuna)\n\n## Palavras-chave\nciclos, mudança, virada, movimento da vida\n\n## Expressão reversa / bloqueada\nresistência à mudança, sensação de repetição, fase difícil do ciclo\n\n## Leitura geral\nA Roda gira com figuras que sobem e descem: é a carta dos ciclos e das viradas. Lembra que nenhuma fase é permanente. Na tradição, fala do que muda além do nosso controle e de como responder a isso.\n\n## Amor\nUma fase nova pode estar começando, ou um padrão antigo voltando para ser visto. Pergunta o que se repete nas suas relações.\n\n## Trabalho/propósito\nMudanças de cenário, oportunidades e ajustes de rota. A carta pede adaptabilidade, não aposta cega.\n\n## Autoconhecimento\nAjuda a reconhecer seus ciclos e o que você pode fazer diferente quando eles voltam.\n\n## Reversa\nInvertida, pode indicar resistência a uma mudança inevitável ou a sensação de girar sempre no mesmo ciclo. Pergunte o que depende de você nesta volta.\n\n## Ação/reflexão\nLembre de uma fase difícil que passou. Anote o que te ajudou a atravessá-la e guarde a lista.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -900,8 +900,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/11-justice": {
   "id": "tarot/major-arcana/11-justice",
   "domain": "tarot",
-  "title": "11 — Justice",
-  "content": "# 11 — Justice\n\n## Palavras-chave\nequilíbrio, consequência, clareza, responsabilidade\n\n## Expressão reversa / bloqueada\nrigidez, julgamento, falta de imparcialidade\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "11 — Justice (A Justiça)",
+  "content": "# 11 — Justice (A Justiça)\n\n## Palavras-chave\nequilíbrio, verdade, responsabilidade, consequência\n\n## Expressão reversa / bloqueada\nparcialidade, desonestidade, evitar responsabilidade, desequilíbrio\n\n## Leitura geral\nA Justiça segura a balança e a espada: é a carta da clareza, da verdade e das consequências. Fala de decisões tomadas com honestidade. Na tradição, representa o equilíbrio entre causa e efeito.\n\n## Amor\nReciprocidade e honestidade. A carta pergunta se as trocas na relação são justas e se as conversas difíceis estão sendo feitas.\n\n## Trabalho/propósito\nContratos, acordos, decisões objetivas e responsabilidade pelas próprias escolhas. Favorece agir com transparência.\n\n## Autoconhecimento\nConvida a assumir a sua parte em uma situação, sem se culpar por tudo nem culpar só os outros.\n\n## Reversa\nInvertida, pode indicar desequilíbrio nas trocas, decisões parciais ou fuga de uma conversa necessária.\n\n## Ação/reflexão\nEscreva uma situação pendente em duas colunas: o que é responsabilidade sua e o que não é. Aja sobre a primeira coluna.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -910,8 +910,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/12-the-hanged-man": {
   "id": "tarot/major-arcana/12-the-hanged-man",
   "domain": "tarot",
-  "title": "12 — The Hanged Man",
-  "content": "# 12 — The Hanged Man\n\n## Palavras-chave\npausa, nova perspectiva, entrega, suspensão\n\n## Expressão reversa / bloqueada\nestagnação, vitimização, adiamento\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "12 — The Hanged Man (O Enforcado)",
+  "content": "# 12 — The Hanged Man (O Enforcado)\n\n## Palavras-chave\npausa, nova perspectiva, entrega, espera consciente\n\n## Expressão reversa / bloqueada\nestagnação, sacrifício inútil, resistência, indecisão\n\n## Leitura geral\nO Enforcado está de cabeça para baixo, com expressão serena: é a carta de ver o mundo por outro ângulo. Fala de pausa, entrega e de esperar sem desistir. Na tradição, representa a sabedoria de suspender a ação para compreender.\n\n## Amor\nMomento de espera ou de olhar a relação sob outro ponto de vista. Pergunta se algum sacrifício está sendo feito sem sentido.\n\n## Trabalho/propósito\nProjeto em compasso de espera ou necessidade de mudar a estratégia. Pausar pode revelar o que a pressa escondia.\n\n## Autoconhecimento\nConvida a soltar o controle por um momento e perceber o que muda quando você inverte a pergunta.\n\n## Reversa\nInvertida, pode indicar estagnação, sacrifícios que já não fazem sentido ou resistência a mudar de perspectiva.\n\n## Ação/reflexão\nPegue um problema atual e descreva-o do ponto de vista de outra pessoa envolvida. Veja o que aparece.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -920,8 +920,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/13-death": {
   "id": "tarot/major-arcana/13-death",
   "domain": "tarot",
-  "title": "13 — Death",
-  "content": "# 13 — Death\n\n## Palavras-chave\nfim de ciclo, transformação, desapego, transição\n\n## Expressão reversa / bloqueada\nresistência à mudança, apego ao passado\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "13 — Death (A Morte)",
+  "content": "# 13 — Death (A Morte)\n\n## Palavras-chave\nencerramento, transformação, fim de ciclo, renovação\n\n## Expressão reversa / bloqueada\napego, medo de mudar, fim adiado, transição arrastada\n\n## Leitura geral\nA Morte, no Tarot, fala de transformação, não de morte física. É a carta do encerramento necessário para que algo novo possa nascer. Na tradição, o sol que nasce ao fundo da imagem lembra que todo fim abre espaço.\n\n## Amor\nFim de uma fase da relação ou de um padrão afetivo. Pode ser a transformação de um vínculo, não necessariamente o seu término.\n\n## Trabalho/propósito\nEncerramento de um projeto, mudança de função ou de área. Abre espaço para o que vem a seguir.\n\n## Autoconhecimento\nConvida a reconhecer o que já terminou em você e ainda está sendo carregado por hábito.\n\n## Reversa\nInvertida, pode indicar apego ao que já acabou ou uma transição arrastada pelo medo do novo.\n\n## Ação/reflexão\nEscolha algo pequeno para encerrar esta semana: um objeto, uma tarefa pendente, um compromisso que já não faz sentido.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -930,8 +930,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/14-temperance": {
   "id": "tarot/major-arcana/14-temperance",
   "domain": "tarot",
-  "title": "14 — Temperance",
-  "content": "# 14 — Temperance\n\n## Palavras-chave\nintegração, moderação, mistura, equilíbrio\n\n## Expressão reversa / bloqueada\nexcesso, falta de ritmo, extremos\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "14 — Temperance (A Temperança)",
+  "content": "# 14 — Temperance (A Temperança)\n\n## Palavras-chave\nequilíbrio, moderação, integração, paciência\n\n## Expressão reversa / bloqueada\nexcesso, desequilíbrio, pressa, extremos\n\n## Leitura geral\nA Temperança mistura líquidos entre duas taças com calma: é a carta da medida certa e da integração entre opostos. Fala de paciência e cura gradual. Na tradição, mostra que a harmonia é construída aos poucos.\n\n## Amor\nRelação que pede equilíbrio, conversa e meio-termo. Favorece reconciliações cuidadosas e a construção paciente da confiança.\n\n## Trabalho/propósito\nTrabalho em equipe, gestão de recursos e ritmo sustentável. Combinar habilidades diferentes dá bons resultados.\n\n## Autoconhecimento\nAjuda a perceber onde você vai aos extremos e o que seria a sua medida justa.\n\n## Reversa\nInvertida, pode indicar excessos, pressa ou falta de equilíbrio entre áreas da vida.\n\n## Ação/reflexão\nIdentifique um hábito em excesso e outro em falta. Ajuste um pouco cada um durante a semana.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -940,8 +940,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/15-the-devil": {
   "id": "tarot/major-arcana/15-the-devil",
   "domain": "tarot",
-  "title": "15 — The Devil",
-  "content": "# 15 — The Devil\n\n## Palavras-chave\napego, desejo, compulsão, sombra, materialidade\n\n## Expressão reversa / bloqueada\nnegação, dependência, aprisionamento\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "15 — The Devil (O Diabo)",
+  "content": "# 15 — The Devil (O Diabo)\n\n## Palavras-chave\napego, desejo, padrões, sombra\n\n## Expressão reversa / bloqueada\nlibertação, consciência do padrão, quebra de correntes, ou aprofundamento do vício\n\n## Leitura geral\nO Diabo mostra figuras presas por correntes largas, que poderiam ser retiradas: é a carta dos apegos e padrões que nos prendem. Fala de desejo, sombra e do que fazemos no automático. Na tradição, aponta que a prisão costuma ser menos rígida do que parece.\n\n## Amor\nAtração intensa, ciúme, dependência ou dinâmicas de controle. Pede olhar honesto sobre o que prende e o que nutre.\n\n## Trabalho/propósito\nPode indicar apego a dinheiro, status ou a uma situação que já não faz bem. Também fala de ambição que precisa de limites.\n\n## Autoconhecimento\nConvida a reconhecer um padrão que se repete e a função que ele cumpre para você.\n\n## Reversa\nInvertida, pode indicar o momento de perceber e soltar uma corrente, ou um padrão que se aprofunda quando é negado.\n\n## Ação/reflexão\nNomeie um hábito que você gostaria de mudar. Observe por três dias quando ele aparece e o que vem antes.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -950,8 +950,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/16-the-tower": {
   "id": "tarot/major-arcana/16-the-tower",
   "domain": "tarot",
-  "title": "16 — The Tower",
-  "content": "# 16 — The Tower\n\n## Palavras-chave\nruptura, revelação, colapso de estrutura, mudança abrupta\n\n## Expressão reversa / bloqueada\nresistência, medo da ruptura, prolongamento do inevitável\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "16 — The Tower (A Torre)",
+  "content": "# 16 — The Tower (A Torre)\n\n## Palavras-chave\nruptura, revelação, mudança súbita, libertação\n\n## Expressão reversa / bloqueada\nevitar o inevitável, medo de mudança, crise adiada, reconstrução interna\n\n## Leitura geral\nA Torre é atingida por um raio: é a carta das estruturas que caem porque estavam frágeis. Fala de revelação e de mudança rápida. Na tradição, a queda abre espaço para reconstruir sobre base mais verdadeira.\n\n## Amor\nUma verdade que vem à tona, uma conversa que muda tudo ou o fim de uma ilusão. Pode ser desconfortável e libertador ao mesmo tempo.\n\n## Trabalho/propósito\nMudanças inesperadas de cenário. A carta pede flexibilidade e foco no que pode ser reconstruído.\n\n## Autoconhecimento\nConvida a perceber quais crenças sobre si já não se sustentam.\n\n## Reversa\nInvertida, pode indicar uma crise adiada, resistência a uma mudança necessária ou uma transformação vivida mais por dentro.\n\n## Ação/reflexão\nEscreva uma crença que caiu recentemente e o que você ganhou de espaço com essa queda.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -960,8 +960,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/17-the-star": {
   "id": "tarot/major-arcana/17-the-star",
   "domain": "tarot",
-  "title": "17 — The Star",
-  "content": "# 17 — The Star\n\n## Palavras-chave\nesperança, inspiração, renovação, orientação\n\n## Expressão reversa / bloqueada\ndesânimo, expectativa idealizada, falta de aterramento\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "17 — The Star (A Estrela)",
+  "content": "# 17 — The Star (A Estrela)\n\n## Palavras-chave\nesperança, cura, inspiração, serenidade\n\n## Expressão reversa / bloqueada\ndesânimo, descrença, desconexão, falta de fé em si\n\n## Leitura geral\nA Estrela mostra uma figura que derrama água sob um céu estrelado: é a carta da esperança renovada depois da tempestade. Fala de cura, inspiração e confiança no futuro. Na tradição, sucede a Torre como um respiro.\n\n## Amor\nFase de reconexão, ternura e abertura gradual. Favorece relações em que se pode ser quem se é.\n\n## Trabalho/propósito\nInspiração, visão de longo prazo e trabalhos criativos. Bom momento para retomar um sonho com passos realistas.\n\n## Autoconhecimento\nConvida a reencontrar o que te dá sentido e a cuidar da própria esperança.\n\n## Reversa\nInvertida, pode indicar desânimo, perda de confiança ou dificuldade de enxergar saídas. Pede cuidado com a própria fé em si.\n\n## Ação/reflexão\nEscreva um desejo para os próximos seis meses e um pequeno gesto que você pode fazer por ele hoje.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -970,8 +970,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/18-the-moon": {
   "id": "tarot/major-arcana/18-the-moon",
   "domain": "tarot",
-  "title": "18 — The Moon",
-  "content": "# 18 — The Moon\n\n## Palavras-chave\nincerteza, imaginação, sonhos, ambiguidade\n\n## Expressão reversa / bloqueada\nconfusão, medo projetado, interpretação precipitada\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "18 — The Moon (A Lua)",
+  "content": "# 18 — The Moon (A Lua)\n\n## Palavras-chave\nintuição, incerteza, imaginação, sonhos\n\n## Expressão reversa / bloqueada\nconfusão que se dissipa, medo que perde força, ou ilusão que se aprofunda\n\n## Leitura geral\nA Lua ilumina um caminho entre duas torres, com cães e um lagostim que sai da água: é a carta do que ainda não está claro. Fala de intuição, sonhos e medos. Na tradição, nem tudo é o que parece sob a luz da Lua.\n\n## Amor\nInseguranças, projeções ou falta de clareza. Pede conversas francas antes de tirar conclusões.\n\n## Trabalho/propósito\nCenário incerto, informações incompletas. Vale checar dados antes de decidir e confiar no tempo.\n\n## Autoconhecimento\nConvida a separar o que você teme do que realmente está acontecendo.\n\n## Reversa\nInvertida, pode indicar que a confusão começa a se dissipar, ou que a ilusão se aprofunda. Observe o que fica mais claro.\n\n## Ação/reflexão\nEscreva um medo atual e, ao lado, os fatos concretos que você conhece. Compare as duas listas.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -980,8 +980,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/19-the-sun": {
   "id": "tarot/major-arcana/19-the-sun",
   "domain": "tarot",
-  "title": "19 — The Sun",
-  "content": "# 19 — The Sun\n\n## Palavras-chave\nclareza, vitalidade, alegria, visibilidade\n\n## Expressão reversa / bloqueada\nexcesso de exposição, otimismo sem medida\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "19 — The Sun (O Sol)",
+  "content": "# 19 — The Sun (O Sol)\n\n## Palavras-chave\nalegria, vitalidade, clareza, sucesso\n\n## Expressão reversa / bloqueada\nalegria contida, otimismo excessivo, cansaço, brilho apagado\n\n## Leitura geral\nO Sol brilha sobre uma criança num cavalo branco: é a carta da clareza, da alegria e da vitalidade. Fala de reconhecimento e de se mostrar como se é. Na tradição, é das cartas mais luminosas do baralho.\n\n## Amor\nCalor, leveza e transparência. Favorece momentos de alegria compartilhada e relações em que se pode brilhar.\n\n## Trabalho/propósito\nReconhecimento, sucesso visível e energia para realizar. Bom para apresentar trabalhos e se expor.\n\n## Autoconhecimento\nConvida a reconhecer o que te traz alegria genuína e a se permitir ocupar espaço.\n\n## Reversa\nInvertida, pode indicar uma alegria contida, cansaço ou otimismo que ignora detalhes. O sol continua lá, só encoberto.\n\n## Ação/reflexão\nFaça uma lista de cinco coisas que te deram alegria neste mês e repita uma delas nesta semana.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -990,8 +990,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/20-judgement": {
   "id": "tarot/major-arcana/20-judgement",
   "domain": "tarot",
-  "title": "20 — Judgement",
-  "content": "# 20 — Judgement\n\n## Palavras-chave\nreavaliação, chamado, despertar, decisão\n\n## Expressão reversa / bloqueada\nculpa, autocondenação, resistência ao chamado\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "20 — Judgement (O Julgamento)",
+  "content": "# 20 — Judgement (O Julgamento)\n\n## Palavras-chave\ndespertar, renovação, chamado, avaliação\n\n## Expressão reversa / bloqueada\nautocrítica, dúvida, chamado ignorado, dificuldade de seguir em frente\n\n## Leitura geral\nO Julgamento mostra figuras que se levantam ao som de uma trombeta: é a carta do despertar e da renovação. Fala de avaliar a trajetória e responder a um chamado. Na tradição, representa o momento de renascer com mais consciência.\n\n## Amor\nOlhar o passado afetivo com clareza e decidir o que se leva adiante. Pode indicar retomadas conscientes ou um encerramento maduro.\n\n## Trabalho/propósito\nChamado para uma nova etapa profissional ou avaliação do caminho até aqui.\n\n## Autoconhecimento\nConvida a ouvir o que te chama agora e a perdoar versões antigas de si.\n\n## Reversa\nInvertida, pode indicar autocrítica dura, dúvida diante do chamado ou dificuldade de soltar o passado.\n\n## Ação/reflexão\nEscreva uma carta curta para a pessoa que você era há cinco anos, dizendo o que aprendeu desde então.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"
@@ -1000,8 +1000,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/major-arcana/21-the-world": {
   "id": "tarot/major-arcana/21-the-world",
   "domain": "tarot",
-  "title": "21 — The World",
-  "content": "# 21 — The World\n\n## Palavras-chave\nconclusão, integração, realização, fechamento\n\n## Expressão reversa / bloqueada\ninacabamento, dificuldade de reconhecer conclusão\n\n## Leitura geral\nUse os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.\n\n## Amor\nPerguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?\n\n## Autoconhecimento\nPerguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?\n\n## Ação/reflexão\nTransformar a leitura em uma pergunta ou pequeno exercício concreto.",
+  "title": "21 — The World (O Mundo)",
+  "content": "# 21 — The World (O Mundo)\n\n## Palavras-chave\nconclusão, integração, realização, plenitude\n\n## Expressão reversa / bloqueada\nciclo inacabado, falta de fechamento, atraso, busca de completude\n\n## Leitura geral\nO Mundo mostra uma figura que dança dentro de uma guirlanda: é a carta do ciclo completo. Fala de realização, integração e de chegar a um ponto de plenitude. Na tradição, encerra a jornada dos Arcanos Maiores.\n\n## Amor\nRelação madura, sensação de completude e celebração do caminho percorrido.\n\n## Trabalho/propósito\nConclusão de projetos, reconhecimento e abertura de novos horizontes, inclusive viagens e expansão.\n\n## Autoconhecimento\nConvida a reconhecer suas conquistas e a celebrar o que se completou antes de começar outra coisa.\n\n## Reversa\nInvertida, pode indicar um ciclo inacabado, falta de fechamento ou a sensação de quase chegar.\n\n## Ação/reflexão\nAnote três ciclos que você concluiu neste ano e celebre um deles de forma concreta.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm",
    "https://labyrinthos.co/blogs/learn-tarot-with-labyrinthos-academy/tarot-meaning-cheat-sheets-infographics-plus-free-printable-resource"

@@ -1,22 +1,28 @@
-# 08 — Strength
+# 08 — Strength (A Força)
 
 ## Palavras-chave
-coragem, compaixão, domínio interior, serenidade
+coragem gentil, paciência, autodomínio, compaixão
 
 ## Expressão reversa / bloqueada
-força bruta, insegurança, repressão
+insegurança, impulsividade, força bruta, autocrítica
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Força mostra uma figura que acalma um leão com as mãos, sem luta. É a carta da coragem que não precisa de violência: firmeza, paciência e compaixão. Na tradição, fala de lidar com instintos sem negá-los.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Paciência e ternura para atravessar fases difíceis. A carta valoriza a firmeza calma, que acolhe sem se anular.
+
+## Trabalho/propósito
+Indica persistência e capacidade de lidar com pressão sem perder a cabeça. Liderar pelo exemplo, não pelo grito.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a perceber como você trata seus próprios impulsos e medos: com dureza ou com firmeza gentil.
+
+## Reversa
+Invertida, pode indicar insegurança, explosões ou uma autocrítica dura demais. A força está fora de equilíbrio, para mais ou para menos.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Na próxima situação que te irritar, respire três vezes antes de responder e observe o que muda.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

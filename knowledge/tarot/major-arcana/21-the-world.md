@@ -1,22 +1,28 @@
-# 21 — The World
+# 21 — The World (O Mundo)
 
 ## Palavras-chave
-conclusão, integração, realização, fechamento
+conclusão, integração, realização, plenitude
 
 ## Expressão reversa / bloqueada
-inacabamento, dificuldade de reconhecer conclusão
+ciclo inacabado, falta de fechamento, atraso, busca de completude
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Mundo mostra uma figura que dança dentro de uma guirlanda: é a carta do ciclo completo. Fala de realização, integração e de chegar a um ponto de plenitude. Na tradição, encerra a jornada dos Arcanos Maiores.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Relação madura, sensação de completude e celebração do caminho percorrido.
+
+## Trabalho/propósito
+Conclusão de projetos, reconhecimento e abertura de novos horizontes, inclusive viagens e expansão.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a reconhecer suas conquistas e a celebrar o que se completou antes de começar outra coisa.
+
+## Reversa
+Invertida, pode indicar um ciclo inacabado, falta de fechamento ou a sensação de quase chegar.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Anote três ciclos que você concluiu neste ano e celebre um deles de forma concreta.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

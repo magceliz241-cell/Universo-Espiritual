@@ -1,22 +1,28 @@
-# 14 — Temperance
+# 14 — Temperance (A Temperança)
 
 ## Palavras-chave
-integração, moderação, mistura, equilíbrio
+equilíbrio, moderação, integração, paciência
 
 ## Expressão reversa / bloqueada
-excesso, falta de ritmo, extremos
+excesso, desequilíbrio, pressa, extremos
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+A Temperança mistura líquidos entre duas taças com calma: é a carta da medida certa e da integração entre opostos. Fala de paciência e cura gradual. Na tradição, mostra que a harmonia é construída aos poucos.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Relação que pede equilíbrio, conversa e meio-termo. Favorece reconciliações cuidadosas e a construção paciente da confiança.
+
+## Trabalho/propósito
+Trabalho em equipe, gestão de recursos e ritmo sustentável. Combinar habilidades diferentes dá bons resultados.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Ajuda a perceber onde você vai aos extremos e o que seria a sua medida justa.
+
+## Reversa
+Invertida, pode indicar excessos, pressa ou falta de equilíbrio entre áreas da vida.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Identifique um hábito em excesso e outro em falta. Ajuste um pouco cada um durante a semana.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

@@ -1,22 +1,28 @@
-# 04 — The Emperor
+# 04 — The Emperor (O Imperador)
 
 ## Palavras-chave
-estrutura, autoridade, limites, liderança
+estrutura, liderança, limites, responsabilidade
 
 ## Expressão reversa / bloqueada
-rigidez, controle, autoritarismo
+rigidez, autoritarismo, falta de limites, dificuldade com regras
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Imperador está firme no trono de pedra: é a carta da ordem, do planejamento e da autoridade que protege. Fala de criar estrutura para que algo dure. Na tradição, representa o princípio que organiza o mundo.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Pede clareza de compromisso, limites saudáveis e estabilidade. Vale observar se a relação tem segurança ou se o controle ocupou o lugar do cuidado.
+
+## Trabalho/propósito
+Favorece organização, liderança, contratos e planejamento de longo prazo. É hora de assumir o comando do que é seu.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Ajuda a olhar sua relação com regras e autoridade: as que você cria, as que respeita e as que talvez precise rever.
+
+## Reversa
+Invertida, a estrutura pode endurecer em rigidez ou faltar por completo. Pergunte se há controle demais ou responsabilidade de menos.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Defina uma regra simples para a sua semana (um horário, um limite, uma rotina) e cumpra por sete dias.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):
