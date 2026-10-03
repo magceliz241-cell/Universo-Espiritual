@@ -1,22 +1,31 @@
-# 10 de Ouros
+# Dez de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-culminação, carga, conclusão de ciclo
+conclusão, ápice, fim de ciclo
 
-## Leitura combinada
-Combine o tema de “culminação, carga, conclusão de ciclo” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+legado, estabilidade, família, riqueza duradoura
+
+## Leitura geral
+Uma família e animais diante de uma casa. O Dez de Ouros fala de legado e segurança duradoura.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Compromisso, família, estabilidade.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Patrimônio, empresas familiares.
+
+## Autoconhecimento
+Pergunta o que você quer construir para durar.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar conflitos familiares ou instabilidade.
+
+## Ação/reflexão
+Escreva o legado que você quer deixar.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,31 @@
-# 8 de Ouros
+# Oito de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-processo, repetição, desenvolvimento, movimento
+movimento, esforço, mudança de ritmo
 
-## Leitura combinada
-Combine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+dedicação, aprendizado, prática, aprimoramento
+
+## Leitura geral
+Um artesão trabalha moeda por moeda. O Oito de Ouros fala de dedicação e prática.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Investir na relação com atenção.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Aperfeiçoamento, estudo, foco.
+
+## Autoconhecimento
+Pergunta em que você quer se aprimorar.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar perfeccionismo ou desmotivação.
+
+## Ação/reflexão
+Pratique uma habilidade por 20 minutos.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

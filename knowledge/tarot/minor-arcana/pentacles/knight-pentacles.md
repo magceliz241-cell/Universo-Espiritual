@@ -4,19 +4,28 @@
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-movimento, busca, impulso, ação
+corte — ação, busca, movimento intenso
 
-## Leitura combinada
-Combine o tema de “movimento, busca, impulso, ação” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+constância, responsabilidade, trabalho, método
+
+## Leitura geral
+O Cavaleiro de Ouros segue devagar e firme. Fala de constância e responsabilidade.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Relação estável e confiável.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Trabalho constante, método.
+
+## Autoconhecimento
+Pergunta onde você precisa de mais constância.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar estagnação ou tédio.
+
+## Ação/reflexão
+Mantenha uma rotina por sete dias.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

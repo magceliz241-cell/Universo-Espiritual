@@ -6,17 +6,26 @@ Ouros — corpo, recursos, trabalho, estabilidade, materialização
 ## Número / corte
 início, potencial, semente
 
-## Leitura combinada
-Combine o tema de “início, potencial, semente” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+oportunidade concreta, prosperidade, semente material, segurança
+
+## Leitura geral
+Uma mão oferece uma moeda sobre um jardim. O Ás de Ouros fala de uma oportunidade concreta e de começos sólidos.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Relação com base estável, gestos concretos de cuidado.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Nova oportunidade de trabalho, renda ou projeto.
+
+## Autoconhecimento
+Convida a cuidar do corpo e das bases da vida.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar oportunidade perdida ou má gestão.
+
+## Ação/reflexão
+Escolha um pequeno investimento de tempo ou dinheiro em você.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,31 @@
-# 9 de Ouros
+# Nove de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-maturação, autonomia, resultado próximo
+quase completo, intensidade, resultado próximo
 
-## Leitura combinada
-Combine o tema de “maturação, autonomia, resultado próximo” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+autonomia, conforto, conquista, independência
+
+## Leitura geral
+Uma figura elegante num jardim abundante. O Nove de Ouros fala de independência e conforto conquistado.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Autonomia na relação, amor próprio.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Estabilidade financeira, conquista pessoal.
+
+## Autoconhecimento
+Convida a desfrutar do que conquistou.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar dependência ou excesso.
+
+## Ação/reflexão
+Dê a si um momento de prazer.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

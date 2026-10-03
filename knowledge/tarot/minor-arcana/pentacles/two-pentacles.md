@@ -1,22 +1,31 @@
-# 2 de Ouros
+# Dois de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-dualidade, escolha, equilíbrio, parceria
+escolha, parceria, equilíbrio entre dois polos
 
-## Leitura combinada
-Combine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+equilíbrio, adaptação, malabarismo, prioridades
+
+## Leitura geral
+Uma figura equilibra duas moedas em movimento. O Dois de Ouros fala de adaptar-se e equilibrar demandas.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Conciliar relação e outras áreas da vida.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Múltiplas tarefas, gestão do tempo.
+
+## Autoconhecimento
+Pergunta como você distribui sua energia.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar sobrecarga ou desorganização.
+
+## Ação/reflexão
+Organize suas tarefas em ordem de prioridade.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm
