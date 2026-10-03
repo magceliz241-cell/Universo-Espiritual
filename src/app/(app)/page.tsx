@@ -48,6 +48,8 @@ export default async function Dashboard() {
   const moon = moonState();
   const name = profile?.display_name?.split(" ")[0];
   const idx = STRIP.findIndex((p) => p.id === moon.phase);
+  // Perto de uma fase principal, o evento exato pode cair no mesmo dia: "próxima" mostra a fase seguinte.
+  const upcoming = moon.next.find((n) => n.phase !== moon.phase) ?? moon.next[0];
   const strip = [-2, -1, 0, 1, 2].map((o) => STRIP[(idx + o + 8) % 8]);
 
   return (
@@ -77,8 +79,8 @@ export default async function Dashboard() {
             <p className="text-display mt-1 text-[1.7rem]">{moon.phaseLabel}</p>
             <p className="mt-1 text-sm text-ink-2">{STRIP[idx].line}</p>
             <p className="mt-2 text-xs text-ink-3">
-              {Math.round(moon.illumination * 100)}% iluminada · Lua em {SIGN_NAMES[moon.moonSign]} · próxima: {moon.next[0].label},{" "}
-              {formatDatePt(moon.next[0].instant, tz, { day: "numeric", month: "short" })}
+              {Math.round(moon.illumination * 100)}% iluminada · Lua em {SIGN_NAMES[moon.moonSign]} · próxima: {upcoming.label},{" "}
+              {formatDatePt(upcoming.instant, tz, { day: "numeric", month: "short" })}
             </p>
           </Card>
         </Link>
