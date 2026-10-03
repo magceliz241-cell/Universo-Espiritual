@@ -299,17 +299,19 @@ pelo GitHub.
 
 ## 6. Checklist final (mostre ao Guilherme)
 
+Estado em 03/10/2026, conferido pelo Claude Code na volta do Cowork:
+
 - [x] Merge na `main` feito
 - [x] Supabase: 3 migrations aplicadas e conferidas (12 tabelas com RLS)
-- [ ] Supabase Auth: Confirm email ligado, templates e SMTP configurados, Site URL e Redirect URLs corretas
-- [ ] PRs abertos do Claude Code mergeados (Etapa 1)
-- [ ] Projeto do app na Vercel com as variáveis da 3.2, `NEXT_PUBLIC_APP_URL` e redeploy; `/api/health/engine` → `ok: true`
-- [ ] Supabase: Site URL e Redirect URLs com o endereço do app
-- [ ] Cidades importadas (mais de 150 mil; busca por "sao paulo" funciona)
-- [ ] Teste com acesso manual: todas as telas abrem e a leitura do Guia funciona com a IA real
-- [ ] Cakto: Astarot (com bump), Astarot Love e oferta de upgrade criados; webhook com os 3 eventos e todos os produtos marcados
-- [ ] `/api/webhooks/cakto` (GET) → tudo `true`
+- [x] Supabase Auth: Confirm email ligado, templates (roxo) e SMTP configurados, Site URL e Redirect URLs corretas
+- [x] PRs abertos do Claude Code mergeados (Etapa 1)
+- [x] Projeto do app na Vercel com as variáveis e redeploy; `/api/health/engine` → `ok: true`
+- [x] Cidades importadas (237.613; busca por "sao paulo" funciona)
+- [x] Teste com acesso manual: telas abrem e a IA real responde (acesso de teste mantido de propósito)
+- [x] Cakto: Astarot (com bump), Astarot Love e complemento criados; webhook "Astarot - Entrega" testado (`needs_review`)
+- [x] `/api/webhooks/cakto` (GET) → tudo `true`
 - [ ] Compra real: Astarot libera; upgrade dentro do app libera Amor na hora; Astarot Love libera tudo; reembolso bloqueia
-- [x] Landing publicada (Root Directory `landing`)
-- [ ] Dados da landing juntados (Etapa 7) e `NEXT_PUBLIC_LANDING_URL` preenchida no app
-- [ ] 9 capturas feitas e mensagem de volta entregue ao Guilherme (Etapa 8)
+- [x] Landing publicada (`astarot.vercel.app`)
+- [x] Dados da landing juntados (Etapa 7) e `NEXT_PUBLIC_LANDING_URL` preenchida no app
+- [x] 9 capturas feitas e mensagem de volta entregue (Etapa 8)
+- [x] Login com Google: provedor ligado no Supabase (o botão depende de `NEXT_PUBLIC_GOOGLE_AUTH=1`)

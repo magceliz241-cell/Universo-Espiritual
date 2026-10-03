@@ -1,8 +1,8 @@
 # Astarot: plano do login com Google (OAuth)
 
-> Status: **planejado, ainda não implementado.** Pode ser feito antes ou depois do lançamento. O login por e-mail e
-> senha continua existindo, porque nem todo comprador tem conta Google e o link de entrega da Cakto aponta para o
-> cadastro.
+> Status (03/10/2026): **provedor ligado no Supabase e código pronto** (branch `claude/vigilant-heisenberg-0ff2f3`).
+> Falta: `NEXT_PUBLIC_GOOGLE_AUTH=1` na Vercel + redeploy, o template *Change email address* (SETUP §1.6) e o teste
+> manual da seção 4. Decisões do Guilherme que mudaram este plano estão na seção 6.
 
 ---
 
@@ -84,3 +84,18 @@ Google `ana@gmail.com`, o app não encontra a compra e mostra a tela "Ainda não
 | Conta criada por e-mail mas nunca confirmada, depois entra com Google | O Supabase dá preferência à identidade verificada (Google) e remove a não confirmada, por segurança. Comportamento esperado; testar no item 3 |
 | Remover login por e-mail | **Não.** Continua como alternativa (e é para onde aponta o link de entrega da Cakto) |
 | Apple, Facebook | Fora do escopo. Mesmo caminho, se um dia for pedido |
+
+## 6. O que mudou na implementação (decisões do Guilherme, 03/10/2026)
+
+- **Google é a opção principal** do login e do cadastro: botão centralizado, com o "G" oficial colorido (tema escuro
+  das diretrizes de marca do Google). Embaixo, só uma frase com a alternativa pelo e-mail do checkout
+  (`?metodo=email`), que continua igual a antes. Substitui o item 3.2.1 (botão acima do formulário com "ou").
+- **E-mail do Google diferente do da compra** (substitui a seção 2): em `/acesso` a pessoa informa o e-mail usado no
+  checkout. O app pede ao Supabase a **troca do e-mail da conta** para esse endereço; o Supabase manda um link para
+  ele e só depois da confirmação o e-mail muda e o gatilho `link_memberships_on_confirm` liga a compra à conta.
+  Digitar o e-mail sozinho não libera nada, e um e-mail que já tem conta própria é recusado (a pessoa entra por ela).
+  Sem migration nova: o gatilho já reage à troca de e-mail confirmada. Limite de envios: o do próprio Supabase.
+- **Nome de exibição:** em vez de gravar no primeiro acesso, o primeiro nome do Google vem sugerido no formulário do
+  mapa, que agora é a primeira tela de quem ainda não tem mapa.
+- Teste manual extra: conta Google sem compra → informar o e-mail do checkout em `/acesso` → confirmar o link →
+  atualizar `/acesso` → entra no app (e o e-mail da conta passa a ser o da compra).

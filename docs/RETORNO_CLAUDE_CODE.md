@@ -5,6 +5,10 @@
 > se adapta ao que estiver pronto.
 > Regras do projeto: `CLAUDE.md` (inclui a regra do conector Supabase: leitura livre, escrita só com permissão).
 
+> **Última execução: 03/10/2026** (branch `claude/vigilant-heisenberg-0ff2f3`). Feitos: Passos 0, 1, 2 (sem o script
+> da UTMify, aguardando confirmação do domínio), 4, 5, 5b e 7. Pendentes: Passo 3 (as 9 capturas precisam chegar
+> como arquivos nesta sessão), Passo 6 (rede bloqueia `ssd.jpl.nasa.gov`/`*.vercel.app`) e a compra real (Passo 8).
+
 ---
 
 ## 1. A mensagem que o Guilherme cola aqui

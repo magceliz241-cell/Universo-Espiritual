@@ -40,7 +40,24 @@ você. O Claude deixa tudo pronto e explica cada passo.
      <p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery&next=/auth/update-password">Criar nova senha</a></p>
      <p>Se você não pediu isso, ignore este e-mail.</p>
      ```
+   - *Change email address* — assunto `Confirme o e-mail da sua compra no Astarot` (usado quando alguém entra com o
+     Google e informa, em `/acesso`, o e-mail do checkout):
+     ```html
+     <p>Oi!</p>
+     <p>Para ligar a sua compra do Astarot a esta conta, confirme o e-mail {{ .NewEmail }} pelo link abaixo:</p>
+     <p><a href="{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email_change&next=/">Confirmar e-mail da compra</a></p>
+     <p>Se você não pediu isso, ignore este e-mail.</p>
+     ```
    Os links usam `token_hash` e funcionam em qualquer aparelho (o `{{ .ConfirmationURL }}` só funciona no mesmo navegador).
+   Os três templates seguem o visual roxo já aprovado (03/10); basta trocar o texto e o link.
+7. **Authentication → Sign In / Providers → Email → Secure email change**: recomendado **desligar**. Ligado, a troca
+   de e-mail pede confirmação nos dois endereços (o do Google e o da compra); desligado, só no e-mail da compra, que é
+   o que prova que a compra é da pessoa.
+8. **Authentication → Sign In / Providers → Google**: ✅ ligado em 03/10/2026 (cliente "Astarot Web" no Google Cloud,
+   projeto `astarot`). O botão no app só aparece com `NEXT_PUBLIC_GOOGLE_AUTH=1` na Vercel (seção 3).
+9. **Leaked password protection** (aviso do Supabase Advisors): bloqueia senhas vazadas (HaveIBeenPwned). Só existe no
+   plano Pro do Supabase; ligar quando assinar (*Authentication → Sign In / Providers → Email → Prevent use of leaked
+   passwords*).
 
 ## 2. Base de cidades (GeoNames, CC-BY 4.0)
 
@@ -76,6 +93,7 @@ Importe o repositório. Variáveis de ambiente (Settings → Environment Variabl
 | `CAKTO_MAIN_IDS` | config | ids/códigos do produto e das ofertas do plano principal, separados por vírgula |
 | `CAKTO_LOVE_IDS` | config | ids/códigos do Astarot Love **como complemento**: order bump no checkout do Astarot **e** oferta de upgrade dentro do app (liberam só o Love) |
 | `CAKTO_FULL_IDS` | config | ids/códigos do produto **Astarot Love vendido sozinho** (R$ 29,90, checkout próprio; libera o Astarot **e** o Love) |
+| `NEXT_PUBLIC_GOOGLE_AUTH` | pública | `1` mostra o login com Google como opção principal (provedor ligado no Supabase); vazio = só e-mail e senha |
 
 Variáveis `NEXT_PUBLIC_*` entram no build, então depois de mudar alguma é preciso fazer **redeploy**.
 Um id nunca pode estar em duas listas.
