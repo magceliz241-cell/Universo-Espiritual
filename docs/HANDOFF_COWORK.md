@@ -2,8 +2,10 @@
 
 > Para: Claude Cowork, operando o Chrome do Guilherme.
 > De: a sessão do Claude Code que construiu o app (30/09 a 01/10/2026).
-> Envie este arquivo junto com `docs/SETUP.md` e `landing/README.md`. Este arquivo diz **o que já existe e em que
-> ordem terminar**; o SETUP tem o detalhe técnico de cada passo (templates de e-mail, tabela de variáveis).
+> **Arquivos que o Guilherme envia, nesta ordem:** `1-HANDOFF_COWORK.md` (este, o principal), `2-SETUP.md` (detalhe
+> técnico: templates de e-mail, tabela de variáveis), `3-LANDING_README.md` (como a landing funciona) e
+> `4-PLANO_LOGIN_GOOGLE.md` (etapa opcional). No repositório eles ficam em `docs/HANDOFF_COWORK.md`, `docs/SETUP.md`,
+> `landing/README.md` e `docs/PLANO_LOGIN_GOOGLE.md`.
 > Ao terminar, a **Etapa 8** devolve o trabalho ao Claude Code, que segue `docs/RETORNO_CLAUDE_CODE.md`.
 
 ---
@@ -74,9 +76,11 @@ Prévia visual com todas as telas (privada, do Guilherme): https://claude.ai/art
 
 A ordem importa: com a Vercel no ar, o Guilherme já consegue testar o app antes da Cakto existir.
 
-### Etapa 1: Merge do código na `main` (✅ já feito)
-O código já está na `main`. Se houver algum Pull Request aberto do Claude Code quando você começar, pergunte ao
-Guilherme se ele quer fazer o merge antes de seguir.
+### Etapa 1: Merge do código na `main`
+O código já está na `main`. **Antes de seguir, abra
+https://github.com/magceliz241-cell/Universo-Espiritual/pulls**: se houver Pull Request aberto do Claude Code
+(por exemplo o #8, com o visual novo do app), mostre ao Guilherme e, com o OK dele, faça o merge. Assim o app já sobe
+na Vercel com a versão mais recente.
 
 ### Etapa 2: Supabase (Auth e e-mails; o banco já está pronto)
 Siga `docs/SETUP.md` §1. Em resumo:
@@ -91,24 +95,50 @@ Siga `docs/SETUP.md` §1. Em resumo:
 4. **Templates de e-mail**: use os textos simples do SETUP §1.6. Os links usam `token_hash` e funcionam em qualquer
    aparelho.
 5. **SMTP**: Gmail do produto com senha de app (ele cria e cola).
-6. Anote para a Vercel: *Project URL* e chave *anon/publishable* (públicas) e *service_role* (secreta, ele cola).
+6. As chaves para a Vercel ficam em *Project Settings → API Keys* (ou *Data API*): a URL do projeto e a chave
+   **anon** são públicas (você pode copiar); a **service_role** é secreta (só o Guilherme copia, na Etapa 3).
 
-### Etapa 3: Vercel
-> O Guilherme pode já ter criado o projeto do app sozinho (como fez com a landing). Nesse caso, **não crie outro**:
-> abra o projeto existente e confira cada item abaixo, completando o que faltar.
+### Etapa 3: Projeto do app na Vercel
+> Se o Guilherme já tiver criado o projeto do app, **não crie outro**: abra o projeto e confira cada item abaixo,
+> completando o que faltar. O projeto `universo-espiritual-landing` é só da landing; **não mexa nele**.
 
-1. Ele importa o repositório na Vercel **de novo, como um projeto novo** (o projeto que já existe,
-   `universo-espiritual-landing`, é só da landing). Neste projeto do app, o **Root Directory fica na raiz** (padrão),
-   framework Next.js detectado sozinho, Node 22. Não mude o comando de build.
-2. Variáveis de ambiente: tabela completa em `docs/SETUP.md` §3. Nesta etapa bastam:
-   - `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (ele cola)
-   - `NEXT_PUBLIC_APP_URL` (a URL final da Vercel, sem barra no fim)
-   - `GROQ_API_KEY` (ele cria em console.groq.com e cola) e `GROQ_MODEL=openai/gpt-oss-120b`
-3. Faça o deploy. Depois **volte no Supabase** → *Authentication → URL Configuration* e coloque a URL da Vercel como
-   **Site URL** e nas **Redirect URLs** (+ `https://*-<time>.vercel.app/**` para prévias).
-4. **Conferência (mostre ao Guilherme):**
-   - `https://<app>/api/health/engine` → `"ok": true`
-   - `https://<app>/auth/login` abre a tela de login
+**3.1 Criar o projeto** (você faz):
+1. https://vercel.com → **Add New → Project** → importar `magceliz241-cell/Universo-Espiritual` (o mesmo repositório
+   da landing).
+2. Nome sugerido: `astarot-app`. **Root Directory: deixe na raiz** (não escolha `landing`). Framework: **Next.js**
+   (detectado sozinho). Não mude o comando de build. Node.js 22 (*Settings → General*, se perguntar).
+
+**3.2 Variáveis de ambiente** (em *Environment Variables*, antes do primeiro deploy; marque Production, Preview e
+Development):
+
+| Nome | Valor | Quem preenche |
+|---|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | `https://vyynstiepcqvxitwsipx.supabase.co` | você |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | chave **anon** do Supabase (*Project Settings → API Keys → anon / Legacy anon*). É pública | você |
+| `SUPABASE_SERVICE_ROLE_KEY` | chave **service_role** (mesma página, botão *Reveal*) | **o Guilherme copia e cola**. Você não lê, não copia e não digita |
+| `GROQ_MODEL` | `openai/gpt-oss-120b` | você |
+| `GROQ_API_KEY` | chave da Groq (Etapa 3.4) | **o Guilherme cola** |
+
+Para a service_role, diga exatamente: "Abra o Supabase em *Project Settings → API Keys*, clique em *Reveal* na
+service_role, copie e cole no campo `SUPABASE_SERVICE_ROLE_KEY` da Vercel". Espere ele confirmar.
+
+**3.3 Primeiro deploy e endereço do app** (você faz):
+1. Clique em **Deploy** e espere terminar (alguns minutos).
+2. Copie o endereço gerado (ex.: `https://astarot-app.vercel.app`). Esse é o **`<app>`** do resto deste documento.
+3. Crie a variável `NEXT_PUBLIC_APP_URL` = `<app>` (sem barra no fim) e faça **Redeploy** (*Deployments → ⋯ →
+   Redeploy*). Variáveis `NEXT_PUBLIC_*` só valem depois de um redeploy.
+4. No Supabase, *Authentication → URL Configuration*:
+   - **Site URL:** `<app>`
+   - **Redirect URLs:** `<app>/**` e `https://*-<time-da-vercel>.vercel.app/**` (prévias) e `http://localhost:3000/**`
+
+**3.4 Chave da Groq** (Seu Guia):
+1. O Guilherme cria a conta em https://console.groq.com (ele mesmo) e gera uma chave em *API Keys*.
+2. Ele cola em `GROQ_API_KEY` na Vercel. Depois, **Redeploy**.
+
+**3.5 Conferência (mostre prints ao Guilherme):**
+- `<app>/api/health/engine` → `"ok": true`
+- `<app>/auth/login` abre a tela de login com o logo dourado
+- `<app>/api/webhooks/cakto` → mostra `true` em `supabase_admin` (os itens da Cakto ficam `false` até a Etapa 6)
 
 ### Etapa 4: Base de cidades (obrigatória: sem ela ninguém cadastra o nascimento)
 Arquivos em https://download.geonames.org/export/dump/: `cities1000.zip`, `BR.zip` e `admin1CodesASCII.txt`.
@@ -150,9 +180,9 @@ o CSV.
 - [ ] **Order bump** no checkout do Astarot: "Astarot Love", **+ R$ 10,00**, aparecendo no checkout do Astarot.
 - [ ] **Astarot Love:** nome "Astarot Love", preço **R$ 29,90**, pagamento único, Pix e cartão, **sem** order bump.
 - [ ] Os dois checkouts abrem e mostram o preço certo (abra os links).
-- [ ] Entregável / "acesso por e-mail": **ainda pendente**, porque o endereço do app vai ser definido. Quando existir,
-      o link é `https://<app>/auth/sign-up` nos dois produtos e na oferta de upgrade. Não invente um link
-      provisório.
+- [ ] Entregável / "acesso por e-mail": o link é **`<app>/auth/sign-up`** (endereço do app criado na Etapa 3), nos dois
+      produtos e na oferta de upgrade. Mostre ao Guilherme e, com o OK dele, preencha. Se a Etapa 3 ainda não tiver
+      sido feita, deixe pendente; não invente um link provisório.
 - [ ] Anote os IDs/códigos de produto e de oferta de cada um (vão para a Vercel no passo 4).
 Se algo estiver diferente, mostre ao Guilherme e pergunte antes de alterar.
 
@@ -221,6 +251,8 @@ UTMIFY_SCRIPT:
 <script da UTMify, inteiro>
 PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 29,90 · bump/upgrade do Love 10,00
 TELAS: 9 capturas do app em anexo
+LOGIN GOOGLE: provedor ligado no Supabase? sim / não
+LINKS DE ENTREGA NA CAKTO: preenchidos com <app>/auth/sign-up? sim / não
 O QUE O COWORK NÃO CONSEGUIU FAZER: ...   (ou "nada")
 ```
 **Nunca** inclua service role, chave da Groq, segredo do webhook ou senhas: não são necessários lá.
@@ -229,9 +261,10 @@ A partir daí o Claude Code faz o resto sozinho: diagnóstico de produção pelo
 landing, troca das telas, enriquecimento do Tarot, ajuste de tom do app, testes e o Pull Request para o Guilherme
 fazer o merge.
 
-### Etapa extra (opcional): login com Google
-Plano completo em `docs/PLANO_LOGIN_GOOGLE.md`. Sua parte é a 3.1 de lá (Google Cloud Console + provedor Google no
-Supabase), com o Guilherme colando o segredo. O código fica com o Claude Code.
+### Etapa extra (opcional, antes da Etapa 8): login com Google
+Pergunte ao Guilherme se ele quer fazer agora. Plano completo em `4-PLANO_LOGIN_GOOGLE.md` (`docs/PLANO_LOGIN_GOOGLE.md`).
+Sua parte é a 3.1 de lá (Google Cloud Console + provedor Google no Supabase), com o Guilherme colando o segredo do
+cliente. O código fica com o Claude Code. Na mensagem da Etapa 8, informe se o provedor ficou ligado.
 
 ---
 
@@ -268,7 +301,9 @@ pelo GitHub.
 - [x] Merge na `main` feito
 - [x] Supabase: 3 migrations aplicadas e conferidas (12 tabelas com RLS)
 - [ ] Supabase Auth: Confirm email ligado, templates e SMTP configurados, Site URL e Redirect URLs corretas
-- [ ] Vercel no ar; `/api/health/engine` → `ok: true`
+- [ ] PRs abertos do Claude Code mergeados (Etapa 1)
+- [ ] Projeto do app na Vercel com as variáveis da 3.2, `NEXT_PUBLIC_APP_URL` e redeploy; `/api/health/engine` → `ok: true`
+- [ ] Supabase: Site URL e Redirect URLs com o endereço do app
 - [ ] Cidades importadas (mais de 150 mil; busca por "sao paulo" funciona)
 - [ ] Teste com acesso manual: todas as telas abrem e a leitura do Guia funciona com a IA real
 - [ ] Cakto: Astarot (com bump), Astarot Love e oferta de upgrade criados; webhook com os 3 eventos e todos os produtos marcados

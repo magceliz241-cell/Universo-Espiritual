@@ -25,6 +25,8 @@ UTMIFY_SCRIPT:
 <cole aqui o script de captura de UTMs da UTMify, inteiro>
 PRECOS NA CAKTO: Astarot 19,90 · Astarot Love 29,90 · bump/upgrade do Love 10,00
 TELAS: 9 capturas do app em anexo          (ou "sem telas")
+LOGIN GOOGLE: provedor ligado no Supabase? sim / não
+LINKS DE ENTREGA NA CAKTO: preenchidos com <app>/auth/sign-up? sim / não
 O QUE O COWORK NÃO CONSEGUIU FAZER: ...   (ou "nada")
 ```
 
@@ -113,6 +115,17 @@ para linguagem simples. Aplicar o mesmo tom aos **textos fixos das telas do app*
 - **Não mexer** nas regras do prompt da IA nem em `knowledge/LEGAL_AND_EDITORIAL_NOTES.md`. Elas continuam valendo
   para o que a IA escreve.
 - Atualizar `tests/e2e/flow.mjs` se algum texto checado mudar.
+
+### Passo 5b: login com Google (se "LOGIN GOOGLE: sim")
+Implementar a parte 3.2 de `docs/PLANO_LOGIN_GOOGLE.md` (botão atrás de `NEXT_PUBLIC_GOOGLE_AUTH`, textos do mesmo
+e-mail, nome de exibição, Política de Privacidade, teste unitário). Depois, pedir ao Guilherme para criar
+`NEXT_PUBLIC_GOOGLE_AUTH=1` na Vercel, fazer redeploy e seguir o teste manual da seção 4 do plano. Se for "não",
+perguntar se ele quer agora ou depois.
+
+### Passo 5c: conferências de lançamento
+- Links de entrega da Cakto (se "não" na mensagem): lembrar o Guilherme de preencher `<app>/auth/sign-up`.
+- Leitura do mapa em blocos: com a IA real, abrir o Mapa e conferir que a leitura vem com "Seus pontos fortes",
+  "Seus desafios" e "No amor" (prompt `natal_summary@3`). Se o modelo não seguir o formato, ajustar o prompt.
 
 ### Passo 6: precisão (opcional, depende de rede)
 - Se `ssd.jpl.nasa.gov` estiver liberado: `npm run benchmark:fetch-jpl`, `npm run benchmark` e atualizar
