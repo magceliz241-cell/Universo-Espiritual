@@ -1,4 +1,4 @@
-# 4 de Paus
+# Quatro de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
@@ -6,17 +6,26 @@ Paus — ação, criatividade, iniciativa, energia, projetos
 ## Número / corte
 estabilidade, pausa, estrutura
 
-## Leitura combinada
-Combine o tema de “estabilidade, pausa, estrutura” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+celebração, lar, estabilidade, comemoração
+
+## Leitura geral
+Quatro bastões formam um portal enfeitado e pessoas celebram ao fundo. O Quatro de Paus fala de um ponto de chegada alegre, de casa e de comunidade.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Momento de celebração, compromisso, vida a dois ou encontros com família e amigos.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Marco atingido, equipe em harmonia, ambiente de trabalho acolhedor.
+
+## Autoconhecimento
+Convida a reconhecer suas conquistas e a celebrar com quem você ama.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar tensão em casa, celebração adiada ou sensação de não pertencer.
+
+## Ação/reflexão
+Organize um encontro simples para comemorar algo que deu certo, mesmo pequeno.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,31 @@
-# 6 de Paus
+# Seis de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-movimento, ajuste, troca, transição
+harmonia, troca, recuperação
 
-## Leitura combinada
-Combine o tema de “movimento, ajuste, troca, transição” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+reconhecimento, vitória, confiança, progresso
+
+## Leitura geral
+Uma figura cavalga coroada de louros, cercada de pessoas. O Seis de Paus fala de reconhecimento público e de colher o resultado do esforço.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Ter o próprio valor reconhecido pelo outro, orgulho do vínculo, relação que se mostra.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Reconhecimento, promoção, resultados visíveis. Bom momento para mostrar o trabalho.
+
+## Autoconhecimento
+Convida a aceitar elogios e a reconhecer suas vitórias sem diminuí-las.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar falta de reconhecimento, insegurança ou dependência da aprovação alheia.
+
+## Ação/reflexão
+Anote uma conquista recente e conte para alguém de confiança.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

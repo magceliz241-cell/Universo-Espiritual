@@ -1,22 +1,31 @@
-# 8 de Paus
+# Oito de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-processo, repetição, desenvolvimento, movimento
+movimento, esforço, mudança de ritmo
 
-## Leitura combinada
-Combine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+velocidade, notícias, movimento, avanço rápido
+
+## Leitura geral
+Oito bastões cruzam o céu em voo. O Oito de Paus fala de movimento rápido, mensagens e coisas que se aceleram.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Mensagens, encontros rápidos, sentimentos que avançam depressa.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Andamento acelerado, resultados chegando, viagens e comunicação intensa.
+
+## Autoconhecimento
+Convida a perceber como você lida com a velocidade: aproveita ou se atropela?
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar atrasos, mensagens desencontradas ou pressa que gera erro.
+
+## Ação/reflexão
+Resolva hoje três pendências rápidas que estão travando algo maior.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm
