@@ -94,6 +94,9 @@ Siga `docs/SETUP.md` §1. Em resumo:
 6. Anote para a Vercel: *Project URL* e chave *anon/publishable* (públicas) e *service_role* (secreta, ele cola).
 
 ### Etapa 3: Vercel
+> O Guilherme pode já ter criado o projeto do app sozinho (como fez com a landing). Nesse caso, **não crie outro**:
+> abra o projeto existente e confira cada item abaixo, completando o que faltar.
+
 1. Ele importa o repositório na Vercel **de novo, como um projeto novo** (o projeto que já existe,
    `universo-espiritual-landing`, é só da landing). Neste projeto do app, o **Root Directory fica na raiz** (padrão),
    framework Next.js detectado sozinho, Node 22. Não mude o comando de build.
@@ -141,8 +144,20 @@ o CSV.
    ```
 
 ### Etapa 6: Cakto
-Siga `docs/SETUP.md` §4:
-1. Ele cria e confirma os produtos:
+**6.0 Conferir os produtos que o Guilherme já criou (faça isto primeiro).** Ele criou na Cakto os produtos
+**Astarot** e **Astarot Love**. Antes de qualquer outra coisa, abra cada um e confira com ele, mostrando prints:
+- [ ] **Astarot:** nome "Astarot", preço **R$ 19,90**, pagamento único (sem recorrência), Pix e cartão.
+- [ ] **Order bump** no checkout do Astarot: "Astarot Love", **+ R$ 10,00**, aparecendo no checkout do Astarot.
+- [ ] **Astarot Love:** nome "Astarot Love", preço **R$ 29,90**, pagamento único, Pix e cartão, **sem** order bump.
+- [ ] Os dois checkouts abrem e mostram o preço certo (abra os links).
+- [ ] Entregável / "acesso por e-mail": **ainda pendente**, porque o endereço do app vai ser definido. Quando existir,
+      o link é `https://<app>/auth/sign-up` nos dois produtos e na oferta de upgrade. Não invente um link
+      provisório.
+- [ ] Anote os IDs/códigos de produto e de oferta de cada um (vão para a Vercel no passo 4).
+Se algo estiver diferente, mostre ao Guilherme e pergunte antes de alterar.
+
+Depois, siga `docs/SETUP.md` §4:
+1. Ele cria e confirma os produtos (pule o que já existe e foi conferido no 6.0):
    - **Astarot** (principal, sem expiração);
    - **order bump "Astarot Love"** (+ R$ 10,00) dentro do checkout do Astarot;
    - **Astarot Love** (R$ 29,90), produto próprio com checkout próprio, sem bump;
@@ -213,6 +228,10 @@ O QUE O COWORK NÃO CONSEGUIU FAZER: ...   (ou "nada")
 A partir daí o Claude Code faz o resto sozinho: diagnóstico de produção pelo conector e pelas URLs, preenchimento da
 landing, troca das telas, enriquecimento do Tarot, ajuste de tom do app, testes e o Pull Request para o Guilherme
 fazer o merge.
+
+### Etapa extra (opcional): login com Google
+Plano completo em `docs/PLANO_LOGIN_GOOGLE.md`. Sua parte é a 3.1 de lá (Google Cloud Console + provedor Google no
+Supabase), com o Guilherme colando o segredo. O código fica com o Claude Code.
 
 ---
 

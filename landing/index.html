@@ -30,7 +30,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Noto+Sans+Symbols:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
   /* Astarot — mesmos tokens do app (docs/DESIGN_SYSTEM.md). Página sempre escura. */
@@ -75,11 +75,8 @@
   .glyph{font-family:var(--glyph);font-weight:300;font-variant-emoji:text;line-height:1}
 
   /* ---------- Marca ---------- */
-  .brand{display:inline-flex;align-items:center;gap:8px;font-size:21px;line-height:1;text-decoration:none}
-  .brand .mk{width:.9em;height:1.12em;flex:none}
-  .bw{font-family:"Cinzel","Trajan Pro",Georgia,serif;font-weight:500;letter-spacing:.08em;background:linear-gradient(180deg,#f6e2ad,#d6b56e 50%,#a8853f);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .bo{position:relative;display:inline-block}
-  .bo svg{position:absolute;left:50%;top:52%;width:.62em;height:.62em;transform:translate(-50%,-50%)}
+  .brand{display:inline-flex;align-items:center;gap:8px;font-size:23px;line-height:1;text-decoration:none}
+  .brand .lg{height:1.35em;width:auto;display:block}
 
   /* ---------- Botões ---------- */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--violet);color:var(--ink);text-decoration:none;border:0;cursor:pointer;
@@ -102,7 +99,7 @@
   .nav a.login:hover{color:var(--ink)}
 
   /* ---------- HERO ---------- */
-  .hero{padding:18px 0 56px}
+  .hero{padding:18px 0 56px;overflow-x:clip}
   .hero-grid{display:grid;gap:34px;align-items:center}
   .hero h1{font-size:clamp(46px,10.5vw,92px);line-height:.98;max-width:13ch}
   .hero .lead{color:#c9c4d4}
@@ -113,7 +110,11 @@
   .cta-or{align-self:center;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
 
   .observatory{position:relative;max-width:560px;width:100%;margin:0 auto}
-  .observatory::before{content:"";position:absolute;inset:6% 6% auto;aspect-ratio:1/1;border-radius:50%;background:radial-gradient(circle,rgba(139,114,201,.20),transparent 68%);filter:blur(20px)}
+  .observatory::before{content:"";position:absolute;inset:-8% -8% auto;aspect-ratio:1/1;border-radius:50%;
+    background:radial-gradient(circle,rgba(241,205,120,.55) 0%,rgba(190,110,255,.60) 38%,rgba(120,60,230,.42) 52%,rgba(90,40,200,.18) 62%,transparent 72%);filter:blur(30px);animation:glow 6s ease-in-out infinite}
+  .observatory::after{content:"";position:absolute;inset:22% 22% auto;aspect-ratio:1/1;border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle,rgba(246,226,173,.20),transparent 65%);filter:blur(14px)}
+  @keyframes glow{0%,100%{opacity:.85;transform:scale(1)}50%{opacity:1;transform:scale(1.04)}}
   .wheel{position:relative;aspect-ratio:1/1;max-width:100%}
   .wheel svg{width:100%;height:100%;animation:wheelIn 1.4s var(--ease) both}
   @keyframes wheelIn{from{opacity:0;transform:rotate(-8deg) scale(.96)}to{opacity:1;transform:none}}
@@ -236,6 +237,13 @@
   .orbit-art{position:relative;width:100%;max-width:180px;aspect-ratio:1/1;margin:0 auto}
   .orbit-art svg{width:100%;height:100%}
   .quiz-cta > div:first-child{position:relative;z-index:1}
+  .vs-panel .h2{max-width:16ch}
+  .quiz-cta.vs-panel{padding-bottom:38px}
+  .vs-panel .quiz-art{bottom:-170px;opacity:.55}
+  .vs-lead{font-size:16.5px;margin-top:14px}
+  .vs-panel .vs{background:rgba(9,8,18,.55);backdrop-filter:blur(2px)}
+  .truth-one{max-width:760px}
+  .truth-one .truth-card{display:grid;gap:4px 28px;align-items:center}
   .quiz-art{position:absolute;z-index:0;left:50%;bottom:-80px;width:480px;transform:translateX(-40%);opacity:.8;pointer-events:none;mix-blend-mode:screen;
     -webkit-mask-image:radial-gradient(closest-side at 64% 46%,#000 52%,transparent 100%);mask-image:radial-gradient(closest-side at 64% 46%,#000 52%,transparent 100%)}
   .quiz-art img{display:block;width:100%;height:auto}
@@ -400,7 +408,7 @@
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     .js .reveal{opacity:1;transform:none;transition:none}
-    .wheel svg,.q-anim,.q-loading .orbit-art svg{animation:none}
+    .wheel svg,.q-anim,.q-loading .orbit-art svg,.observatory::before{animation:none}
     .btn,.sticky{transition:none}
     .offer-timer .dot,.live-dot{animation:none}
   }
@@ -454,7 +462,6 @@
     .offer-pair .offer{padding:26px 12px 16px;border-radius:20px}
     .offer-tag{font-size:9.5px;padding:5px 9px;letter-spacing:.08em;top:-11px}
     .offer .brand,.love-title{font-size:21px;gap:6px}
-    .offer .brand .mk{width:.85em;height:1.05em}
     .love-title .glyph{font-size:17px}
     .offer-pair .offer-sub{display:none}
     .offer-list{gap:7px;margin:12px 0;padding:12px 0}
@@ -517,20 +524,21 @@
     .quiz-cta{grid-template-columns:1.3fr .7fr;padding:56px 52px}
     .offer{padding:46px 44px 34px}
     .offer-pair .offer{padding:44px 36px 32px}
-    .truth{grid-template-columns:1.3fr 1fr;align-items:start}
+    .truth{grid-template-columns:1fr}
+    .truth-one .truth-card{grid-template-columns:auto 1fr}
+    .truth-one .seal{grid-row:span 2;margin-bottom:0}
     .truth-card{padding:44px 40px}
   }
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="lgGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e2ad"/><stop offset=".6" stop-color="#d6b56e"/><stop offset="1" stop-color="#a8853f"/></linearGradient></defs></svg>
 
 <div class="topbar"><span class="js-timer-wrap">Por tempo limitado: <b class="js-timer">32:00</b> · </span>Seu mapa astral completo, explicado pelo Seu Guia<span class="tb-extra"> · 7 dias de garantia</span></div>
 
 <nav class="nav" aria-label="Topo">
   <div class="wrap">
     <a class="brand" href="#" aria-label="Astarot">
-      <svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span>
+      <img class="lg" src="img/logo.webp" alt="Astarot" width="700" height="148">
     </a>
     <a class="login js-app-link" href="#" hidden>Já comprei · Entrar</a>
   </div>
@@ -695,19 +703,22 @@
   </div>
 </section>
 
-<!-- ================= 6. QUIZ CTA ================= -->
-<section style="padding-top:0">
+<!-- ================= 6. TUDO EM UM SÓ LUGAR ================= -->
+<section style="padding-top:0" id="comparativo">
   <div class="wrap">
-    <div class="quiz-cta reveal">
+    <div class="quiz-cta vs-panel reveal">
       <div>
-        <span class="eyebrow">Em menos de 1 minuto</span>
-        <h2 class="h2">Descubra <em>por onde começar.</em></h2>
-        <ul class="quiz-points">
-          <li><i>1</i><span><b>Responda 5 perguntas rápidas</b> sobre o que você quer entender agora.</span></li>
-          <li><i>2</i><span><b>Veja o seu ponto de partida</b> dentro do app.</span></li>
-          <li><i>3</i><span><b>Comece no seu ritmo</b>, pela parte que mais faz sentido para você.</span></li>
-        </ul>
-        <button type="button" class="btn js-quiz" style="margin-top:26px">Fazer o teste</button>
+        <span class="eyebrow">Tudo em um só lugar</span>
+        <h2 class="h2">O que você procura <em>em vários sites,</em> aqui está junto.</h2>
+        <p class="lead vs-lead">Quem procura por aí encontra <strong>um site para o mapa, outro para o Tarot, um app só para a Lua</strong> e textos genéricos que servem para qualquer pessoa. Achar tudo junto, com cálculo de verdade e uma leitura que faça sentido para você, é raro. O Astarot reúne tudo isso.</p>
+        <div class="vs" role="table" aria-label="Comparação: por aí e no Astarot">
+        <div class="vs-row vs-head" role="row"><span role="columnheader">Por aí</span><span role="columnheader">No Astarot</span></div>
+        <div class="vs-row" role="row"><span role="cell">Um site para cada coisa</span><span role="cell">Mapa, Lua, Tarot, numerologia, sonhos e amor juntos</span></div>
+        <div class="vs-row" role="row"><span role="cell">Texto pronto por signo</span><span role="cell">Leituras feitas a partir do seu mapa</span></div>
+        <div class="vs-row" role="row"><span role="cell">Termos técnicos difíceis</span><span role="cell">O Seu Guia traduz em linguagem simples</span></div>
+        <div class="vs-row" role="row"><span role="cell">Previsão igual para todo mundo</span><span role="cell">Posições do céu calculadas com precisão</span></div>
+      </div>
+        <p class="vs-foot">Seu mapa e seus sonhos ficam só na sua conta. Não vendemos dados.</p>
       </div>
       <div class="quiz-art" aria-hidden="true"><img src="img/astrolabio.webp" alt="" loading="lazy" width="800" height="1000"></div>
       <template id="orbitTpl"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="92" stroke="#f5f1ea" stroke-opacity=".12"/><circle cx="100" cy="100" r="64" stroke="#f5f1ea" stroke-opacity=".10" stroke-dasharray="2 5"/><circle cx="100" cy="100" r="36" stroke="#f5f1ea" stroke-opacity=".14"/><ellipse cx="100" cy="100" rx="92" ry="34" transform="rotate(-22 100 100)" stroke="#c58bcf" stroke-opacity=".35"/><circle cx="185" cy="66" r="5" fill="#d6b56e"/><circle cx="46" cy="148" r="3" fill="#c58bcf"/><circle cx="100" cy="100" r="9" fill="#f5f1ea" fill-opacity=".9"/></svg></template>
@@ -724,7 +735,7 @@
     <div class="offer-pair">
     <article class="offer reveal" id="plano">
       <span class="offer-tag">Pagamento único</span>
-      <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
+      <span class="brand"><img class="lg" src="img/logo.webp" alt="Astarot" width="700" height="148"></span>
       <p class="offer-sub">Tudo o que você precisa para conhecer e acompanhar o seu céu.</p>
       <ul class="offer-list">
         <li><span class="g" aria-hidden="true">☉&#xFE0E;</span><span><b>Mapa astral completo</b><span class="d">: planetas, Ascendente, Meio do Céu, casas e aspectos, com Placidus, Whole Sign ou Equal</span></span></li>
@@ -784,19 +795,7 @@
 
 <!-- ================= 8. GARANTIA + CUIDADO ================= -->
 <section style="padding-top:0">
-  <div class="wrap truth">
-    <div class="truth-card vs-card reveal">
-      <h3>Tudo em um só lugar</h3>
-      <p>Quem procura por aí encontra <strong>um site para o mapa, outro para o Tarot, um app só para a Lua</strong> e textos genéricos que servem para qualquer pessoa. Achar tudo junto, com cálculo de verdade e uma leitura que faça sentido para você, é raro. O Astarot reúne tudo isso.</p>
-      <div class="vs" role="table" aria-label="Comparação: por aí e no Astarot">
-        <div class="vs-row vs-head" role="row"><span role="columnheader">Por aí</span><span role="columnheader">No Astarot</span></div>
-        <div class="vs-row" role="row"><span role="cell">Um site para cada coisa</span><span role="cell">Mapa, Lua, Tarot, numerologia, sonhos e amor juntos</span></div>
-        <div class="vs-row" role="row"><span role="cell">Texto pronto por signo</span><span role="cell">Leituras feitas a partir do seu mapa</span></div>
-        <div class="vs-row" role="row"><span role="cell">Termos técnicos difíceis</span><span role="cell">O Seu Guia traduz em linguagem simples</span></div>
-        <div class="vs-row" role="row"><span role="cell">Previsão igual para todo mundo</span><span role="cell">Posições do céu calculadas com precisão</span></div>
-      </div>
-      <p class="vs-foot">Seu mapa e seus sonhos ficam só na sua conta. Não vendemos dados.</p>
-    </div>
+  <div class="wrap truth truth-one">
     <div class="truth-card reveal">
       <div class="seal" aria-hidden="true"><div><b>7</b><small>dias</small></div></div>
       <h3>Garantia incondicional de 7 dias</h3>
@@ -838,7 +837,7 @@
 
 <footer>
   <div class="wrap">
-    <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
+    <span class="brand"><img class="lg" src="img/logo.webp" alt="Astarot" width="700" height="148"></span>
     <nav class="f-links" aria-label="Links institucionais">
       <a href="privacidade.html">Política de Privacidade</a>
       <a href="termos.html">Termos de Uso</a>
@@ -858,7 +857,7 @@
 <!-- ================= QUIZ ================= -->
 <div class="quiz" id="quizBox" role="dialog" aria-modal="true" aria-label="Descubra por onde começar no Astarot">
   <div class="quiz-top">
-    <span class="brand"><svg class="mk" viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C16.5 8.5 18 11 23 12C18 13 16.5 15.5 16 23C15.5 15.5 14 13 9 12C14 11 15.5 8.5 16 1Z" fill="url(#lgGold)"/><path d="M6 26A10 10 0 0 0 26 26A13 13 0 0 1 6 26Z" fill="url(#lgGold)"/></svg><span class="bw">ASTAR<span class="bo">O<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C12.7 8 16 11.3 23.5 12C16 12.7 12.7 16 12 23.5C11.3 16 8 12.7 .5 12C8 11.3 11.3 8 12 .5Z" fill="url(#lgGold)"/></svg></span>T</span></span>
+    <span class="brand"><img class="lg" src="img/logo.webp" alt="Astarot" width="700" height="148"></span>
     <div class="q-progress"><i id="qBar"></i></div>
     <button class="q-close" type="button" id="qClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>

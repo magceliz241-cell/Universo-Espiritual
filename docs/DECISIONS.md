@@ -365,3 +365,20 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   (`public/tarot/`, 78 cartas, ~2,7 MB, carregadas sob demanda). Escaneamentos de um repositório MIT; só o traço é
   aproveitado e a marca da gráfica é recortada. Script reproduzível: `scripts/build-tarot-art.mjs`.
 - Landing: logo novo e telas do app recapturadas no visual novo (e2e 65/65).
+
+## Ajustes pós-criativos (2026-10-03)
+
+- **Logo dos criativos:** o "ASTAROT" com floreios no A e no R (fonte de desenho próprio, não existe pronta)
+  recortado da capa, recolorido no dourado do app e usado como imagem com transparência (`public/brand/astarot-logo.webp`,
+  `landing/img/logo.webp`).
+- **App mais perto dos criativos, sem copiar:** leitura do mapa em blocos ("O que o seu mapa revela", "Seus pontos
+  fortes", "Seus desafios", "No amor"; prompt `natal_summary@3`) e a seção "O essencial do seu mapa" (Sol, Lua e
+  Ascendente com uma explicação curta e os temas do signo, da base editorial). Mantida a paleta dourada (sem a roda
+  multicolorida dos criativos).
+- **Landing:** o bloco "Descubra por onde começar" virou o comparativo "Tudo em um só lugar" (o teste continua no
+  topo e embaixo dos planos); garantia em cartão único; brilho saturado (dourado/roxo, pulsando devagar) atrás do
+  mapa do topo; a roda de exemplo regenerada com as cores novas.
+- **Cowork:** nova Etapa 6.0 para conferir os produtos Astarot e Astarot Love já criados na Cakto (entregável ainda
+  pendente). Etapa 3 avisa que o Guilherme pode já ter criado o projeto do app na Vercel.
+- **Login com Google:** plano em `docs/PLANO_LOGIN_GOOGLE.md` (sem mudança no banco; botão atrás de
+  `NEXT_PUBLIC_GOOGLE_AUTH`).

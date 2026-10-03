@@ -34,24 +34,22 @@ export function Mark({ className, size = 28 }: { className?: string; size?: numb
 }
 
 /**
- * Logo "ASTAROT" em maiúsculas clássicas com degradê dourado e a estrela dentro do "O".
- * size: altura das letras em px.
+ * Logo "ASTAROT" dos criativos: desenho com floreios no A e no R e a estrela dentro do "O"
+ * (public/brand/astarot-logo.webp, recortado da capa e recolorido no dourado do app; 700×148).
+ * size: referência de altura das letras em px.
  */
 export function Logo({ size = 20, className }: { size?: number; className?: string }) {
+  const h = Math.round(size * 1.35);
   return (
-    <span
-      role="img"
-      aria-label="Astarot"
-      className={cn("font-brand inline-flex items-center leading-none tracking-[0.08em]", className)}
-      style={{ fontSize: size }}
-    >
-      <span aria-hidden className="text-gold-gradient">ASTAR</span>
-      <span aria-hidden className="relative inline-block">
-        <span className="text-gold-gradient">O</span>
-        <Sparkle size={Math.round(size * 0.62)} className="absolute left-1/2 top-[52%] -translate-x-1/2 -translate-y-1/2" />
-      </span>
-      <span aria-hidden className="text-gold-gradient">T</span>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element -- imagem estática pequena, com transparência
+    <img
+      src="/brand/astarot-logo.webp"
+      alt="Astarot"
+      width={Math.round((h * 700) / 148)}
+      height={h}
+      className={cn("inline-block select-none", className)}
+      draggable={false}
+    />
   );
 }
 
