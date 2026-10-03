@@ -122,6 +122,7 @@ try {
   const w1 = await webhook(purchase(email, "prod-main-e2e", `ord-${run}-1`));
   check("webhook compra → processed", w1.status === 200 && w1.body.outcomes?.[0]?.status === "processed", JSON.stringify(w1.body));
   await page.goto(`${APP}/`);
+  await page.waitForURL(`${APP}/perfil/nascimento`, { timeout: 10000 }).catch(() => {});
   check("com compra e sem mapa → primeira tela é a criação do mapa", page.url() === `${APP}/perfil/nascimento`, page.url());
   check("criação do mapa sem rolagem lateral (390px)", await noOverflow(page));
   await shot(page, "04-criar-mapa");
@@ -146,6 +147,11 @@ try {
   check("com mapa → dashboard", page.url() === `${APP}/`, page.url());
   check("dashboard: fase da Lua", await visible(page.getByText("Fase da Lua")));
   check("dashboard sem rolagem lateral (390px)", await noOverflow(page));
+  check("Guia em destaque no centro da navegação", (await page.locator("nav[aria-label='Navegação principal'] li").nth(2).innerText()).includes("Guia"));
+  await page.getByTestId("section-help").click();
+  check("botão ? mostra a dica do Início", await visible(page.getByRole("dialog", { name: "Como usar o Início" })));
+  await page.goto(`${APP}/mapa`);
+  check("aba com botão de voltar ao Início", (await page.getByTestId("section-back").getAttribute("href")) === "/");
 
   // 8. Seu Guia (IA simulada)
   await page.getByRole("button", { name: "Ver minha leitura" }).click();
