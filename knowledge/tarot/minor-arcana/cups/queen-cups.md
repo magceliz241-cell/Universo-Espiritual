@@ -4,19 +4,28 @@
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-maturidade interna, domínio receptivo/expressivo do naipe
+corte — maturidade receptiva, cuidado, domínio interno
 
-## Leitura combinada
-Combine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+empatia, acolhimento, intuição, cuidado emocional
+
+## Leitura geral
+A Rainha de Copas contempla uma taça fechada à beira-mar. Fala de empatia, intuição e cuidado emocional maduro.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Afeto acolhedor, escuta e compreensão.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Trabalho com cuidado, escuta e criatividade. Inteligência emocional.
+
+## Autoconhecimento
+Convida a cuidar das suas emoções com a mesma ternura que oferece aos outros.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar excesso de empatia, dependência emocional ou desconexão.
+
+## Ação/reflexão
+Pergunte a si: o que estou sentindo agora? Escreva sem julgar.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,31 @@
-# 3 de Copas
+# Três de Copas
 
 ## Naipe
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-desenvolvimento, colaboração, expansão
+expansão, primeiros frutos, colaboração
 
-## Leitura combinada
-Combine o tema de “desenvolvimento, colaboração, expansão” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+amizade, celebração, comunidade, alegria compartilhada
+
+## Leitura geral
+Três figuras brindam e dançam. O Três de Copas fala de amizade, celebração e da alegria de estar em grupo.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Momentos leves, amigos, festas. Pode indicar a influência do círculo social na relação.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Equipe unida, colaboração, celebração de resultados.
+
+## Autoconhecimento
+Convida a valorizar suas amizades e a rede que te sustenta.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar excessos, fofocas ou distância dos amigos.
+
+## Ação/reflexão
+Marque um encontro com alguém de quem você sente falta.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,31 @@
-# 2 de Copas
+# Dois de Copas
 
 ## Naipe
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-dualidade, escolha, equilíbrio, parceria
+escolha, parceria, equilíbrio entre dois polos
 
-## Leitura combinada
-Combine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+conexão, parceria, reciprocidade, encontro
+
+## Leitura geral
+Duas figuras trocam taças sob um símbolo de união. O Dois de Copas fala de conexão mútua e de parceria equilibrada.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Afinidade, reciprocidade, encontro entre iguais. Uma das cartas mais afetivas do baralho.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Parcerias de confiança, acordos, trabalho a dois.
+
+## Autoconhecimento
+Pergunta como você se relaciona quando há troca de verdade.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar desequilíbrio na troca, desencontro ou falta de comunicação.
+
+## Ação/reflexão
+Diga a alguém próximo algo que você admira nessa pessoa.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

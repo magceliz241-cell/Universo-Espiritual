@@ -6,17 +6,26 @@ Copas — emoção, vínculos, intimidade, imaginação, receptividade
 ## Número / corte
 início, potencial, semente
 
-## Leitura combinada
-Combine o tema de “início, potencial, semente” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+amor, abertura emocional, sensibilidade, novo sentimento
+
+## Leitura geral
+Uma taça transborda, sustentada por uma mão que sai da nuvem. O Ás de Copas fala de um novo sentimento, de abertura emocional e de afeto que quer fluir.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Início de um amor, renovação de afeto ou disponibilidade para sentir.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Trabalho com propósito emocional, criatividade, projetos que tocam pessoas.
+
+## Autoconhecimento
+Convida a perceber o que faz o seu coração se abrir.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar emoções represadas, dificuldade de receber afeto ou carência.
+
+## Ação/reflexão
+Faça um gesto de carinho sem esperar retorno e repare em como você se sente.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -4,19 +4,28 @@
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-movimento, busca, impulso, ação
+corte — ação, busca, movimento intenso
 
-## Leitura combinada
-Combine o tema de “movimento, busca, impulso, ação” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+romantismo, convite, idealismo, proposta
+
+## Leitura geral
+O Cavaleiro de Copas avança devagar segurando uma taça. Fala de romantismo, propostas e de seguir o coração.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Convites, declarações, romance. Pede atenção ao idealismo.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Propostas criativas, trabalho com arte ou cuidado.
+
+## Autoconhecimento
+Pergunta se você segue o coração ou uma ideia idealizada dele.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar promessas vazias, mudanças de humor ou fuga.
+
+## Ação/reflexão
+Faça um convite que você está adiando.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

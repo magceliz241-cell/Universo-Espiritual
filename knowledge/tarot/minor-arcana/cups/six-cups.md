@@ -1,22 +1,31 @@
-# 6 de Copas
+# Seis de Copas
 
 ## Naipe
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-movimento, ajuste, troca, transição
+harmonia, troca, recuperação
 
-## Leitura combinada
-Combine o tema de “movimento, ajuste, troca, transição” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+nostalgia, memória, inocência, gentileza
+
+## Leitura geral
+Uma criança oferece uma taça com flores a outra. O Seis de Copas fala de memórias, infância e gestos simples de carinho.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Retorno de alguém do passado, relação com ternura, lembranças afetivas.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Retomar projetos antigos, ambientes acolhedores, trabalho com crianças ou memória.
+
+## Autoconhecimento
+Pergunta o que do passado ainda te nutre e o que te prende.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar apego ao passado ou idealização de tempos antigos.
+
+## Ação/reflexão
+Lembre de uma memória feliz da infância e repita algo dela nesta semana.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm
