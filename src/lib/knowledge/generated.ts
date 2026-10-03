@@ -2,7 +2,7 @@
 // Rode: npm run build:knowledge
 import type { KnowledgeDoc } from "./types";
 
-export const KNOWLEDGE_VERSION = "2.0+96afbd50c9c4";
+export const KNOWLEDGE_VERSION = "2.0+f7c1d71bad22";
 
 export const DOCS: Record<string, KnowledgeDoc> = {
  "AI_CONTEXT_RULES": {
@@ -1025,7 +1025,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/cups/ace-cups",
   "domain": "tarot",
   "title": "Ás de Copas",
-  "content": "# Ás de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ninício, potencial, semente\n\n## Leitura combinada\nCombine o tema de “início, potencial, semente” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Ás de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ninício, potencial, semente\n\n## Palavras-chave\namor, abertura emocional, sensibilidade, novo sentimento\n\n## Leitura geral\nUma taça transborda, sustentada por uma mão que sai da nuvem. O Ás de Copas fala de um novo sentimento, de abertura emocional e de afeto que quer fluir.\n\n## Amor\nInício de um amor, renovação de afeto ou disponibilidade para sentir.\n\n## Trabalho/recursos\nTrabalho com propósito emocional, criatividade, projetos que tocam pessoas.\n\n## Autoconhecimento\nConvida a perceber o que faz o seu coração se abrir.\n\n## Reversa\nInvertida, pode indicar emoções represadas, dificuldade de receber afeto ou carência.\n\n## Ação/reflexão\nFaça um gesto de carinho sem esperar retorno e repare em como você se sente.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1033,8 +1033,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/eight-cups": {
   "id": "tarot/minor-arcana/cups/eight-cups",
   "domain": "tarot",
-  "title": "8 de Copas",
-  "content": "# 8 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nprocesso, repetição, desenvolvimento, movimento\n\n## Leitura combinada\nCombine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Oito de Copas",
+  "content": "# Oito de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmovimento, esforço, mudança de ritmo\n\n## Palavras-chave\npartida, busca de sentido, desapego, deixar para trás\n\n## Leitura geral\nUma figura se afasta de oito taças empilhadas, sob a Lua. O Oito de Copas fala de deixar o que já não satisfaz em busca de algo mais profundo.\n\n## Amor\nDistanciamento, fim de um ciclo afetivo ou busca de algo mais verdadeiro.\n\n## Trabalho/recursos\nAbandonar um caminho que já não faz sentido, mesmo que pareça estável.\n\n## Autoconhecimento\nPergunta o que você precisa deixar para encontrar sentido.\n\n## Reversa\nInvertida, pode indicar medo de partir, indecisão ou retorno ao que já não serve.\n\n## Ação/reflexão\nEscreva o que te prende a algo que já não te satisfaz.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1042,8 +1042,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/five-cups": {
   "id": "tarot/minor-arcana/cups/five-cups",
   "domain": "tarot",
-  "title": "5 de Copas",
-  "content": "# 5 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ntensão, mudança, desafio\n\n## Leitura combinada\nCombine o tema de “tensão, mudança, desafio” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Cinco de Copas",
+  "content": "# Cinco de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nconflito, perda, desafio que move\n\n## Palavras-chave\nperda, luto, decepção, foco no que se foi\n\n## Leitura geral\nUma figura de capa olha três taças derramadas, sem notar as duas de pé atrás de si. O Cinco de Copas fala de decepção e do tempo do luto.\n\n## Amor\nMágoa, arrependimento, fim que ainda dói. Pede acolher a tristeza sem esquecer o que ficou.\n\n## Trabalho/recursos\nFrustração com resultados, perda de oportunidade. Há algo a recuperar.\n\n## Autoconhecimento\nConvida a sentir a perda e depois virar o rosto para o que permanece.\n\n## Reversa\nInvertida, pode indicar o início da aceitação e da recuperação.\n\n## Ação/reflexão\nEscreva o que você perdeu e, ao lado, o que ainda está de pé.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1051,8 +1051,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/four-cups": {
   "id": "tarot/minor-arcana/cups/four-cups",
   "domain": "tarot",
-  "title": "4 de Copas",
-  "content": "# 4 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Leitura combinada\nCombine o tema de “estabilidade, pausa, estrutura” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Quatro de Copas",
+  "content": "# Quatro de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Palavras-chave\napatia, introspecção, oferta não vista, insatisfação\n\n## Leitura geral\nUma figura sentada sob a árvore ignora a taça que lhe é oferecida. O Quatro de Copas fala de tédio, introspecção e de não perceber o que está à frente.\n\n## Amor\nDesinteresse, rotina, oportunidades afetivas que passam despercebidas.\n\n## Trabalho/recursos\nDesmotivação, sensação de que nada atrai. Pede olhar de novo para as opções.\n\n## Autoconhecimento\nPergunta o que você está recusando sem perceber.\n\n## Reversa\nInvertida, pode indicar retomada de interesse e abertura para o novo.\n\n## Ação/reflexão\nAnote três coisas boas oferecidas a você recentemente que você deixou passar.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1061,7 +1061,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/cups/king-cups",
   "domain": "tarot",
   "title": "Rei de Copas",
-  "content": "# Rei de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmaturidade, direção, domínio consciente do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rei de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ncorte — maturidade ativa, liderança, domínio externo\n\n## Palavras-chave\nequilíbrio emocional, diplomacia, maturidade, calma\n\n## Leitura geral\nO Rei de Copas flutua sobre um mar agitado, sereno. Fala de equilíbrio emocional e de conduzir sentimentos com maturidade.\n\n## Amor\nEstabilidade emocional, apoio, compreensão.\n\n## Trabalho/recursos\nLiderança calma, diplomacia, mediação.\n\n## Autoconhecimento\nPergunta como você equilibra razão e emoção.\n\n## Reversa\nInvertida, pode indicar emoções reprimidas, manipulação ou instabilidade.\n\n## Ação/reflexão\nNuma conversa tensa, nomeie a emoção antes de argumentar.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1070,7 +1070,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/cups/knight-cups",
   "domain": "tarot",
   "title": "Cavaleiro de Copas",
-  "content": "# Cavaleiro de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmovimento, busca, impulso, ação\n\n## Leitura combinada\nCombine o tema de “movimento, busca, impulso, ação” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Cavaleiro de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ncorte — ação, busca, movimento intenso\n\n## Palavras-chave\nromantismo, convite, idealismo, proposta\n\n## Leitura geral\nO Cavaleiro de Copas avança devagar segurando uma taça. Fala de romantismo, propostas e de seguir o coração.\n\n## Amor\nConvites, declarações, romance. Pede atenção ao idealismo.\n\n## Trabalho/recursos\nPropostas criativas, trabalho com arte ou cuidado.\n\n## Autoconhecimento\nPergunta se você segue o coração ou uma ideia idealizada dele.\n\n## Reversa\nInvertida, pode indicar promessas vazias, mudanças de humor ou fuga.\n\n## Ação/reflexão\nFaça um convite que você está adiando.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1078,8 +1078,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/nine-cups": {
   "id": "tarot/minor-arcana/cups/nine-cups",
   "domain": "tarot",
-  "title": "9 de Copas",
-  "content": "# 9 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmaturação, autonomia, resultado próximo\n\n## Leitura combinada\nCombine o tema de “maturação, autonomia, resultado próximo” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Nove de Copas",
+  "content": "# Nove de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nquase completo, intensidade, resultado próximo\n\n## Palavras-chave\nsatisfação, desejo realizado, contentamento, prazer\n\n## Leitura geral\nUma figura satisfeita sentada diante de nove taças. O Nove de Copas é conhecido como a carta do desejo realizado.\n\n## Amor\nContentamento, prazer, satisfação emocional.\n\n## Trabalho/recursos\nResultados que agradam, conforto, reconhecimento pessoal.\n\n## Autoconhecimento\nConvida a reconhecer o que já te satisfaz e a saborear.\n\n## Reversa\nInvertida, pode indicar satisfação superficial, excesso ou desejo que não preenche.\n\n## Ação/reflexão\nAnote um desejo que se realizou e agradeça por ele.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1088,7 +1088,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/cups/page-cups",
   "domain": "tarot",
   "title": "Pajem de Copas",
-  "content": "# Pajem de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\naprendizado, mensagem, curiosidade, início de expressão\n\n## Leitura combinada\nCombine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Pajem de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ncorte — aprendizado, curiosidade, mensagem\n\n## Palavras-chave\nsensibilidade, criatividade, mensagem afetiva, curiosidade emocional\n\n## Leitura geral\nO Pajem de Copas olha um peixe que sai da taça. Fala de surpresas emocionais, imaginação e sensibilidade.\n\n## Amor\nMensagem afetiva, flerte, sentimentos novos e tímidos.\n\n## Trabalho/recursos\nIdeias criativas, intuição no trabalho, propostas inesperadas.\n\n## Autoconhecimento\nConvida a ouvir sua sensibilidade sem vergonha.\n\n## Reversa\nInvertida, pode indicar imaturidade emocional, insegurança ou bloqueio criativo.\n\n## Ação/reflexão\nEscreva, desenhe ou cante algo sem objetivo, só para expressar o que sente.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1097,7 +1097,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/cups/queen-cups",
   "domain": "tarot",
   "title": "Rainha de Copas",
-  "content": "# Rainha de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmaturidade interna, domínio receptivo/expressivo do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rainha de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ncorte — maturidade receptiva, cuidado, domínio interno\n\n## Palavras-chave\nempatia, acolhimento, intuição, cuidado emocional\n\n## Leitura geral\nA Rainha de Copas contempla uma taça fechada à beira-mar. Fala de empatia, intuição e cuidado emocional maduro.\n\n## Amor\nAfeto acolhedor, escuta e compreensão.\n\n## Trabalho/recursos\nTrabalho com cuidado, escuta e criatividade. Inteligência emocional.\n\n## Autoconhecimento\nConvida a cuidar das suas emoções com a mesma ternura que oferece aos outros.\n\n## Reversa\nInvertida, pode indicar excesso de empatia, dependência emocional ou desconexão.\n\n## Ação/reflexão\nPergunte a si: o que estou sentindo agora? Escreva sem julgar.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1105,8 +1105,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/seven-cups": {
   "id": "tarot/minor-arcana/cups/seven-cups",
   "domain": "tarot",
-  "title": "7 de Copas",
-  "content": "# 7 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\navaliação, estratégia, teste\n\n## Leitura combinada\nCombine o tema de “avaliação, estratégia, teste” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Sete de Copas",
+  "content": "# Sete de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\navaliação, persistência, prova\n\n## Palavras-chave\nfantasias, opções, ilusão, escolha difícil\n\n## Leitura geral\nSete taças flutuam nas nuvens, cada uma com um conteúdo diferente. O Sete de Copas fala de muitas opções, sonhos e ilusões.\n\n## Amor\nIdealização, dúvida entre caminhos, expectativas pouco realistas.\n\n## Trabalho/recursos\nMuitas ideias, pouca definição. Pede escolher uma e testar.\n\n## Autoconhecimento\nConvida a separar desejo real de fantasia.\n\n## Reversa\nInvertida, pode indicar clareza depois da confusão e foco renovado.\n\n## Ação/reflexão\nEntre suas opções atuais, escolha uma e faça um teste prático.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1114,8 +1114,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/six-cups": {
   "id": "tarot/minor-arcana/cups/six-cups",
   "domain": "tarot",
-  "title": "6 de Copas",
-  "content": "# 6 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nmovimento, ajuste, troca, transição\n\n## Leitura combinada\nCombine o tema de “movimento, ajuste, troca, transição” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Seis de Copas",
+  "content": "# Seis de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nharmonia, troca, recuperação\n\n## Palavras-chave\nnostalgia, memória, inocência, gentileza\n\n## Leitura geral\nUma criança oferece uma taça com flores a outra. O Seis de Copas fala de memórias, infância e gestos simples de carinho.\n\n## Amor\nRetorno de alguém do passado, relação com ternura, lembranças afetivas.\n\n## Trabalho/recursos\nRetomar projetos antigos, ambientes acolhedores, trabalho com crianças ou memória.\n\n## Autoconhecimento\nPergunta o que do passado ainda te nutre e o que te prende.\n\n## Reversa\nInvertida, pode indicar apego ao passado ou idealização de tempos antigos.\n\n## Ação/reflexão\nLembre de uma memória feliz da infância e repita algo dela nesta semana.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1123,8 +1123,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/ten-cups": {
   "id": "tarot/minor-arcana/cups/ten-cups",
   "domain": "tarot",
-  "title": "10 de Copas",
-  "content": "# 10 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nculminação, carga, conclusão de ciclo\n\n## Leitura combinada\nCombine o tema de “culminação, carga, conclusão de ciclo” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dez de Copas",
+  "content": "# Dez de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nconclusão, ápice, fim de ciclo\n\n## Palavras-chave\nharmonia, família, plenitude emocional, lar\n\n## Leitura geral\nUma família celebra sob um arco-íris de dez taças. O Dez de Copas fala de harmonia, lar e plenitude afetiva.\n\n## Amor\nRelação estável e feliz, sentido de família, valores compartilhados.\n\n## Trabalho/recursos\nAmbiente de trabalho harmonioso, equilíbrio entre vida e trabalho.\n\n## Autoconhecimento\nPergunta o que significa lar e pertencimento para você.\n\n## Reversa\nInvertida, pode indicar desarmonia, expectativas idealizadas de família ou distância emocional.\n\n## Ação/reflexão\nFaça algo para fortalecer um vínculo familiar ou de amizade próxima.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1132,8 +1132,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/three-cups": {
   "id": "tarot/minor-arcana/cups/three-cups",
   "domain": "tarot",
-  "title": "3 de Copas",
-  "content": "# 3 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ndesenvolvimento, colaboração, expansão\n\n## Leitura combinada\nCombine o tema de “desenvolvimento, colaboração, expansão” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Três de Copas",
+  "content": "# Três de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nexpansão, primeiros frutos, colaboração\n\n## Palavras-chave\namizade, celebração, comunidade, alegria compartilhada\n\n## Leitura geral\nTrês figuras brindam e dançam. O Três de Copas fala de amizade, celebração e da alegria de estar em grupo.\n\n## Amor\nMomentos leves, amigos, festas. Pode indicar a influência do círculo social na relação.\n\n## Trabalho/recursos\nEquipe unida, colaboração, celebração de resultados.\n\n## Autoconhecimento\nConvida a valorizar suas amizades e a rede que te sustenta.\n\n## Reversa\nInvertida, pode indicar excessos, fofocas ou distância dos amigos.\n\n## Ação/reflexão\nMarque um encontro com alguém de quem você sente falta.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1141,8 +1141,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/cups/two-cups": {
   "id": "tarot/minor-arcana/cups/two-cups",
   "domain": "tarot",
-  "title": "2 de Copas",
-  "content": "# 2 de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\ndualidade, escolha, equilíbrio, parceria\n\n## Leitura combinada\nCombine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dois de Copas",
+  "content": "# Dois de Copas\n\n## Naipe\nCopas — emoção, vínculos, intimidade, imaginação, receptividade\n\n## Número / corte\nescolha, parceria, equilíbrio entre dois polos\n\n## Palavras-chave\nconexão, parceria, reciprocidade, encontro\n\n## Leitura geral\nDuas figuras trocam taças sob um símbolo de união. O Dois de Copas fala de conexão mútua e de parceria equilibrada.\n\n## Amor\nAfinidade, reciprocidade, encontro entre iguais. Uma das cartas mais afetivas do baralho.\n\n## Trabalho/recursos\nParcerias de confiança, acordos, trabalho a dois.\n\n## Autoconhecimento\nPergunta como você se relaciona quando há troca de verdade.\n\n## Reversa\nInvertida, pode indicar desequilíbrio na troca, desencontro ou falta de comunicação.\n\n## Ação/reflexão\nDiga a alguém próximo algo que você admira nessa pessoa.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1158,7 +1158,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/pentacles/ace-pentacles",
   "domain": "tarot",
   "title": "Ás de Ouros",
-  "content": "# Ás de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ninício, potencial, semente\n\n## Leitura combinada\nCombine o tema de “início, potencial, semente” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Ás de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ninício, potencial, semente\n\n## Palavras-chave\noportunidade concreta, prosperidade, semente material, segurança\n\n## Leitura geral\nUma mão oferece uma moeda sobre um jardim. O Ás de Ouros fala de uma oportunidade concreta e de começos sólidos.\n\n## Amor\nRelação com base estável, gestos concretos de cuidado.\n\n## Trabalho/recursos\nNova oportunidade de trabalho, renda ou projeto.\n\n## Autoconhecimento\nConvida a cuidar do corpo e das bases da vida.\n\n## Reversa\nInvertida, pode indicar oportunidade perdida ou má gestão.\n\n## Ação/reflexão\nEscolha um pequeno investimento de tempo ou dinheiro em você.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1166,8 +1166,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/eight-pentacles": {
   "id": "tarot/minor-arcana/pentacles/eight-pentacles",
   "domain": "tarot",
-  "title": "8 de Ouros",
-  "content": "# 8 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nprocesso, repetição, desenvolvimento, movimento\n\n## Leitura combinada\nCombine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Oito de Ouros",
+  "content": "# Oito de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmovimento, esforço, mudança de ritmo\n\n## Palavras-chave\ndedicação, aprendizado, prática, aprimoramento\n\n## Leitura geral\nUm artesão trabalha moeda por moeda. O Oito de Ouros fala de dedicação e prática.\n\n## Amor\nInvestir na relação com atenção.\n\n## Trabalho/recursos\nAperfeiçoamento, estudo, foco.\n\n## Autoconhecimento\nPergunta em que você quer se aprimorar.\n\n## Reversa\nInvertida, pode indicar perfeccionismo ou desmotivação.\n\n## Ação/reflexão\nPratique uma habilidade por 20 minutos.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1175,8 +1175,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/five-pentacles": {
   "id": "tarot/minor-arcana/pentacles/five-pentacles",
   "domain": "tarot",
-  "title": "5 de Ouros",
-  "content": "# 5 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ntensão, mudança, desafio\n\n## Leitura combinada\nCombine o tema de “tensão, mudança, desafio” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Cinco de Ouros",
+  "content": "# Cinco de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nconflito, perda, desafio que move\n\n## Palavras-chave\ndificuldade, escassez, exclusão, ajuda disponível\n\n## Leitura geral\nDuas figuras passam no frio diante de uma janela iluminada. O Cinco de Ouros fala de dificuldade e de não perceber a ajuda disponível.\n\n## Amor\nSensação de abandono ou de falta.\n\n## Trabalho/recursos\nDificuldades financeiras, insegurança.\n\n## Autoconhecimento\nConvida a pedir ajuda.\n\n## Reversa\nInvertida, pode indicar recuperação ou fim de dificuldade.\n\n## Ação/reflexão\nPeça ajuda a alguém para uma questão concreta.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1184,8 +1184,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/four-pentacles": {
   "id": "tarot/minor-arcana/pentacles/four-pentacles",
   "domain": "tarot",
-  "title": "4 de Ouros",
-  "content": "# 4 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Leitura combinada\nCombine o tema de “estabilidade, pausa, estrutura” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Quatro de Ouros",
+  "content": "# Quatro de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Palavras-chave\nsegurança, controle, economia, apego\n\n## Leitura geral\nUma figura segura moedas junto ao corpo. O Quatro de Ouros fala de segurança e também de apego.\n\n## Amor\nPossessividade ou medo de perder.\n\n## Trabalho/recursos\nEconomia, estabilidade, cautela financeira.\n\n## Autoconhecimento\nPergunta o que você segura por medo.\n\n## Reversa\nInvertida, pode indicar generosidade ou gastos excessivos.\n\n## Ação/reflexão\nDoe algo que você não usa mais.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1194,7 +1194,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/pentacles/king-pentacles",
   "domain": "tarot",
   "title": "Rei de Ouros",
-  "content": "# Rei de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmaturidade, direção, domínio consciente do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rei de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ncorte — maturidade ativa, liderança, domínio externo\n\n## Palavras-chave\nprosperidade, segurança, liderança prática, realização\n\n## Leitura geral\nO Rei de Ouros no trono cercado de abundância. Fala de prosperidade e liderança prática.\n\n## Amor\nSegurança e estabilidade.\n\n## Trabalho/recursos\nSucesso, gestão de recursos.\n\n## Autoconhecimento\nPergunta como você constrói segurança.\n\n## Reversa\nInvertida, pode indicar materialismo ou rigidez.\n\n## Ação/reflexão\nRevise suas finanças do mês.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1203,7 +1203,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/pentacles/knight-pentacles",
   "domain": "tarot",
   "title": "Cavaleiro de Ouros",
-  "content": "# Cavaleiro de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmovimento, busca, impulso, ação\n\n## Leitura combinada\nCombine o tema de “movimento, busca, impulso, ação” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Cavaleiro de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ncorte — ação, busca, movimento intenso\n\n## Palavras-chave\nconstância, responsabilidade, trabalho, método\n\n## Leitura geral\nO Cavaleiro de Ouros segue devagar e firme. Fala de constância e responsabilidade.\n\n## Amor\nRelação estável e confiável.\n\n## Trabalho/recursos\nTrabalho constante, método.\n\n## Autoconhecimento\nPergunta onde você precisa de mais constância.\n\n## Reversa\nInvertida, pode indicar estagnação ou tédio.\n\n## Ação/reflexão\nMantenha uma rotina por sete dias.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1211,8 +1211,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/nine-pentacles": {
   "id": "tarot/minor-arcana/pentacles/nine-pentacles",
   "domain": "tarot",
-  "title": "9 de Ouros",
-  "content": "# 9 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmaturação, autonomia, resultado próximo\n\n## Leitura combinada\nCombine o tema de “maturação, autonomia, resultado próximo” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Nove de Ouros",
+  "content": "# Nove de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nquase completo, intensidade, resultado próximo\n\n## Palavras-chave\nautonomia, conforto, conquista, independência\n\n## Leitura geral\nUma figura elegante num jardim abundante. O Nove de Ouros fala de independência e conforto conquistado.\n\n## Amor\nAutonomia na relação, amor próprio.\n\n## Trabalho/recursos\nEstabilidade financeira, conquista pessoal.\n\n## Autoconhecimento\nConvida a desfrutar do que conquistou.\n\n## Reversa\nInvertida, pode indicar dependência ou excesso.\n\n## Ação/reflexão\nDê a si um momento de prazer.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1221,7 +1221,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/pentacles/page-pentacles",
   "domain": "tarot",
   "title": "Pajem de Ouros",
-  "content": "# Pajem de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\naprendizado, mensagem, curiosidade, início de expressão\n\n## Leitura combinada\nCombine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Pajem de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ncorte — aprendizado, curiosidade, mensagem\n\n## Palavras-chave\nestudo, planejamento, oportunidade, curiosidade prática\n\n## Leitura geral\nO Pajem de Ouros contempla a moeda. Fala de aprendizado prático e novas oportunidades.\n\n## Amor\nInteresse sério, construção lenta.\n\n## Trabalho/recursos\nEstudo, curso, nova oportunidade.\n\n## Autoconhecimento\nConvida a aprender algo útil.\n\n## Reversa\nInvertida, pode indicar procrastinação.\n\n## Ação/reflexão\nInscreva-se num curso curto.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1230,7 +1230,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/pentacles/queen-pentacles",
   "domain": "tarot",
   "title": "Rainha de Ouros",
-  "content": "# Rainha de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmaturidade interna, domínio receptivo/expressivo do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rainha de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ncorte — maturidade receptiva, cuidado, domínio interno\n\n## Palavras-chave\ncuidado prático, abundância, acolhimento, praticidade\n\n## Leitura geral\nA Rainha de Ouros segura a moeda com cuidado. Fala de cuidado prático e abundância.\n\n## Amor\nAfeto demonstrado em cuidado.\n\n## Trabalho/recursos\nGestão prática, equilíbrio trabalho-casa.\n\n## Autoconhecimento\nConvida a cuidar do corpo e do lar.\n\n## Reversa\nInvertida, pode indicar desequilíbrio ou descuido.\n\n## Ação/reflexão\nArrume um canto da casa.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1238,8 +1238,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/seven-pentacles": {
   "id": "tarot/minor-arcana/pentacles/seven-pentacles",
   "domain": "tarot",
-  "title": "7 de Ouros",
-  "content": "# 7 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\navaliação, estratégia, teste\n\n## Leitura combinada\nCombine o tema de “avaliação, estratégia, teste” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Sete de Ouros",
+  "content": "# Sete de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\navaliação, persistência, prova\n\n## Palavras-chave\npaciência, avaliação, investimento, espera\n\n## Leitura geral\nUma figura observa a planta crescer. O Sete de Ouros fala de paciência e avaliação do que foi plantado.\n\n## Amor\nAvaliar a relação, investimento de longo prazo.\n\n## Trabalho/recursos\nResultados ainda em crescimento, revisão.\n\n## Autoconhecimento\nConvida a ter paciência com seus processos.\n\n## Reversa\nInvertida, pode indicar frustração ou impaciência.\n\n## Ação/reflexão\nAvalie um projeto e decida se continua.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1247,8 +1247,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/six-pentacles": {
   "id": "tarot/minor-arcana/pentacles/six-pentacles",
   "domain": "tarot",
-  "title": "6 de Ouros",
-  "content": "# 6 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nmovimento, ajuste, troca, transição\n\n## Leitura combinada\nCombine o tema de “movimento, ajuste, troca, transição” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Seis de Ouros",
+  "content": "# Seis de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nharmonia, troca, recuperação\n\n## Palavras-chave\ngenerosidade, troca, equilíbrio, ajuda\n\n## Leitura geral\nUma figura distribui moedas com uma balança. O Seis de Ouros fala de generosidade e trocas justas.\n\n## Amor\nEquilíbrio entre dar e receber.\n\n## Trabalho/recursos\nApoio, parcerias, distribuição justa.\n\n## Autoconhecimento\nPergunta como você dá e recebe.\n\n## Reversa\nInvertida, pode indicar desequilíbrio ou dependência.\n\n## Ação/reflexão\nAjude alguém sem esperar nada em troca.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1256,8 +1256,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/ten-pentacles": {
   "id": "tarot/minor-arcana/pentacles/ten-pentacles",
   "domain": "tarot",
-  "title": "10 de Ouros",
-  "content": "# 10 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nculminação, carga, conclusão de ciclo\n\n## Leitura combinada\nCombine o tema de “culminação, carga, conclusão de ciclo” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dez de Ouros",
+  "content": "# Dez de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nconclusão, ápice, fim de ciclo\n\n## Palavras-chave\nlegado, estabilidade, família, riqueza duradoura\n\n## Leitura geral\nUma família e animais diante de uma casa. O Dez de Ouros fala de legado e segurança duradoura.\n\n## Amor\nCompromisso, família, estabilidade.\n\n## Trabalho/recursos\nPatrimônio, empresas familiares.\n\n## Autoconhecimento\nPergunta o que você quer construir para durar.\n\n## Reversa\nInvertida, pode indicar conflitos familiares ou instabilidade.\n\n## Ação/reflexão\nEscreva o legado que você quer deixar.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1265,8 +1265,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/three-pentacles": {
   "id": "tarot/minor-arcana/pentacles/three-pentacles",
   "domain": "tarot",
-  "title": "3 de Ouros",
-  "content": "# 3 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ndesenvolvimento, colaboração, expansão\n\n## Leitura combinada\nCombine o tema de “desenvolvimento, colaboração, expansão” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Três de Ouros",
+  "content": "# Três de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nexpansão, primeiros frutos, colaboração\n\n## Palavras-chave\ncolaboração, habilidade, aprendizado, trabalho em equipe\n\n## Leitura geral\nUm artesão trabalha numa catedral, consultado por outras pessoas. O Três de Ouros fala de colaboração e trabalho bem feito.\n\n## Amor\nConstruir a relação juntos, cooperação.\n\n## Trabalho/recursos\nTrabalho em equipe, reconhecimento da competência.\n\n## Autoconhecimento\nConvida a valorizar suas habilidades.\n\n## Reversa\nInvertida, pode indicar falta de cooperação ou trabalho mal feito.\n\n## Ação/reflexão\nPeça opinião a alguém sobre um trabalho seu.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1274,8 +1274,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/pentacles/two-pentacles": {
   "id": "tarot/minor-arcana/pentacles/two-pentacles",
   "domain": "tarot",
-  "title": "2 de Ouros",
-  "content": "# 2 de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\ndualidade, escolha, equilíbrio, parceria\n\n## Leitura combinada\nCombine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dois de Ouros",
+  "content": "# Dois de Ouros\n\n## Naipe\nOuros — corpo, recursos, trabalho, estabilidade, materialização\n\n## Número / corte\nescolha, parceria, equilíbrio entre dois polos\n\n## Palavras-chave\nequilíbrio, adaptação, malabarismo, prioridades\n\n## Leitura geral\nUma figura equilibra duas moedas em movimento. O Dois de Ouros fala de adaptar-se e equilibrar demandas.\n\n## Amor\nConciliar relação e outras áreas da vida.\n\n## Trabalho/recursos\nMúltiplas tarefas, gestão do tempo.\n\n## Autoconhecimento\nPergunta como você distribui sua energia.\n\n## Reversa\nInvertida, pode indicar sobrecarga ou desorganização.\n\n## Ação/reflexão\nOrganize suas tarefas em ordem de prioridade.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1291,7 +1291,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/swords/ace-swords",
   "domain": "tarot",
   "title": "Ás de Espadas",
-  "content": "# Ás de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ninício, potencial, semente\n\n## Leitura combinada\nCombine o tema de “início, potencial, semente” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Ás de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ninício, potencial, semente\n\n## Palavras-chave\nclareza, verdade, ideia nova, decisão\n\n## Leitura geral\nUma espada coroada surge da nuvem. O Ás de Espadas fala de clareza mental, verdade e de uma ideia que corta a confusão.\n\n## Amor\nConversa honesta, clareza sobre o que se quer.\n\n## Trabalho/recursos\nIdeia nova, decisão firme, comunicação objetiva.\n\n## Autoconhecimento\nConvida a buscar a verdade, mesmo que desconfortável.\n\n## Reversa\nInvertida, pode indicar confusão, mal-entendidos ou palavras usadas para ferir.\n\n## Ação/reflexão\nEscreva em uma frase o que você realmente pensa sobre uma situação.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1299,8 +1299,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/eight-swords": {
   "id": "tarot/minor-arcana/swords/eight-swords",
   "domain": "tarot",
-  "title": "8 de Espadas",
-  "content": "# 8 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nprocesso, repetição, desenvolvimento, movimento\n\n## Leitura combinada\nCombine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Oito de Espadas",
+  "content": "# Oito de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmovimento, esforço, mudança de ritmo\n\n## Palavras-chave\nrestrição, medo, sensação de prisão, limites mentais\n\n## Leitura geral\nUma figura vendada cercada de espadas, mas com espaço para sair. O Oito de Espadas fala de prisões mentais.\n\n## Amor\nSensação de não ter saída, medo de agir.\n\n## Trabalho/recursos\nLimitações percebidas, falta de opções aparente.\n\n## Autoconhecimento\nPergunta quais limites são reais e quais são crença.\n\n## Reversa\nInvertida, pode indicar libertação e novas perspectivas.\n\n## Ação/reflexão\nListe três crenças que te limitam e uma prova contrária para cada.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1308,8 +1308,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/five-swords": {
   "id": "tarot/minor-arcana/swords/five-swords",
   "domain": "tarot",
-  "title": "5 de Espadas",
-  "content": "# 5 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ntensão, mudança, desafio\n\n## Leitura combinada\nCombine o tema de “tensão, mudança, desafio” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Cinco de Espadas",
+  "content": "# Cinco de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nconflito, perda, desafio que move\n\n## Palavras-chave\nconflito, derrota, vitória vazia, tensão\n\n## Leitura geral\nUma figura recolhe espadas enquanto outras se afastam. O Cinco de Espadas fala de vitórias que custam caro.\n\n## Amor\nDiscussões em que ninguém ganha, orgulho, distância.\n\n## Trabalho/recursos\nCompetição desleal, conflitos internos.\n\n## Autoconhecimento\nConvida a pensar se vale a pena vencer a qualquer custo.\n\n## Reversa\nInvertida, pode indicar reconciliação ou desejo de encerrar o conflito.\n\n## Ação/reflexão\nPense numa discussão recente: o que você ganharia cedendo?",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1317,8 +1317,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/four-swords": {
   "id": "tarot/minor-arcana/swords/four-swords",
   "domain": "tarot",
-  "title": "4 de Espadas",
-  "content": "# 4 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Leitura combinada\nCombine o tema de “estabilidade, pausa, estrutura” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Quatro de Espadas",
+  "content": "# Quatro de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Palavras-chave\ndescanso, recuperação, pausa, recolhimento\n\n## Leitura geral\nUma figura repousa sobre um túmulo, com três espadas na parede. O Quatro de Espadas fala de descanso e recuperação.\n\n## Amor\nPausa na relação, tempo para pensar.\n\n## Trabalho/recursos\nDescanso necessário, férias, planejamento silencioso.\n\n## Autoconhecimento\nPergunta quando você descansou de verdade pela última vez.\n\n## Reversa\nInvertida, pode indicar esgotamento ou retorno à atividade.\n\n## Ação/reflexão\nReserve um período sem tarefas nesta semana.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1327,7 +1327,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/swords/king-swords",
   "domain": "tarot",
   "title": "Rei de Espadas",
-  "content": "# Rei de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmaturidade, direção, domínio consciente do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rei de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ncorte — maturidade ativa, liderança, domínio externo\n\n## Palavras-chave\nautoridade intelectual, razão, justiça, decisão\n\n## Leitura geral\nO Rei de Espadas, sentado, segura a espada erguida. Fala de autoridade intelectual e decisões racionais.\n\n## Amor\nRacionalidade, conversas objetivas.\n\n## Trabalho/recursos\nLiderança, estratégia, decisões éticas.\n\n## Autoconhecimento\nPergunta como você equilibra razão e empatia.\n\n## Reversa\nInvertida, pode indicar manipulação ou rigidez.\n\n## Ação/reflexão\nTome uma decisão pendente com base em fatos.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1336,7 +1336,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/swords/knight-swords",
   "domain": "tarot",
   "title": "Cavaleiro de Espadas",
-  "content": "# Cavaleiro de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmovimento, busca, impulso, ação\n\n## Leitura combinada\nCombine o tema de “movimento, busca, impulso, ação” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Cavaleiro de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ncorte — ação, busca, movimento intenso\n\n## Palavras-chave\npressa, ação direta, ambição, objetividade\n\n## Leitura geral\nO Cavaleiro de Espadas avança em velocidade. Fala de ação rápida e objetiva.\n\n## Amor\nFranqueza, impulsividade nas palavras.\n\n## Trabalho/recursos\nDeterminação, pressa para resolver.\n\n## Autoconhecimento\nPergunta se a pressa ajuda ou atropela.\n\n## Reversa\nInvertida, pode indicar agressividade ou falta de direção.\n\n## Ação/reflexão\nAntes de responder a algo, conte até dez.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1344,8 +1344,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/nine-swords": {
   "id": "tarot/minor-arcana/swords/nine-swords",
   "domain": "tarot",
-  "title": "9 de Espadas",
-  "content": "# 9 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmaturação, autonomia, resultado próximo\n\n## Leitura combinada\nCombine o tema de “maturação, autonomia, resultado próximo” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Nove de Espadas",
+  "content": "# Nove de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nquase completo, intensidade, resultado próximo\n\n## Palavras-chave\nansiedade, preocupação, insônia, medo\n\n## Leitura geral\nUma figura acorda com as mãos no rosto, nove espadas na parede. O Nove de Espadas fala de ansiedade e preocupação.\n\n## Amor\nMedos, ciúmes ou preocupações que tiram o sono.\n\n## Trabalho/recursos\nEstresse, pensamentos repetitivos.\n\n## Autoconhecimento\nConvida a separar o medo do fato e a pedir apoio.\n\n## Reversa\nInvertida, pode indicar alívio ou ansiedade guardada.\n\n## Ação/reflexão\nAntes de dormir, escreva suas preocupações em um papel e deixe-as ali.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1354,7 +1354,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/swords/page-swords",
   "domain": "tarot",
   "title": "Pajem de Espadas",
-  "content": "# Pajem de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\naprendizado, mensagem, curiosidade, início de expressão\n\n## Leitura combinada\nCombine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Pajem de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ncorte — aprendizado, curiosidade, mensagem\n\n## Palavras-chave\ncuriosidade, vigilância, novas ideias, comunicação\n\n## Leitura geral\nO Pajem de Espadas segura a espada atento ao vento. Fala de curiosidade intelectual e vigilância.\n\n## Amor\nConversas, curiosidade, atenção aos sinais.\n\n## Trabalho/recursos\nAprendizado, pesquisa, novas ideias.\n\n## Autoconhecimento\nConvida a pensar antes de falar.\n\n## Reversa\nInvertida, pode indicar fofoca, desatenção ou pressa.\n\n## Ação/reflexão\nFaça uma pergunta que você evita fazer.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1363,7 +1363,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/swords/queen-swords",
   "domain": "tarot",
   "title": "Rainha de Espadas",
-  "content": "# Rainha de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmaturidade interna, domínio receptivo/expressivo do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rainha de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ncorte — maturidade receptiva, cuidado, domínio interno\n\n## Palavras-chave\nclareza, independência, franqueza, discernimento\n\n## Leitura geral\nA Rainha de Espadas ergue a espada com olhar firme. Fala de clareza, independência e franqueza.\n\n## Amor\nComunicação honesta, limites claros.\n\n## Trabalho/recursos\nAnálise lúcida, imparcialidade.\n\n## Autoconhecimento\nConvida a dizer a verdade com cuidado.\n\n## Reversa\nInvertida, pode indicar frieza ou dureza excessiva.\n\n## Ação/reflexão\nDiga a alguém algo verdadeiro com gentileza.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1371,8 +1371,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/seven-swords": {
   "id": "tarot/minor-arcana/swords/seven-swords",
   "domain": "tarot",
-  "title": "7 de Espadas",
-  "content": "# 7 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\navaliação, estratégia, teste\n\n## Leitura combinada\nCombine o tema de “avaliação, estratégia, teste” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Sete de Espadas",
+  "content": "# Sete de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\navaliação, persistência, prova\n\n## Palavras-chave\nestratégia, esperteza, segredo, desonestidade\n\n## Leitura geral\nUma figura leva espadas escondida. O Sete de Espadas fala de estratégia, mas também de segredos e atalhos.\n\n## Amor\nFalta de transparência, segredos ou jogo de estratégia.\n\n## Trabalho/recursos\nAgir com estratégia; cuidado com atalhos e desonestidade.\n\n## Autoconhecimento\nConvida a perceber onde você está se enganando.\n\n## Reversa\nInvertida, pode indicar confissão, verdade que aparece ou arrependimento.\n\n## Ação/reflexão\nPergunte-se: há algo que eu esteja escondendo de mim?",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1380,8 +1380,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/six-swords": {
   "id": "tarot/minor-arcana/swords/six-swords",
   "domain": "tarot",
-  "title": "6 de Espadas",
-  "content": "# 6 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nmovimento, ajuste, troca, transição\n\n## Leitura combinada\nCombine o tema de “movimento, ajuste, troca, transição” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Seis de Espadas",
+  "content": "# Seis de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nharmonia, troca, recuperação\n\n## Palavras-chave\ntransição, travessia, mudança, seguir em frente\n\n## Leitura geral\nUma barca leva figuras para águas calmas. O Seis de Espadas fala de transição e de deixar a turbulência para trás.\n\n## Amor\nSeguir em frente, superar uma fase difícil.\n\n## Trabalho/recursos\nMudança de emprego, projeto ou cidade. Transição gradual.\n\n## Autoconhecimento\nPergunta o que você leva na travessia e o que deixa.\n\n## Reversa\nInvertida, pode indicar resistência à mudança ou bagagem emocional.\n\n## Ação/reflexão\nEscreva o que fica para trás nesta transição.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1389,8 +1389,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/ten-swords": {
   "id": "tarot/minor-arcana/swords/ten-swords",
   "domain": "tarot",
-  "title": "10 de Espadas",
-  "content": "# 10 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nculminação, carga, conclusão de ciclo\n\n## Leitura combinada\nCombine o tema de “culminação, carga, conclusão de ciclo” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dez de Espadas",
+  "content": "# Dez de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nconclusão, ápice, fim de ciclo\n\n## Palavras-chave\nfim, encerramento doloroso, fundo do poço, recomeço\n\n## Leitura geral\nUma figura deitada com dez espadas nas costas, o sol nascendo ao fundo. O Dez de Espadas fala de um fim definitivo e da chance de recomeçar.\n\n## Amor\nFim de um ciclo afetivo, sensação de derrota.\n\n## Trabalho/recursos\nFim de um projeto, ruptura. O pior já passou.\n\n## Autoconhecimento\nPergunta o que precisa terminar para você se reerguer.\n\n## Reversa\nInvertida, pode indicar recuperação lenta ou resistência ao fim.\n\n## Ação/reflexão\nEscreva o que você aprendeu com um fim doloroso.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1398,8 +1398,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/three-swords": {
   "id": "tarot/minor-arcana/swords/three-swords",
   "domain": "tarot",
-  "title": "3 de Espadas",
-  "content": "# 3 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ndesenvolvimento, colaboração, expansão\n\n## Leitura combinada\nCombine o tema de “desenvolvimento, colaboração, expansão” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Três de Espadas",
+  "content": "# Três de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nexpansão, primeiros frutos, colaboração\n\n## Palavras-chave\ndor, mágoa, tristeza, verdade dolorosa\n\n## Leitura geral\nUm coração atravessado por três espadas sob a chuva. O Três de Espadas fala de dor emocional e de verdades que machucam.\n\n## Amor\nMágoa, decepção, separação ou ciúme. Pede acolher a dor.\n\n## Trabalho/recursos\nCrítica dura, frustração, conflito na equipe.\n\n## Autoconhecimento\nConvida a reconhecer a dor sem negá-la nem se definir por ela.\n\n## Reversa\nInvertida, pode indicar recuperação, perdão ou dor guardada.\n\n## Ação/reflexão\nEscreva o que te machucou e o que você precisa para cuidar disso.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1407,8 +1407,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/swords/two-swords": {
   "id": "tarot/minor-arcana/swords/two-swords",
   "domain": "tarot",
-  "title": "2 de Espadas",
-  "content": "# 2 de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\ndualidade, escolha, equilíbrio, parceria\n\n## Leitura combinada\nCombine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dois de Espadas",
+  "content": "# Dois de Espadas\n\n## Naipe\nEspadas — pensamento, comunicação, conflito, decisão, discernimento\n\n## Número / corte\nescolha, parceria, equilíbrio entre dois polos\n\n## Palavras-chave\nimpasse, indecisão, bloqueio, equilíbrio frágil\n\n## Leitura geral\nUma figura vendada cruza duas espadas diante do peito. O Dois de Espadas fala de impasse e de evitar enxergar uma decisão.\n\n## Amor\nIndecisão, evitar uma conversa, sentimentos bloqueados.\n\n## Trabalho/recursos\nDecisão adiada, falta de informação, neutralidade forçada.\n\n## Autoconhecimento\nPergunta o que você não quer ver.\n\n## Reversa\nInvertida, pode indicar que a decisão se aproxima ou que a confusão aumenta.\n\n## Ação/reflexão\nListe os prós e contras de uma decisão adiada e marque uma data para decidir.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1424,7 +1424,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/wands/ace-wands",
   "domain": "tarot",
   "title": "Ás de Paus",
-  "content": "# Ás de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ninício, potencial, semente\n\n## Leitura combinada\nCombine o tema de “início, potencial, semente” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Ás de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ninício, potencial, semente\n\n## Palavras-chave\nfaísca, inspiração, vontade de começar, energia criativa\n\n## Leitura geral\nUma mão sai da nuvem segurando um bastão que brota: é a centelha de um começo. O Ás de Paus fala de entusiasmo, de uma ideia que pede ação e da energia disponível para criar.\n\n## Amor\nAtração, desejo renovado ou vontade de tomar iniciativa. Pode ser o início de algo novo ou um sopro de vida numa relação.\n\n## Trabalho/recursos\nIdeia nova, projeto que quer nascer, motivação para começar. Bom momento para dar o primeiro passo prático.\n\n## Autoconhecimento\nPergunta o que acende você de verdade e o que tem apagado esse fogo.\n\n## Reversa\nInvertida, a faísca pode existir sem combustível: ideias que não saem do lugar, atraso ou desânimo. Vale perguntar o que falta para começar.\n\n## Ação/reflexão\nEscreva uma ideia que te anima e faça hoje a menor ação possível em direção a ela.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1432,8 +1432,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/eight-wands": {
   "id": "tarot/minor-arcana/wands/eight-wands",
   "domain": "tarot",
-  "title": "8 de Paus",
-  "content": "# 8 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nprocesso, repetição, desenvolvimento, movimento\n\n## Leitura combinada\nCombine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Oito de Paus",
+  "content": "# Oito de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmovimento, esforço, mudança de ritmo\n\n## Palavras-chave\nvelocidade, notícias, movimento, avanço rápido\n\n## Leitura geral\nOito bastões cruzam o céu em voo. O Oito de Paus fala de movimento rápido, mensagens e coisas que se aceleram.\n\n## Amor\nMensagens, encontros rápidos, sentimentos que avançam depressa.\n\n## Trabalho/recursos\nAndamento acelerado, resultados chegando, viagens e comunicação intensa.\n\n## Autoconhecimento\nConvida a perceber como você lida com a velocidade: aproveita ou se atropela?\n\n## Reversa\nInvertida, pode indicar atrasos, mensagens desencontradas ou pressa que gera erro.\n\n## Ação/reflexão\nResolva hoje três pendências rápidas que estão travando algo maior.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1441,8 +1441,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/five-wands": {
   "id": "tarot/minor-arcana/wands/five-wands",
   "domain": "tarot",
-  "title": "5 de Paus",
-  "content": "# 5 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ntensão, mudança, desafio\n\n## Leitura combinada\nCombine o tema de “tensão, mudança, desafio” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Cinco de Paus",
+  "content": "# Cinco de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nconflito, perda, desafio que move\n\n## Palavras-chave\ncompetição, atrito, disputa, energia caótica\n\n## Leitura geral\nCinco figuras brandem bastões umas contra as outras, sem ferir ninguém de verdade. O Cinco de Paus fala de atritos, disputas de ego e do caos de muitas vontades ao mesmo tempo.\n\n## Amor\nDiscussões, competição ou ruído na comunicação. Pede atenção para o que é briga de verdade e o que é só disputa por espaço.\n\n## Trabalho/recursos\nConcorrência, divergência em equipe, muitas opiniões. Pode ser estímulo ou desgaste.\n\n## Autoconhecimento\nPergunta como você reage quando precisa disputar espaço.\n\n## Reversa\nInvertida, pode indicar conflito evitado, acordo após disputa ou tensão que fica escondida.\n\n## Ação/reflexão\nNuma discussão desta semana, repita com suas palavras o que a outra pessoa disse antes de responder.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1450,8 +1450,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/four-wands": {
   "id": "tarot/minor-arcana/wands/four-wands",
   "domain": "tarot",
-  "title": "4 de Paus",
-  "content": "# 4 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Leitura combinada\nCombine o tema de “estabilidade, pausa, estrutura” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Quatro de Paus",
+  "content": "# Quatro de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nestabilidade, pausa, estrutura\n\n## Palavras-chave\ncelebração, lar, estabilidade, comemoração\n\n## Leitura geral\nQuatro bastões formam um portal enfeitado e pessoas celebram ao fundo. O Quatro de Paus fala de um ponto de chegada alegre, de casa e de comunidade.\n\n## Amor\nMomento de celebração, compromisso, vida a dois ou encontros com família e amigos.\n\n## Trabalho/recursos\nMarco atingido, equipe em harmonia, ambiente de trabalho acolhedor.\n\n## Autoconhecimento\nConvida a reconhecer suas conquistas e a celebrar com quem você ama.\n\n## Reversa\nInvertida, pode indicar tensão em casa, celebração adiada ou sensação de não pertencer.\n\n## Ação/reflexão\nOrganize um encontro simples para comemorar algo que deu certo, mesmo pequeno.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1460,7 +1460,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/wands/king-wands",
   "domain": "tarot",
   "title": "Rei de Paus",
-  "content": "# Rei de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmaturidade, direção, domínio consciente do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rei de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ncorte — maturidade ativa, liderança, domínio externo\n\n## Palavras-chave\nvisão, liderança, ousadia, empreendedorismo\n\n## Leitura geral\nO Rei de Paus olha adiante com o bastão na mão. Fala de liderança visionária e de transformar ideias em realizações.\n\n## Amor\nRelação com projeto em comum, iniciativa e proteção.\n\n## Trabalho/recursos\nEmpreendedorismo, visão de longo prazo, liderar pelo exemplo.\n\n## Autoconhecimento\nPergunta como você usa sua capacidade de inspirar pessoas.\n\n## Reversa\nInvertida, pode indicar autoritarismo, impaciência ou expectativas altas demais.\n\n## Ação/reflexão\nEscreva sua visão para um projeto em uma frase e compartilhe com alguém.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1469,7 +1469,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/wands/knight-wands",
   "domain": "tarot",
   "title": "Cavaleiro de Paus",
-  "content": "# Cavaleiro de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmovimento, busca, impulso, ação\n\n## Leitura combinada\nCombine o tema de “movimento, busca, impulso, ação” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Cavaleiro de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ncorte — ação, busca, movimento intenso\n\n## Palavras-chave\nimpulso, aventura, paixão, ação rápida\n\n## Leitura geral\nO Cavaleiro de Paus avança num cavalo empinado. Fala de energia intensa, aventura e impulso.\n\n## Amor\nPaixão, intensidade, atração que chega rápido. Pede atenção à constância.\n\n## Trabalho/recursos\nAção rápida, mudanças, coragem para arriscar. Cuidado com a pressa.\n\n## Autoconhecimento\nPergunta onde a sua impulsividade ajuda e onde atrapalha.\n\n## Reversa\nInvertida, pode indicar precipitação, raiva ou energia que se dispersa.\n\n## Ação/reflexão\nAntes de uma decisão impulsiva, espere um dia e veja se a vontade continua.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1477,8 +1477,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/nine-wands": {
   "id": "tarot/minor-arcana/wands/nine-wands",
   "domain": "tarot",
-  "title": "9 de Paus",
-  "content": "# 9 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmaturação, autonomia, resultado próximo\n\n## Leitura combinada\nCombine o tema de “maturação, autonomia, resultado próximo” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Nove de Paus",
+  "content": "# Nove de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nquase completo, intensidade, resultado próximo\n\n## Palavras-chave\nresiliência, persistência, cautela, última etapa\n\n## Leitura geral\nUma figura ferida, mas de pé, segura um bastão diante de oito outros. O Nove de Paus fala de resistência e de estar perto do fim de um desafio.\n\n## Amor\nCautela depois de experiências difíceis, defesa emocional. Pergunta se a proteção ainda é necessária.\n\n## Trabalho/recursos\nCansaço da reta final, persistência. Falta pouco.\n\n## Autoconhecimento\nConvida a reconhecer sua força e a perceber quando a guarda alta já não serve.\n\n## Reversa\nInvertida, pode indicar exaustão, desconfiança excessiva ou vontade de desistir perto do fim.\n\n## Ação/reflexão\nNomeie a última etapa de algo difícil e peça ajuda para uma parte dela.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1487,7 +1487,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/wands/page-wands",
   "domain": "tarot",
   "title": "Pajem de Paus",
-  "content": "# Pajem de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\naprendizado, mensagem, curiosidade, início de expressão\n\n## Leitura combinada\nCombine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Pajem de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ncorte — aprendizado, curiosidade, mensagem\n\n## Palavras-chave\nentusiasmo, curiosidade, novidade, mensagem\n\n## Leitura geral\nO Pajem de Paus observa o bastão com interesse. Fala de entusiasmo de quem está começando, de curiosidade e de notícias.\n\n## Amor\nFlerte, interesse novo, energia jovem na relação.\n\n## Trabalho/recursos\nAprender algo novo, notícias sobre projetos, ideias frescas.\n\n## Autoconhecimento\nConvida a recuperar a curiosidade de iniciante.\n\n## Reversa\nInvertida, pode indicar falta de foco, ideias que não se sustentam ou impaciência.\n\n## Ação/reflexão\nSepare meia hora para aprender algo novo por pura curiosidade.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1496,7 +1496,7 @@ export const DOCS: Record<string, KnowledgeDoc> = {
   "id": "tarot/minor-arcana/wands/queen-wands",
   "domain": "tarot",
   "title": "Rainha de Paus",
-  "content": "# Rainha de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmaturidade interna, domínio receptivo/expressivo do naipe\n\n## Leitura combinada\nCombine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "content": "# Rainha de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ncorte — maturidade receptiva, cuidado, domínio interno\n\n## Palavras-chave\nconfiança, carisma, calor, determinação\n\n## Leitura geral\nA Rainha de Paus está no trono com um girassol e um gato preto. Fala de confiança, carisma e de uma presença calorosa e independente.\n\n## Amor\nAutoconfiança no amor, magnetismo, afeto generoso.\n\n## Trabalho/recursos\nLiderança calorosa, energia social, determinação.\n\n## Autoconhecimento\nConvida a ocupar espaço com confiança e calor.\n\n## Reversa\nInvertida, pode indicar insegurança, ciúme ou energia esgotada.\n\n## Ação/reflexão\nFaça hoje algo que exige confiança e observe como você se sente depois.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1504,8 +1504,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/seven-wands": {
   "id": "tarot/minor-arcana/wands/seven-wands",
   "domain": "tarot",
-  "title": "7 de Paus",
-  "content": "# 7 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\navaliação, estratégia, teste\n\n## Leitura combinada\nCombine o tema de “avaliação, estratégia, teste” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Sete de Paus",
+  "content": "# Sete de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\navaliação, persistência, prova\n\n## Palavras-chave\ndefesa, firmeza, convicção, sustentar posição\n\n## Leitura geral\nUma figura no alto defende-se de seis bastões que vêm de baixo. O Sete de Paus fala de sustentar uma posição diante de pressão.\n\n## Amor\nDefender seus limites ou a própria relação diante de opiniões externas. Pede firmeza sem se fechar.\n\n## Trabalho/recursos\nConcorrência forte, necessidade de defender ideias ou projetos. Persistência.\n\n## Autoconhecimento\nPergunta pelo que vale a pena lutar e o que é só teimosia.\n\n## Reversa\nInvertida, pode indicar cansaço de se defender, sensação de estar sem forças ou recuar por medo.\n\n## Ação/reflexão\nEscreva uma posição sua que você quer manter e o argumento mais simples para ela.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1513,8 +1513,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/six-wands": {
   "id": "tarot/minor-arcana/wands/six-wands",
   "domain": "tarot",
-  "title": "6 de Paus",
-  "content": "# 6 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nmovimento, ajuste, troca, transição\n\n## Leitura combinada\nCombine o tema de “movimento, ajuste, troca, transição” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Seis de Paus",
+  "content": "# Seis de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nharmonia, troca, recuperação\n\n## Palavras-chave\nreconhecimento, vitória, confiança, progresso\n\n## Leitura geral\nUma figura cavalga coroada de louros, cercada de pessoas. O Seis de Paus fala de reconhecimento público e de colher o resultado do esforço.\n\n## Amor\nTer o próprio valor reconhecido pelo outro, orgulho do vínculo, relação que se mostra.\n\n## Trabalho/recursos\nReconhecimento, promoção, resultados visíveis. Bom momento para mostrar o trabalho.\n\n## Autoconhecimento\nConvida a aceitar elogios e a reconhecer suas vitórias sem diminuí-las.\n\n## Reversa\nInvertida, pode indicar falta de reconhecimento, insegurança ou dependência da aprovação alheia.\n\n## Ação/reflexão\nAnote uma conquista recente e conte para alguém de confiança.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1522,8 +1522,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/ten-wands": {
   "id": "tarot/minor-arcana/wands/ten-wands",
   "domain": "tarot",
-  "title": "10 de Paus",
-  "content": "# 10 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nculminação, carga, conclusão de ciclo\n\n## Leitura combinada\nCombine o tema de “culminação, carga, conclusão de ciclo” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dez de Paus",
+  "content": "# Dez de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nconclusão, ápice, fim de ciclo\n\n## Palavras-chave\nsobrecarga, responsabilidade, peso, excesso de tarefas\n\n## Leitura geral\nUma figura carrega dez bastões com dificuldade. O Dez de Paus fala do peso de assumir tudo sem dividir com ninguém.\n\n## Amor\nRelação que pesa ou em que uma pessoa carrega quase tudo. Pede divisão de responsabilidades.\n\n## Trabalho/recursos\nExcesso de trabalho, acúmulo de funções, dificuldade de delegar.\n\n## Autoconhecimento\nPergunta o que você carrega por hábito e não por necessidade.\n\n## Reversa\nInvertida, pode indicar o momento de soltar parte do peso ou um colapso por excesso.\n\n## Ação/reflexão\nListe suas tarefas da semana e risque ou delegue duas.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1531,8 +1531,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/three-wands": {
   "id": "tarot/minor-arcana/wands/three-wands",
   "domain": "tarot",
-  "title": "3 de Paus",
-  "content": "# 3 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ndesenvolvimento, colaboração, expansão\n\n## Leitura combinada\nCombine o tema de “desenvolvimento, colaboração, expansão” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Três de Paus",
+  "content": "# Três de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nexpansão, primeiros frutos, colaboração\n\n## Palavras-chave\nexpansão, horizonte, espera ativa, perspectiva\n\n## Leitura geral\nUma figura observa navios no mar, de costas, como quem espera o retorno do que lançou. O Três de Paus fala de expansão e de ver os primeiros resultados ao longe.\n\n## Amor\nRelação que amplia horizontes, distância geográfica ou planos em comum que começam a ganhar forma.\n\n## Trabalho/recursos\nCrescimento, parcerias externas, comércio, viagens. Os esforços iniciais começam a dar retorno.\n\n## Autoconhecimento\nPergunta até onde você se permite enxergar e sonhar.\n\n## Reversa\nInvertida, pode indicar atrasos, frustração com a demora ou visão curta demais para o que se quer.\n\n## Ação/reflexão\nListe três coisas que você já colocou em movimento e confira o andamento de cada uma.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
@@ -1540,8 +1540,8 @@ export const DOCS: Record<string, KnowledgeDoc> = {
  "tarot/minor-arcana/wands/two-wands": {
   "id": "tarot/minor-arcana/wands/two-wands",
   "domain": "tarot",
-  "title": "2 de Paus",
-  "content": "# 2 de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\ndualidade, escolha, equilíbrio, parceria\n\n## Leitura combinada\nCombine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.\n\n## Amor\nUse como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.\n\n## Trabalho/recursos\nUse o naipe como contexto, sem transformar a carta em previsão financeira.\n\n## Reversa\nPode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.",
+  "title": "Dois de Paus",
+  "content": "# Dois de Paus\n\n## Naipe\nPaus — ação, criatividade, iniciativa, energia, projetos\n\n## Número / corte\nescolha, parceria, equilíbrio entre dois polos\n\n## Palavras-chave\nplanejamento, visão, decisão de rumo\n\n## Leitura geral\nUma figura segura o mundo nas mãos e olha o horizonte do alto de um castelo: é o momento de planejar. O Dois de Paus fala de escolher direção depois do primeiro impulso.\n\n## Amor\nDecisão sobre o futuro da relação ou sobre sair da zona de conforto afetiva. Pede conversa sobre planos.\n\n## Trabalho/recursos\nPlanejamento de longo prazo, escolha entre ficar no seguro ou expandir. Bom para traçar metas.\n\n## Autoconhecimento\nConvida a perceber se você está pensando grande ou apenas esperando.\n\n## Reversa\nInvertida, pode indicar medo de sair do conhecido, planos indefinidos ou excesso de análise.\n\n## Ação/reflexão\nDesenhe dois cenários para os próximos seis meses e escolha um passo que vale para os dois.",
   "sources": [
    "https://sacred-texts.com/tarot/pkt/index.htm"
   ]
