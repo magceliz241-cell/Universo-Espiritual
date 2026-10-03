@@ -6,6 +6,7 @@ import { Button, ButtonLink } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { publicEnv, supabaseConfigured } from "@/lib/env";
 import { createClient } from "@/lib/supabase/server";
+import { ClaimForm } from "./claim-form";
 
 export const metadata: Metadata = { title: "Acesso" };
 
@@ -36,10 +37,17 @@ export default async function AcessoPage() {
               <>Não há uma compra do Astarot ligada a esta conta.</>
             )}
           </p>
-          <ul className="mt-5 flex flex-col gap-3 text-sm leading-relaxed text-ink-2">
-            <li>
-              <span className="text-gold">·</span> Comprou com outro e-mail? Saia e crie a conta com o e-mail da compra.
-            </li>
+          {email ? (
+            <div className="mt-6 border-t border-line pt-5">
+              <h2 className="text-display text-[1.35rem]">Comprou com outro e-mail?</h2>
+              <p className="mb-4 mt-1 text-sm leading-relaxed text-ink-2">
+                Informe o e-mail usado no checkout. Enviamos um link para ele e, quando você confirmar, o acesso é
+                liberado nesta conta.
+              </p>
+              <ClaimForm />
+            </div>
+          ) : null}
+          <ul className="mt-6 flex flex-col gap-3 text-sm leading-relaxed text-ink-2">
             <li>
               <span className="text-gold">·</span> Acabou de comprar? A liberação costuma levar menos de um minuto.
               Atualize esta página.

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { Sparkle } from "@/components/brand/wordmark";
 import { MoonPhase } from "@/components/celestial/moon-phase";
 import { PlacementCard } from "@/components/dashboard/placement-card";
@@ -42,6 +43,8 @@ const STRIP: { id: MoonPhaseId; k: number; waxing: boolean; line: string }[] = [
 export default async function Dashboard() {
   const { db } = await requireMember();
   const [profile, self] = await Promise.all([getProfile(db), getSelfProfile(db)]);
+  // Primeira entrada: a primeira tela é a criação do mapa.
+  if (!self) redirect("/perfil/nascimento");
   const chart = self ? (await getOrCreateChart(db, self, DEFAULT_HOUSE_SYSTEM)).chart : null;
   const tz = self?.timezone ?? "America/Sao_Paulo";
   const southern = (self?.latitude ?? -15) < 0;

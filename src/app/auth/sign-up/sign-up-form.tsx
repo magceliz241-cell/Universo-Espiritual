@@ -20,7 +20,7 @@ export function SignUpForm() {
           Abra o e-mail e clique em <em>Confirmar meu e-mail</em>. Se não encontrar, procure no spam ou na aba
           Promoções. Depois é só entrar com sua senha.
         </p>
-        <Link href="/auth/login" className="text-sm text-ink underline underline-offset-4">
+        <Link href="/auth/login?metodo=email" className="text-sm text-ink underline underline-offset-4">
           Ir para o login
         </Link>
       </div>
@@ -44,7 +44,7 @@ export function SignUpForm() {
           {state.code === "already_registered" ? (
             <>
               {" "}
-              <Link href="/auth/login" className="underline underline-offset-4">
+              <Link href="/auth/login?metodo=email" className="underline underline-offset-4">
                 Entrar
               </Link>
             </>

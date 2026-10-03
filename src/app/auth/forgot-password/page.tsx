@@ -11,7 +11,7 @@ export default function ForgotPasswordPage() {
       title="Recuperar senha"
       subtitle="Enviaremos um link para você criar uma nova senha."
       footer={
-        <Link href="/auth/login" className="text-ink underline underline-offset-4">
+        <Link href="/auth/login?metodo=email" className="text-ink underline underline-offset-4">
           Voltar ao login
         </Link>
       }

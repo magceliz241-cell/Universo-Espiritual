@@ -110,3 +110,40 @@ export async function updatePasswordAction(_: AuthState, form: FormData): Promis
   }
   redirect("/");
 }
+
+/**
+ * Conta logada (ex.: Google) com e-mail diferente do da compra: pede a troca do e-mail da conta para o do checkout.
+ * O Supabase envia um link para esse e-mail; só depois da confirmação o e-mail muda e o gatilho
+ * link_memberships_on_confirm liga a compra a esta conta. Digitar o e-mail sozinho não libera nada.
+ */
+export async function claimPurchaseEmailAction(_: AuthState, form: FormData): Promise<AuthState> {
+  if (!supabaseConfigured()) return notConfigured;
+  const email = emailSchema.safeParse(form.get("email"));
+  if (!email.success) return { message: "Informe um e-mail válido.", code: "invalid_email" };
+
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getUser();
+  if (!data.user) return { message: "Sua sessão expirou. Entre de novo.", code: "no_session" };
+  if (data.user.email?.toLowerCase() === email.data) {
+    return { message: "Esse já é o e-mail desta conta.", code: "same_email", email: email.data };
+  }
+
+  const { error } = await supabase.auth.updateUser(
+    { email: email.data },
+    { emailRedirectTo: `${publicEnv.appUrl}/auth/confirm?next=/` },
+  );
+  if (error) {
+    if (error.code === "email_exists") {
+      return {
+        message: "Já existe uma conta com esse e-mail. Saia e entre com ele (se não lembrar a senha, use “Esqueci minha senha”).",
+        code: error.code,
+        email: email.data,
+      };
+    }
+    if (error.code === "over_email_send_rate_limit" || error.status === 429) {
+      return { message: "Muitos envios em pouco tempo. Tente de novo em alguns minutos.", code: "rate_limited", email: email.data };
+    }
+    return { message: "Não conseguimos enviar o e-mail agora. Tente novamente.", code: error.code ?? "error", email: email.data };
+  }
+  return { ok: true, code: "claim_sent", email: email.data };
+}
