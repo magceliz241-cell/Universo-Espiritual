@@ -1,22 +1,31 @@
-# 9 de Espadas
+# Nove de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-maturação, autonomia, resultado próximo
+quase completo, intensidade, resultado próximo
 
-## Leitura combinada
-Combine o tema de “maturação, autonomia, resultado próximo” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+ansiedade, preocupação, insônia, medo
+
+## Leitura geral
+Uma figura acorda com as mãos no rosto, nove espadas na parede. O Nove de Espadas fala de ansiedade e preocupação.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Medos, ciúmes ou preocupações que tiram o sono.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Estresse, pensamentos repetitivos.
+
+## Autoconhecimento
+Convida a separar o medo do fato e a pedir apoio.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar alívio ou ansiedade guardada.
+
+## Ação/reflexão
+Antes de dormir, escreva suas preocupações em um papel e deixe-as ali.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

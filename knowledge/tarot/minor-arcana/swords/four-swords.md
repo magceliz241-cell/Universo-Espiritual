@@ -1,4 +1,4 @@
-# 4 de Espadas
+# Quatro de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
@@ -6,17 +6,26 @@ Espadas — pensamento, comunicação, conflito, decisão, discernimento
 ## Número / corte
 estabilidade, pausa, estrutura
 
-## Leitura combinada
-Combine o tema de “estabilidade, pausa, estrutura” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+descanso, recuperação, pausa, recolhimento
+
+## Leitura geral
+Uma figura repousa sobre um túmulo, com três espadas na parede. O Quatro de Espadas fala de descanso e recuperação.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Pausa na relação, tempo para pensar.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Descanso necessário, férias, planejamento silencioso.
+
+## Autoconhecimento
+Pergunta quando você descansou de verdade pela última vez.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar esgotamento ou retorno à atividade.
+
+## Ação/reflexão
+Reserve um período sem tarefas nesta semana.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

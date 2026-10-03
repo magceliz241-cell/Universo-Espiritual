@@ -1,22 +1,31 @@
-# 3 de Espadas
+# Três de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-desenvolvimento, colaboração, expansão
+expansão, primeiros frutos, colaboração
 
-## Leitura combinada
-Combine o tema de “desenvolvimento, colaboração, expansão” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+dor, mágoa, tristeza, verdade dolorosa
+
+## Leitura geral
+Um coração atravessado por três espadas sob a chuva. O Três de Espadas fala de dor emocional e de verdades que machucam.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Mágoa, decepção, separação ou ciúme. Pede acolher a dor.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Crítica dura, frustração, conflito na equipe.
+
+## Autoconhecimento
+Convida a reconhecer a dor sem negá-la nem se definir por ela.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar recuperação, perdão ou dor guardada.
+
+## Ação/reflexão
+Escreva o que te machucou e o que você precisa para cuidar disso.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

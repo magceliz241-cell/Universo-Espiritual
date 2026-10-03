@@ -4,19 +4,28 @@
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-maturidade interna, domínio receptivo/expressivo do naipe
+corte — maturidade receptiva, cuidado, domínio interno
 
-## Leitura combinada
-Combine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+clareza, independência, franqueza, discernimento
+
+## Leitura geral
+A Rainha de Espadas ergue a espada com olhar firme. Fala de clareza, independência e franqueza.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Comunicação honesta, limites claros.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Análise lúcida, imparcialidade.
+
+## Autoconhecimento
+Convida a dizer a verdade com cuidado.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar frieza ou dureza excessiva.
+
+## Ação/reflexão
+Diga a alguém algo verdadeiro com gentileza.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

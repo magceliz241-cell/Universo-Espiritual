@@ -4,19 +4,28 @@
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-maturidade, direção, domínio consciente do naipe
+corte — maturidade ativa, liderança, domínio externo
 
-## Leitura combinada
-Combine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+autoridade intelectual, razão, justiça, decisão
+
+## Leitura geral
+O Rei de Espadas, sentado, segura a espada erguida. Fala de autoridade intelectual e decisões racionais.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Racionalidade, conversas objetivas.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Liderança, estratégia, decisões éticas.
+
+## Autoconhecimento
+Pergunta como você equilibra razão e empatia.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar manipulação ou rigidez.
+
+## Ação/reflexão
+Tome uma decisão pendente com base em fatos.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

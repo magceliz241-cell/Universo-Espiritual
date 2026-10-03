@@ -1,22 +1,31 @@
-# 6 de Espadas
+# Seis de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-movimento, ajuste, troca, transição
+harmonia, troca, recuperação
 
-## Leitura combinada
-Combine o tema de “movimento, ajuste, troca, transição” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+transição, travessia, mudança, seguir em frente
+
+## Leitura geral
+Uma barca leva figuras para águas calmas. O Seis de Espadas fala de transição e de deixar a turbulência para trás.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Seguir em frente, superar uma fase difícil.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Mudança de emprego, projeto ou cidade. Transição gradual.
+
+## Autoconhecimento
+Pergunta o que você leva na travessia e o que deixa.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar resistência à mudança ou bagagem emocional.
+
+## Ação/reflexão
+Escreva o que fica para trás nesta transição.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

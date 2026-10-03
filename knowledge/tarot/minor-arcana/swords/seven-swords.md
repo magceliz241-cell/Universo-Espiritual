@@ -1,22 +1,31 @@
-# 7 de Espadas
+# Sete de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-avaliação, estratégia, teste
+avaliação, persistência, prova
 
-## Leitura combinada
-Combine o tema de “avaliação, estratégia, teste” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+estratégia, esperteza, segredo, desonestidade
+
+## Leitura geral
+Uma figura leva espadas escondida. O Sete de Espadas fala de estratégia, mas também de segredos e atalhos.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Falta de transparência, segredos ou jogo de estratégia.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Agir com estratégia; cuidado com atalhos e desonestidade.
+
+## Autoconhecimento
+Convida a perceber onde você está se enganando.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar confissão, verdade que aparece ou arrependimento.
+
+## Ação/reflexão
+Pergunte-se: há algo que eu esteja escondendo de mim?
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm
