@@ -1,4 +1,5 @@
 import { BottomNav } from "@/components/shell/bottom-nav";
+import { SectionBar } from "@/components/shell/section-bar";
 import { TopBar } from "@/components/shell/top-bar";
 
 export default function AppLayout({ children }: LayoutProps<"/">) {
@@ -9,6 +10,7 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
       </a>
       <TopBar />
       <main id="conteudo" className="mx-auto w-full max-w-6xl flex-1 px-4 pb-28 pt-6 md:px-6 md:pb-16 md:pt-10">
+        <SectionBar />
         {children}
       </main>
       <BottomNav />
