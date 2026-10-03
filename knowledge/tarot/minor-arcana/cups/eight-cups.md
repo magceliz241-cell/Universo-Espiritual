@@ -1,22 +1,31 @@
-# 8 de Copas
+# Oito de Copas
 
 ## Naipe
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-processo, repetição, desenvolvimento, movimento
+movimento, esforço, mudança de ritmo
 
-## Leitura combinada
-Combine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+partida, busca de sentido, desapego, deixar para trás
+
+## Leitura geral
+Uma figura se afasta de oito taças empilhadas, sob a Lua. O Oito de Copas fala de deixar o que já não satisfaz em busca de algo mais profundo.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Distanciamento, fim de um ciclo afetivo ou busca de algo mais verdadeiro.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Abandonar um caminho que já não faz sentido, mesmo que pareça estável.
+
+## Autoconhecimento
+Pergunta o que você precisa deixar para encontrar sentido.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar medo de partir, indecisão ou retorno ao que já não serve.
+
+## Ação/reflexão
+Escreva o que te prende a algo que já não te satisfaz.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

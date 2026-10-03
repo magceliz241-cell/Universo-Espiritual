@@ -1,22 +1,31 @@
-# 5 de Espadas
+# Cinco de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-tensão, mudança, desafio
+conflito, perda, desafio que move
 
-## Leitura combinada
-Combine o tema de “tensão, mudança, desafio” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+conflito, derrota, vitória vazia, tensão
+
+## Leitura geral
+Uma figura recolhe espadas enquanto outras se afastam. O Cinco de Espadas fala de vitórias que custam caro.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Discussões em que ninguém ganha, orgulho, distância.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Competição desleal, conflitos internos.
+
+## Autoconhecimento
+Convida a pensar se vale a pena vencer a qualquer custo.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar reconciliação ou desejo de encerrar o conflito.
+
+## Ação/reflexão
+Pense numa discussão recente: o que você ganharia cedendo?
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -28,7 +28,7 @@ export default async function TarotPage({ searchParams }: PageProps<"/tarot">) {
   return (
     <div className="mx-auto max-w-3xl">
       <PageHeader eyebrow="Tarot Rider-Waite-Smith" title="Tarot">
-        Escolha uma tiragem, respire e tire as cartas. O Tarot aqui é um espelho para reflexão, não uma previsão.
+        Escolha uma tiragem, respire e tire as cartas. O Seu Guia traduz o que elas trazem para a sua pergunta, carta por carta.
       </PageHeader>
       <TarotTable spreads={spreads} initialSpread={initial} interpret={interpretTarot} />
     </div>

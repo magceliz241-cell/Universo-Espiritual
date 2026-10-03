@@ -4,19 +4,28 @@
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-maturidade interna, domínio receptivo/expressivo do naipe
+corte — maturidade receptiva, cuidado, domínio interno
 
-## Leitura combinada
-Combine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+cuidado prático, abundância, acolhimento, praticidade
+
+## Leitura geral
+A Rainha de Ouros segura a moeda com cuidado. Fala de cuidado prático e abundância.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Afeto demonstrado em cuidado.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Gestão prática, equilíbrio trabalho-casa.
+
+## Autoconhecimento
+Convida a cuidar do corpo e do lar.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar desequilíbrio ou descuido.
+
+## Ação/reflexão
+Arrume um canto da casa.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

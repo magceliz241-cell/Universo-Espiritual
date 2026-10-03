@@ -1,22 +1,31 @@
-# 7 de Copas
+# Sete de Copas
 
 ## Naipe
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-avaliação, estratégia, teste
+avaliação, persistência, prova
 
-## Leitura combinada
-Combine o tema de “avaliação, estratégia, teste” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+fantasias, opções, ilusão, escolha difícil
+
+## Leitura geral
+Sete taças flutuam nas nuvens, cada uma com um conteúdo diferente. O Sete de Copas fala de muitas opções, sonhos e ilusões.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Idealização, dúvida entre caminhos, expectativas pouco realistas.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Muitas ideias, pouca definição. Pede escolher uma e testar.
+
+## Autoconhecimento
+Convida a separar desejo real de fantasia.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar clareza depois da confusão e foco renovado.
+
+## Ação/reflexão
+Entre suas opções atuais, escolha uma e faça um teste prático.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

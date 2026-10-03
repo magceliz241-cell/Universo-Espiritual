@@ -41,11 +41,13 @@ export function TarotTable({
     start(async () => {
       setError(null);
       setRevealed(0);
-      const r = await drawAction(spreadId, question);
+      // Embaralha por pelo menos ~1,4 s enquanto o servidor sorteia (o CSS respeita prefers-reduced-motion).
+      const reduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const [r] = await Promise.all([drawAction(spreadId, question), new Promise((ok) => setTimeout(ok, reduced ? 0 : 1400))]);
       if (!r.ok) return setError(r.message);
       setResult(r);
-      // Revela uma a uma (o CSS respeita prefers-reduced-motion).
-      r.cards.forEach((_, i) => setTimeout(() => setRevealed((n) => Math.max(n, i + 1)), 450 + i * 550));
+      // Distribui e revela uma a uma, com uma pausa entre as cartas.
+      r.cards.forEach((_, i) => setTimeout(() => setRevealed((n) => Math.max(n, i + 1)), reduced ? 0 : 900 + i * 1000));
     });
 
   if (result) {
@@ -54,7 +56,7 @@ export function TarotTable({
       <div className="flex flex-col gap-10">
         <div className={cn("mx-auto grid w-full gap-4", result.cards.length === 1 ? "max-w-[220px]" : "max-w-[640px] grid-cols-3")}>
           {result.cards.map((c, i) => (
-            <figure key={c.cardId} className="flex flex-col items-center gap-3">
+            <figure key={c.cardId} className="tarot-deal flex flex-col items-center gap-3" style={{ animationDelay: `${i * 140}ms` }}>
               <div className="w-full [perspective:1200px]">
                 <div
                   className={cn(
@@ -65,7 +67,10 @@ export function TarotTable({
                   <div className="[backface-visibility:hidden]">
                     <CardBack />
                   </div>
-                  <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  <div
+                    className={cn("absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)]", i < revealed && "tarot-glow")}
+                    style={{ animationDelay: "320ms" }}
+                  >
                     <CardFace cardId={c.cardId} name={c.name} arcana={c.arcana} number={c.number} rank={c.rank} reversed={c.reversed} />
                   </div>
                 </div>
@@ -80,6 +85,13 @@ export function TarotTable({
             </figure>
           ))}
         </div>
+
+        {done && result.cards.some((c) => c.reversed) ? (
+          <p className="-mt-5 text-center text-xs leading-relaxed text-ink-3">
+            Cartas invertidas aparecem de cabeça para baixo de propósito: na tradição do Tarot, a carta invertida muda o
+            tom da leitura.
+          </p>
+        ) : null}
 
         {done ? (
           <GuideCard
@@ -153,9 +165,16 @@ export function TarotTable({
         </div>
       ) : null}
 
-      <div className="mx-auto grid w-full max-w-[380px] grid-cols-3 gap-3 opacity-80" aria-hidden>
+      <div className={cn("mx-auto grid w-full max-w-[380px] grid-cols-3 gap-3 transition-opacity", pending ? "opacity-100" : "opacity-80")} aria-hidden>
         {[0, 1, 2].map((i) => (
-          <CardBack key={i} className={cn(i === 1 ? "-translate-y-2" : "", spread.positions.length === 1 && i !== 1 && "opacity-30")} />
+          <CardBack
+            key={i}
+            className={cn(
+              i === 1 ? "-translate-y-2" : "",
+              spread.positions.length === 1 && i !== 1 && !pending && "opacity-30",
+              pending && ["tarot-shuffle-a", "tarot-shuffle-b", "tarot-shuffle-c"][i],
+            )}
+          />
         ))}
       </div>
 

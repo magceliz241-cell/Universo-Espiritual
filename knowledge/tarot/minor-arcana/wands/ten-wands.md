@@ -1,22 +1,31 @@
-# 10 de Paus
+# Dez de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-culminação, carga, conclusão de ciclo
+conclusão, ápice, fim de ciclo
 
-## Leitura combinada
-Combine o tema de “culminação, carga, conclusão de ciclo” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+sobrecarga, responsabilidade, peso, excesso de tarefas
+
+## Leitura geral
+Uma figura carrega dez bastões com dificuldade. O Dez de Paus fala do peso de assumir tudo sem dividir com ninguém.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Relação que pesa ou em que uma pessoa carrega quase tudo. Pede divisão de responsabilidades.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Excesso de trabalho, acúmulo de funções, dificuldade de delegar.
+
+## Autoconhecimento
+Pergunta o que você carrega por hábito e não por necessidade.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar o momento de soltar parte do peso ou um colapso por excesso.
+
+## Ação/reflexão
+Liste suas tarefas da semana e risque ou delegue duas.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

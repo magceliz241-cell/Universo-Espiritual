@@ -1,22 +1,31 @@
-# 3 de Paus
+# Três de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-desenvolvimento, colaboração, expansão
+expansão, primeiros frutos, colaboração
 
-## Leitura combinada
-Combine o tema de “desenvolvimento, colaboração, expansão” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+expansão, horizonte, espera ativa, perspectiva
+
+## Leitura geral
+Uma figura observa navios no mar, de costas, como quem espera o retorno do que lançou. O Três de Paus fala de expansão e de ver os primeiros resultados ao longe.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Relação que amplia horizontes, distância geográfica ou planos em comum que começam a ganhar forma.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Crescimento, parcerias externas, comércio, viagens. Os esforços iniciais começam a dar retorno.
+
+## Autoconhecimento
+Pergunta até onde você se permite enxergar e sonhar.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar atrasos, frustração com a demora ou visão curta demais para o que se quer.
+
+## Ação/reflexão
+Liste três coisas que você já colocou em movimento e confira o andamento de cada uma.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

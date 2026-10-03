@@ -1,22 +1,31 @@
-# 7 de Ouros
+# Sete de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-avaliação, estratégia, teste
+avaliação, persistência, prova
 
-## Leitura combinada
-Combine o tema de “avaliação, estratégia, teste” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+paciência, avaliação, investimento, espera
+
+## Leitura geral
+Uma figura observa a planta crescer. O Sete de Ouros fala de paciência e avaliação do que foi plantado.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Avaliar a relação, investimento de longo prazo.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Resultados ainda em crescimento, revisão.
+
+## Autoconhecimento
+Convida a ter paciência com seus processos.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar frustração ou impaciência.
+
+## Ação/reflexão
+Avalie um projeto e decida se continua.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

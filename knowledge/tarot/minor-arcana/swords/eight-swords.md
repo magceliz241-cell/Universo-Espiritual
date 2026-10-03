@@ -1,22 +1,31 @@
-# 8 de Espadas
+# Oito de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-processo, repetição, desenvolvimento, movimento
+movimento, esforço, mudança de ritmo
 
-## Leitura combinada
-Combine o tema de “processo, repetição, desenvolvimento, movimento” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+restrição, medo, sensação de prisão, limites mentais
+
+## Leitura geral
+Uma figura vendada cercada de espadas, mas com espaço para sair. O Oito de Espadas fala de prisões mentais.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Sensação de não ter saída, medo de agir.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Limitações percebidas, falta de opções aparente.
+
+## Autoconhecimento
+Pergunta quais limites são reais e quais são crença.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar libertação e novas perspectivas.
+
+## Ação/reflexão
+Liste três crenças que te limitam e uma prova contrária para cada.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

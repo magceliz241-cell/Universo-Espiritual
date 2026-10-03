@@ -1,22 +1,28 @@
-# 09 — The Hermit
+# 09 — The Hermit (O Eremita)
 
 ## Palavras-chave
-introspecção, busca, sabedoria, recolhimento
+recolhimento, busca interior, sabedoria, orientação
 
 ## Expressão reversa / bloqueada
-isolamento, fechamento, excesso de introspecção
+isolamento, solidão excessiva, fuga, recusa de ajuda
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Eremita caminha sozinho com uma lanterna: é a carta da pausa para enxergar melhor. Fala de introspecção, estudo e da sabedoria que vem da experiência. Na tradição, a luz que ele carrega também orienta outras pessoas.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Tempo para entender o que se quer antes de se envolver, ou um momento mais reservado dentro da relação. Solidão escolhida não é falta de amor.
+
+## Trabalho/propósito
+Favorece estudo, especialização, planejamento e trabalho solitário e profundo. Pode indicar a busca de um mentor ou o papel de orientar alguém.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a ouvir a própria voz longe do ruído e a reconhecer o que você já aprendeu.
+
+## Reversa
+Invertida, o recolhimento pode virar isolamento ou fuga. Também pode indicar resistência a pedir orientação.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Separe um período curto do dia, sem redes sociais, para caminhar ou escrever sobre uma única pergunta.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

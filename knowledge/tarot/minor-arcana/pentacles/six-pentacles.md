@@ -1,22 +1,31 @@
-# 6 de Ouros
+# Seis de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-movimento, ajuste, troca, transição
+harmonia, troca, recuperação
 
-## Leitura combinada
-Combine o tema de “movimento, ajuste, troca, transição” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+generosidade, troca, equilíbrio, ajuda
+
+## Leitura geral
+Uma figura distribui moedas com uma balança. O Seis de Ouros fala de generosidade e trocas justas.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Equilíbrio entre dar e receber.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Apoio, parcerias, distribuição justa.
+
+## Autoconhecimento
+Pergunta como você dá e recebe.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar desequilíbrio ou dependência.
+
+## Ação/reflexão
+Ajude alguém sem esperar nada em troca.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

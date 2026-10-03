@@ -8,6 +8,8 @@ export const publicEnv = {
   appUrl: (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/+$/, ""),
   checkoutLoveUrl: process.env.NEXT_PUBLIC_CHECKOUT_LOVE_URL ?? "",
   landingUrl: process.env.NEXT_PUBLIC_LANDING_URL ?? "",
+  /** Login com Google: só aparece com NEXT_PUBLIC_GOOGLE_AUTH=1 (provedor ligado no Supabase). */
+  googleAuth: process.env.NEXT_PUBLIC_GOOGLE_AUTH === "1",
 };
 
 export const supabaseConfigured = () => Boolean(publicEnv.supabaseUrl && publicEnv.supabaseAnonKey);

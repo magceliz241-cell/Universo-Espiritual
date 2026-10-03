@@ -45,7 +45,7 @@ export default async function AmorPage() {
         <Link href="/tarot?tiragem=love-3-cards">
           <Card interactive className="h-full p-6">
             <p className="eyebrow text-rose">Tarot do amor</p>
-            <p className="text-display mt-2 text-[1.7rem]">Três cartas para refletir</p>
+            <p className="text-display mt-2 text-[1.7rem]">Três cartas sobre o seu amor</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-2">Energia atual, dinâmica e reflexão. Um espelho, não uma previsão.</p>
           </Card>
         </Link>

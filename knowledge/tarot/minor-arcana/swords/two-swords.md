@@ -1,22 +1,31 @@
-# 2 de Espadas
+# Dois de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-dualidade, escolha, equilíbrio, parceria
+escolha, parceria, equilíbrio entre dois polos
 
-## Leitura combinada
-Combine o tema de “dualidade, escolha, equilíbrio, parceria” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+impasse, indecisão, bloqueio, equilíbrio frágil
+
+## Leitura geral
+Uma figura vendada cruza duas espadas diante do peito. O Dois de Espadas fala de impasse e de evitar enxergar uma decisão.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Indecisão, evitar uma conversa, sentimentos bloqueados.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Decisão adiada, falta de informação, neutralidade forçada.
+
+## Autoconhecimento
+Pergunta o que você não quer ver.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar que a decisão se aproxima ou que a confusão aumenta.
+
+## Ação/reflexão
+Liste os prós e contras de uma decisão adiada e marque uma data para decidir.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

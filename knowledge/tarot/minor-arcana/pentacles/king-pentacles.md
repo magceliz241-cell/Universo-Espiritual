@@ -4,19 +4,28 @@
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-maturidade, direção, domínio consciente do naipe
+corte — maturidade ativa, liderança, domínio externo
 
-## Leitura combinada
-Combine o tema de “maturidade, direção, domínio consciente do naipe” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+prosperidade, segurança, liderança prática, realização
+
+## Leitura geral
+O Rei de Ouros no trono cercado de abundância. Fala de prosperidade e liderança prática.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Segurança e estabilidade.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Sucesso, gestão de recursos.
+
+## Autoconhecimento
+Pergunta como você constrói segurança.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar materialismo ou rigidez.
+
+## Ação/reflexão
+Revise suas finanças do mês.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

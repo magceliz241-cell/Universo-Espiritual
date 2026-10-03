@@ -763,9 +763,13 @@ Bottom navigation:
 │              CONTEÚDO              │
 │                                    │
 ├────────────────────────────────────┤
-│ Início │ Mapa │ Tarot │ Amor │ ✦  │
+│ Início │ Mapa │ (✦ Guia) │ Tarot │ Amor │
 └────────────────────────────────────┘
 ```
+
+Atualização 03/10/2026: o ✦ Guia fica no centro, num círculo dourado elevado acima da barra (mais destaque no
+celular). Cada aba tem, no topo do conteúdo, "‹ voltar" (Início ou a seção-mãe) e um botão "?" pequeno com a dica
+de uso daquela aba. As telas entram com um fade curto de baixo para cima (420 ms, desligado com reduced-motion).
 
 O restante pode ficar em menu secundário.
 

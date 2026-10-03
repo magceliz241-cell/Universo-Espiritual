@@ -4,19 +4,28 @@
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-maturidade interna, domínio receptivo/expressivo do naipe
+corte — maturidade receptiva, cuidado, domínio interno
 
-## Leitura combinada
-Combine o tema de “maturidade interna, domínio receptivo/expressivo do naipe” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+confiança, carisma, calor, determinação
+
+## Leitura geral
+A Rainha de Paus está no trono com um girassol e um gato preto. Fala de confiança, carisma e de uma presença calorosa e independente.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Autoconfiança no amor, magnetismo, afeto generoso.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Liderança calorosa, energia social, determinação.
+
+## Autoconhecimento
+Convida a ocupar espaço com confiança e calor.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar insegurança, ciúme ou energia esgotada.
+
+## Ação/reflexão
+Faça hoje algo que exige confiança e observe como você se sente depois.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

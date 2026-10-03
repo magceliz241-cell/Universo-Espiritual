@@ -4,19 +4,28 @@
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-movimento, busca, impulso, ação
+corte — ação, busca, movimento intenso
 
-## Leitura combinada
-Combine o tema de “movimento, busca, impulso, ação” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+impulso, aventura, paixão, ação rápida
+
+## Leitura geral
+O Cavaleiro de Paus avança num cavalo empinado. Fala de energia intensa, aventura e impulso.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Paixão, intensidade, atração que chega rápido. Pede atenção à constância.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Ação rápida, mudanças, coragem para arriscar. Cuidado com a pressa.
+
+## Autoconhecimento
+Pergunta onde a sua impulsividade ajuda e onde atrapalha.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar precipitação, raiva ou energia que se dispersa.
+
+## Ação/reflexão
+Antes de uma decisão impulsiva, espere um dia e veja se a vontade continua.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

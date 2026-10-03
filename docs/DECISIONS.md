@@ -382,3 +382,21 @@ Política aplicada: **XALEN → produção · JPL Horizons/DE440 → oráculo pr
   pendente). Etapa 3 avisa que o Guilherme pode já ter criado o projeto do app na Vercel.
 - **Login com Google:** plano em `docs/PLANO_LOGIN_GOOGLE.md` (sem mudança no banco; botão atrás de
   `NEXT_PUBLIC_GOOGLE_AUTH`).
+
+## Volta do Cowork e melhorias de uso (2026-10-03)
+
+- **Landing com os dados reais:** checkouts `y787ma7_1164578` (Astarot, com bump) e `ofoarir` (Astarot Love),
+  app `astarot-app.vercel.app`, e-mail `astarotoficial@gmail.com`, pixel da UTMify `6abadc940da9c3738ed8197b`,
+  `og:image` com endereço completo (`astarot.vercel.app`). O script de UTMs da UTMify ficou **de fora** até o
+  Guilherme confirmar o domínio que ele carrega (o código é ofuscado e a conferência não pôde ser feita aqui).
+- **Tarot:** as 78 cartas com leitura própria (geral, amor, trabalho, autoconhecimento, reversa e exercício).
+  Embaralhamento animado, cartas distribuídas e reveladas uma a uma com brilho. Cartas invertidas continuam de cabeça
+  para baixo (sorteio 50%), agora com aviso explicando que é de propósito.
+- **Tom do app:** Guia, Tarot, Lua e Sonhos apresentam o Seu Guia como quem traduz o mapa; o aviso de IA continua em
+  Perfil → Sobre e as regras do prompt não mudaram.
+- **Login com Google** como opção principal (ver `docs/PLANO_LOGIN_GOOGLE.md` §6), atrás de `NEXT_PUBLIC_GOOGLE_AUTH`.
+  Conta com outro e-mail confirma o e-mail do checkout pela troca de e-mail do Supabase (sem migration nova).
+- **Navegação:** Guia no centro da barra inferior, em dourado e destacado (muda o desenho do DESIGN_SYSTEM §25:
+  Início · Mapa · ✦ Guia · Tarot · Amor); cada aba tem "voltar" e um "?" com dica de uso; entrada suave em cada
+  tela; a primeira tela de quem ainda não tem mapa é a criação do mapa.
+- **Início:** "próxima" fase não repete a fase atual quando o instante exato cai no mesmo dia.

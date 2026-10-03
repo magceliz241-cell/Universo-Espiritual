@@ -24,6 +24,8 @@ if (!BASE) {
 const SHOTS = process.env.SHOTS || "";
 const CHECKOUT = "https://pay.cakto.com.br/teste123";
 const CHECKOUT_LOVE = "https://pay.cakto.com.br/love456";
+// Config "de fábrica" (placeholders), para testar o comportamento sem links mesmo depois de config.js preenchido.
+const PLACEHOLDERS = { CHECKOUT_URL: "SEU-LINK-AQUI", CHECKOUT_LOVE_URL: "SEU-LINK-LOVE-AQUI", APP_URL: "SEU-APP-AQUI", CONTACT_EMAIL: "SEU-EMAIL-AQUI", META_PIXEL_ID: "", PRICE: "19,90", BUMP_PRICE: "10,00", LOVE_PRICE: "29,90" };
 const executablePath = fs.existsSync("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
   ? "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
   : undefined;
@@ -70,7 +72,7 @@ async function revealAll(page) {
 
 for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["desktop", { width: 1280, height: 860 }]]) {
   // 1) Página com config padrão (placeholders): nada quebra, links caem na oferta.
-  const { ctx, page, errors } = await open(viewport);
+  const { ctx, page, errors } = await open(viewport, { config: PLACEHOLDERS });
   await revealAll(page);
   check(`[${label}] sem rolagem horizontal`, await noOverflow(page));
   check(`[${label}] roda do mapa renderizada`, await page.locator("#wheel svg").count() === 1);
@@ -140,6 +142,20 @@ for (const [label, viewport] of [["celular", { width: 390, height: 844 }], ["des
   check(`[${label}] sem explicação de "marcar no checkout" no cartão do Love`, (await b.page.locator("#oferta-amor").innerText()).indexOf("marcar") === -1);
   check(`[${label}] sem erros no console (config preenchida)`, b.errors().length === 0, b.errors().join(" | "));
   await b.ctx.close();
+
+  // 3b) config.js real (o publicado): os botões levam aos checkouts da Cakto com as UTMs.
+  {
+    const r = await open(viewport, { query: "?utm_source=fb&utm_campaign=lanc" });
+    const real = await r.page.evaluate(() => window.SU_CONFIG);
+    const isReal = (v) => typeof v === "string" && /^https:\/\/pay\.cakto\.com\.br\//.test(v);
+    check(`[${label}] config.js real com os dois checkouts da Cakto`, isReal(real.CHECKOUT_URL) && isReal(real.CHECKOUT_LOVE_URL) && real.CHECKOUT_URL !== real.CHECKOUT_LOVE_URL);
+    const rh = new URL(await r.page.locator("#plano .js-checkout").getAttribute("href"));
+    check(`[${label}] (real) Astarot leva ao CHECKOUT_URL com UTMs`, rh.origin + rh.pathname === real.CHECKOUT_URL && rh.searchParams.get("utm_source") === "fb");
+    const rl = new URL(await r.page.locator("#oferta-amor .js-checkout").getAttribute("href"));
+    check(`[${label}] (real) Astarot Love leva ao CHECKOUT_LOVE_URL com UTMs`, rl.origin + rl.pathname === real.CHECKOUT_LOVE_URL && rl.searchParams.get("utm_campaign") === "lanc");
+    check(`[${label}] (real) "Entrar" aponta para o app`, await r.page.locator(".js-app-link").getAttribute("href") === `${real.APP_URL}/auth/login`);
+    await r.ctx.close();
+  }
 
   // 4) Páginas legais
   for (const file of ["termos.html", "privacidade.html"]) {

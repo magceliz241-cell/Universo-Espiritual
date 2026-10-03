@@ -1,22 +1,28 @@
-# 07 — The Chariot
+# 07 — The Chariot (O Carro)
 
 ## Palavras-chave
-direção, determinação, movimento, autocontrole
+determinação, direção, avanço, autocontrole
 
 ## Expressão reversa / bloqueada
-pressa, conflito interno, perda de direção
+falta de direção, forças em conflito, pressa, perda de controle
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Carro avança puxado por duas esfinges de cores opostas: é a carta de conduzir forças diferentes na mesma direção. Fala de vontade, foco e movimento. Na tradição, representa a vitória que vem do domínio de si.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Iniciativa e decisão para fazer a relação andar. Pede alinhamento: as duas pessoas querem ir para o mesmo lugar?
+
+## Trabalho/propósito
+Fase de avanço, metas claras e esforço concentrado. Bom para mudanças, viagens e projetos que exigem disciplina.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Mostra como você lida com impulsos opostos dentro de si e se consegue manter o rumo sem atropelar ninguém.
+
+## Reversa
+Invertida, pode indicar energia sem direção, metas em conflito ou pressa que tira o controle. Vale desacelerar para recuperar o rumo.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Escolha uma meta para os próximos sete dias e escreva o único passo diário que leva até ela.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

@@ -1,4 +1,4 @@
-# 4 de Ouros
+# Quatro de Ouros
 
 ## Naipe
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
@@ -6,17 +6,26 @@ Ouros — corpo, recursos, trabalho, estabilidade, materialização
 ## Número / corte
 estabilidade, pausa, estrutura
 
-## Leitura combinada
-Combine o tema de “estabilidade, pausa, estrutura” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+segurança, controle, economia, apego
+
+## Leitura geral
+Uma figura segura moedas junto ao corpo. O Quatro de Ouros fala de segurança e também de apego.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Possessividade ou medo de perder.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Economia, estabilidade, cautela financeira.
+
+## Autoconhecimento
+Pergunta o que você segura por medo.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar generosidade ou gastos excessivos.
+
+## Ação/reflexão
+Doe algo que você não usa mais.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

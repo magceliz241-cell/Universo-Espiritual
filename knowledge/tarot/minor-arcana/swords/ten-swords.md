@@ -1,22 +1,31 @@
-# 10 de Espadas
+# Dez de Espadas
 
 ## Naipe
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-culminação, carga, conclusão de ciclo
+conclusão, ápice, fim de ciclo
 
-## Leitura combinada
-Combine o tema de “culminação, carga, conclusão de ciclo” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+fim, encerramento doloroso, fundo do poço, recomeço
+
+## Leitura geral
+Uma figura deitada com dez espadas nas costas, o sol nascendo ao fundo. O Dez de Espadas fala de um fim definitivo e da chance de recomeçar.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Fim de um ciclo afetivo, sensação de derrota.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Fim de um projeto, ruptura. O pior já passou.
+
+## Autoconhecimento
+Pergunta o que precisa terminar para você se reerguer.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar recuperação lenta ou resistência ao fim.
+
+## Ação/reflexão
+Escreva o que você aprendeu com um fim doloroso.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

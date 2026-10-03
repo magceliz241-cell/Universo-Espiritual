@@ -4,19 +4,28 @@
 Espadas — pensamento, comunicação, conflito, decisão, discernimento
 
 ## Número / corte
-movimento, busca, impulso, ação
+corte — ação, busca, movimento intenso
 
-## Leitura combinada
-Combine o tema de “movimento, busca, impulso, ação” com o domínio de swords. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+pressa, ação direta, ambição, objetividade
+
+## Leitura geral
+O Cavaleiro de Espadas avança em velocidade. Fala de ação rápida e objetiva.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Franqueza, impulsividade nas palavras.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Determinação, pressa para resolver.
+
+## Autoconhecimento
+Pergunta se a pressa ajuda ou atropela.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar agressividade ou falta de direção.
+
+## Ação/reflexão
+Antes de responder a algo, conte até dez.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

@@ -1,22 +1,28 @@
-# 15 — The Devil
+# 15 — The Devil (O Diabo)
 
 ## Palavras-chave
-apego, desejo, compulsão, sombra, materialidade
+apego, desejo, padrões, sombra
 
 ## Expressão reversa / bloqueada
-negação, dependência, aprisionamento
+libertação, consciência do padrão, quebra de correntes, ou aprofundamento do vício
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Diabo mostra figuras presas por correntes largas, que poderiam ser retiradas: é a carta dos apegos e padrões que nos prendem. Fala de desejo, sombra e do que fazemos no automático. Na tradição, aponta que a prisão costuma ser menos rígida do que parece.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Atração intensa, ciúme, dependência ou dinâmicas de controle. Pede olhar honesto sobre o que prende e o que nutre.
+
+## Trabalho/propósito
+Pode indicar apego a dinheiro, status ou a uma situação que já não faz bem. Também fala de ambição que precisa de limites.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a reconhecer um padrão que se repete e a função que ele cumpre para você.
+
+## Reversa
+Invertida, pode indicar o momento de perceber e soltar uma corrente, ou um padrão que se aprofunda quando é negado.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Nomeie um hábito que você gostaria de mudar. Observe por três dias quando ele aparece e o que vem antes.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):

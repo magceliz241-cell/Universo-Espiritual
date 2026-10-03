@@ -1,22 +1,31 @@
-# 9 de Paus
+# Nove de Paus
 
 ## Naipe
 Paus — ação, criatividade, iniciativa, energia, projetos
 
 ## Número / corte
-maturação, autonomia, resultado próximo
+quase completo, intensidade, resultado próximo
 
-## Leitura combinada
-Combine o tema de “maturação, autonomia, resultado próximo” com o domínio de wands. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+resiliência, persistência, cautela, última etapa
+
+## Leitura geral
+Uma figura ferida, mas de pé, segura um bastão diante de oito outros. O Nove de Paus fala de resistência e de estar perto do fim de um desafio.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Cautela depois de experiências difíceis, defesa emocional. Pergunta se a proteção ainda é necessária.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Cansaço da reta final, persistência. Falta pouco.
+
+## Autoconhecimento
+Convida a reconhecer sua força e a perceber quando a guarda alta já não serve.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar exaustão, desconfiança excessiva ou vontade de desistir perto do fim.
+
+## Ação/reflexão
+Nomeie a última etapa de algo difícil e peça ajuda para uma parte dela.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

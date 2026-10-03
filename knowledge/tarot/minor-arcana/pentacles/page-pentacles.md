@@ -4,19 +4,28 @@
 Ouros — corpo, recursos, trabalho, estabilidade, materialização
 
 ## Número / corte
-aprendizado, mensagem, curiosidade, início de expressão
+corte — aprendizado, curiosidade, mensagem
 
-## Leitura combinada
-Combine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de pentacles. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+estudo, planejamento, oportunidade, curiosidade prática
+
+## Leitura geral
+O Pajem de Ouros contempla a moeda. Fala de aprendizado prático e novas oportunidades.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Interesse sério, construção lenta.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Estudo, curso, nova oportunidade.
+
+## Autoconhecimento
+Convida a aprender algo útil.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar procrastinação.
+
+## Ação/reflexão
+Inscreva-se num curso curto.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

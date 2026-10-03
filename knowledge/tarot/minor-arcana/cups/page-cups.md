@@ -4,19 +4,28 @@
 Copas — emoção, vínculos, intimidade, imaginação, receptividade
 
 ## Número / corte
-aprendizado, mensagem, curiosidade, início de expressão
+corte — aprendizado, curiosidade, mensagem
 
-## Leitura combinada
-Combine o tema de “aprendizado, mensagem, curiosidade, início de expressão” com o domínio de cups. A interpretação final depende da posição na tiragem e da pergunta.
+## Palavras-chave
+sensibilidade, criatividade, mensagem afetiva, curiosidade emocional
+
+## Leitura geral
+O Pajem de Copas olha um peixe que sai da taça. Fala de surpresas emocionais, imaginação e sensibilidade.
 
 ## Amor
-Use como lente para observar dinâmica afetiva, disponibilidade, comunicação, desejo, limites ou reciprocidade.
+Mensagem afetiva, flerte, sentimentos novos e tímidos.
 
 ## Trabalho/recursos
-Use o naipe como contexto, sem transformar a carta em previsão financeira.
+Ideias criativas, intuição no trabalho, propostas inesperadas.
+
+## Autoconhecimento
+Convida a ouvir sua sensibilidade sem vergonha.
 
 ## Reversa
-Pode indicar bloqueio, excesso, internalização, atraso ou expressão desequilibrada do tema. Escolher a interpretação pelo contexto, não por regra mecânica.
+Invertida, pode indicar imaturidade emocional, insegurança ou bloqueio criativo.
+
+## Ação/reflexão
+Escreva, desenhe ou cante algo sem objetivo, só para expressar o que sente.
 
 ## Fonte de referência
 https://sacred-texts.com/tarot/pkt/index.htm

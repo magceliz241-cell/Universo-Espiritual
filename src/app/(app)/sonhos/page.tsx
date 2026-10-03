@@ -14,8 +14,8 @@ export default async function SonhosPage() {
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-12">
       <PageHeader eyebrow="Diário de sonhos" title="Sonhos">
-        Escreva o que lembrar. O sistema identifica símbolos do relato e o Seu Guia oferece leituras possíveis, sempre
-        a partir do que você sentiu.
+        Escreva o que lembrar. O sistema identifica os símbolos do relato e o Seu Guia traduz leituras possíveis a
+        partir do que você sentiu.
       </PageHeader>
       <Card className="p-6 md:p-8">
         <DreamForm />

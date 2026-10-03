@@ -25,7 +25,7 @@ export async function LoveOffer() {
             {[
               ["Perfil amoroso", "Vênus, Marte, Lua e as casas do encontro."],
               ["Mapa do casal", "Conexões entre os dois mapas."],
-              ["Tarot do amor", "Tiragem de 3 cartas para refletir."],
+              ["Tarot do amor", "Tiragem de 3 cartas sobre o seu momento no amor."],
             ].map(([t, d]) => (
               <li key={t} className="rounded-[var(--radius-md)] border border-line bg-surface-2 p-4">
                 <p className="text-ink">{t}</p>

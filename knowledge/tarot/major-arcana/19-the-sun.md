@@ -1,22 +1,28 @@
-# 19 — The Sun
+# 19 — The Sun (O Sol)
 
 ## Palavras-chave
-clareza, vitalidade, alegria, visibilidade
+alegria, vitalidade, clareza, sucesso
 
 ## Expressão reversa / bloqueada
-excesso de exposição, otimismo sem medida
+alegria contida, otimismo excessivo, cansaço, brilho apagado
 
 ## Leitura geral
-Use os temas da carta para construir uma narrativa contextual. Não tratar a carta como previsão objetiva.
+O Sol brilha sobre uma criança num cavalo branco: é a carta da clareza, da alegria e da vitalidade. Fala de reconhecimento e de se mostrar como se é. Na tradição, é das cartas mais luminosas do baralho.
 
 ## Amor
-Perguntar: o que este símbolo sugere sobre vínculo, escolha, comunicação, limites ou disponibilidade emocional?
+Calor, leveza e transparência. Favorece momentos de alegria compartilhada e relações em que se pode brilhar.
+
+## Trabalho/propósito
+Reconhecimento, sucesso visível e energia para realizar. Bom para apresentar trabalhos e se expor.
 
 ## Autoconhecimento
-Perguntar: que comportamento, valor, medo ou possibilidade o símbolo pode ajudar o usuário a observar?
+Convida a reconhecer o que te traz alegria genuína e a se permitir ocupar espaço.
+
+## Reversa
+Invertida, pode indicar uma alegria contida, cansaço ou otimismo que ignora detalhes. O sol continua lá, só encoberto.
 
 ## Ação/reflexão
-Transformar a leitura em uma pergunta ou pequeno exercício concreto.
+Faça uma lista de cinco coisas que te deram alegria neste mês e repita uma delas nesta semana.
 
 ## Fonte principal
 A. E. Waite, The Pictorial Key to the Tarot (1911):
